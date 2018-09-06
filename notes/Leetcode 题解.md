@@ -1,197 +1,599 @@
 <!-- GFM-TOC -->
-* [Ëã·¨Ë¼Ïë](#Ëã·¨Ë¼Ïë)
-    * [¶ş·Ö²éÕÒ](#¶ş·Ö²éÕÒ)
-    * [Ì°ĞÄË¼Ïë](#Ì°ĞÄË¼Ïë)
-    * [Ë«Ö¸Õë](#Ë«Ö¸Õë)
-    * [ÅÅĞò](#ÅÅĞò)
-        * [¿ìËÙÑ¡Ôñ](#¿ìËÙÑ¡Ôñ)
-        * [¶ÑÅÅĞò](#¶ÑÅÅĞò)
-        * [Í°ÅÅĞò](#Í°ÅÅĞò)
-    * [ËÑË÷](#ËÑË÷)
+* [ç®—æ³•æ€æƒ³](#ç®—æ³•æ€æƒ³)
+    * [åŒæŒ‡é’ˆ](#åŒæŒ‡é’ˆ)
+    * [æ’åº](#æ’åº)
+        * [å¿«é€Ÿé€‰æ‹©](#å¿«é€Ÿé€‰æ‹©)
+        * [å †æ’åº](#å †æ’åº)
+        * [æ¡¶æ’åº](#æ¡¶æ’åº)
+        * [è·å…°å›½æ——é—®é¢˜](#è·å…°å›½æ——é—®é¢˜)
+    * [è´ªå¿ƒæ€æƒ³](#è´ªå¿ƒæ€æƒ³)
+    * [äºŒåˆ†æŸ¥æ‰¾](#äºŒåˆ†æŸ¥æ‰¾)
+    * [åˆ†æ²»](#åˆ†æ²»)
+    * [æœç´¢](#æœç´¢)
         * [BFS](#bfs)
         * [DFS](#dfs)
         * [Backtracking](#backtracking)
-    * [·ÖÖÎ](#·ÖÖÎ)
-    * [¶¯Ì¬¹æ»®](#¶¯Ì¬¹æ»®)
-        * [·Ö¸îÕûÊı](#·Ö¸îÕûÊı)
-        * [¾ØÕóÂ·¾¶](#¾ØÕóÂ·¾¶)
-        * [ì³²¨ÄÇÆõÊıÁĞ](#ì³²¨ÄÇÆõÊıÁĞ)
-        * [×î³¤µİÔö×ÓĞòÁĞ](#×î³¤µİÔö×ÓĞòÁĞ)
-        * [×î³¤¹«¹²×ÓÏµÁĞ](#×î³¤¹«¹²×ÓÏµÁĞ)
-        * [0-1 ±³°ü](#0-1-±³°ü)
-        * [Êı×éÇø¼ä](#Êı×éÇø¼ä)
-        * [×Ö·û´®±à¼­](#×Ö·û´®±à¼­)
-        * [ÆäËüÎÊÌâ](#ÆäËüÎÊÌâ)
-    * [ÊıÑ§](#ÊıÑ§)
-        * [ËØÊı](#ËØÊı)
-        * [×î´ó¹«Ô¼Êı](#×î´ó¹«Ô¼Êı)
-        * [½øÖÆ×ª»»](#½øÖÆ×ª»»)
-        * [½×³Ë](#½×³Ë)
-        * [×Ö·û´®¼Ó·¨¼õ·¨](#×Ö·û´®¼Ó·¨¼õ·¨)
-        * [ÏàÓöÎÊÌâ](#ÏàÓöÎÊÌâ)
-        * [¶àÊıÍ¶Æ±ÎÊÌâ](#¶àÊıÍ¶Æ±ÎÊÌâ)
-        * [ÆäËü](#ÆäËü)
-* [Êı¾İ½á¹¹Ïà¹Ø](#Êı¾İ½á¹¹Ïà¹Ø)
-    * [Õ»ºÍ¶ÓÁĞ](#Õ»ºÍ¶ÓÁĞ)
-    * [¹şÏ£±í](#¹şÏ£±í)
-    * [×Ö·û´®](#×Ö·û´®)
-    * [Êı×éÓë¾ØÕó](#Êı×éÓë¾ØÕó)
-        * [ÓĞĞò¾ØÕó](#ÓĞĞò¾ØÕó)
-    * [Á´±í](#Á´±í)
-    * [Ê÷](#Ê÷)
-        * [µİ¹é](#µİ¹é)
-        * [²ã´Î±éÀú](#²ã´Î±éÀú)
-        * [Ç°ÖĞºóĞò±éÀú](#Ç°ÖĞºóĞò±éÀú)
+    * [åŠ¨æ€è§„åˆ’](#åŠ¨æ€è§„åˆ’)
+        * [æ–æ³¢é‚£å¥‘æ•°åˆ—](#æ–æ³¢é‚£å¥‘æ•°åˆ—)
+        * [çŸ©é˜µè·¯å¾„](#çŸ©é˜µè·¯å¾„)
+        * [æ•°ç»„åŒºé—´](#æ•°ç»„åŒºé—´)
+        * [åˆ†å‰²æ•´æ•°](#åˆ†å‰²æ•´æ•°)
+        * [æœ€é•¿é€’å¢å­åºåˆ—](#æœ€é•¿é€’å¢å­åºåˆ—)
+        * [æœ€é•¿å…¬å…±å­åºåˆ—](#æœ€é•¿å…¬å…±å­åºåˆ—)
+        * [0-1 èƒŒåŒ…](#0-1-èƒŒåŒ…)
+        * [è‚¡ç¥¨äº¤æ˜“](#è‚¡ç¥¨äº¤æ˜“)
+        * [å­—ç¬¦ä¸²ç¼–è¾‘](#å­—ç¬¦ä¸²ç¼–è¾‘)
+    * [æ•°å­¦](#æ•°å­¦)
+        * [ç´ æ•°](#ç´ æ•°)
+        * [æœ€å¤§å…¬çº¦æ•°](#æœ€å¤§å…¬çº¦æ•°)
+        * [è¿›åˆ¶è½¬æ¢](#è¿›åˆ¶è½¬æ¢)
+        * [é˜¶ä¹˜](#é˜¶ä¹˜)
+        * [å­—ç¬¦ä¸²åŠ æ³•å‡æ³•](#å­—ç¬¦ä¸²åŠ æ³•å‡æ³•)
+        * [ç›¸é‡é—®é¢˜](#ç›¸é‡é—®é¢˜)
+        * [å¤šæ•°æŠ•ç¥¨é—®é¢˜](#å¤šæ•°æŠ•ç¥¨é—®é¢˜)
+        * [å…¶å®ƒ](#å…¶å®ƒ)
+* [æ•°æ®ç»“æ„ç›¸å…³](#æ•°æ®ç»“æ„ç›¸å…³)
+    * [é“¾è¡¨](#é“¾è¡¨)
+    * [æ ‘](#æ ‘)
+        * [é€’å½’](#é€’å½’)
+        * [å±‚æ¬¡éå†](#å±‚æ¬¡éå†)
+        * [å‰ä¸­ååºéå†](#å‰ä¸­ååºéå†)
         * [BST](#bst)
         * [Trie](#trie)
-    * [Í¼](#Í¼)
-    * [Î»ÔËËã](#Î»ÔËËã)
-* [²Î¿¼×ÊÁÏ](#²Î¿¼×ÊÁÏ)
+    * [æ ˆå’Œé˜Ÿåˆ—](#æ ˆå’Œé˜Ÿåˆ—)
+    * [å“ˆå¸Œè¡¨](#å“ˆå¸Œè¡¨)
+    * [å­—ç¬¦ä¸²](#å­—ç¬¦ä¸²)
+    * [æ•°ç»„ä¸çŸ©é˜µ](#æ•°ç»„ä¸çŸ©é˜µ)
+    * [å›¾](#å›¾)
+        * [äºŒåˆ†å›¾](#äºŒåˆ†å›¾)
+        * [æ‹“æ‰‘æ’åº](#æ‹“æ‰‘æ’åº)
+        * [å¹¶æŸ¥é›†](#å¹¶æŸ¥é›†)
+    * [ä½è¿ç®—](#ä½è¿ç®—)
+* [å‚è€ƒèµ„æ–™](#å‚è€ƒèµ„æ–™)
 <!-- GFM-TOC -->
 
-# Ëã·¨Ë¼Ïë
 
-## ¶ş·Ö²éÕÒ
+# ç®—æ³•æ€æƒ³
 
-¶ş·Ö²éÕÒË¼Ïë¼òµ¥£¬µ«ÊÇÔÚÊµÏÖÊ±ÓĞÒ»Ğ©ĞèÒª×¢ÒâµÄÏ¸½Ú£º
+## åŒæŒ‡é’ˆ
 
-1. ÔÚ¼ÆËã mid Ê±²»ÄÜÊ¹ÓÃ mid = (l + h) / 2 ÕâÖÖ·½Ê½£¬ÒòÎª l + h ¿ÉÄÜ»áµ¼ÖÂ¼Ó·¨Òç³ö£¬Ó¦¸ÃÊ¹ÓÃ mid = l + (h - l) / 2¡£
+åŒæŒ‡é’ˆä¸»è¦ç”¨äºéå†æ•°ç»„ï¼Œä¸¤ä¸ªæŒ‡é’ˆæŒ‡å‘ä¸åŒçš„å…ƒç´ ï¼Œä»è€ŒååŒå®Œæˆä»»åŠ¡ã€‚
 
-2. ¶Ô h µÄ¸³ÖµºÍÑ­»·Ìõ¼şÓĞ¹Ø£¬µ±Ñ­»·Ìõ¼şÎª l <= h Ê±£¬h = mid - 1£»µ±Ñ­»·Ìõ¼şÎª l < h Ê±£¬h = mid¡£
-½âÊÍÈçÏÂ£ºÔÚÑ­»·Ìõ¼şÎª l <= h Ê±£¬Èç¹û h = mid£¬»á³öÏÖÑ­»·ÎŞ·¨ÍË³öµÄÇé¿ö£¬ÀıÈç l = 1£¬h = 1£¬´ËÊ± mid Ò²µÈÓÚ 1£¬Èç¹û´ËÊ±¼ÌĞøÖ´ĞĞ h = mid£¬ÄÇÃ´¾Í»áÎŞÏŞÑ­»·£»ÔÚÑ­»·Ìõ¼şÎª l < h£¬Èç¹û h = mid - 1£¬»á´íÎóÌø¹ı²éÕÒµÄÊı£¬ÀıÈç¶ÔÓÚÊı×é [1,2,3]£¬Òª²éÕÒ 1£¬×î¿ªÊ¼ l = 0£¬h = 2£¬mid = 1£¬ÅĞ¶Ï key < arr[mid] Ö´ĞĞ h = mid - 1 = 0£¬´ËÊ±Ñ­»·ÍË³ö£¬Ö±½Ó°Ñ²éÕÒµÄÊıÌø¹ıÁË¡£
+**æœ‰åºæ•°ç»„çš„ Two Sum** 
 
-3. l µÄ¸³ÖµÒ»°ã¶¼Îª l = mid + 1¡£
-
-```java
-public int search(int key, int[] arr) {
-    int l = 0, h = arr.length - 1;
-    while (l <= h) {
-        int mid = l + (h - l) / 2;
-        if (key == arr[mid]) return mid;
-        if (key < arr[mid]) h = mid - 1;
-        else l = mid + 1;
-    }
-    return -1;
-}
-```
-
-**Çó¿ª·½**
-
-[Leetcode : 69. Sqrt(x) (Easy)](https://leetcode.com/problems/sqrtx/description/)
-
-Ò»¸öÊı x µÄ¿ª·½ sqrt Ò»¶¨ÔÚ 0 \~ x Ö®¼ä£¬²¢ÇÒÂú×ã sqrt == x / sqrt ¡£¿ÉÒÔÀûÓÃ¶ş·Ö²éÕÒÔÚ 0 \~ x Ö®¼ä²éÕÒ sqrt¡£
-
-```java
-public int mySqrt(int x) {
-    if(x <= 1) return x;
-    int l = 1, h = x;
-    while(l <= h){
-        int mid = l + (h - l) / 2;
-        int sqrt = x / mid;
-        if(sqrt == mid) return mid;
-        else if(sqrt < mid) h = mid - 1;
-        else l = mid + 1;
-    }
-    return h;
-}
-```
-
-**°ÚÓ²±Ò**
-
-[Leetcode : 441. Arranging Coins (Easy)](https://leetcode.com/problems/arranging-coins/description/)
+[Leetcode ï¼š167. Two Sum II - Input array is sorted (Easy)](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
 
 ```html
-n = 8
-
-The coins can form the following rows:
-¡è
-¡è ¡è
-¡è ¡è ¡è
-¡è ¡è
-
-Because the 4th row is incomplete, we return 3.
+Input: numbers={2, 7, 11, 15}, target=9
+Output: index1=1, index2=2
 ```
 
-ÌâÄ¿ÃèÊö£ºµÚ i ĞĞ°Ú i ¸ö£¬Í³¼ÆÄÜ¹»°ÚµÄĞĞÊı¡£
+é¢˜ç›®æè¿°ï¼šåœ¨æœ‰åºæ•°ç»„ä¸­æ‰¾å‡ºä¸¤ä¸ªæ•°ï¼Œä½¿å®ƒä»¬çš„å’Œä¸º targetã€‚
 
-·µ»Ø h ¶ø²»ÊÇ l£¬ÒòÎª°ÚµÄÓ²±Ò×îºóÒ»ĞĞ²»ÄÜËã½øÈ¥¡£
+ä½¿ç”¨åŒæŒ‡é’ˆï¼Œä¸€ä¸ªæŒ‡é’ˆæŒ‡å‘å€¼è¾ƒå°çš„å…ƒç´ ï¼Œä¸€ä¸ªæŒ‡é’ˆæŒ‡å‘å€¼è¾ƒå¤§çš„å…ƒç´ ã€‚æŒ‡å‘è¾ƒå°å…ƒç´ çš„æŒ‡é’ˆä»å¤´å‘å°¾éå†ï¼ŒæŒ‡å‘è¾ƒå¤§å…ƒç´ çš„æŒ‡é’ˆä»å°¾å‘å¤´éå†ã€‚
+
+- å¦‚æœä¸¤ä¸ªæŒ‡é’ˆæŒ‡å‘å…ƒç´ çš„å’Œ sum == targetï¼Œé‚£ä¹ˆå¾—åˆ°è¦æ±‚çš„ç»“æœï¼›
+- å¦‚æœ sum > targetï¼Œç§»åŠ¨è¾ƒå¤§çš„å…ƒç´ ï¼Œä½¿ sum å˜å°ä¸€äº›ï¼›
+- å¦‚æœ sum < targetï¼Œç§»åŠ¨è¾ƒå°çš„å…ƒç´ ï¼Œä½¿ sum å˜å¤§ä¸€äº›ã€‚
 
 ```java
-public int arrangeCoins(int n) {
-    int l = 0, h = n;
-    while(l <= h){
-        int m = l + (h - l) / 2;
-        long x = m * (m + 1L) / 2;
-        if(x == n) return m;
-        else if(x < n) l = m + 1;
-        else h = m - 1;
+public int[] twoSum(int[] numbers, int target) {
+    int i = 0, j = numbers.length - 1;
+    while (i < j) {
+        int sum = numbers[i] + numbers[j];
+        if (sum == target) {
+            return new int[]{i + 1, j + 1};
+        } else if (sum < target) {
+            i++;
+        } else {
+            j--;
+        }
     }
-    return h;
+    return null;
 }
 ```
 
-¿ÉÒÔ²»ÓÃ¶ş·Ö²éÕÒ£¬¸üÖ±¹ÛµÄ½â·¨ÈçÏÂ£º
+**ä¸¤æ•°å¹³æ–¹å’Œ** 
+
+[633. Sum of Square Numbers (Easy)](https://leetcode.com/problems/sum-of-square-numbers/description/)
+
+```html
+Input: 5
+Output: True
+Explanation: 1 * 1 + 2 * 2 = 5
+```
+
+é¢˜ç›®æè¿°ï¼šåˆ¤æ–­ä¸€ä¸ªæ•°æ˜¯å¦ä¸ºä¸¤ä¸ªæ•°çš„å¹³æ–¹å’Œï¼Œä¾‹å¦‚ 5 = 1<sup>2</sup> + 2<sup>2</sup>ã€‚
 
 ```java
-public int arrangeCoins(int n) {
-    int level = 1;
-    while (n > 0) {
-        n -= level;
-        level++;
+public boolean judgeSquareSum(int c) {
+    int i = 0, j = (int) Math.sqrt(c);
+    while (i <= j) {
+        int powSum = i * i + j * j;
+        if (powSum == c) {
+            return true;
+        } else if (powSum > c) {
+            j--;
+        } else {
+            i++;
+        }
     }
-    return n == 0 ? level - 1 : level - 2;
+    return false;
 }
 ```
 
-**ÓĞĞòÊı×éµÄ Single Element**
+**åè½¬å­—ç¬¦ä¸²ä¸­çš„å…ƒéŸ³å­—ç¬¦** 
 
-[Leetcode : 540. Single Element in a Sorted Array (Medium)](https://leetcode.com/problems/single-element-in-a-sorted-array/description/)
+[345. Reverse Vowels of a String (Easy)](https://leetcode.com/problems/reverse-vowels-of-a-string/description/)
 
-ÌâÄ¿ÃèÊö£ºÒ»¸öÓĞĞòÊı×éÖ»ÓĞÒ»¸öÊı²»³öÏÖÁ½´Î£¬ÕÒ³öÕâ¸öÊı¡£
+```html
+Given s = "leetcode", return "leotcede".
+```
+
+ä½¿ç”¨åŒæŒ‡é’ˆï¼ŒæŒ‡å‘å¾…åè½¬çš„ä¸¤ä¸ªå…ƒéŸ³å­—ç¬¦ï¼Œä¸€ä¸ªæŒ‡é’ˆä»å¤´å‘å°¾éå†ï¼Œä¸€ä¸ªæŒ‡é’ˆä»å°¾åˆ°å¤´éå†ã€‚
 
 ```java
-public int singleNonDuplicate(int[] nums) {
+private final static HashSet<Character> vowels = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));
+
+public String reverseVowels(String s) {
+    int i = 0, j = s.length() - 1;
+    char[] result = new char[s.length()];
+    while (i <= j) {
+        char ci = s.charAt(i);
+        char cj = s.charAt(j);
+        if (!vowels.contains(ci)) {
+            result[i++] = ci;
+        } else if (!vowels.contains(cj)) {
+            result[j--] = cj;
+        } else {
+            result[i++] = cj;
+            result[j--] = ci;
+        }
+    }
+    return new String(result);
+}
+```
+
+**å›æ–‡å­—ç¬¦ä¸²** 
+
+[680. Valid Palindrome II (Easy)](https://leetcode.com/problems/valid-palindrome-ii/description/)
+
+```html
+Input: "abca"
+Output: True
+Explanation: You could delete the character 'c'.
+```
+
+é¢˜ç›®æè¿°ï¼šå¯ä»¥åˆ é™¤ä¸€ä¸ªå­—ç¬¦ï¼Œåˆ¤æ–­æ˜¯å¦èƒ½æ„æˆå›æ–‡å­—ç¬¦ä¸²ã€‚
+
+```java
+public boolean validPalindrome(String s) {
+    int i = -1, j = s.length();
+    while (++i < --j) {
+        if (s.charAt(i) != s.charAt(j)) {
+            return isPalindrome(s, i, j - 1) || isPalindrome(s, i + 1, j);
+        }
+    }
+    return true;
+}
+
+private boolean isPalindrome(String s, int i, int j) {
+    while (i < j) {
+        if (s.charAt(i++) != s.charAt(j--)) {
+            return false;
+        }
+    }
+    return true;
+}
+```
+
+**å½’å¹¶ä¸¤ä¸ªæœ‰åºæ•°ç»„** 
+
+[88. Merge Sorted Array (Easy)](https://leetcode.com/problems/merge-sorted-array/description/)
+
+```html
+Input:
+nums1 = [1,2,3,0,0,0], m = 3
+nums2 = [2,5,6],       n = 3
+
+Output: [1,2,2,3,5,6]
+```
+
+é¢˜ç›®æè¿°ï¼šæŠŠå½’å¹¶ç»“æœå­˜åˆ°ç¬¬ä¸€ä¸ªæ•°ç»„ä¸Šã€‚
+
+éœ€è¦ä»å°¾å¼€å§‹éå†ï¼Œå¦åˆ™åœ¨ nums1 ä¸Šå½’å¹¶å¾—åˆ°çš„å€¼ä¼šè¦†ç›–è¿˜æœªè¿›è¡Œå½’å¹¶æ¯”è¾ƒçš„å€¼ã€‚
+
+```java
+public void merge(int[] nums1, int m, int[] nums2, int n) {
+    int index1 = m - 1, index2 = n - 1;
+    int indexMerge = m + n - 1;
+    while (index1 >= 0 || index2 >= 0) {
+        if (index1 < 0) {
+            nums1[indexMerge--] = nums2[index2--];
+        } else if (index2 < 0) {
+            nums1[indexMerge--] = nums1[index1--];
+        } else if (nums1[index1] > nums2[index2]) {
+            nums1[indexMerge--] = nums1[index1--];
+        } else {
+            nums1[indexMerge--] = nums2[index2--];
+        }
+    }
+}
+```
+
+**åˆ¤æ–­é“¾è¡¨æ˜¯å¦å­˜åœ¨ç¯** 
+
+[141. Linked List Cycle (Easy)](https://leetcode.com/problems/linked-list-cycle/description/)
+
+ä½¿ç”¨åŒæŒ‡é’ˆï¼Œä¸€ä¸ªæŒ‡é’ˆæ¯æ¬¡ç§»åŠ¨ä¸€ä¸ªèŠ‚ç‚¹ï¼Œä¸€ä¸ªæŒ‡é’ˆæ¯æ¬¡ç§»åŠ¨ä¸¤ä¸ªèŠ‚ç‚¹ï¼Œå¦‚æœå­˜åœ¨ç¯ï¼Œé‚£ä¹ˆè¿™ä¸¤ä¸ªæŒ‡é’ˆä¸€å®šä¼šç›¸é‡ã€‚
+
+```java
+public boolean hasCycle(ListNode head) {
+    if (head == null) {
+        return false;
+    }
+    ListNode l1 = head, l2 = head.next;
+    while (l1 != null && l2 != null && l2.next != null) {
+        if (l1 == l2) {
+            return true;
+        }
+        l1 = l1.next;
+        l2 = l2.next.next;
+    }
+    return false;
+}
+```
+
+**æœ€é•¿å­åºåˆ—** 
+
+[524. Longest Word in Dictionary through Deleting (Medium)](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/description/)
+
+```
+Input:
+s = "abpcplea", d = ["ale","apple","monkey","plea"]
+
+Output:
+"apple"
+```
+
+é¢˜ç›®æè¿°ï¼šåˆ é™¤ s ä¸­çš„ä¸€äº›å­—ç¬¦ï¼Œä½¿å¾—å®ƒæ„æˆå­—ç¬¦ä¸²åˆ—è¡¨ d ä¸­çš„ä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œæ‰¾å‡ºèƒ½æ„æˆçš„æœ€é•¿å­—ç¬¦ä¸²ã€‚å¦‚æœæœ‰å¤šä¸ªç›¸åŒé•¿åº¦çš„ç»“æœï¼Œè¿”å›å­—å…¸åºçš„æœ€å¤§å­—ç¬¦ä¸²ã€‚
+
+```java
+public String findLongestWord(String s, List<String> d) {
+    String longestWord = "";
+    for (String target : d) {
+        int l1 = longestWord.length(), l2 = target.length();
+        if (l1 > l2 || (l1 == l2 && longestWord.compareTo(target) < 0)) {
+            continue;
+        }
+        if (isValid(s, target)) {
+            longestWord = target;
+        }
+    }
+    return longestWord;
+}
+
+private boolean isValid(String s, String target) {
+    int i = 0, j = 0;
+    while (i < s.length() && j < target.length()) {
+        if (s.charAt(i) == target.charAt(j)) {
+            j++;
+        }
+        i++;
+    }
+    return j == target.length();
+}
+```
+
+## æ’åº
+
+### å¿«é€Ÿé€‰æ‹©
+
+ç”¨äºæ±‚è§£  **Kth Element**  é—®é¢˜ï¼Œä½¿ç”¨å¿«é€Ÿæ’åºçš„ partition() è¿›è¡Œå®ç°ã€‚
+
+éœ€è¦å…ˆæ‰“ä¹±æ•°ç»„ï¼Œå¦åˆ™æœ€åæƒ…å†µä¸‹æ—¶é—´å¤æ‚åº¦ä¸º O(N<sup>2</sup>)ã€‚
+
+### å †æ’åº
+
+ç”¨äºæ±‚è§£  **TopK Elements**  é—®é¢˜ï¼Œé€šè¿‡ç»´æŠ¤ä¸€ä¸ªå¤§å°ä¸º K çš„å †ï¼Œå †ä¸­çš„å…ƒç´ å°±æ˜¯ TopK Elementsã€‚
+
+å †æ’åºä¹Ÿå¯ä»¥ç”¨äºæ±‚è§£ Kth Element é—®é¢˜ï¼Œå †é¡¶å…ƒç´ å°±æ˜¯ Kth Elementã€‚
+
+å¿«é€Ÿé€‰æ‹©ä¹Ÿå¯ä»¥æ±‚è§£ TopK Elements é—®é¢˜ï¼Œå› ä¸ºæ‰¾åˆ° Kth Element ä¹‹åï¼Œå†éå†ä¸€æ¬¡æ•°ç»„ï¼Œæ‰€æœ‰å°äºç­‰äº Kth Element çš„å…ƒç´ éƒ½æ˜¯ TopK Elementsã€‚
+
+å¯ä»¥çœ‹åˆ°ï¼Œå¿«é€Ÿé€‰æ‹©å’Œå †æ’åºéƒ½å¯ä»¥æ±‚è§£ Kth Element å’Œ TopK Elements é—®é¢˜ã€‚
+
+**Kth Element** 
+
+[215. Kth Largest Element in an Array (Medium)](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
+
+**æ’åº** ï¼šæ—¶é—´å¤æ‚åº¦ O(NlogN)ï¼Œç©ºé—´å¤æ‚åº¦ O(1)
+
+```java
+public int findKthLargest(int[] nums, int k) {
+    Arrays.sort(nums);
+    return nums[nums.length - k];
+}
+```
+
+**å †æ’åº** ï¼šæ—¶é—´å¤æ‚åº¦ O(NlogK)ï¼Œç©ºé—´å¤æ‚åº¦ O(K)ã€‚
+
+```java
+public int findKthLargest(int[] nums, int k) {
+    PriorityQueue<Integer> pq = new PriorityQueue<>(); // å°é¡¶å †
+    for (int val : nums) {
+        pq.add(val);
+        if (pq.size() > k) // ç»´æŠ¤å †çš„å¤§å°ä¸º K
+            pq.poll();
+    }
+    return pq.peek();
+}
+```
+
+**å¿«é€Ÿé€‰æ‹©** ï¼šæ—¶é—´å¤æ‚åº¦ O(N)ï¼Œç©ºé—´å¤æ‚åº¦ O(1)
+
+```java
+public int findKthLargest(int[] nums, int k) {
+    k = nums.length - k;
     int l = 0, h = nums.length - 1;
-    while(l < h) {
-        int m = l + (h - l) / 2;
-        if(m % 2 == 1) m--; // ±£Ö¤ l/h/m ¶¼ÔÚÅ¼ÊıÎ»£¬Ê¹µÃ²éÕÒÇø¼ä´óĞ¡Ò»Ö±¶¼ÊÇÆæÊı
-        if(nums[m] == nums[m + 1]) l = m + 2;
-        else h = m;
+    while (l < h) {
+        int j = partition(nums, l, h);
+        if (j == k) {
+            break;
+        } else if (j < k) {
+            l = j + 1;
+        } else {
+            h = j - 1;
+        }
     }
-    return nums[l];
+    return nums[k];
+}
+
+private int partition(int[] a, int l, int h) {
+    int i = l, j = h + 1;
+    while (true) {
+        while (a[++i] < a[l] && i < h) ;
+        while (a[--j] > a[l] && j > l) ;
+        if (i >= j) {
+            break;
+        }
+        swap(a, i, j);
+    }
+    swap(a, l, j);
+    return j;
+}
+
+private void swap(int[] a, int i, int j) {
+    int t = a[i];
+    a[i] = a[j];
+    a[j] = t;
 }
 ```
 
-## Ì°ĞÄË¼Ïë
+### æ¡¶æ’åº
 
-Ì°ĞÄË¼Ïë±£Ö¤Ã¿´Î²Ù×÷¶¼ÊÇ¾Ö²¿×îÓÅµÄ£¬²¢ÇÒ×îºóµÃµ½µÄ½á¹ûÊÇÈ«¾Ö×îÓÅµÄ¡£
+**å‡ºç°é¢‘ç‡æœ€å¤šçš„ k ä¸ªæ•°** 
 
-**·ÖÅä±ı¸É**
+[347. Top K Frequent Elements (Medium)](https://leetcode.com/problems/top-k-frequent-elements/description/)
 
-[Leetcode : 455. Assign Cookies (Easy)](https://leetcode.com/problems/assign-cookies/description/)
+```html
+Given [1,1,1,2,2,3] and k = 2, return [1,2].
+```
 
-ÌâÄ¿ÃèÊö£ºÃ¿¸öº¢×Ó¶¼ÓĞÒ»¸öÂú×ã¶È£¬Ã¿¸ö±ı¸É¶¼ÓĞÒ»¸ö´óĞ¡£¬Ö»ÓĞ±ı¸ÉµÄ´óĞ¡´óÓÚÒ»¸öº¢×ÓµÄÂú×ã¶È£¬¸Ãº¢×Ó²Å»á»ñµÃÂú×ã¡£Çó½â×î¶à¿ÉÒÔ»ñµÃÂú×ãµÄº¢×ÓÊıÁ¿¡£
+è®¾ç½®è‹¥å¹²ä¸ªæ¡¶ï¼Œæ¯ä¸ªæ¡¶å­˜å‚¨å‡ºç°é¢‘ç‡ç›¸åŒçš„æ•°ï¼Œå¹¶ä¸”æ¡¶çš„ä¸‹æ ‡ä»£è¡¨æ¡¶ä¸­æ•°å‡ºç°çš„é¢‘ç‡ï¼Œå³ç¬¬ i ä¸ªæ¡¶ä¸­å­˜å‚¨çš„æ•°å‡ºç°çš„é¢‘ç‡ä¸º iã€‚
 
-ÒòÎª×îĞ¡µÄº¢×Ó×îÈİÒ×µÃµ½Âú×ã£¬Òò´ËÏÈÂú×ã×îĞ¡º¢×Ó¡£¸øÒ»¸öº¢×ÓµÄ±ı¸ÉÓ¦µ±¾¡Á¿Ğ¡ÓÖÄÜÂú×ã¸Ãº¢×Ó£¬ÕâÑù´ó±ı¸É¾ÍÄÜÄÃÀ´¸øÂú×ã¶È±È½Ï´óµÄº¢×Ó¡£
+æŠŠæ•°éƒ½æ”¾åˆ°æ¡¶ä¹‹åï¼Œä»åå‘å‰éå†æ¡¶ï¼Œæœ€å…ˆå¾—åˆ°çš„ k ä¸ªæ•°å°±æ˜¯å‡ºç°é¢‘ç‡æœ€å¤šçš„çš„ k ä¸ªæ•°ã€‚
 
-Ö¤Ã÷£º¼ÙÉèÔÚÄ³´ÎÑ¡ÔñÖĞ£¬Ì°ĞÄ²ßÂÔÑ¡Ôñ¸øµÚ i ¸öº¢×Ó·ÖÅäµÚ m ¸ö±ı¸É£¬²¢ÇÒµÚ i ¸öº¢×ÓÂú×ã¶È×îĞ¡£¬µÚ m ¸ö±ı¸ÉÎª¿ÉÒÔÂú×ãµÚ i ¸öº¢×ÓµÄ×îĞ¡±ı¸É£¬ÀûÓÃÌ°ĞÄ²ßÂÔ×îÖÕ¿ÉÒÔÂú×ã k ¸öº¢×Ó¡£¼ÙÉè×îÓÅ²ßÂÔÔÚÕâ´ÎÑ¡ÔñÖĞ¸ø i ¸öº¢×Ó·ÖÅäµÚ n ¸ö±ı¸É£¬²¢ÇÒÕâ¸ö±ı¸É´óÓÚµÚ m ¸ö±ı¸É¡£ÎÒÃÇ·¢ÏÖÊ¹ÓÃµÚ m ¸ö±ı¸ÉÈ¥Ìæ´úµÚ n ¸ö±ı¸ÉÍêÈ«²»Ó°ÏìºóĞøµÄ½á¹û£¬Òò´Ë²»´æÔÚ±ÈÌ°ĞÄ²ßÂÔ¸üÓÅµÄ²ßÂÔ£¬¼´Ì°ĞÄ²ßÂÔ¾ÍÊÇ×îÓÅ²ßÂÔ¡£
+```java
+public List<Integer> topKFrequent(int[] nums, int k) {
+    Map<Integer, Integer> frequencyForNum = new HashMap<>();
+    for (int num : nums) {
+        frequencyForNum.put(num, frequencyForNum.getOrDefault(num, 0) + 1);
+    }
+    List<Integer>[] buckets = new ArrayList[nums.length + 1];
+    for (int key : frequencyForNum.keySet()) {
+        int frequency = frequencyForNum.get(key);
+        if (buckets[frequency] == null) {
+            buckets[frequency] = new ArrayList<>();
+        }
+        buckets[frequency].add(key);
+    }
+    List<Integer> topK = new ArrayList<>();
+    for (int i = buckets.length - 1; i >= 0 && topK.size() < k; i--) {
+        if (buckets[i] != null) {
+            topK.addAll(buckets[i]);
+        }
+    }
+    return topK;
+}
+```
+
+**æŒ‰ç…§å­—ç¬¦å‡ºç°æ¬¡æ•°å¯¹å­—ç¬¦ä¸²æ’åº** 
+
+[451. Sort Characters By Frequency (Medium)](https://leetcode.com/problems/sort-characters-by-frequency/description/)
+
+```html
+Input:
+"tree"
+
+Output:
+"eert"
+
+Explanation:
+'e' appears twice while 'r' and 't' both appear once.
+So 'e' must appear before both 'r' and 't'. Therefore "eetr" is also a valid answer.
+```
+
+```java
+public String frequencySort(String s) {
+    Map<Character, Integer> frequencyForNum = new HashMap<>();
+    for (char c : s.toCharArray())
+        frequencyForNum.put(c, frequencyForNum.getOrDefault(c, 0) + 1);
+
+    List<Character>[] frequencyBucket = new ArrayList[s.length() + 1];
+    for (char c : frequencyForNum.keySet()) {
+        int f = frequencyForNum.get(c);
+        if (frequencyBucket[f] == null) {
+            frequencyBucket[f] = new ArrayList<>();
+        }
+        frequencyBucket[f].add(c);
+    }
+    StringBuilder str = new StringBuilder();
+    for (int i = frequencyBucket.length - 1; i >= 0; i--) {
+        if (frequencyBucket[i] == null) {
+            continue;
+        }
+        for (char c : frequencyBucket[i]) {
+            for (int j = 0; j < i; j++) {
+                str.append(c);
+            }
+        }
+    }
+    return str.toString();
+}
+```
+
+### è·å…°å›½æ——é—®é¢˜
+
+è·å…°å›½æ——åŒ…å«ä¸‰ç§é¢œè‰²ï¼šçº¢ã€ç™½ã€è“ã€‚
+
+æœ‰ä¸‰ç§é¢œè‰²çš„çƒï¼Œç®—æ³•çš„ç›®æ ‡æ˜¯å°†è¿™ä¸‰ç§çƒæŒ‰é¢œè‰²é¡ºåºæ­£ç¡®åœ°æ’åˆ—ã€‚
+
+å®ƒå…¶å®æ˜¯ä¸‰å‘åˆ‡åˆ†å¿«é€Ÿæ’åºçš„ä¸€ç§å˜ç§ï¼Œåœ¨ä¸‰å‘åˆ‡åˆ†å¿«é€Ÿæ’åºä¸­ï¼Œæ¯æ¬¡åˆ‡åˆ†éƒ½å°†æ•°ç»„åˆ†æˆä¸‰ä¸ªåŒºé—´ï¼šå°äºåˆ‡åˆ†å…ƒç´ ã€ç­‰äºåˆ‡åˆ†å…ƒç´ ã€å¤§äºåˆ‡åˆ†å…ƒç´ ï¼Œè€Œè¯¥ç®—æ³•æ˜¯å°†æ•°ç»„åˆ†æˆä¸‰ä¸ªåŒºé—´ï¼šç­‰äºçº¢è‰²ã€ç­‰äºç™½è‰²ã€ç­‰äºè“è‰²ã€‚
+
+<div align="center"> <img src="../pics//3b49dd67-2c40-4b81-8ad2-7bbb1fe2fcbd.png"/> </div><br>
+
+**æŒ‰é¢œè‰²è¿›è¡Œæ’åº** 
+
+[75. Sort Colors (Medium)](https://leetcode.com/problems/sort-colors/description/)
+
+```html
+Input: [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+```
+
+é¢˜ç›®æè¿°ï¼šåªæœ‰ 0/1/2 ä¸‰ç§é¢œè‰²ã€‚
+
+```java
+public void sortColors(int[] nums) {
+    int zero = -1, one = 0, two = nums.length;
+    while (one < two) {
+        if (nums[one] == 0) {
+            swap(nums, ++zero, one++);
+        } else if (nums[one] == 2) {
+            swap(nums, --two, one);
+        } else {
+            ++one;
+        }
+    }
+}
+
+private void swap(int[] nums, int i, int j) {
+    int t = nums[i];
+    nums[i] = nums[j];
+    nums[j] = t;
+}
+```
+
+## è´ªå¿ƒæ€æƒ³
+
+ä¿è¯æ¯æ¬¡æ“ä½œéƒ½æ˜¯å±€éƒ¨æœ€ä¼˜çš„ï¼Œå¹¶ä¸”æœ€åå¾—åˆ°çš„ç»“æœæ˜¯å…¨å±€æœ€ä¼˜çš„ã€‚
+
+**åˆ†é…é¥¼å¹²** 
+
+[455. Assign Cookies (Easy)](https://leetcode.com/problems/assign-cookies/description/)
+
+```html
+Input: [1,2], [1,2,3]
+Output: 2
+
+Explanation: You have 2 children and 3 cookies. The greed factors of 2 children are 1, 2.
+You have 3 cookies and their sizes are big enough to gratify all of the children,
+You need to output 2.
+```
+
+é¢˜ç›®æè¿°ï¼šæ¯ä¸ªå­©å­éƒ½æœ‰ä¸€ä¸ªæ»¡è¶³åº¦ï¼Œæ¯ä¸ªé¥¼å¹²éƒ½æœ‰ä¸€ä¸ªå¤§å°ï¼Œåªæœ‰é¥¼å¹²çš„å¤§å°å¤§äºç­‰äºä¸€ä¸ªå­©å­çš„æ»¡è¶³åº¦ï¼Œè¯¥å­©å­æ‰ä¼šè·å¾—æ»¡è¶³ã€‚æ±‚è§£æœ€å¤šå¯ä»¥è·å¾—æ»¡è¶³çš„å­©å­æ•°é‡ã€‚
+
+ç»™ä¸€ä¸ªå­©å­çš„é¥¼å¹²åº”å½“å°½é‡å°åˆèƒ½æ»¡è¶³è¯¥å­©å­ï¼Œè¿™æ ·å¤§é¥¼å¹²å°±èƒ½æ‹¿æ¥ç»™æ»¡è¶³åº¦æ¯”è¾ƒå¤§çš„å­©å­ã€‚å› ä¸ºæœ€å°çš„å­©å­æœ€å®¹æ˜“å¾—åˆ°æ»¡è¶³ï¼Œæ‰€ä»¥å…ˆæ»¡è¶³æœ€å°çš„å­©å­ã€‚
+
+è¯æ˜ï¼šå‡è®¾åœ¨æŸæ¬¡é€‰æ‹©ä¸­ï¼Œè´ªå¿ƒç­–ç•¥é€‰æ‹©ç»™å½“å‰æ»¡è¶³åº¦æœ€å°çš„å­©å­åˆ†é…ç¬¬ m ä¸ªé¥¼å¹²ï¼Œç¬¬ m ä¸ªé¥¼å¹²ä¸ºå¯ä»¥æ»¡è¶³è¯¥å­©å­çš„æœ€å°é¥¼å¹²ã€‚å‡è®¾å­˜åœ¨ä¸€ç§æœ€ä¼˜ç­–ç•¥ï¼Œç»™è¯¥å­©å­åˆ†é…ç¬¬ n ä¸ªé¥¼å¹²ï¼Œå¹¶ä¸” m < nã€‚æˆ‘ä»¬å¯ä»¥å‘ç°ï¼Œç»è¿‡è¿™ä¸€è½®åˆ†é…ï¼Œè´ªå¿ƒç­–ç•¥åˆ†é…åå‰©ä¸‹çš„é¥¼å¹²ä¸€å®šæœ‰ä¸€ä¸ªæ¯”æœ€ä¼˜ç­–ç•¥æ¥å¾—å¤§ã€‚å› æ­¤åœ¨åç»­çš„åˆ†é…ä¸­ï¼Œè´ªå¿ƒç­–ç•¥ä¸€å®šèƒ½æ»¡è¶³æ›´å¤šçš„å­©å­ã€‚ä¹Ÿå°±æ˜¯è¯´ä¸å­˜åœ¨æ¯”è´ªå¿ƒç­–ç•¥æ›´ä¼˜çš„ç­–ç•¥ï¼Œå³è´ªå¿ƒç­–ç•¥å°±æ˜¯æœ€ä¼˜ç­–ç•¥ã€‚
 
 ```java
 public int findContentChildren(int[] g, int[] s) {
     Arrays.sort(g);
     Arrays.sort(s);
-    int i = 0, j = 0;
-    while(i < g.length && j < s.length){
-        if(g[i] <= s[j]) i++;
-        j++;
+    int gi = 0, si = 0;
+    while (gi < g.length && si < s.length) {
+        if (g[gi] <= s[si]) {
+            gi++;
+        }
+        si++;
     }
-    return i;
+    return gi;
 }
 ```
 
-**Í¶·ÉïÚ´ÌÆÆÆøÇò**
+**ä¸é‡å çš„åŒºé—´ä¸ªæ•°** 
 
-[Leetcode : 452. Minimum Number of Arrows to Burst Balloons (Medium)](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/)
+[435. Non-overlapping Intervals (Medium)](https://leetcode.com/problems/non-overlapping-intervals/description/)
+
+```html
+Input: [ [1,2], [1,2], [1,2] ]
+
+Output: 2
+
+Explanation: You need to remove two [1,2] to make the rest of intervals non-overlapping.
+```
+
+```html
+Input: [ [1,2], [2,3] ]
+
+Output: 0
+
+Explanation: You don't need to remove any of the intervals since they're already non-overlapping.
+```
+
+é¢˜ç›®æè¿°ï¼šè®¡ç®—è®©ä¸€ç»„åŒºé—´ä¸é‡å æ‰€éœ€è¦ç§»é™¤çš„åŒºé—´ä¸ªæ•°ã€‚
+
+è®¡ç®—æœ€å¤šèƒ½ç»„æˆçš„ä¸é‡å åŒºé—´ä¸ªæ•°ï¼Œç„¶åç”¨åŒºé—´æ€»ä¸ªæ•°å‡å»ä¸é‡å åŒºé—´çš„ä¸ªæ•°ã€‚
+
+åœ¨æ¯æ¬¡é€‰æ‹©ä¸­ï¼ŒåŒºé—´çš„ç»“å°¾æœ€ä¸ºé‡è¦ï¼Œé€‰æ‹©çš„åŒºé—´ç»“å°¾è¶Šå°ï¼Œç•™ç»™åé¢çš„åŒºé—´çš„ç©ºé—´è¶Šå¤§ï¼Œé‚£ä¹ˆåé¢èƒ½å¤Ÿé€‰æ‹©çš„åŒºé—´ä¸ªæ•°ä¹Ÿå°±è¶Šå¤§ã€‚
+
+æŒ‰åŒºé—´çš„ç»“å°¾è¿›è¡Œæ’åºï¼Œæ¯æ¬¡é€‰æ‹©ç»“å°¾æœ€å°ï¼Œå¹¶ä¸”å’Œå‰ä¸€ä¸ªåŒºé—´ä¸é‡å çš„åŒºé—´ã€‚
+
+```java
+public int eraseOverlapIntervals(Interval[] intervals) {
+    if (intervals.length == 0) {
+        return 0;
+    }
+    Arrays.sort(intervals, Comparator.comparingInt(o -> o.end));
+    int cnt = 1;
+    int end = intervals[0].end;
+    for (int i = 1; i < intervals.length; i++) {
+        if (intervals[i].start < end) {
+            continue;
+        }
+        end = intervals[i].end;
+        cnt++;
+    }
+    return intervals.length - cnt;
+}
+```
+
+ä½¿ç”¨ lambda è¡¨ç¤ºå¼åˆ›å»º Comparator ä¼šå¯¼è‡´ç®—æ³•è¿è¡Œæ—¶é—´è¿‡é•¿ï¼Œå¦‚æœæ³¨é‡è¿è¡Œæ—¶é—´ï¼Œå¯ä»¥ä¿®æ”¹ä¸ºæ™®é€šåˆ›å»º Comparator è¯­å¥ï¼š
+
+```java
+Arrays.sort(intervals, new Comparator<Interval>() {
+    @Override
+    public int compare(Interval o1, Interval o2) {
+        return o1.end - o2.end;
+    }
+});
+```
+
+**æŠ•é£é•–åˆºç ´æ°”çƒ** 
+
+[452. Minimum Number of Arrows to Burst Balloons (Medium)](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/)
 
 ```
 Input:
@@ -201,121 +603,65 @@ Output:
 2
 ```
 
-ÌâÄ¿ÃèÊö£ºÆøÇòÔÚÒ»¸öË®Æ½ÊıÖáÉÏ°Ú·Å£¬¿ÉÒÔÖØµş£¬·ÉïÚ´¹Ö±ÉäÏò×ø±êÖá£¬Ê¹µÃÂ·¾¶ÉÏµÄÆøÇò¶¼»á´ÌÆÆ¡£Çó½â×îĞ¡µÄÍ¶·ÉïÚ´ÎÊıÊ¹ËùÓĞÆøÇò¶¼±»´ÌÆÆ¡£
+é¢˜ç›®æè¿°ï¼šæ°”çƒåœ¨ä¸€ä¸ªæ°´å¹³æ•°è½´ä¸Šæ‘†æ”¾ï¼Œå¯ä»¥é‡å ï¼Œé£é•–å‚ç›´æŠ•å‘åæ ‡è½´ï¼Œä½¿å¾—è·¯å¾„ä¸Šçš„æ°”çƒéƒ½ä¼šåˆºç ´ã€‚æ±‚è§£æœ€å°çš„æŠ•é£é•–æ¬¡æ•°ä½¿æ‰€æœ‰æ°”çƒéƒ½è¢«åˆºç ´ã€‚
 
-´Ó×óÍùÓÒÍ¶·ÉïÚ£¬²¢ÇÒÔÚÃ¿´ÎÍ¶·ÉïÚÊ±Âú×ãÒÔÏÂÌõ¼ş£º
-
-1. ×ó±ßÒÑ¾­Ã»ÓĞÆøÇòÁË£»
-2. ±¾´ÎÍ¶·ÉïÚÄÜ¹»´ÌÆÆ×î¶àµÄÆøÇò¡£
+ä¹Ÿæ˜¯è®¡ç®—ä¸é‡å çš„åŒºé—´ä¸ªæ•°ï¼Œä¸è¿‡å’Œ Non-overlapping Intervals çš„åŒºåˆ«åœ¨äºï¼Œ[1, 2] å’Œ [2, 3] åœ¨æœ¬é¢˜ä¸­ç®—æ˜¯é‡å åŒºé—´ã€‚
 
 ```java
 public int findMinArrowShots(int[][] points) {
-    if(points.length == 0) return 0;
-    Arrays.sort(points,(a,b) -> (a[1] - b[1]));
-    int curPos = points[0][1];
-    int ret = 1;
+    if (points.length == 0) {
+        return 0;
+    }
+    Arrays.sort(points, Comparator.comparingInt(o -> o[1]));
+    int cnt = 1, end = points[0][1];
     for (int i = 1; i < points.length; i++) {
-        if(points[i][0] <= curPos) {
+        if (points[i][0] <= end) {
             continue;
         }
-        curPos = points[i][1];
-        ret++;
+        cnt++;
+        end = points[i][1];
     }
-    return ret;
- }
-```
-
-**¹ÉÆ±µÄ×î´óÊÕÒæ**
-
-[Leetcode : 122. Best Time to Buy and Sell Stock II (Easy)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/)
-
-ÌâÄ¿ÃèÊö£ºÒ»´Î½»Ò×°üº¬ÂòÈëºÍÂô³ö£¬¶à¸ö½»Ò×Ö®¼ä²»ÄÜ½»²æ½øĞĞ¡£
-
-¶ÔÓÚ [a, b, c, d]£¬Èç¹ûÓĞ a <= b <= c <= d £¬ÄÇÃ´×î´óÊÕÒæÎª d - a¡£¶ø d - a = (d - c) + (c - b) + (b - a) £¬Òò´Ëµ±·ÃÎÊµ½Ò»¸ö prices[i] ÇÒ prices[i] - prices[i-1] > 0£¬ÄÇÃ´¾Í°Ñ prices[i] - prices[i-1] Ìí¼Ó¼Óµ½ÊÕÒæÖĞ£¬´Ó¶øÔÚ¾Ö²¿×îÓÅµÄÇé¿öÏÂÒ²±£Ö¤È«¾Ö×îÓÅ¡£
-
-```java
-public int maxProfit(int[] prices) {
-    int profit = 0;
-    for(int i = 1; i < prices.length; i++){
-        if(prices[i] > prices[i-1]) profit += (prices[i] - prices[i-1]);
-    }
-    return profit;
+    return cnt;
 }
 ```
 
-**ÖÖÖ²»¨¶ä**
+**æ ¹æ®èº«é«˜å’Œåºå·é‡ç»„é˜Ÿåˆ—** 
 
-[Leetcode : 605. Can Place Flowers (Easy)](https://leetcode.com/problems/can-place-flowers/description/)
+[406. Queue Reconstruction by Height(Medium)](https://leetcode.com/problems/queue-reconstruction-by-height/description/)
 
 ```html
-Input: flowerbed = [1,0,0,0,1], n = 1
-Output: True
+Input:
+[[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]
+
+Output:
+[[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]
 ```
 
-ÌâÄ¿ÃèÊö£º»¨¶äÖ®¼äÖÁÉÙĞèÒªÒ»¸öµ¥Î»µÄ¼ä¸ô¡£
+é¢˜ç›®æè¿°ï¼šä¸€ä¸ªå­¦ç”Ÿç”¨ä¸¤ä¸ªåˆ†é‡ (h, k) æè¿°ï¼Œh è¡¨ç¤ºèº«é«˜ï¼Œk è¡¨ç¤ºæ’åœ¨å‰é¢çš„æœ‰ k ä¸ªå­¦ç”Ÿçš„èº«é«˜æ¯”ä»–é«˜æˆ–è€…å’Œä»–ä¸€æ ·é«˜ã€‚
+
+ä¸ºäº†åœ¨æ¯æ¬¡æ’å…¥æ“ä½œæ—¶ä¸å½±å“åç»­çš„æ“ä½œï¼Œèº«é«˜è¾ƒé«˜çš„å­¦ç”Ÿåº”è¯¥å…ˆåšæ’å…¥æ“ä½œï¼Œå¦åˆ™èº«é«˜è¾ƒå°çš„å­¦ç”ŸåŸå…ˆæ­£ç¡®æ’å…¥ç¬¬ k ä¸ªä½ç½®å¯èƒ½ä¼šå˜æˆç¬¬ k+1 ä¸ªä½ç½®ã€‚
+
+èº«é«˜é™åºã€k å€¼å‡åºï¼Œç„¶åæŒ‰æ’å¥½åºçš„é¡ºåºæ’å…¥é˜Ÿåˆ—çš„ç¬¬ k ä¸ªä½ç½®ä¸­ã€‚
 
 ```java
-public boolean canPlaceFlowers(int[] flowerbed, int n) {
-    int cnt = 0;
-    for(int i = 0; i < flowerbed.length; i++){
-        if(flowerbed[i] == 1) continue;
-        int pre = i == 0 ? 0 : flowerbed[i - 1];
-        int next = i == flowerbed.length - 1 ? 0 : flowerbed[i + 1];
-        if(pre == 0 && next == 0) {
-            cnt++;
-            flowerbed[i] = 1;
-        }
+public int[][] reconstructQueue(int[][] people) {
+    if (people == null || people.length == 0 || people[0].length == 0) {
+        return new int[0][0];
     }
-    return cnt >= n;
+    Arrays.sort(people, (a, b) -> (a[0] == b[0] ? a[1] - b[1] : b[0] - a[0]));
+    List<int[]> queue = new ArrayList<>();
+    for (int[] p : people) {
+        queue.add(p[1], p);
+    }
+    return queue.toArray(new int[queue.size()][]);
 }
 ```
 
-**ĞŞ¸ÄÒ»¸öÊı³ÉÎª·Çµİ¼õÊı×é**
+**åˆ†éš”å­—ç¬¦ä¸²ä½¿åŒç§å­—ç¬¦å‡ºç°åœ¨ä¸€èµ·** 
 
-[Leetcode : 665. Non-decreasing Array (Easy)](https://leetcode.com/problems/non-decreasing-array/description/)
-
-ÌâÄ¿ÃèÊö£ºÅĞ¶ÏÒ»¸öÊı×éÄÜ²»ÄÜÖ»ĞŞ¸ÄÒ»¸öÊı¾Í³ÉÎª·Çµİ¼õÊı×é¡£
-
-ÔÚ³öÏÖ nums[i] < nums[i - 1] Ê±£¬ĞèÒª¿¼ÂÇµÄÊÇÓ¦¸ÃĞŞ¸ÄÊı×éµÄÄÄ¸öÊı£¬Ê¹µÃ±¾´ÎĞŞ¸ÄÄÜÊ¹ i Ö®Ç°µÄÊı×é³ÉÎª·Çµİ¼õÊı×é£¬²¢ÇÒ **²»Ó°ÏìºóĞøµÄ²Ù×÷**¡£ÓÅÏÈ¿¼ÂÇÁî nums[i - 1] = nums[i]£¬ÒòÎªÈç¹ûĞŞ¸Ä nums[i] = nums[i - 1] µÄ»°£¬ÄÇÃ´ nums[i] Õâ¸öÊı»á±ä´ó£¬ÄÇÃ´¾ÍÓĞ¿ÉÄÜ±È nums[i + 1] ´ó£¬´Ó¶øÓ°ÏìÁËºóĞø²Ù×÷¡£»¹ÓĞÒ»¸ö±È½ÏÌØ±ğµÄÇé¿ö¾ÍÊÇ nums[i] < nums[i - 2]£¬Ö»ĞŞ¸Ä nums[i - 1] = nums[i] ²»ÄÜÁîÊı×é³ÉÎª·Çµİ¼õ£¬Ö»ÄÜÍ¨¹ıĞŞ¸Ä nums[i] = nums[i - 1] ²ÅĞĞ¡£
-
-```java
-public boolean checkPossibility(int[] nums) {
-    int cnt = 0;
-    for(int i = 1; i < nums.length; i++){
-        if(nums[i] < nums[i - 1]){
-            cnt++;
-            if(i - 2 >= 0 && nums[i - 2] > nums[i]) nums[i] = nums[i-1];
-            else nums[i - 1] = nums[i];
-        }
-    }
-    return cnt <= 1;
-}
-```
-
-**ÅĞ¶ÏÊÇ·ñÎª×Ó´®**
-
-[Leetcode : 392. Is Subsequence (Medium)](https://leetcode.com/problems/is-subsequence/description/)
+[763. Partition Labels (Medium)](https://leetcode.com/problems/partition-labels/description/)
 
 ```html
-s = "abc", t = "ahbgdc"
-Return true.
-```
-
-```java
-public boolean isSubsequence(String s, String t) {
-    for (int i = 0, pos = 0; i < s.length(); i++, pos++) {
-        pos = t.indexOf(s.charAt(i), pos);
-        if(pos == -1) return false;
-    }
-    return true;
-}
-```
-
-**·Ö¸ô×Ö·û´®Ê¹Í¬ÖÖ×Ö·û³öÏÖÔÚÒ»Æğ**
-
-[Leetcode : 763. Partition Labels (Medium)](https://leetcode.com/problems/partition-labels/description/)
-
-```java
 Input: S = "ababcbacadefegdehijhklij"
 Output: [9,7,8]
 Explanation:
@@ -326,479 +672,807 @@ A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits 
 
 ```java
 public List<Integer> partitionLabels(String S) {
-    List<Integer> ret = new ArrayList<>();
-    int[] lastIdxs = new int[26];
-    for(int i = 0; i < S.length(); i++) lastIdxs[S.charAt(i) - 'a'] = i;
-    int startIdx = 0;
-    while(startIdx < S.length()) {
-        int endIdx = startIdx;
-        for(int i = startIdx; i < S.length() && i <= endIdx; i++) {
-            int lastIdx = lastIdxs[S.charAt(i) - 'a'];
-            if(lastIdx == i) continue;
-            if(lastIdx > endIdx) endIdx = lastIdx;
-        }
-        ret.add(endIdx - startIdx + 1);
-        startIdx = endIdx + 1;
+    int[] lastIndexsOfChar = new int[26];
+    for (int i = 0; i < S.length(); i++) {
+        lastIndexsOfChar[char2Index(S.charAt(i))] = i;
     }
-    return ret;
+    List<Integer> partitions = new ArrayList<>();
+    int firstIndex = 0;
+    while (firstIndex < S.length()) {
+        int lastIndex = firstIndex;
+        for (int i = firstIndex; i < S.length() && i <= lastIndex; i++) {
+            int index = lastIndexsOfChar[char2Index(S.charAt(i))];
+            if (index > lastIndex) {
+                lastIndex = index;
+            }
+        }
+        partitions.add(lastIndex - firstIndex + 1);
+        firstIndex = lastIndex + 1;
+    }
+    return partitions;
+}
+
+private int char2Index(char c) {
+    return c - 'a';
 }
 ```
 
-**¸ù¾İÉí¸ßºÍĞòºÅÖØ×é¶ÓÁĞ**
 
-[Leetcode : 406. Queue Reconstruction by Height(Medium)](https://leetcode.com/problems/queue-reconstruction-by-height/description/)
+**ç§æ¤èŠ±æœµ** 
+
+[605. Can Place Flowers (Easy)](https://leetcode.com/problems/can-place-flowers/description/)
 
 ```html
-Input:
-[[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]
-
-Output:
-[[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]
+Input: flowerbed = [1,0,0,0,1], n = 1
+Output: True
 ```
 
-ÌâÄ¿ÃèÊö£ºÒ»¸öÑ§ÉúÓÃÁ½¸ö·ÖÁ¿ (h, k) ÃèÊö£¬h ±íÊ¾Éí¸ß£¬k ±íÊ¾ÅÅÔÚÇ°ÃæµÄÓĞ k ¸öÑ§ÉúµÄÉí¸ß±ÈËû¸ß»òÕßºÍËûÒ»Ñù¸ß¡£
-
-ÎªÁËÔÚÃ¿´Î²åÈë²Ù×÷Ê±²»Ó°ÏìºóĞøµÄ²Ù×÷£¬Éí¸ß½Ï¸ßµÄÑ§ÉúÓ¦¸ÃÏÈ×ö²åÈë²Ù×÷£¬·ñÔòÉí¸ß½ÏĞ¡µÄÑ§ÉúÔ­ÏÈÕıÈ·²åÈëµÚ k ¸öÎ»ÖÃ¿ÉÄÜ»á±ä³ÉµÚ k+1 ¸öÎ»ÖÃ¡£
-
-Éí¸ß½µĞò¡¢k ÖµÉıĞò£¬È»ºó°´ÅÅºÃĞòµÄË³Ğò²åÈë¶ÓÁĞµÄµÚ k ¸öÎ»ÖÃÖĞ¡£
+é¢˜ç›®æè¿°ï¼šèŠ±æœµä¹‹é—´è‡³å°‘éœ€è¦ä¸€ä¸ªå•ä½çš„é—´éš”ï¼Œæ±‚è§£æ˜¯å¦èƒ½ç§ä¸‹ n æœµèŠ±ã€‚
 
 ```java
-public int[][] reconstructQueue(int[][] people) {
-    if(people == null || people.length == 0 || people[0].length == 0) return new int[0][0];
-
-    Arrays.sort(people, new Comparator<int[]>() {
-       public int compare(int[] a, int[] b) {
-           if(a[0] == b[0]) return a[1] - b[1];
-           return b[0] - a[0];
-       }
-    });
-    
-    int n = people.length;
-    List<int[]> tmp = new ArrayList<>();
-    for(int i = 0; i < n; i++) {
-        tmp.add(people[i][1], new int[]{people[i][0], people[i][1]});
-    }
-    
-    int[][] ret = new int[n][2];
-    for(int i = 0; i < n; i++) {
-        ret[i][0] = tmp.get(i)[0];
-        ret[i][1] = tmp.get(i)[1];
-    }
-    return ret;
-}
-```
-
-## Ë«Ö¸Õë
-
-Ë«Ö¸ÕëÖ÷ÒªÓÃÓÚ±éÀúÊı×é£¬Á½¸öÖ¸ÕëÖ¸Ïò²»Í¬µÄÔªËØ£¬´Ó¶øĞ­Í¬Íê³ÉÈÎÎñ¡£
-
-**´ÓÒ»¸öÒÑ¾­ÅÅĞòµÄÊı×éÖĞ²éÕÒ³öÁ½¸öÊı£¬Ê¹ËüÃÇµÄºÍÎª 0**
-
-[Leetcode £º167. Two Sum II - Input array is sorted (Easy)](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
-
-Ê¹ÓÃË«Ö¸Õë£¬Ò»¸öÖ¸ÕëÖ¸ÏòÔªËØ½ÏĞ¡µÄÖµ£¬Ò»¸öÖ¸ÕëÖ¸ÏòÔªËØ½Ï´óµÄÖµ¡£Ö¸Ïò½ÏĞ¡ÔªËØµÄÖ¸Õë´ÓÍ·ÏòÎ²±éÀú£¬Ö¸Ïò½Ï´óÔªËØµÄÖ¸Õë´ÓÎ²ÏòÍ·±éÀú¡£
-
-Èç¹ûÁ½¸öÖ¸ÕëÖ¸ÏòÔªËØµÄºÍ sum == target£¬ÄÇÃ´µÃµ½ÒªÇóµÄ½á¹û£»Èç¹û sum > target£¬ÒÆ¶¯½Ï´óµÄÔªËØ£¬Ê¹ sum ±äĞ¡Ò»Ğ©£»Èç¹û sum < target£¬ÒÆ¶¯½ÏĞ¡µÄÔªËØ£¬Ê¹ sum ±ä´óÒ»Ğ©¡£
-
-```java
-public int[] twoSum(int[] numbers, int target) {
-    int i = 0, j = numbers.length - 1;
-    while (i < j) {
-        int sum = numbers[i] + numbers[j];
-        if (sum == target) return new int[]{i + 1, j + 1};
-        else if (sum < target) i++;
-        else j--;
-    }
-    return null;
-}
-```
-
-**·´×ª×Ö·û´®ÖĞµÄÔªÒô×Ö·û**
-
-[Leetcode : 345. Reverse Vowels of a String (Easy)](https://leetcode.com/problems/reverse-vowels-of-a-string/description/)
-
-Ê¹ÓÃË«Ö¸Õë£¬Ö¸Ïò´ı·´×ªµÄÁ½¸öÔªÒô×Ö·û£¬Ò»¸öÖ¸Õë´ÓÍ·ÏòÎ²±éÀú£¬Ò»¸öÖ¸Õë´ÓÎ²µ½Í·±éÀú¡£
-
-```java
-private HashSet<Character> vowels = new HashSet<>(Arrays.asList('a','e','i','o','u','A','E','I','O','U'));
-
-public String reverseVowels(String s) {
-    if(s.length() == 0) return s;
-    int i = 0, j = s.length() - 1;
-    char[] result = new char[s.length()];
-    while(i <= j){
-        char ci = s.charAt(i);
-        char cj = s.charAt(j);
-        if(!vowels.contains(ci)){
-            result[i] = ci;
-            i++;
-        } else if(!vowels.contains(cj)){
-            result[j] = cj;
-            j--;
-        } else{
-            result[i] = cj;
-            result[j] = ci;
-            i++;
-            j--;
+public boolean canPlaceFlowers(int[] flowerbed, int n) {
+    int len = flowerbed.length;
+    int cnt = 0;
+    for (int i = 0; i < len && cnt < n; i++) {
+        if (flowerbed[i] == 1) {
+            continue;
+        }
+        int pre = i == 0 ? 0 : flowerbed[i - 1];
+        int next = i == len - 1 ? 0 : flowerbed[i + 1];
+        if (pre == 0 && next == 0) {
+            cnt++;
+            flowerbed[i] = 1;
         }
     }
-    return new String(result);
+    return cnt >= n;
 }
 ```
 
-**Á½ÊıÆ½·½ºÍ**
+**åˆ¤æ–­æ˜¯å¦ä¸ºå­åºåˆ—** 
 
-[Leetcode : 633. Sum of Square Numbers (Easy)](https://leetcode.com/problems/sum-of-square-numbers/description/)
+[392. Is Subsequence (Medium)](https://leetcode.com/problems/is-subsequence/description/)
 
-ÌâÄ¿ÃèÊö£ºÅĞ¶ÏÒ»¸öÊıÊÇ·ñÎªÁ½¸öÊıµÄÆ½·½ºÍ£¬ÀıÈç 5 = 1<sup>2</sup> + 2<sup>2</sup>¡£
-
-```java
-public boolean judgeSquareSum(int c) {
-    int left = 0, right = (int) Math.sqrt(c);
-    while(left <= right){
-        int powSum = left * left + right * right;
-        if(powSum == c) return true;
-        else if(powSum > c) right--;
-        else left++;
-    }
-    return false;
-}
+```html
+s = "abc", t = "ahbgdc"
+Return true.
 ```
 
-**»ØÎÄ×Ö·û´®**
-
-[Leetcode : 680. Valid Palindrome II (Easy)](https://leetcode.com/problems/valid-palindrome-ii/description/)
-
-ÌâÄ¿ÃèÊö£º×Ö·û´®¿ÉÒÔÉ¾³ıÒ»¸ö×Ö·û£¬ÅĞ¶ÏÊÇ·ñÄÜ¹¹³É»ØÎÄ×Ö·û´®¡£
-
 ```java
-public boolean validPalindrome(String s) {
-    int i = 0, j = s.length() -1;
-    while(i < j){
-        if(s.charAt(i) != s.charAt(j)){
-            return isPalindrome(s, i, j - 1) || isPalindrome(s, i + 1, j);
-        }
-        i++;
-        j--;
-    }
-    return true;
-}
-
-private boolean isPalindrome(String s, int l, int r){
-    while(l < r){
-        if(s.charAt(l) != s.charAt(r))
+public boolean isSubsequence(String s, String t) {
+    int index = -1;
+    for (char c : s.toCharArray()) {
+        index = t.indexOf(c, index + 1);
+        if (index == -1) {
             return false;
-        l++;
-        r--;
+        }
     }
     return true;
 }
 ```
 
-**¹é²¢Á½¸öÓĞĞòÊı×é**
+**ä¿®æ”¹ä¸€ä¸ªæ•°æˆä¸ºéé€’å‡æ•°ç»„** 
 
-[Leetcode : 88. Merge Sorted Array (Easy)](https://leetcode.com/problems/merge-sorted-array/description/)
-
-ÌâÄ¿ÃèÊö£º°Ñ¹é²¢½á¹û´æµ½µÚÒ»¸öÊı×éÉÏ
-
-```java
-public void merge(int[] nums1, int m, int[] nums2, int n) {
-    int i = m - 1, j = n - 1; // ĞèÒª´ÓÎ²¿ªÊ¼±éÀú£¬·ñÔòÔÚ nums1 ÉÏ¹é²¢µÃµ½µÄÖµ»á¸²¸Ç»¹Î´½øĞĞ¹é²¢±È½ÏµÄÖµ
-    int idx = m + n - 1;
-    while(i >= 0 || j >= 0){
-        if(i < 0) nums1[idx] = nums2[j--];
-        else if(j < 0) nums1[idx] = nums1[i--];
-        else if(nums1[i] > nums2[j]) nums1[idx] = nums1[i--];
-        else nums1[idx] = nums2[j--];
-        idx--;
-    }
-}
-```
-
-**ÅĞ¶ÏÁ´±íÊÇ·ñ´æÔÚ»·**
-
-[Leetcode : 141. Linked List Cycle (Easy)](https://leetcode.com/problems/linked-list-cycle/description/)
-
-Ê¹ÓÃË«Ö¸Õë£¬Ò»¸öÖ¸ÕëÃ¿´ÎÒÆ¶¯Ò»¸ö½Úµã£¬Ò»¸öÖ¸ÕëÃ¿´ÎÒÆ¶¯Á½¸ö½Úµã£¬Èç¹û´æÔÚ»·£¬ÄÇÃ´ÕâÁ½¸öÖ¸ÕëÒ»¶¨»áÏàÓö¡£
-
-```java
-public boolean hasCycle(ListNode head) {
-    if(head == null) return false;
-    ListNode l1 = head, l2 = head.next;
-    while(l1 != null && l2 != null){
-        if(l1 == l2) return true;
-        l1 = l1.next;
-        if(l2.next == null) break;
-        l2 = l2.next.next;
-    }
-    return false;
-}
-```
-
-**×î³¤×ÓĞòÁĞ**
-
-[Leetcode : 524. Longest Word in Dictionary through Deleting (Medium)](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/description/)
-
-```
-Input:
-s = "abpcplea", d = ["ale","apple","monkey","plea"]
-
-Output:
-"apple"
-```
-
-ÌâÄ¿ÃèÊö£º¿ÉÒÔÉ¾³ı s ÖĞµÄÒ»Ğ©×Ö·û£¬Ê¹µÃËü³ÉÎª×Ö·û´®ÁĞ±í d ÖĞµÄÒ»¸ö×Ö·û´®¡£ÒªÇóÔÚ d ÖĞÕÒµ½Âú×ãÌõ¼şµÄ×î³¤×Ö·û´®¡£
-
-```java
-public String findLongestWord(String s, List<String> d) {
-    String ret = "";
-    for (String str : d) {
-        for (int i = 0, j = 0; i < s.length() && j < str.length(); i++) {
-            if (s.charAt(i) == str.charAt(j)) j++;
-            if (j == str.length()) {
-                if (ret.length() < str.length()
-                        || (ret.length() == str.length() && ret.compareTo(str) > 0)) {
-                    ret = str;
-                }
-            }
-        }
-    }
-    return ret;
-}
-```
-
-## ÅÅĞò
-
-### ¿ìËÙÑ¡Ôñ
-
-Ò»°ãÓÃÓÚÇó½â **Kth Element** ÎÊÌâ£¬¿ÉÒÔÔÚ O(n) Ê±¼ä¸´ÔÓ¶È£¬O(1) ¿Õ¼ä¸´ÔÓ¶ÈÍê³ÉÇó½â¹¤×÷¡£
-
-Óë¿ìËÙÅÅĞòÒ»Ñù£¬¿ìËÙÑ¡ÔñÒ»°ãĞèÒªÏÈ´òÂÒÊı×é£¬·ñÔò×î»µÇé¿öÏÂÊ±¼ä¸´ÔÓ¶ÈÎª O(n<sup>2</sup>)¡£
-
-### ¶ÑÅÅĞò
-
-¶ÑÅÅĞòÓÃÓÚÇó½â **TopK Elements** ÎÊÌâ£¬Í¨¹ıÎ¬»¤Ò»¸ö´óĞ¡Îª K µÄ¶Ñ£¬¶ÑÖĞµÄÔªËØ¾ÍÊÇ TopK Elements¡£µ±È»ËüÒ²¿ÉÒÔÓÃÓÚÇó½â Kth Element ÎÊÌâ£¬ÒòÎª×îºó³ö¶ÑµÄÄÇ¸öÔªËØ¾ÍÊÇ Kth Element¡£¿ìËÙÑ¡ÔñÒ²¿ÉÒÔÇó½â TopK Elements ÎÊÌâ£¬ÒòÎªÕÒµ½ Kth Element Ö®ºó£¬ÔÙ±éÀúÒ»´ÎÊı×é£¬ËùÓĞĞ¡ÓÚµÈÓÚ  Kth Element µÄÔªËØ¶¼ÊÇ TopK Elements¡£¿ÉÒÔ¿´µ½£¬¿ìËÙÑ¡ÔñºÍ¶ÑÅÅĞò¶¼¿ÉÒÔÇó½â Kth Element ºÍ TopK Elements ÎÊÌâ¡£
-
-**Kth Element**
-
-[Leetocde : 215. Kth Largest Element in an Array (Medium)](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
-
-**ÅÅĞò**£ºÊ±¼ä¸´ÔÓ¶È O(nlgn)£¬¿Õ¼ä¸´ÔÓ¶È O(1) ½â·¨
-
-```java
-public int findKthLargest(int[] nums, int k) {
-        int N = nums.length;
-        Arrays.sort(nums);
-        return nums[N - k];
-}
-```
-
-**¶ÑÅÅĞò**£ºÊ±¼ä¸´ÔÓ¶È O(nlgk)£¬¿Õ¼ä¸´ÔÓ¶È O(k)
-
-```java
-public int findKthLargest(int[] nums, int k) {
-    PriorityQueue<Integer> pq = new PriorityQueue<>();
-    for(int val : nums) {
-        pq.offer(val);
-        if(pq.size() > k) {
-            pq.poll();
-        }
-    }
-    return pq.peek();
-}
-```
-
-**¿ìËÙÑ¡Ôñ**£ºÊ±¼ä¸´ÔÓ¶È O(n)£¬¿Õ¼ä¸´ÔÓ¶È O(1)
-
-```java
-public int findKthLargest(int[] nums, int k) {
-        k = nums.length - k;
-        int lo = 0;
-        int hi = nums.length - 1;
-        while (lo < hi) {
-            final int j = partition(nums, lo, hi);
-            if(j < k) {
-                lo = j + 1;
-            } else if (j > k) {
-                hi = j - 1;
-            } else {
-                break;
-            }
-        }
-        return nums[k];
-    }
-
-    private int partition(int[] a, int lo, int hi) {
-        int i = lo;
-        int j = hi + 1;
-        while(true) {
-            while(i < hi && less(a[++i], a[lo]));
-            while(j > lo && less(a[lo], a[--j]));
-            if(i >= j) {
-                break;
-            }
-            exch(a, i, j);
-        }
-        exch(a, lo, j);
-        return j;
-    }
-
-    private void exch(int[] a, int i, int j) {
-        final int tmp = a[i];
-        a[i] = a[j];
-        a[j] = tmp;
-    }
-
-    private boolean less(int v, int w) {
-        return v < w;
-    }
-}
-```
-
-### Í°ÅÅĞò
-
-**ÕÒ³ö³öÏÖÆµÂÊ×î¶àµÄ k ¸öÊı**
-
-[Leetcode : 347. Top K Frequent Elements (Medium)](https://leetcode.com/problems/top-k-frequent-elements/description/)
-
-```java
-public List<Integer> topKFrequent(int[] nums, int k) {
-    List<Integer> ret = new ArrayList<>();
-    Map<Integer, Integer> map = new HashMap<>();
-    for(int num : nums) {
-        map.put(num, map.getOrDefault(num, 0) + 1);
-    }
-    List<Integer>[] bucket = new List[nums.length + 1];
-    for(int key : map.keySet()) {
-        int frequency = map.get(key);
-        if(bucket[frequency] == null) {
-            bucket[frequency] = new ArrayList<>();
-        }
-        bucket[frequency].add(key);
-    }
-    
-    for(int i = bucket.length - 1; i >= 0 && ret.size() < k; i--) {
-        if(bucket[i] != null) {
-            ret.addAll(bucket[i]);
-        }
-    }
-    return ret;
-}
-```
-
-## ËÑË÷
-
-Éî¶ÈÓÅÏÈËÑË÷ºÍ¹ã¶ÈÓÅÏÈËÑË÷¹ã·ºÔËÓÃÓÚÊ÷ºÍÍ¼ÖĞ£¬µ«ÊÇËüÃÇµÄÓ¦ÓÃÔ¶Ô¶²»Ö¹Èç´Ë¡£
-
-### BFS
-
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/4ff355cf-9a7f-4468-af43-e5b02038facc.jpg)
-
-¹ã¶ÈÓÅÏÈËÑË÷µÄËÑË÷¹ı³ÌÓĞµãÏñÒ»²ãÒ»²ãµØ½øĞĞ±éÀú£º´Ó½Úµã 0 ³ö·¢£¬±éÀúµ½ 6¡¢2¡¢1 ºÍ 5 ÕâËÄ¸öĞÂ½Úµã¡£
-
-¼ÌĞø´Ó 6 ¿ªÊ¼±éÀú£¬µÃµ½½Úµã 4 £»´Ó 2 ¿ªÊ¼±éÀú£¬Ã»ÓĞÏÂÒ»¸ö½Úµã£»´Ó 1 ¿ªÊ¼±éÀú£¬Ã»ÓĞÏÂÒ»¸ö½Úµã£»´Ó 5 ¿ªÊ¼±éÀú£¬µÃµ½ 3 ºÍ 4 ½Úµã¡£ÕâÒ»ÂÖ×Ü¹²µÃµ½Á½¸öĞÂ½Úµã£º4 ºÍ 3 ¡£
-
-·´¸´´ÓĞÂ½Úµã³ö·¢½øĞĞÉÏÊöµÄ±éÀú²Ù×÷¡£
-
-¿ÉÒÔ¿´µ½£¬Ã¿Ò»ÂÖ±éÀúµÄ½Úµã¶¼Óë¸ù½ÚµãÂ·¾¶³¤¶ÈÏàÍ¬¡£Éè d<sub>i</sub> ±íÊ¾µÚ i ¸ö½ÚµãÓë¸ù½ÚµãµÄÂ·¾¶³¤¶È£¬ÍÆµ¼³öÒ»¸ö½áÂÛ£º¶ÔÓÚÏÈ±éÀúµÄ½Úµã i Óëºó±éÀúµÄ½Úµã j£¬ÓĞ d<sub>i</sub><=d<sub>j</sub>¡£ÀûÓÃÕâ¸ö½áÂÛ£¬¿ÉÒÔÇó½â×î¶ÌÂ·¾¶ **×îÓÅ½â** ÎÊÌâ£ºµÚÒ»´Î±éÀúµ½Ä¿µÄ½Úµã£¬ÆäËù¾­¹ıµÄÂ·¾¶Îª×î¶ÌÂ·¾¶£¬Èç¹û¼ÌĞø±éÀú£¬Ö®ºóÔÙ±éÀúµ½Ä¿µÄ½Úµã£¬Ëù¾­¹ıµÄÂ·¾¶¾Í²»ÊÇ×î¶ÌÂ·¾¶¡£
-
-ÔÚ³ÌĞòÊµÏÖ BFS Ê±ĞèÒª¿¼ÂÇÒÔÏÂÎÊÌâ£º
-
-- ¶ÓÁĞ£ºÓÃÀ´´æ´¢Ã¿Ò»ÂÖ±éÀúµÄ½Úµã
-- ±ê¼Ç£º¶ÔÓÚ±éÀú¹ıµÃ½Úµã£¬Ó¦¸Ã½«Ëü±ê¼Ç£¬·ÀÖ¹ÖØ¸´±éÀú£»
-
-**¼ÆËãÔÚÍø¸ñÖĞ´ÓÔ­µãµ½ÌØ¶¨µãµÄ×î¶ÌÂ·¾¶³¤¶È**
+[665. Non-decreasing Array (Easy)](https://leetcode.com/problems/non-decreasing-array/description/)
 
 ```html
-[[1,1,0,1],
-[1,0,1,0],
-[1,1,1,1],
-[1,0,1,1]]
+Input: [4,2,3]
+Output: True
+Explanation: You could modify the first 4 to 1 to get a non-decreasing array.
 ```
 
+é¢˜ç›®æè¿°ï¼šåˆ¤æ–­ä¸€ä¸ªæ•°ç»„èƒ½ä¸èƒ½åªä¿®æ”¹ä¸€ä¸ªæ•°å°±æˆä¸ºéé€’å‡æ•°ç»„ã€‚
+
+åœ¨å‡ºç° nums[i] < nums[i - 1] æ—¶ï¼Œéœ€è¦è€ƒè™‘çš„æ˜¯åº”è¯¥ä¿®æ”¹æ•°ç»„çš„å“ªä¸ªæ•°ï¼Œä½¿å¾—æœ¬æ¬¡ä¿®æ”¹èƒ½ä½¿ i ä¹‹å‰çš„æ•°ç»„æˆä¸ºéé€’å‡æ•°ç»„ï¼Œå¹¶ä¸”  **ä¸å½±å“åç»­çš„æ“ä½œ** ã€‚ä¼˜å…ˆè€ƒè™‘ä»¤ nums[i - 1] = nums[i]ï¼Œå› ä¸ºå¦‚æœä¿®æ”¹ nums[i] = nums[i - 1] çš„è¯ï¼Œé‚£ä¹ˆ nums[i] è¿™ä¸ªæ•°ä¼šå˜å¤§ï¼Œå°±æœ‰å¯èƒ½æ¯” nums[i + 1] å¤§ï¼Œä»è€Œå½±å“äº†åç»­æ“ä½œã€‚è¿˜æœ‰ä¸€ä¸ªæ¯”è¾ƒç‰¹åˆ«çš„æƒ…å†µå°±æ˜¯ nums[i] < nums[i - 2]ï¼Œåªä¿®æ”¹ nums[i - 1] = nums[i] ä¸èƒ½ä½¿æ•°ç»„æˆä¸ºéé€’å‡æ•°ç»„ï¼Œåªèƒ½ä¿®æ”¹ nums[i] = nums[i - 1]ã€‚
+
 ```java
-public int minPathLength(int[][] grids, int tr, int tc) {
-    int[][] next = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-    int m = grids.length, n = grids[0].length;
-    Queue<Position> queue = new LinkedList<>();
-    queue.add(new Position(0, 0, 1));
-    while (!queue.isEmpty()) {
-        Position pos = queue.poll();
-        for (int i = 0; i < 4; i++) {
-            Position nextPos = new Position(pos.r + next[i][0], pos.c + next[i][1], pos.length + 1);
-            if (nextPos.r < 0 || nextPos.r >= m || nextPos.c < 0 || nextPos.c >= n) continue;
-            if (grids[nextPos.r][nextPos.c] != 1) continue;
-            grids[nextPos.r][nextPos.c] = 0;
-            if (nextPos.r == tr && nextPos.c == tc) return nextPos.length;
-            queue.add(nextPos);
+public boolean checkPossibility(int[] nums) {
+    int cnt = 0;
+    for (int i = 1; i < nums.length && cnt < 2; i++) {
+        if (nums[i] >= nums[i - 1]) {
+            continue;
+        }
+        cnt++;
+        if (i - 2 >= 0 && nums[i - 2] > nums[i]) {
+            nums[i] = nums[i - 1];
+        } else {
+            nums[i - 1] = nums[i];
+        }
+    }
+    return cnt <= 1;
+}
+```
+
+**è‚¡ç¥¨çš„æœ€å¤§æ”¶ç›Š** 
+
+[122. Best Time to Buy and Sell Stock II (Easy)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/)
+
+é¢˜ç›®æè¿°ï¼šä¸€æ¬¡è‚¡ç¥¨äº¤æ˜“åŒ…å«ä¹°å…¥å’Œå–å‡ºï¼Œå¤šä¸ªäº¤æ˜“ä¹‹é—´ä¸èƒ½äº¤å‰è¿›è¡Œã€‚
+
+å¯¹äº [a, b, c, d]ï¼Œå¦‚æœæœ‰ a <= b <= c <= d ï¼Œé‚£ä¹ˆæœ€å¤§æ”¶ç›Šä¸º d - aã€‚è€Œ d - a = (d - c) + (c - b) + (b - a) ï¼Œå› æ­¤å½“è®¿é—®åˆ°ä¸€ä¸ª prices[i] ä¸” prices[i] - prices[i-1] > 0ï¼Œé‚£ä¹ˆå°±æŠŠ prices[i] - prices[i-1] æ·»åŠ åˆ°æ”¶ç›Šä¸­ï¼Œä»è€Œåœ¨å±€éƒ¨æœ€ä¼˜çš„æƒ…å†µä¸‹ä¹Ÿä¿è¯å…¨å±€æœ€ä¼˜ã€‚
+
+```java
+public int maxProfit(int[] prices) {
+    int profit = 0;
+    for (int i = 1; i < prices.length; i++) {
+        if (prices[i] > prices[i - 1]) {
+            profit += (prices[i] - prices[i - 1]);
+        }
+    }
+    return profit;
+}
+```
+
+## äºŒåˆ†æŸ¥æ‰¾
+
+**æ­£å¸¸å®ç°** 
+
+```java
+public int binarySearch(int[] nums, int key) {
+    int l = 0, h = nums.length - 1;
+    while (l <= h) {
+        int m = l + (h - l) / 2;
+        if (nums[m] == key) {
+            return m;
+        } else if (nums[m] > key) {
+            h = m - 1;
+        } else {
+            l = m + 1;
         }
     }
     return -1;
 }
+```
 
-private class Position {
-    int r, c, length;
-    public Position(int r, int c, int length) {
-        this.r = r;
-        this.c = c;
-        this.length = length;
+**æ—¶é—´å¤æ‚åº¦** 
+
+äºŒåˆ†æŸ¥æ‰¾ä¹Ÿç§°ä¸ºæŠ˜åŠæŸ¥æ‰¾ï¼Œæ¯æ¬¡éƒ½èƒ½å°†æŸ¥æ‰¾åŒºé—´å‡åŠï¼Œè¿™ç§æŠ˜åŠç‰¹æ€§çš„ç®—æ³•æ—¶é—´å¤æ‚åº¦éƒ½ä¸º O(logN)ã€‚
+
+**m è®¡ç®—** 
+
+æœ‰ä¸¤ç§è®¡ç®—ä¸­å€¼ m çš„æ–¹å¼ï¼š
+
+- m = (l + h) / 2
+- m = l + (h - l) / 2
+
+l + h å¯èƒ½å‡ºç°åŠ æ³•æº¢å‡ºï¼Œæœ€å¥½ä½¿ç”¨ç¬¬äºŒç§æ–¹å¼ã€‚
+
+**è¿”å›å€¼** 
+
+å¾ªç¯é€€å‡ºæ—¶å¦‚æœä»ç„¶æ²¡æœ‰æŸ¥æ‰¾åˆ° keyï¼Œé‚£ä¹ˆè¡¨ç¤ºæŸ¥æ‰¾å¤±è´¥ã€‚å¯ä»¥æœ‰ä¸¤ç§è¿”å›å€¼ï¼š
+
+- -1ï¼šä»¥ä¸€ä¸ªé”™è¯¯ç è¡¨ç¤ºæ²¡æœ‰æŸ¥æ‰¾åˆ° key
+- lï¼šå°† key æ’å…¥åˆ° nums ä¸­çš„æ­£ç¡®ä½ç½®
+
+**å˜ç§** 
+
+äºŒåˆ†æŸ¥æ‰¾å¯ä»¥æœ‰å¾ˆå¤šå˜ç§ï¼Œå˜ç§å®ç°è¦æ³¨æ„è¾¹ç•Œå€¼çš„åˆ¤æ–­ã€‚ä¾‹å¦‚åœ¨ä¸€ä¸ªæœ‰é‡å¤å…ƒç´ çš„æ•°ç»„ä¸­æŸ¥æ‰¾ key çš„æœ€å·¦ä½ç½®çš„å®ç°å¦‚ä¸‹ï¼š
+
+```java
+public int binarySearch(int[] nums, int key) {
+    int l = 0, h = nums.length - 1;
+    while (l < h) {
+        int m = l + (h - l) / 2;
+        if (nums[m] >= key) {
+            h = m;
+        } else {
+            l = m + 1;
+        }
     }
+    return l;
 }
 ```
 
+è¯¥å®ç°å’Œæ­£å¸¸å®ç°æœ‰ä»¥ä¸‹ä¸åŒï¼š
 
-### DFS
+- å¾ªç¯æ¡ä»¶ä¸º l < h
+- h çš„èµ‹å€¼è¡¨è¾¾å¼ä¸º h = m
+- æœ€åè¿”å› l è€Œä¸æ˜¯ -1
 
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/f7f7e3e5-7dd4-4173-9999-576b9e2ac0a2.png)
+åœ¨ nums[m] >= key çš„æƒ…å†µä¸‹ï¼Œå¯ä»¥æ¨å¯¼å‡ºæœ€å·¦ key ä½äº [l, m] åŒºé—´ä¸­ï¼Œè¿™æ˜¯ä¸€ä¸ªé—­åŒºé—´ã€‚h çš„èµ‹å€¼è¡¨è¾¾å¼ä¸º h = mï¼Œå› ä¸º m ä½ç½®ä¹Ÿå¯èƒ½æ˜¯è§£ã€‚
 
-¹ã¶ÈÓÅÏÈËÑË÷Ò»²ãÒ»²ã±éÀú£¬Ã¿Ò»²ã±éÀúµ½µÄËùÓĞĞÂ½Úµã£¬ÒªÓÃ¶ÓÁĞÏÈ´æ´¢ÆğÀ´ÒÔ±¸ÏÂÒ»²ã±éÀúµÄÊ±ºòÔÙ±éÀú£»¶øÉî¶ÈÓÅÏÈËÑË÷ÔÚ±éÀúµ½Ò»¸öĞÂ½ÚµãÊ±Á¢Âí¶ÔĞÂ½Úµã½øĞĞ±éÀú£º´Ó½Úµã 0 ³ö·¢¿ªÊ¼±éÀú£¬µÃµ½µ½ĞÂ½Úµã 6 Ê±£¬Á¢Âí¶ÔĞÂ½Úµã 6 ½øĞĞ±éÀú£¬µÃµ½ĞÂ½Úµã 4£»Èç´Ë·´¸´ÒÔÕâÖÖ·½Ê½±éÀúĞÂ½Úµã£¬Ö±µ½Ã»ÓĞĞÂ½ÚµãÁË£¬´ËÊ±·µ»Ø¡£·µ»Øµ½¸ù½Úµã 0 µÄÇé¿öÊÇ£¬¼ÌĞø¶Ô¸ù½Úµã 0 ½øĞĞ±éÀú£¬µÃµ½ĞÂ½Úµã 2£¬È»ºó¼ÌĞøÒÔÉÏ²½Öè¡£
+åœ¨ h çš„èµ‹å€¼è¡¨è¾¾å¼ä¸º h = mid çš„æƒ…å†µä¸‹ï¼Œå¦‚æœå¾ªç¯æ¡ä»¶ä¸º l <= hï¼Œé‚£ä¹ˆä¼šå‡ºç°å¾ªç¯æ— æ³•é€€å‡ºçš„æƒ…å†µï¼Œå› æ­¤å¾ªç¯æ¡ä»¶åªèƒ½æ˜¯ l < hã€‚ä»¥ä¸‹æ¼”ç¤ºäº†å¾ªç¯æ¡ä»¶ä¸º l <= h æ—¶å¾ªç¯æ— æ³•é€€å‡ºçš„æƒ…å†µï¼š
 
-´ÓÒ»¸ö½Úµã³ö·¢£¬Ê¹ÓÃ DFS ¶ÔÒ»¸öÍ¼½øĞĞ±éÀúÊ±£¬ÄÜ¹»±éÀúµ½µÄ½Úµã¶¼ÊÇ´Ó³õÊ¼½Úµã¿É´ïµÄ£¬DFS ³£ÓÃÀ´Çó½âÕâÖÖ **¿É´ïĞÔ** ÎÊÌâ¡£
+```text
+nums = {0, 1, 2}, key = 1
+l   m   h
+0   1   2  nums[m] >= key
+0   0   1  nums[m] < key
+1   1   1  nums[m] >= key
+1   1   1  nums[m] >= key
+...
+```
 
-ÔÚ³ÌĞòÊµÏÖ DFS Ê±ĞèÒª¿¼ÂÇÒÔÏÂÎÊÌâ£º
+å½“å¾ªç¯ä½“é€€å‡ºæ—¶ï¼Œä¸è¡¨ç¤ºæ²¡æœ‰æŸ¥æ‰¾åˆ° keyï¼Œå› æ­¤æœ€åè¿”å›çš„ç»“æœä¸åº”è¯¥ä¸º -1ã€‚ä¸ºäº†éªŒè¯æœ‰æ²¡æœ‰æŸ¥æ‰¾åˆ°ï¼Œéœ€è¦åœ¨è°ƒç”¨ç«¯åˆ¤æ–­ä¸€ä¸‹è¿”å›ä½ç½®ä¸Šçš„å€¼å’Œ key æ˜¯å¦ç›¸ç­‰ã€‚
 
-- Õ»£ºÓÃÕ»À´±£´æµ±Ç°½ÚµãĞÅÏ¢£¬µ±±éÀúĞÂ½Úµã·µ»ØÊ±ÄÜ¹»¼ÌĞø±éÀúµ±Ç°½Úµã¡£Ò²¿ÉÒÔÊ¹ÓÃµİ¹éÕ»¡£
-- ±ê¼Ç£ººÍ BFS Ò»ÑùÍ¬ÑùĞèÒª¶ÔÒÑ¾­±éÀú¹ıµÃ½Úµã½øĞĞ±ê¼Ç¡£
+**æ±‚å¼€æ–¹** 
 
-**²éÕÒ×î´óµÄÁ¬Í¨Ãæ»ı**
-
-[Leetcode : 695. Max Area of Island (Easy)](https://leetcode.com/problems/max-area-of-island/description/)
+[69. Sqrt(x) (Easy)](https://leetcode.com/problems/sqrtx/description/)
 
 ```html
-[[0,0,1,0,0,0,0,1,0,0,0,0,0],
-[0,0,0,0,0,0,0,1,1,1,0,0,0],
-[0,1,1,0,1,0,0,0,0,0,0,0,0],
-[0,1,0,0,1,1,0,0,1,0,1,0,0],
-[0,1,0,0,1,1,0,0,1,1,1,0,0],
-[0,0,0,0,0,0,0,0,0,0,1,0,0],
-[0,0,0,0,0,0,0,1,1,1,0,0,0],
-[0,0,0,0,0,0,0,1,1,0,0,0,0]]
+Input: 4
+Output: 2
+
+Input: 8
+Output: 2
+Explanation: The square root of 8 is 2.82842..., and since we want to return an integer, the decimal part will be truncated.
+```
+
+ä¸€ä¸ªæ•° x çš„å¼€æ–¹ sqrt ä¸€å®šåœ¨ 0 \~ x ä¹‹é—´ï¼Œå¹¶ä¸”æ»¡è¶³ sqrt == x / sqrtã€‚å¯ä»¥åˆ©ç”¨äºŒåˆ†æŸ¥æ‰¾åœ¨ 0 \~ x ä¹‹é—´æŸ¥æ‰¾ sqrtã€‚
+
+å¯¹äº x = 8ï¼Œå®ƒçš„å¼€æ–¹æ˜¯ 2.82842...ï¼Œæœ€ååº”è¯¥è¿”å› 2 è€Œä¸æ˜¯ 3ã€‚åœ¨å¾ªç¯æ¡ä»¶ä¸º l <= h å¹¶ä¸”å¾ªç¯é€€å‡ºæ—¶ï¼Œh æ€»æ˜¯æ¯” l å° 1ï¼Œä¹Ÿå°±æ˜¯è¯´ h = 2ï¼Œl = 3ï¼Œå› æ­¤æœ€åçš„è¿”å›å€¼åº”è¯¥ä¸º h è€Œä¸æ˜¯ lã€‚
+
+```java
+public int mySqrt(int x) {
+    if (x <= 1) {
+        return x;
+    }
+    int l = 1, h = x;
+    while (l <= h) {
+        int mid = l + (h - l) / 2;
+        int sqrt = x / mid;
+        if (sqrt == mid) {
+            return mid;
+        } else if (mid > sqrt) {
+            h = mid - 1;
+        } else {
+            l = mid + 1;
+        }
+    }
+    return h;
+}
+```
+
+**å¤§äºç»™å®šå…ƒç´ çš„æœ€å°å…ƒç´ ** 
+
+[744. Find Smallest Letter Greater Than Target (Easy)](https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/)
+
+```html
+Input:
+letters = ["c", "f", "j"]
+target = "d"
+Output: "f"
+
+Input:
+letters = ["c", "f", "j"]
+target = "k"
+Output: "c"
+```
+
+é¢˜ç›®æè¿°ï¼šç»™å®šä¸€ä¸ªæœ‰åºçš„å­—ç¬¦æ•°ç»„ letters å’Œä¸€ä¸ªå­—ç¬¦ targetï¼Œè¦æ±‚æ‰¾å‡º letters ä¸­å¤§äº target çš„æœ€å°å­—ç¬¦ï¼Œå¦‚æœæ‰¾ä¸åˆ°å°±è¿”å›ç¬¬ 1 ä¸ªå­—ç¬¦ã€‚
+
+```java
+public char nextGreatestLetter(char[] letters, char target) {
+    int n = letters.length;
+    int l = 0, h = n - 1;
+    while (l <= h) {
+        int m = l + (h - l) / 2;
+        if (letters[m] <= target) {
+            l = m + 1;
+        } else {
+            h = m - 1;
+        }
+    }
+    return l < n ? letters[l] : letters[0];
+}
+```
+
+**æœ‰åºæ•°ç»„çš„ Single Element** 
+
+[540. Single Element in a Sorted Array (Medium)](https://leetcode.com/problems/single-element-in-a-sorted-array/description/)
+
+```html
+Input: [1,1,2,3,3,4,4,8,8]
+Output: 2
+```
+
+é¢˜ç›®æè¿°ï¼šä¸€ä¸ªæœ‰åºæ•°ç»„åªæœ‰ä¸€ä¸ªæ•°ä¸å‡ºç°ä¸¤æ¬¡ï¼Œæ‰¾å‡ºè¿™ä¸ªæ•°ã€‚è¦æ±‚ä»¥ O(logN) æ—¶é—´å¤æ‚åº¦è¿›è¡Œæ±‚è§£ã€‚
+
+ä»¤ index ä¸º Single Element åœ¨æ•°ç»„ä¸­çš„ä½ç½®ã€‚å¦‚æœ m ä¸ºå¶æ•°ï¼Œå¹¶ä¸” m + 1 < indexï¼Œé‚£ä¹ˆ nums[m] == nums[m + 1]ï¼›m + 1 >= indexï¼Œé‚£ä¹ˆ nums[m] != nums[m + 1]ã€‚
+
+ä»ä¸Šé¢çš„è§„å¾‹å¯ä»¥çŸ¥é“ï¼Œå¦‚æœ nums[m] == nums[m + 1]ï¼Œé‚£ä¹ˆ index æ‰€åœ¨çš„æ•°ç»„ä½ç½®ä¸º [m + 2, h]ï¼Œæ­¤æ—¶ä»¤ l = m + 2ï¼›å¦‚æœ nums[m] != nums[m + 1]ï¼Œé‚£ä¹ˆ index æ‰€åœ¨çš„æ•°ç»„ä½ç½®ä¸º [l, m]ï¼Œæ­¤æ—¶ä»¤ h = mã€‚
+
+å› ä¸º h çš„èµ‹å€¼è¡¨è¾¾å¼ä¸º h = mï¼Œé‚£ä¹ˆå¾ªç¯æ¡ä»¶ä¹Ÿå°±åªèƒ½ä½¿ç”¨ l < h è¿™ç§å½¢å¼ã€‚
+
+```java
+public int singleNonDuplicate(int[] nums) {
+    int l = 0, h = nums.length - 1;
+    while (l < h) {
+        int m = l + (h - l) / 2;
+        if (m % 2 == 1) {
+            m--;   // ä¿è¯ l/h/m éƒ½åœ¨å¶æ•°ä½ï¼Œä½¿å¾—æŸ¥æ‰¾åŒºé—´å¤§å°ä¸€ç›´éƒ½æ˜¯å¥‡æ•°
+        }
+        if (nums[m] == nums[m + 1]) {
+            l = m + 2;
+        } else {
+            h = m;
+        }
+    }
+    return nums[l];
+}
+```
+
+**ç¬¬ä¸€ä¸ªé”™è¯¯çš„ç‰ˆæœ¬** 
+
+[278. First Bad Version (Easy)](https://leetcode.com/problems/first-bad-version/description/)
+
+é¢˜ç›®æè¿°ï¼šç»™å®šä¸€ä¸ªå…ƒç´  n ä»£è¡¨æœ‰ [1, 2, ..., n] ç‰ˆæœ¬ï¼Œå¯ä»¥è°ƒç”¨ isBadVersion(int x) çŸ¥é“æŸä¸ªç‰ˆæœ¬æ˜¯å¦é”™è¯¯ï¼Œè¦æ±‚æ‰¾åˆ°ç¬¬ä¸€ä¸ªé”™è¯¯çš„ç‰ˆæœ¬ã€‚
+
+å¦‚æœç¬¬ m ä¸ªç‰ˆæœ¬å‡ºé”™ï¼Œåˆ™è¡¨ç¤ºç¬¬ä¸€ä¸ªé”™è¯¯çš„ç‰ˆæœ¬åœ¨ [l, m] ä¹‹é—´ï¼Œä»¤ h = mï¼›å¦åˆ™ç¬¬ä¸€ä¸ªé”™è¯¯çš„ç‰ˆæœ¬åœ¨ [m + 1, h] ä¹‹é—´ï¼Œä»¤ l = m + 1ã€‚
+
+å› ä¸º h çš„èµ‹å€¼è¡¨è¾¾å¼ä¸º h = mï¼Œå› æ­¤å¾ªç¯æ¡ä»¶ä¸º l < hã€‚
+
+```java
+public int firstBadVersion(int n) {
+    int l = 1, h = n;
+    while (l < h) {
+        int mid = l + (h - l) / 2;
+        if (isBadVersion(mid)) {
+            h = mid;
+        } else {
+            l = mid + 1;
+        }
+    }
+    return l;
+}
+```
+
+**æ—‹è½¬æ•°ç»„çš„æœ€å°æ•°å­—** 
+
+[153. Find Minimum in Rotated Sorted Array (Medium)](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
+
+```html
+Input: [3,4,5,1,2],
+Output: 1
 ```
 
 ```java
-public int maxAreaOfIsland(int[][] grid) {
-    int m = grid.length, n = grid[0].length;
-    int max = 0;
-    for(int i = 0; i < m; i++){
-        for(int j = 0; j < n; j++){
-            if(grid[i][j] == 1) max = Math.max(max, dfs(grid, i, j));
+public int findMin(int[] nums) {
+    int l = 0, h = nums.length - 1;
+    while (l < h) {
+        int m = l + (h - l) / 2;
+        if (nums[m] <= nums[h]) {
+            h = m;
+        } else {
+            l = m + 1;
         }
     }
-    return max;
-}
-
-private int dfs(int[][] grid, int i, int j){
-    int m = grid.length, n = grid[0].length;
-    if(i < 0 || i >= m || j < 0 || j >= n) return 0;
-    if(grid[i][j] == 0) return 0;
-    grid[i][j] = 0;
-    return dfs(grid, i + 1, j) + dfs(grid, i - 1, j) + dfs(grid, i, j + 1) + dfs(grid, i, j - 1) + 1;
+    return nums[l];
 }
 ```
 
-**Í¼µÄÁ¬Í¨·ÖÁ¿**
+**æŸ¥æ‰¾åŒºé—´** 
 
-[Leetcode : 547. Friend Circles (Medium)](https://leetcode.com/problems/friend-circles/description/)
+[34. Search for a Range (Medium)](https://leetcode.com/problems/search-for-a-range/description/)
+
+```html
+Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]
+
+Input: nums = [5,7,7,8,8,10], target = 6
+Output: [-1,-1]
+```
+
+```java
+public int[] searchRange(int[] nums, int target) {
+    int first = binarySearch(nums, target);
+    int last = binarySearch(nums, target + 1) - 1;
+    if (first == nums.length || nums[first] != target) {
+        return new int[]{-1, -1};
+    } else {
+        return new int[]{first, Math.max(first, last)};
+    }
+}
+
+private int binarySearch(int[] nums, int target) {
+    int l = 0, h = nums.length; // æ³¨æ„ h çš„åˆå§‹å€¼
+    while (l < h) {
+        int m = l + (h - l) / 2;
+        if (nums[m] >= target) {
+            h = m;
+        } else {
+            l = m + 1;
+        }
+    }
+    return l;
+}
+```
+
+## åˆ†æ²»
+
+**ç»™è¡¨è¾¾å¼åŠ æ‹¬å·** 
+
+[241. Different Ways to Add Parentheses (Medium)](https://leetcode.com/problems/different-ways-to-add-parentheses/description/)
+
+```html
+Input: "2-1-1".
+
+((2-1)-1) = 0
+(2-(1-1)) = 2
+
+Output : [0, 2]
+```
+
+```java
+public List<Integer> diffWaysToCompute(String input) {
+    List<Integer> ways = new ArrayList<>();
+    for (int i = 0; i < input.length(); i++) {
+        char c = input.charAt(i);
+        if (c == '+' || c == '-' || c == '*') {
+            List<Integer> left = diffWaysToCompute(input.substring(0, i));
+            List<Integer> right = diffWaysToCompute(input.substring(i + 1));
+            for (int l : left) {
+                for (int r : right) {
+                    switch (c) {
+                        case '+':
+                            ways.add(l + r);
+                            break;
+                        case '-':
+                            ways.add(l - r);
+                            break;
+                        case '*':
+                            ways.add(l * r);
+                            break;
+                    }
+                }
+            }
+        }
+    }
+    if (ways.size() == 0) {
+        ways.add(Integer.valueOf(input));
+    }
+    return ways;
+}
+```
+
+## æœç´¢
+
+æ·±åº¦ä¼˜å…ˆæœç´¢å’Œå¹¿åº¦ä¼˜å…ˆæœç´¢å¹¿æ³›è¿ç”¨äºæ ‘å’Œå›¾ä¸­ï¼Œä½†æ˜¯å®ƒä»¬çš„åº”ç”¨è¿œè¿œä¸æ­¢å¦‚æ­¤ã€‚
+
+### BFS
+
+<div align="center"> <img src="../pics//4ff355cf-9a7f-4468-af43-e5b02038facc.jpg"/> </div><br>
+
+å¹¿åº¦ä¼˜å…ˆæœç´¢çš„æœç´¢è¿‡ç¨‹æœ‰ç‚¹åƒä¸€å±‚ä¸€å±‚åœ°è¿›è¡Œéå†ï¼Œæ¯å±‚éå†éƒ½ä»¥ä¸Šä¸€å±‚éå†çš„ç»“æœä½œä¸ºèµ·ç‚¹ï¼Œéå†ä¸€ä¸ªè·ç¦»èƒ½è®¿é—®åˆ°çš„æ‰€æœ‰èŠ‚ç‚¹ã€‚éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œéå†è¿‡çš„èŠ‚ç‚¹ä¸èƒ½å†æ¬¡è¢«éå†ã€‚
+
+ç¬¬ä¸€å±‚ï¼š
+
+- 0 -> {6,2,1,5};
+
+ç¬¬äºŒå±‚ï¼š
+
+- 6 -> {4}
+- 2 -> {}
+- 1 -> {}
+- 5 -> {3}
+
+ç¬¬ä¸‰å±‚ï¼š
+
+- 4 -> {}
+- 3 -> {}
+
+å¯ä»¥çœ‹åˆ°ï¼Œæ¯ä¸€å±‚éå†çš„èŠ‚ç‚¹éƒ½ä¸æ ¹èŠ‚ç‚¹è·ç¦»ç›¸åŒã€‚è®¾ d<sub>i</sub> è¡¨ç¤ºç¬¬ i ä¸ªèŠ‚ç‚¹ä¸æ ¹èŠ‚ç‚¹çš„è·ç¦»ï¼Œæ¨å¯¼å‡ºä¸€ä¸ªç»“è®ºï¼šå¯¹äºå…ˆéå†çš„èŠ‚ç‚¹ i ä¸åéå†çš„èŠ‚ç‚¹ jï¼Œæœ‰ d<sub>i</sub><=d<sub>j</sub>ã€‚åˆ©ç”¨è¿™ä¸ªç»“è®ºï¼Œå¯ä»¥æ±‚è§£æœ€çŸ­è·¯å¾„ç­‰  **æœ€ä¼˜è§£**  é—®é¢˜ï¼šç¬¬ä¸€æ¬¡éå†åˆ°ç›®çš„èŠ‚ç‚¹ï¼Œå…¶æ‰€ç»è¿‡çš„è·¯å¾„ä¸ºæœ€çŸ­è·¯å¾„ã€‚åº”è¯¥æ³¨æ„çš„æ˜¯ï¼Œä½¿ç”¨ BFS åªèƒ½æ±‚è§£æ— æƒå›¾çš„æœ€çŸ­è·¯å¾„ã€‚
+
+åœ¨ç¨‹åºå®ç° BFS æ—¶éœ€è¦è€ƒè™‘ä»¥ä¸‹é—®é¢˜ï¼š
+
+- é˜Ÿåˆ—ï¼šç”¨æ¥å­˜å‚¨æ¯ä¸€è½®éå†å¾—åˆ°çš„èŠ‚ç‚¹ï¼›
+- æ ‡è®°ï¼šå¯¹äºéå†è¿‡çš„èŠ‚ç‚¹ï¼Œåº”è¯¥å°†å®ƒæ ‡è®°ï¼Œé˜²æ­¢é‡å¤éå†ã€‚
+
+**è®¡ç®—åœ¨ç½‘æ ¼ä¸­ä»åŸç‚¹åˆ°ç‰¹å®šç‚¹çš„æœ€çŸ­è·¯å¾„é•¿åº¦** 
+
+```html
+[[1,1,0,1],
+ [1,0,1,0],
+ [1,1,1,1],
+ [1,0,1,1]]
+```
+
+1 è¡¨ç¤ºå¯ä»¥ç»è¿‡æŸä¸ªä½ç½®ï¼Œæ±‚è§£ä» (0, 0) ä½ç½®åˆ° (tr, tc) ä½ç½®çš„æœ€çŸ­è·¯å¾„é•¿åº¦ã€‚
+
+```java
+public int minPathLength(int[][] grids, int tr, int tc) {
+    final int[][] direction = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+    final int m = grids.length, n = grids[0].length;
+    Queue<Pair<Integer, Integer>> queue = new LinkedList<>();
+    queue.add(new Pair<>(0, 0));
+    int pathLength = 0;
+    while (!queue.isEmpty()) {
+        int size = queue.size();
+        pathLength++;
+        while (size-- > 0) {
+            Pair<Integer, Integer> cur = queue.poll();
+            for (int[] d : direction) {
+                int nr = cur.getKey() + d[0], nc = cur.getValue() + d[1];
+                Pair<Integer, Integer> next = new Pair<>(nr, nc);
+                if (next.getKey() < 0 || next.getValue() >= m
+                        || next.getKey() < 0 || next.getValue() >= n) {
+
+                    continue;
+                }
+                grids[next.getKey()][next.getValue()] = 0; // æ ‡è®°
+                if (next.getKey() == tr && next.getValue() == tc) {
+                    return pathLength;
+                }
+                queue.add(next);
+            }
+        }
+    }
+    return -1;
+}
+```
+
+**ç»„æˆæ•´æ•°çš„æœ€å°å¹³æ–¹æ•°æ•°é‡** 
+
+[279. Perfect Squares (Medium)](https://leetcode.com/problems/perfect-squares/description/)
+
+```html
+For example, given n = 12, return 3 because 12 = 4 + 4 + 4; given n = 13, return 2 because 13 = 4 + 9.
+```
+
+å¯ä»¥å°†æ¯ä¸ªæ•´æ•°çœ‹æˆå›¾ä¸­çš„ä¸€ä¸ªèŠ‚ç‚¹ï¼Œå¦‚æœä¸¤ä¸ªæ•´æ•°ä¹‹å·®ä¸ºä¸€ä¸ªå¹³æ–¹æ•°ï¼Œé‚£ä¹ˆè¿™ä¸¤ä¸ªæ•´æ•°æ‰€åœ¨çš„èŠ‚ç‚¹å°±æœ‰ä¸€æ¡è¾¹ã€‚
+
+è¦æ±‚è§£æœ€å°çš„å¹³æ–¹æ•°æ•°é‡ï¼Œå°±æ˜¯æ±‚è§£ä»èŠ‚ç‚¹ n åˆ°èŠ‚ç‚¹ 0 çš„æœ€çŸ­è·¯å¾„ã€‚
+
+æœ¬é¢˜ä¹Ÿå¯ä»¥ç”¨åŠ¨æ€è§„åˆ’æ±‚è§£ï¼Œåœ¨ä¹‹ååŠ¨æ€è§„åˆ’éƒ¨åˆ†ä¸­ä¼šå†æ¬¡å‡ºç°ã€‚
+
+```java
+public int numSquares(int n) {
+    List<Integer> squares = generateSquares(n);
+    Queue<Integer> queue = new LinkedList<>();
+    boolean[] marked = new boolean[n + 1];
+    queue.add(n);
+    marked[n] = true;
+    int level = 0;
+    while (!queue.isEmpty()) {
+        int size = queue.size();
+        level++;
+        while (size-- > 0) {
+            int cur = queue.poll();
+            for (int s : squares) {
+                int next = cur - s;
+                if (next < 0) {
+                    break;
+                }
+                if (next == 0) {
+                    return level;
+                }
+                if (marked[next]) {
+                    continue;
+                }
+                marked[next] = true;
+                queue.add(cur - s);
+            }
+        }
+    }
+    return n;
+}
+
+/**
+ * ç”Ÿæˆå°äº n çš„å¹³æ–¹æ•°åºåˆ—
+ * @return 1,4,9,...
+ */
+private List<Integer> generateSquares(int n) {
+    List<Integer> squares = new ArrayList<>();
+    int square = 1;
+    int diff = 3;
+    while (square <= n) {
+        squares.add(square);
+        square += diff;
+        diff += 2;
+    }
+    return squares;
+}
+```
+
+**æœ€çŸ­å•è¯è·¯å¾„** 
+
+[127. Word Ladder (Medium)](https://leetcode.com/problems/word-ladder/description/)
+
+```html
+Input:
+beginWord = "hit",
+endWord = "cog",
+wordList = ["hot","dot","dog","lot","log","cog"]
+
+Output: 5
+
+Explanation: As one shortest transformation is "hit" -> "hot" -> "dot" -> "dog" -> "cog",
+return its length 5.
+```
+
+```html
+Input:
+beginWord = "hit"
+endWord = "cog"
+wordList = ["hot","dot","dog","lot","log"]
+
+Output: 0
+
+Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
+```
+
+æ‰¾å‡ºä¸€æ¡ä» beginWord åˆ° endWord çš„æœ€çŸ­è·¯å¾„ï¼Œæ¯æ¬¡ç§»åŠ¨è§„å®šä¸ºæ”¹å˜ä¸€ä¸ªå­—ç¬¦ï¼Œå¹¶ä¸”æ”¹å˜ä¹‹åçš„å­—ç¬¦ä¸²å¿…é¡»åœ¨ wordList ä¸­ã€‚
+
+```java
+public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+    wordList.add(beginWord);
+    int N = wordList.size();
+    int start = N - 1;
+    int end = 0;
+    while (end < N && !wordList.get(end).equals(endWord)) {
+        end++;
+    }
+    if (end == N) {
+        return 0;
+    }
+    List<Integer>[] graphic = buildGraphic(wordList);
+    return getShortestPath(graphic, start, end);
+}
+
+private List<Integer>[] buildGraphic(List<String> wordList) {
+    int N = wordList.size();
+    List<Integer>[] graphic = new List[N];
+    for (int i = 0; i < N; i++) {
+        graphic[i] = new ArrayList<>();
+        for (int j = 0; j < N; j++) {
+            if (isConnect(wordList.get(i), wordList.get(j))) {
+                graphic[i].add(j);
+            }
+        }
+    }
+    return graphic;
+}
+
+private boolean isConnect(String s1, String s2) {
+    int diffCnt = 0;
+    for (int i = 0; i < s1.length() && diffCnt <= 1; i++) {
+        if (s1.charAt(i) != s2.charAt(i)) {
+            diffCnt++;
+        }
+    }
+    return diffCnt == 1;
+}
+
+private int getShortestPath(List<Integer>[] graphic, int start, int end) {
+    Queue<Integer> queue = new LinkedList<>();
+    boolean[] marked = new boolean[graphic.length];
+    queue.add(start);
+    marked[start] = true;
+    int path = 1;
+    while (!queue.isEmpty()) {
+        int size = queue.size();
+        path++;
+        while (size-- > 0) {
+            int cur = queue.poll();
+            for (int next : graphic[cur]) {
+                if (next == end) {
+                    return path;
+                }
+                if (marked[next]) {
+                    continue;
+                }
+                marked[next] = true;
+                queue.add(next);
+            }
+        }
+    }
+    return 0;
+}
+```
+
+### DFS
+
+<div align="center"> <img src="../pics//f7f7e3e5-7dd4-4173-9999-576b9e2ac0a2.png"/> </div><br>
+
+å¹¿åº¦ä¼˜å…ˆæœç´¢ä¸€å±‚ä¸€å±‚éå†ï¼Œæ¯ä¸€å±‚å¾—åˆ°çš„æ‰€æœ‰æ–°èŠ‚ç‚¹ï¼Œè¦ç”¨é˜Ÿåˆ—å­˜å‚¨èµ·æ¥ä»¥å¤‡ä¸‹ä¸€å±‚éå†çš„æ—¶å€™å†éå†ã€‚
+
+è€Œæ·±åº¦ä¼˜å…ˆæœç´¢åœ¨å¾—åˆ°ä¸€ä¸ªæ–°èŠ‚ç‚¹æ—¶ç«‹é©¬å¯¹æ–°èŠ‚ç‚¹è¿›è¡Œéå†ï¼šä»èŠ‚ç‚¹ 0 å‡ºå‘å¼€å§‹éå†ï¼Œå¾—åˆ°åˆ°æ–°èŠ‚ç‚¹ 6 æ—¶ï¼Œç«‹é©¬å¯¹æ–°èŠ‚ç‚¹ 6 è¿›è¡Œéå†ï¼Œå¾—åˆ°æ–°èŠ‚ç‚¹ 4ï¼›å¦‚æ­¤åå¤ä»¥è¿™ç§æ–¹å¼éå†æ–°èŠ‚ç‚¹ï¼Œç›´åˆ°æ²¡æœ‰æ–°èŠ‚ç‚¹äº†ï¼Œæ­¤æ—¶è¿”å›ã€‚è¿”å›åˆ°æ ¹èŠ‚ç‚¹ 0 çš„æƒ…å†µæ˜¯ï¼Œç»§ç»­å¯¹æ ¹èŠ‚ç‚¹ 0 è¿›è¡Œéå†ï¼Œå¾—åˆ°æ–°èŠ‚ç‚¹ 2ï¼Œç„¶åç»§ç»­ä»¥ä¸Šæ­¥éª¤ã€‚
+
+ä»ä¸€ä¸ªèŠ‚ç‚¹å‡ºå‘ï¼Œä½¿ç”¨ DFS å¯¹ä¸€ä¸ªå›¾è¿›è¡Œéå†æ—¶ï¼Œèƒ½å¤Ÿéå†åˆ°çš„èŠ‚ç‚¹éƒ½æ˜¯ä»åˆå§‹èŠ‚ç‚¹å¯è¾¾çš„ï¼ŒDFS å¸¸ç”¨æ¥æ±‚è§£è¿™ç§  **å¯è¾¾æ€§**  é—®é¢˜ã€‚
+
+åœ¨ç¨‹åºå®ç° DFS æ—¶éœ€è¦è€ƒè™‘ä»¥ä¸‹é—®é¢˜ï¼š
+
+- æ ˆï¼šç”¨æ ˆæ¥ä¿å­˜å½“å‰èŠ‚ç‚¹ä¿¡æ¯ï¼Œå½“éå†æ–°èŠ‚ç‚¹è¿”å›æ—¶èƒ½å¤Ÿç»§ç»­éå†å½“å‰èŠ‚ç‚¹ã€‚å¯ä»¥ä½¿ç”¨é€’å½’æ ˆã€‚
+- æ ‡è®°ï¼šå’Œ BFS ä¸€æ ·åŒæ ·éœ€è¦å¯¹å·²ç»éå†è¿‡çš„èŠ‚ç‚¹è¿›è¡Œæ ‡è®°ã€‚
+
+**æŸ¥æ‰¾æœ€å¤§çš„è¿é€šé¢ç§¯** 
+
+[695. Max Area of Island (Easy)](https://leetcode.com/problems/max-area-of-island/description/)
+
+```html
+[[0,0,1,0,0,0,0,1,0,0,0,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,1,1,0,1,0,0,0,0,0,0,0,0],
+ [0,1,0,0,1,1,0,0,1,0,1,0,0],
+ [0,1,0,0,1,1,0,0,1,1,1,0,0],
+ [0,0,0,0,0,0,0,0,0,0,1,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,0,0,0,0,0,0,1,1,0,0,0,0]]
+```
+
+```java
+private int m, n;
+private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+
+public int maxAreaOfIsland(int[][] grid) {
+    if (grid == null || grid.length == 0) {
+        return 0;
+    }
+    m = grid.length;
+    n = grid[0].length;
+    int maxArea = 0;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            maxArea = Math.max(maxArea, dfs(grid, i, j));
+        }
+    }
+    return maxArea;
+}
+
+private int dfs(int[][] grid, int r, int c) {
+    if (r < 0 || r >= m || c < 0 || c >= n || grid[r][c] == 0) {
+        return 0;
+    }
+    grid[r][c] = 0;
+    int area = 1;
+    for (int[] d : direction) {
+        area += dfs(grid, r + d[0], c + d[1]);
+    }
+    return area;
+}
+```
+
+**çŸ©é˜µä¸­çš„è¿é€šåˆ†é‡æ•°ç›®** 
+
+[200. Number of Islands (Medium)](https://leetcode.com/problems/number-of-islands/description/)
+
+```html
+Input:
+11000
+11000
+00100
+00011
+
+Output: 3
+```
+
+å¯ä»¥å°†çŸ©é˜µè¡¨ç¤ºçœ‹æˆä¸€å¼ æœ‰å‘å›¾ã€‚
+
+```java
+private int m, n;
+private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+
+public int numIslands(char[][] grid) {
+    if (grid == null || grid.length == 0) {
+        return 0;
+    }
+    m = grid.length;
+    n = grid[0].length;
+    int islandsNum = 0;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if (grid[i][j] != '0') {
+                dfs(grid, i, j);
+                islandsNum++;
+            }
+        }
+    }
+    return islandsNum;
+}
+
+private void dfs(char[][] grid, int i, int j) {
+    if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] == '0') {
+        return;
+    }
+    grid[i][j] = '0';
+    for (int[] d : direction) {
+        dfs(grid, i + d[0], j + d[1]);
+    }
+}
+```
+
+**å¥½å‹å…³ç³»çš„è¿é€šåˆ†é‡æ•°ç›®** 
+
+[547. Friend Circles (Medium)](https://leetcode.com/problems/friend-circles/description/)
 
 ```html
 Input:
@@ -810,110 +1484,37 @@ Explanation:The 0th and 1st students are direct friends, so they are in a friend
 The 2nd student himself is in a friend circle. So return 2.
 ```
 
+å¥½å‹å…³ç³»å¯ä»¥çœ‹æˆæ˜¯ä¸€ä¸ªæ— å‘å›¾ï¼Œä¾‹å¦‚ç¬¬ 0 ä¸ªäººä¸ç¬¬ 1 ä¸ªäººæ˜¯å¥½å‹ï¼Œé‚£ä¹ˆ M[0][1] å’Œ M[1][0] çš„å€¼éƒ½ä¸º 1ã€‚
+
 ```java
+private int n;
+
 public int findCircleNum(int[][] M) {
-    int n = M.length;
-    int ret = 0;
-    boolean[] hasFind = new boolean[n];
-    for(int i = 0; i < n; i++) {
-        if(!hasFind[i]) {
-            dfs(M, i, hasFind);
-            ret++;
+    n = M.length;
+    int circleNum = 0;
+    boolean[] hasVisited = new boolean[n];
+    for (int i = 0; i < n; i++) {
+        if (!hasVisited[i]) {
+            dfs(M, i, hasVisited);
+            circleNum++;
         }
     }
-    return ret;
+    return circleNum;
 }
 
-private void dfs(int[][] M, int i, boolean[] hasFind) {
-    hasFind[i] = true;
-    int n = M.length;
-    for(int k = 0; k < n; k++) {
-        if(M[i][k] == 1 && !hasFind[k]) {
-            dfs(M, k, hasFind);
+private void dfs(int[][] M, int i, boolean[] hasVisited) {
+    hasVisited[i] = true;
+    for (int k = 0; k < n; k++) {
+        if (M[i][k] == 1 && !hasVisited[k]) {
+            dfs(M, k, hasVisited);
         }
     }
 }
 ```
 
-**¾ØÕóÖĞµÄÁ¬Í¨ÇøÓòÊıÁ¿**
+**å¡«å……å°é—­åŒºåŸŸ** 
 
-[Leetcode : 200. Number of Islands (Medium)](https://leetcode.com/problems/number-of-islands/description/)
-
-```html
-11110
-11010
-11000
-00000
-Answer: 1
-```
-
-```java
-private int m, n;
-private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-
-public int numIslands(char[][] grid) {
-    if (grid == null || grid.length == 0) return 0;
-    m = grid.length;
-    n = grid[0].length;
-    int ret = 0;
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            if (grid[i][j] == '1') {
-                dfs(grid, i, j);
-                ret++;
-            }
-        }
-    }
-    return ret;
-}
-
-private void dfs(char[][] grid, int i, int j) {
-    if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] == '0') return;
-    grid[i][j] = '0';
-    for (int k = 0; k < direction.length; k++) {
-        dfs(grid, i + direction[k][0], j + direction[k][1]);
-    }
-}
-```
-
-**Êä³ö¶ş²æÊ÷ÖĞËùÓĞ´Ó¸ùµ½Ò¶×ÓµÄÂ·¾¶**
-
-[Leetcode : 257. Binary Tree Paths (Easy)](https://leetcode.com/problems/binary-tree-paths/description/)
-
-```html
-  1
-/  \
-2    3
-\
-  5
-```
-```html
-["1->2->5", "1->3"]
-```
-
-```java
-public List<String> binaryTreePaths(TreeNode root) {
-    List<String> ret = new ArrayList();
-    if(root == null) return ret;
-    dfs(root, "", ret);
-    return ret;
-}
-
-private void dfs(TreeNode root, String prefix, List<String> ret){
-    if(root == null) return;
-    if(root.left == null && root.right == null){
-        ret.add(prefix + root.val);
-        return;
-    }
-    prefix += (root.val + "->");
-    dfs(root.left, prefix, ret);
-    dfs(root.right, prefix, ret);
-}
-```
-
-**Ìî³ä·â±ÕÇøÓò**
-
-[Leetcode : 130. Surrounded Regions (Medium)](https://leetcode.com/problems/surrounded-regions/description/)
+[130. Surrounded Regions (Medium)](https://leetcode.com/problems/surrounded-regions/description/)
 
 ```html
 For example,
@@ -929,18 +1530,22 @@ X X X X
 X O X X
 ```
 
-ÌâÄ¿ÃèÊö£ºÊ¹µÃ±» 'X' µÄ 'O' ×ª»»Îª 'X'¡£
+ä½¿è¢« 'X' åŒ…å›´çš„ 'O' è½¬æ¢ä¸º 'X'ã€‚
 
-ÏÈÌî³ä×îÍâ²à£¬Ê£ÏÂµÄ¾ÍÊÇÀï²àÁË¡£
+å…ˆå¡«å……æœ€å¤–ä¾§ï¼Œå‰©ä¸‹çš„å°±æ˜¯é‡Œä¾§äº†ã€‚
 
 ```java
 private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 private int m, n;
 
 public void solve(char[][] board) {
-    if (board == null || board.length == 0) return;
+    if (board == null || board.length == 0) {
+        return;
+    }
+
     m = board.length;
     n = board[0].length;
+
     for (int i = 0; i < m; i++) {
         dfs(board, i, 0);
         dfs(board, i, n - 1);
@@ -949,57 +1554,68 @@ public void solve(char[][] board) {
         dfs(board, 0, i);
         dfs(board, m - 1, i);
     }
+
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            if (board[i][j] == 'T') board[i][j] = 'O';
-            else if (board[i][j] == 'O') board[i][j] = 'X';
+            if (board[i][j] == 'T') {
+                board[i][j] = 'O';
+            } else if (board[i][j] == 'O') {
+                board[i][j] = 'X';
+            }
         }
     }
 }
 
 private void dfs(char[][] board, int r, int c) {
-    if (r < 0 || r >= m || c < 0 || c >= n || board[r][c] != 'O') return;
+    if (r < 0 || r >= m || c < 0 || c >= n || board[r][c] != 'O') {
+        return;
+    }
     board[r][c] = 'T';
-    for (int i = 0; i < direction.length; i++) {
-        dfs(board, r + direction[i][0], c + direction[i][1]);
+    for (int[] d : direction) {
+        dfs(board, r + d[0], c + d[1]);
     }
 }
 ```
 
-**´ÓÁ½¸ö·½Ïò¶¼ÄÜµ½´ïµÄÇøÓò**
+**èƒ½åˆ°è¾¾çš„å¤ªå¹³æ´‹å’Œå¤§è¥¿æ´‹çš„åŒºåŸŸ** 
 
-[Leetcode : 417. Pacific Atlantic Water Flow (Medium)](https://leetcode.com/problems/pacific-atlantic-water-flow/description/)
+[417. Pacific Atlantic Water Flow (Medium)](https://leetcode.com/problems/pacific-atlantic-water-flow/description/)
 
 ```html
 Given the following 5x5 matrix:
 
-  Pacific \~   \~   \~   \~   \~ 
-       \~  1   2   2   3  (5) *
-       \~  3   2   3  (4) (4) *
-       \~  2   4  (5)  3   1  *
-       \~ (6) (7)  1   4   5  *
-       \~ (5)  1   1   2   4  *
+  Pacific ~   ~   ~   ~   ~
+       ~  1   2   2   3  (5) *
+       ~  3   2   3  (4) (4) *
+       ~  2   4  (5)  3   1  *
+       ~ (6) (7)  1   4   5  *
+       ~ (5)  1   1   2   4  *
           *   *   *   *   * Atlantic
 
 Return:
 [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]] (positions with parentheses in above matrix).
 ```
 
-ÌâÄ¿ÃèÊö£º×ó±ßºÍÉÏ±ßÊÇÌ«Æ½Ñó£¬ÓÒ±ßºÍÏÂ±ßÊÇ´óÎ÷Ñó£¬ÄÚ²¿µÄÊı×Ö´ú±íº£°Î£¬º£°Î¸ßµÄµØ·½µÄË®ÄÜ¹»Á÷µ½µÍµÄµØ·½£¬Çó½âË®ÄÜ¹»Á÷µ½Ì«Æ½ÑóºÍ´óÎ÷ÑóµÄËùÓĞÎ»ÖÃ¡£
+å·¦è¾¹å’Œä¸Šè¾¹æ˜¯å¤ªå¹³æ´‹ï¼Œå³è¾¹å’Œä¸‹è¾¹æ˜¯å¤§è¥¿æ´‹ï¼Œå†…éƒ¨çš„æ•°å­—ä»£è¡¨æµ·æ‹”ï¼Œæµ·æ‹”é«˜çš„åœ°æ–¹çš„æ°´èƒ½å¤Ÿæµåˆ°ä½çš„åœ°æ–¹ï¼Œæ±‚è§£æ°´èƒ½å¤Ÿæµåˆ°å¤ªå¹³æ´‹å’Œå¤§è¥¿æ´‹çš„æ‰€æœ‰ä½ç½®ã€‚
 
 ```java
+
 private int m, n;
 private int[][] matrix;
 private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
 public List<int[]> pacificAtlantic(int[][] matrix) {
     List<int[]> ret = new ArrayList<>();
-    if (matrix == null || matrix.length == 0) return ret;
-    this.m = matrix.length;
-    this.n = matrix[0].length;
+    if (matrix == null || matrix.length == 0) {
+        return ret;
+    }
+
+    m = matrix.length;
+    n = matrix[0].length;
     this.matrix = matrix;
     boolean[][] canReachP = new boolean[m][n];
     boolean[][] canReachA = new boolean[m][n];
+
     for (int i = 0; i < m; i++) {
         dfs(i, 0, canReachP);
         dfs(i, n - 1, canReachA);
@@ -1008,6 +1624,7 @@ public List<int[]> pacificAtlantic(int[][] matrix) {
         dfs(0, i, canReachP);
         dfs(m - 1, i, canReachA);
     }
+
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             if (canReachP[i][j] && canReachA[i][j]) {
@@ -1015,96 +1632,45 @@ public List<int[]> pacificAtlantic(int[][] matrix) {
             }
         }
     }
+
     return ret;
 }
 
 private void dfs(int r, int c, boolean[][] canReach) {
-    if(canReach[r][c]) return;
-    canReach[r][c] = true;
-    for (int i = 0; i < direction.length; i++) {
-        int nextR = direction[i][0] + r;
-        int nextC = direction[i][1] + c;
-        if (nextR < 0 || nextR >= m || nextC < 0 || nextC >= n
-                || matrix[r][c] > matrix[nextR][nextC]) continue;
-        dfs(nextR, nextC, canReach);
-    }
-}
-```
-
-**N »Êºó**
-
-[Leetcode : 51. N-Queens (Hard)](https://leetcode.com/problems/n-queens/description/)
-
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/1f080e53-4758-406c-bb5f-dbedf89b63ce.jpg)
-
-ÌâÄ¿ÃèÊö£ºÔÚ n\*n µÄ¾ØÕóÖĞ°Ú·Å n ¸ö»Êºó£¬²¢ÇÒÃ¿¸ö»Êºó²»ÄÜÔÚÍ¬Ò»ĞĞ£¬Í¬Ò»ÁĞ£¬Í¬Ò»¶Ô½ÇÏßÉÏ£¬ÒªÇó½âËùÓĞµÄ n »Êºó½â¡£
-
-Ò»ĞĞÒ»ĞĞµØ°Ú·Å£¬ÔÚÈ·¶¨Ò»ĞĞÖĞµÄÄÇ¸ö»ÊºóÓ¦¸Ã°ÚÔÚÄÄÒ»ÁĞÊ±£¬ĞèÒªÓÃÈı¸ö±ê¼ÇÊı×éÀ´È·¶¨Ä³Ò»ÁĞÊÇ·ñºÏ·¨£¬ÕâÈı¸ö±ê¼ÇÊı×é·Ö±ğÎª£ºÁĞ±ê¼ÇÊı×é¡¢45 ¶È¶Ô½ÇÏß±ê¼ÇÊı×éºÍ 135 ¶È¶Ô½ÇÏß±ê¼ÇÊı×é¡£
-
-45 ¶È¶Ô½ÇÏß±ê¼ÇÊı×éµÄÎ¬¶ÈÎª 2\*n - 1£¬Í¨¹ıÏÂÍ¼¿ÉÒÔÃ÷È· (r,c) µÄÎ»ÖÃËùÔÚµÄÊı×éÏÂ±êÎª r + c¡£
-
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/85583359-1b45-45f2-9811-4f7bb9a64db7.jpg)
-
-135 ¶È¶Ô½ÇÏß±ê¼ÇÊı×éµÄÎ¬¶ÈÒ²ÊÇ 2\*n - 1£¬(r,c) µÄÎ»ÖÃËùÔÚµÄÊı×éÏÂ±êÎª n - 1 - (r - c)¡£
-
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/9e80f75a-b12b-4344-80c8-1f9ccc2d5246.jpg)
-
-```java
-private List<List<String>> ret;
-private char[][] nQueens;
-private boolean[] colUsed;
-private boolean[] diagonals45Used;
-private boolean[] diagonals135Used;
-private int n;
-
-public List<List<String>> solveNQueens(int n) {
-    ret = new ArrayList<>();
-    nQueens = new char[n][n];
-    Arrays.fill(nQueens, '.');
-    colUsed = new boolean[n];
-    diagonals45Used = new boolean[2 * n - 1];
-    diagonals135Used = new boolean[2 * n - 1];
-    this.n = n;
-    backstracking(0);
-    return ret;
-}
-
-private void backstracking(int row) {
-    if (row == n) {
-        List<String> list = new ArrayList<>();
-        for (char[] chars : nQueens) {
-            list.add(new String(chars));
-        }
-        ret.add(list);
+    if (canReach[r][c]) {
         return;
     }
+    canReach[r][c] = true;
+    for (int[] d : direction) {
+        int nextR = d[0] + r;
+        int nextC = d[1] + c;
+        if (nextR < 0 || nextR >= m || nextC < 0 || nextC >= n
+                || matrix[r][c] > matrix[nextR][nextC]) {
 
-    for (int col = 0; col < n; col++) {
-        int diagonals45Idx = row + col;
-        int diagonals135Idx = n - 1 - (row - col);
-        if (colUsed[col] || diagonals45Used[diagonals45Idx] || diagonals135Used[diagonals135Idx]) {
             continue;
         }
-        nQueens[row][col] = 'Q';
-        colUsed[col] = diagonals45Used[diagonals45Idx] = diagonals135Used[diagonals135Idx] = true;
-        backstracking(row + 1);
-        colUsed[col] = diagonals45Used[diagonals45Idx] = diagonals135Used[diagonals135Idx] = false;
-        nQueens[row][col] = '.';
+        dfs(nextR, nextC, canReach);
     }
 }
 ```
 
 ### Backtracking
 
-»ØËİÊÇ DFS µÄÒ»ÖÖ£¬Ëü²»ÊÇÓÃÔÚ±éÀúÍ¼µÄ½ÚµãÉÏ£¬¶øÊÇÓÃÓÚÇó½â **ÅÅÁĞ×éºÏ** ÎÊÌâ£¬ÀıÈçÓĞ { 'a','b','c' } Èı¸ö×Ö·û£¬Çó½âËùÓĞÓÉÕâÈı¸ö×Ö·ûÅÅÁĞµÃµ½µÄ×Ö·û´®¡£
+Backtrackingï¼ˆå›æº¯ï¼‰å±äº DFSã€‚
 
-ÔÚ³ÌĞòÊµÏÖÊ±£¬»ØËİĞèÒª×¢Òâ¶ÔÔªËØ½øĞĞ±ê¼ÇµÄÎÊÌâ¡£Ê¹ÓÃµİ¹éÊµÏÖµÄ»ØËİ£¬ÔÚ·ÃÎÊÒ»¸öĞÂÔªËØ½øÈëĞÂµÄµİ¹éµ÷ÓÃ£¬´ËÊ±ĞèÒª½«ĞÂÔªËØ±ê¼ÇÎªÒÑ¾­·ÃÎÊ£¬ÕâÑù²ÅÄÜÔÚ¼ÌĞøµİ¹éµ÷ÓÃÊ±²»ÓÃÖØ¸´·ÃÎÊ¸ÃÔªËØ£»µ«ÊÇÔÚµİ¹é·µ»ØÊ±£¬ĞèÒª½«¸ÃÔªËØ±ê¼ÇÎªÎ´·ÃÎÊ£¬ÒòÎªÖ»ĞèÒª±£Ö¤ÔÚÒ»¸öµİ¹éÁ´ÖĞ²»Í¬Ê±·ÃÎÊÒ»¸öÔªËØ£¬¶øÔÚ²»Í¬µÄµİ¹éÁ´ÊÇ¿ÉÒÔ·ÃÎÊÒÑ¾­·ÃÎÊ¹ıµ«ÊÇ²»ÔÚµ±Ç°µİ¹éÁ´ÖĞµÄÔªËØ¡£
+- æ™®é€š DFS ä¸»è¦ç”¨åœ¨  **å¯è¾¾æ€§é—®é¢˜** ï¼Œè¿™ç§é—®é¢˜åªéœ€è¦æ‰§è¡Œåˆ°ç‰¹ç‚¹çš„ä½ç½®ç„¶åè¿”å›å³å¯ã€‚
+- è€Œ Backtracking ä¸»è¦ç”¨äºæ±‚è§£  **æ’åˆ—ç»„åˆ**  é—®é¢˜ï¼Œä¾‹å¦‚æœ‰ { 'a','b','c' } ä¸‰ä¸ªå­—ç¬¦ï¼Œæ±‚è§£æ‰€æœ‰ç”±è¿™ä¸‰ä¸ªå­—ç¬¦æ’åˆ—å¾—åˆ°çš„å­—ç¬¦ä¸²ï¼Œè¿™ç§é—®é¢˜åœ¨æ‰§è¡Œåˆ°ç‰¹å®šçš„ä½ç½®è¿”å›ä¹‹åè¿˜ä¼šç»§ç»­æ‰§è¡Œæ±‚è§£è¿‡ç¨‹ã€‚
 
-**Êı×Ö¼üÅÌ×éºÏ**
+å› ä¸º Backtracking ä¸æ˜¯ç«‹å³å°±è¿”å›ï¼Œè€Œè¦ç»§ç»­æ±‚è§£ï¼Œå› æ­¤åœ¨ç¨‹åºå®ç°æ—¶ï¼Œéœ€è¦æ³¨æ„å¯¹å…ƒç´ çš„æ ‡è®°é—®é¢˜ï¼š
 
-[Leetcode : 17. Letter Combinations of a Phone Number (Medium)](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)
+- åœ¨è®¿é—®ä¸€ä¸ªæ–°å…ƒç´ è¿›å…¥æ–°çš„é€’å½’è°ƒç”¨æ—¶ï¼Œéœ€è¦å°†æ–°å…ƒç´ æ ‡è®°ä¸ºå·²ç»è®¿é—®ï¼Œè¿™æ ·æ‰èƒ½åœ¨ç»§ç»­é€’å½’è°ƒç”¨æ—¶ä¸ç”¨é‡å¤è®¿é—®è¯¥å…ƒç´ ï¼›
+- ä½†æ˜¯åœ¨é€’å½’è¿”å›æ—¶ï¼Œéœ€è¦å°†å…ƒç´ æ ‡è®°ä¸ºæœªè®¿é—®ï¼Œå› ä¸ºåªéœ€è¦ä¿è¯åœ¨ä¸€ä¸ªé€’å½’é“¾ä¸­ä¸åŒæ—¶è®¿é—®ä¸€ä¸ªå…ƒç´ ï¼Œå¯ä»¥è®¿é—®å·²ç»è®¿é—®è¿‡ä½†æ˜¯ä¸åœ¨å½“å‰é€’å½’é“¾ä¸­çš„å…ƒç´ ã€‚
 
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/a3f34241-bb80-4879-8ec9-dff2d81b514e.jpg)
+**æ•°å­—é”®ç›˜ç»„åˆ** 
+
+[17. Letter Combinations of a Phone Number (Medium)](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)
+
+<div align="center"> <img src="../pics//a3f34241-bb80-4879-8ec9-dff2d81b514e.jpg"/> </div><br>
 
 ```html
 Input:Digit string "23"
@@ -1112,31 +1678,77 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 ```
 
 ```java
+
 private static final String[] KEYS = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
 public List<String> letterCombinations(String digits) {
-    List<String> ret = new ArrayList<>();
-    if (digits != null && digits.length() != 0) {
-        combination("", digits, 0, ret);
+    List<String> combinations = new ArrayList<>();
+    if (digits == null || digits.length() == 0) {
+        return combinations;
     }
-    return ret;
+    doCombination(new StringBuilder(), combinations, digits);
+    return combinations;
 }
 
-private void combination(String prefix, String digits, int offset, List<String> ret) {
-    if (offset == digits.length()) {
-        ret.add(prefix);
+private void doCombination(StringBuilder prefix, List<String> combinations, final String digits) {
+    if (prefix.length() == digits.length()) {
+        combinations.add(prefix.toString());
         return;
     }
-    String letters = KEYS[digits.charAt(offset) - '0'];
+    int curDigits = digits.charAt(prefix.length()) - '0';
+    String letters = KEYS[curDigits];
     for (char c : letters.toCharArray()) {
-        combination(prefix + c, digits, offset + 1, ret);
+        prefix.append(c);                         // æ·»åŠ 
+        doCombination(prefix, combinations, digits);
+        prefix.deleteCharAt(prefix.length() - 1); // åˆ é™¤
     }
 }
 ```
 
-**ÔÚ¾ØÕóÖĞÑ°ÕÒ×Ö·û´®**
+**IP åœ°å€åˆ’åˆ†** 
 
-[Leetcode : 79. Word Search (Medium)](https://leetcode.com/problems/word-search/description/)
+[93. Restore IP Addresses(Medium)](https://leetcode.com/problems/restore-ip-addresses/description/)
+
+```html
+Given "25525511135",
+return ["255.255.11.135", "255.255.111.35"].
+```
+
+```java
+public List<String> restoreIpAddresses(String s) {
+    List<String> addresses = new ArrayList<>();
+    StringBuilder tempAddress = new StringBuilder();
+    doRestore(0, tempAddress, addresses, s);
+    return addresses;
+}
+
+private void doRestore(int k, StringBuilder tempAddress, List<String> addresses, String s) {
+    if (k == 4 || s.length() == 0) {
+        if (k == 4 && s.length() == 0) {
+            addresses.add(tempAddress.toString());
+        }
+        return;
+    }
+    for (int i = 0; i < s.length() && i <= 2; i++) {
+        if (i != 0 && s.charAt(0) == '0') {
+            break;
+        }
+        String part = s.substring(0, i + 1);
+        if (Integer.valueOf(part) <= 255) {
+            if (tempAddress.length() != 0) {
+                part = "." + part;
+            }
+            tempAddress.append(part);
+            doRestore(k + 1, tempAddress, addresses, s.substring(i + 1));
+            tempAddress.delete(tempAddress.length() - part.length(), tempAddress.length());
+        }
+    }
+}
+```
+
+**åœ¨çŸ©é˜µä¸­å¯»æ‰¾å­—ç¬¦ä¸²** 
+
+[79. Word Search (Medium)](https://leetcode.com/problems/word-search/description/)
 
 ```html
 For example,
@@ -1152,81 +1764,118 @@ word = "ABCB", -> returns false.
 ```
 
 ```java
-private static int[][] shift = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-private static boolean[][] visited;
+private final static int[][] direction = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 private int m;
 private int n;
 
 public boolean exist(char[][] board, String word) {
-    if (word == null || word.length() == 0) return true;
-    if (board == null || board.length == 0 || board[0].length == 0) return false;
+    if (word == null || word.length() == 0) {
+        return true;
+    }
+    if (board == null || board.length == 0 || board[0].length == 0) {
+        return false;
+    }
+
     m = board.length;
     n = board[0].length;
-    visited = new boolean[m][n];
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            if (dfs(board, word, 0, i, j)) return true;
+    boolean[][] hasVisited = new boolean[m][n];
+
+    for (int r = 0; r < m; r++) {
+        for (int c = 0; c < n; c++) {
+            if (backtracking(0, r, c, hasVisited, board, word)) {
+                return true;
+            }
         }
     }
+
     return false;
 }
 
-private boolean dfs(char[][] board, String word, int start, int r, int c) {
-    if (start == word.length()) {
+private boolean backtracking(int curLen, int r, int c, boolean[][] visited, final char[][] board, final String word) {
+    if (curLen == word.length()) {
         return true;
     }
-    if (r < 0 || r >= m || c < 0 || c >= n || board[r][c] != word.charAt(start) ||  visited[r][c] ) {
+    if (r < 0 || r >= m || c < 0 || c >= n
+            || board[r][c] != word.charAt(curLen) || visited[r][c]) {
+
         return false;
     }
+
     visited[r][c] = true;
-    for (int i = 0; i < shift.length; i++) {
-        int nextR = r + shift[i][0];
-        int nextC = c + shift[i][1];
-        if (dfs(board, word, start + 1, nextR, nextC)) return true;
+
+    for (int[] d : direction) {
+        if (backtracking(curLen + 1, r + d[0], c + d[1], visited, board, word)) {
+            return true;
+        }
     }
+
     visited[r][c] = false;
+
     return false;
 }
 ```
 
-**IP µØÖ·»®·Ö**
+**è¾“å‡ºäºŒå‰æ ‘ä¸­æ‰€æœ‰ä»æ ¹åˆ°å¶å­çš„è·¯å¾„** 
 
-[Leetcode : 93. Restore IP Addresses(Medium)](https://leetcode.com/problems/restore-ip-addresses/description/)
+[257. Binary Tree Paths (Easy)](https://leetcode.com/problems/binary-tree-paths/description/)
 
 ```html
-Given "25525511135",
-return ["255.255.11.135", "255.255.111.35"].
+  1
+ /  \
+2    3
+ \
+  5
+```
+
+```html
+["1->2->5", "1->3"]
 ```
 
 ```java
-private List<String> ret;
 
-public List<String> restoreIpAddresses(String s) {
-    ret = new ArrayList<>();
-    doRestore(0, "", s);
-    return ret;
+public List<String> binaryTreePaths(TreeNode root) {
+    List<String> paths = new ArrayList<>();
+    if (root == null) {
+        return paths;
+    }
+    List<Integer> values = new ArrayList<>();
+    backtracking(root, values, paths);
+    return paths;
 }
 
-private void doRestore(int k, String path, String s) {
-    if (k == 4 || s.length() == 0) {
-        if (k == 4 && s.length() == 0) {
-            ret.add(path);
-        }
+private void backtracking(TreeNode node, List<Integer> values, List<String> paths) {
+    if (node == null) {
         return;
     }
-    for (int i = 0; i < s.length() && i <= 2; i++) {
-        if (i != 0 && s.charAt(0) == '0') break;
-        String part = s.substring(0, i + 1);
-        if (Integer.valueOf(part) <= 255) {
-            doRestore(k + 1, path.length() != 0 ? path + "." + part : part, s.substring(i + 1));
+    values.add(node.val);
+    if (isLeaf(node)) {
+        paths.add(buildPath(values));
+    } else {
+        backtracking(node.left, values, paths);
+        backtracking(node.right, values, paths);
+    }
+    values.remove(values.size() - 1);
+}
+
+private boolean isLeaf(TreeNode node) {
+    return node.left == null && node.right == null;
+}
+
+private String buildPath(List<Integer> values) {
+    StringBuilder str = new StringBuilder();
+    for (int i = 0; i < values.size(); i++) {
+        str.append(values.get(i));
+        if (i != values.size() - 1) {
+            str.append("->");
         }
     }
+    return str.toString();
 }
 ```
 
-**ÅÅÁĞ**
+**æ’åˆ—** 
 
-[Leetcode : 46. Permutations (Medium)](https://leetcode.com/problems/permutations/description/)
+[46. Permutations (Medium)](https://leetcode.com/problems/permutations/description/)
 
 ```html
 [1,2,3] have the following permutations:
@@ -1242,74 +1891,79 @@ private void doRestore(int k, String path, String s) {
 
 ```java
 public List<List<Integer>> permute(int[] nums) {
-    List<List<Integer>> ret = new ArrayList<>();
+    List<List<Integer>> permutes = new ArrayList<>();
     List<Integer> permuteList = new ArrayList<>();
-    boolean[] visited = new boolean[nums.length];
-    backtracking(permuteList, visited, nums, ret);
-    return ret;
+    boolean[] hasVisited = new boolean[nums.length];
+    backtracking(permuteList, permutes, hasVisited, nums);
+    return permutes;
 }
 
-private void backtracking(List<Integer> permuteList, boolean[] visited, int[] nums, List<List<Integer>> ret){
-    if(permuteList.size() == nums.length){
-        ret.add(new ArrayList(permuteList));
+private void backtracking(List<Integer> permuteList, List<List<Integer>> permutes, boolean[] visited, final int[] nums) {
+    if (permuteList.size() == nums.length) {
+        permutes.add(new ArrayList<>(permuteList)); // é‡æ–°æ„é€ ä¸€ä¸ª List
         return;
     }
-
-    for(int i = 0; i < visited.length; i++){
-        if(visited[i]) continue;
+    for (int i = 0; i < visited.length; i++) {
+        if (visited[i]) {
+            continue;
+        }
         visited[i] = true;
         permuteList.add(nums[i]);
-        backtracking(permuteList, visited, nums, ret);
+        backtracking(permuteList, permutes, visited, nums);
         permuteList.remove(permuteList.size() - 1);
         visited[i] = false;
     }
 }
 ```
 
-**º¬ÓĞÏàÍ¬ÔªËØÇóÅÅÁĞ**
+**å«æœ‰ç›¸åŒå…ƒç´ æ±‚æ’åˆ—** 
 
-[Leetcode : 47. Permutations II (Medium)](https://leetcode.com/problems/permutations-ii/description/)
+[47. Permutations II (Medium)](https://leetcode.com/problems/permutations-ii/description/)
 
 ```html
 [1,1,2] have the following unique permutations:
 [[1,1,2], [1,2,1], [2,1,1]]
 ```
 
-ÌâÄ¿ÃèÊö£ºÊı×éÔªËØ¿ÉÄÜº¬ÓĞÏàÍ¬µÄÔªËØ£¬½øĞĞÅÅÁĞÊ±¾ÍÓĞ¿ÉÄÜ³öÏÈÖØ¸´µÄÅÅÁĞ£¬ÒªÇóÖØ¸´µÄÅÅÁĞÖ»·µ»ØÒ»¸ö¡£
+æ•°ç»„å…ƒç´ å¯èƒ½å«æœ‰ç›¸åŒçš„å…ƒç´ ï¼Œè¿›è¡Œæ’åˆ—æ—¶å°±æœ‰å¯èƒ½å‡ºç°é‡å¤çš„æ’åˆ—ï¼Œè¦æ±‚é‡å¤çš„æ’åˆ—åªè¿”å›ä¸€ä¸ªã€‚
 
-ÔÚÊµÏÖÉÏ£¬ºÍ Permutations ²»Í¬µÄÊÇÒªÏÈÅÅĞò£¬È»ºóÔÚÌí¼ÓÒ»¸öÔªËØÊ±£¬ÅĞ¶ÏÕâ¸öÔªËØÊÇ·ñµÈÓÚÇ°Ò»¸öÔªËØ£¬Èç¹ûµÈÓÚ£¬²¢ÇÒÇ°Ò»¸öÔªËØ»¹Î´·ÃÎÊ£¬ÄÇÃ´¾ÍÌø¹ıÕâ¸öÔªËØ¡£
+åœ¨å®ç°ä¸Šï¼Œå’Œ Permutations ä¸åŒçš„æ˜¯è¦å…ˆæ’åºï¼Œç„¶ååœ¨æ·»åŠ ä¸€ä¸ªå…ƒç´ æ—¶ï¼Œåˆ¤æ–­è¿™ä¸ªå…ƒç´ æ˜¯å¦ç­‰äºå‰ä¸€ä¸ªå…ƒç´ ï¼Œå¦‚æœç­‰äºï¼Œå¹¶ä¸”å‰ä¸€ä¸ªå…ƒç´ è¿˜æœªè®¿é—®ï¼Œé‚£ä¹ˆå°±è·³è¿‡è¿™ä¸ªå…ƒç´ ã€‚
 
 ```java
 public List<List<Integer>> permuteUnique(int[] nums) {
-    List<List<Integer>> ret = new ArrayList<>();
+    List<List<Integer>> permutes = new ArrayList<>();
     List<Integer> permuteList = new ArrayList<>();
-    Arrays.sort(nums);
-    boolean[] visited = new boolean[nums.length];
-    backtracking(permuteList, visited, nums, ret);
-    return ret;
+    Arrays.sort(nums);  // æ’åº
+    boolean[] hasVisited = new boolean[nums.length];
+    backtracking(permuteList, permutes, hasVisited, nums);
+    return permutes;
 }
 
-private void backtracking(List<Integer> permuteList, boolean[] visited, int[] nums, List<List<Integer>> ret) {
+private void backtracking(List<Integer> permuteList, List<List<Integer>> permutes, boolean[] visited, final int[] nums) {
     if (permuteList.size() == nums.length) {
-        ret.add(new ArrayList(permuteList));
+        permutes.add(new ArrayList<>(permuteList));
         return;
     }
 
     for (int i = 0; i < visited.length; i++) {
-        if (i != 0 && nums[i] == nums[i - 1] && !visited[i - 1]) continue;
-        if (visited[i]) continue;
+        if (i != 0 && nums[i] == nums[i - 1] && !visited[i - 1]) {
+            continue;  // é˜²æ­¢é‡å¤
+        }
+        if (visited[i]){
+            continue;
+        }
         visited[i] = true;
         permuteList.add(nums[i]);
-        backtracking(permuteList, visited, nums, ret);
+        backtracking(permuteList, permutes, visited, nums);
         permuteList.remove(permuteList.size() - 1);
         visited[i] = false;
     }
 }
 ```
 
-**×éºÏ**
+**ç»„åˆ** 
 
-[Leetcode : 77. Combinations (Medium)](https://leetcode.com/problems/combinations/description/)
+[77. Combinations (Medium)](https://leetcode.com/problems/combinations/description/)
 
 ```html
 If n = 4 and k = 2, a solution is:
@@ -1325,30 +1979,28 @@ If n = 4 and k = 2, a solution is:
 
 ```java
 public List<List<Integer>> combine(int n, int k) {
-    List<List<Integer>> ret = new ArrayList<>();
+    List<List<Integer>> combinations = new ArrayList<>();
     List<Integer> combineList = new ArrayList<>();
-    backtracking(1, n, k, combineList, ret);
-    return ret;
+    backtracking(combineList, combinations, 1, k, n);
+    return combinations;
 }
 
-private void backtracking(int start, int n, int k, List<Integer> combineList, List<List<Integer>> ret){
-    if(k == 0){
-        ret.add(new ArrayList(combineList)); // ÕâÀïÒªÖØĞÂ¹¹ÔìÒ»¸ö List
+private void backtracking(List<Integer> combineList, List<List<Integer>> combinations, int start, int k, final int n) {
+    if (k == 0) {
+        combinations.add(new ArrayList<>(combineList));
         return;
     }
-    
-    for(int i = start; i <= n - k + 1; i++){ // ¼ôÖ¦
-
-        combineList.add(i);                        // °Ñ i ±ê¼ÇÎªÒÑ·ÃÎÊ
-        backtracking(i + 1, n, k - 1, combineList, ret);
-        combineList.remove(combineList.size() - 1); // °Ñ i ±ê¼ÇÎªÎ´·ÃÎÊ
+    for (int i = start; i <= n - k + 1; i++) {  // å‰ªæ
+        combineList.add(i);
+        backtracking(combineList, combinations, i + 1, k - 1, n);
+        combineList.remove(combineList.size() - 1);
     }
 }
 ```
 
-**×éºÏÇóºÍ**
+**ç»„åˆæ±‚å’Œ** 
 
-[Leetcode : 39. Combination Sum (Medium)](https://leetcode.com/problems/combination-sum/description/)
+[39. Combination Sum (Medium)](https://leetcode.com/problems/combination-sum/description/)
 
 ```html
 given candidate set [2, 3, 6, 7] and target 7,
@@ -1357,36 +2009,36 @@ A solution set is:
 ```
 
 ```java
- private List<List<Integer>> ret;
+public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    List<List<Integer>> combinations = new ArrayList<>();
+    backtracking(new ArrayList<>(), combinations, 0, target, candidates);
+    return combinations;
+}
 
- public List<List<Integer>> combinationSum(int[] candidates, int target) {
-     ret = new ArrayList<>();
-     doCombination(candidates, target, 0, new ArrayList<>());
-     return ret;
- }
+private void backtracking(List<Integer> tempCombination, List<List<Integer>> combinations,
+                          int start, int target, final int[] candidates) {
 
- private void doCombination(int[] candidates, int target, int start, List<Integer> list) {
-     if (target == 0) {
-         ret.add(new ArrayList<>(list));
-         return;
-     }
-     for (int i = start; i < candidates.length; i++) {
-         if (candidates[i] <= target) {
-             list.add(candidates[i]);
-             doCombination(candidates, target - candidates[i], i, list);
-             list.remove(list.size() - 1);
-         }
-     }
- }
+    if (target == 0) {
+        combinations.add(new ArrayList<>(tempCombination));
+        return;
+    }
+    for (int i = start; i < candidates.length; i++) {
+        if (candidates[i] <= target) {
+            tempCombination.add(candidates[i]);
+            backtracking(tempCombination, combinations, i, target - candidates[i], candidates);
+            tempCombination.remove(tempCombination.size() - 1);
+        }
+    }
+}
 ```
 
-**º¬ÓĞÏàÍ¬ÔªËØµÄÇó×éºÏÇóºÍ**
+**å«æœ‰ç›¸åŒå…ƒç´ çš„æ±‚ç»„åˆæ±‚å’Œ** 
 
-[Leetcode : 40. Combination Sum II (Medium)](https://leetcode.com/problems/combination-sum-ii/description/)
+[40. Combination Sum II (Medium)](https://leetcode.com/problems/combination-sum-ii/description/)
 
 ```html
-For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8, 
-A solution set is: 
+For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8,
+A solution set is:
 [
   [1, 7],
   [1, 2, 5],
@@ -1396,69 +2048,109 @@ A solution set is:
 ```
 
 ```java
-private List<List<Integer>> ret;
-
 public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-    ret = new ArrayList<>();
+    List<List<Integer>> combinations = new ArrayList<>();
     Arrays.sort(candidates);
-    doCombination(candidates, target, 0, new ArrayList<>(), new boolean[candidates.length]);
-    return ret;
+    backtracking(new ArrayList<>(), combinations, new boolean[candidates.length], 0, target, candidates);
+    return combinations;
 }
 
-private void doCombination(int[] candidates, int target, int start, List<Integer> list, boolean[] visited) {
+private void backtracking(List<Integer> tempCombination, List<List<Integer>> combinations,
+                          boolean[] hasVisited, int start, int target, final int[] candidates) {
+
     if (target == 0) {
-        ret.add(new ArrayList<>(list));
+        combinations.add(new ArrayList<>(tempCombination));
         return;
     }
     for (int i = start; i < candidates.length; i++) {
-        if (i != 0 && candidates[i] == candidates[i - 1] && !visited[i - 1]) continue;
+        if (i != 0 && candidates[i] == candidates[i - 1] && !hasVisited[i - 1]) {
+            continue;
+        }
         if (candidates[i] <= target) {
-            list.add(candidates[i]);
-            visited[i] = true;
-            doCombination(candidates, target - candidates[i], i + 1, list, visited);
-            visited[i] = false;
-            list.remove(list.size() - 1);
+            tempCombination.add(candidates[i]);
+            hasVisited[i] = true;
+            backtracking(tempCombination, combinations, hasVisited, i + 1, target - candidates[i], candidates);
+            hasVisited[i] = false;
+            tempCombination.remove(tempCombination.size() - 1);
         }
     }
 }
 ```
 
-**×Ó¼¯**
+**1-9 æ•°å­—çš„ç»„åˆæ±‚å’Œ** 
 
-[Leetcode : 78. Subsets (Medium)](https://leetcode.com/problems/subsets/description/)
+[216. Combination Sum III (Medium)](https://leetcode.com/problems/combination-sum-iii/description/)
 
-ÌâÄ¿ÃèÊö£ºÕÒ³ö¼¯ºÏµÄËùÓĞ×Ó¼¯£¬×Ó¼¯²»ÄÜÖØ¸´£¬[1, 2] ºÍ [2, 1] ÕâÖÖ×Ó¼¯ËãÖØ¸´
+```html
+Input: k = 3, n = 9
+
+Output:
+
+[[1,2,6], [1,3,5], [2,3,4]]
+```
+
+ä» 1-9 æ•°å­—ä¸­é€‰å‡º k ä¸ªæ•°ä¸é‡å¤çš„æ•°ï¼Œä½¿å¾—å®ƒä»¬çš„å’Œä¸º nã€‚
 
 ```java
-private List<List<Integer>> ret;
-private List<Integer> subsetList;
-
-public List<List<Integer>> subsets(int[] nums) {
-    ret = new ArrayList<>();
-    subsetList = new ArrayList<>();
-    for (int i = 0; i <= nums.length; i++) {
-        backtracking(0, i, nums);
-    }
-    return ret;
+public List<List<Integer>> combinationSum3(int k, int n) {
+    List<List<Integer>> combinations = new ArrayList<>();
+    List<Integer> path = new ArrayList<>();
+    backtracking(k, n, 1, path, combinations);
+    return combinations;
 }
 
-private void backtracking(int startIdx, int size, int[] nums) {
-    if (subsetList.size() == size) {
-        ret.add(new ArrayList(subsetList));
+private void backtracking(int k, int n, int start,
+                          List<Integer> tempCombination, List<List<Integer>> combinations) {
+
+    if (k == 0 && n == 0) {
+        combinations.add(new ArrayList<>(tempCombination));
         return;
     }
-
-    for (int i = startIdx; i < nums.length; i++) {
-        subsetList.add(nums[i]);
-        backtracking(i + 1, size, nums); // startIdx ÉèÎªÏÂÒ»¸öÔªËØ£¬Ê¹ subset ÖĞµÄÔªËØ¶¼µİÔöÅÅĞò
-        subsetList.remove(subsetList.size() - 1);
+    if (k == 0 || n == 0) {
+        return;
+    }
+    for (int i = start; i <= 9; i++) {
+        tempCombination.add(i);
+        backtracking(k - 1, n - i, i + 1, tempCombination, combinations);
+        tempCombination.remove(tempCombination.size() - 1);
     }
 }
 ```
 
-**º¬ÓĞÏàÍ¬ÔªËØÇó×Ó¼¯**
+**å­é›†** 
 
-[Leetcode : 90. Subsets II (Medium)](https://leetcode.com/problems/subsets-ii/description/)
+[78. Subsets (Medium)](https://leetcode.com/problems/subsets/description/)
+
+æ‰¾å‡ºé›†åˆçš„æ‰€æœ‰å­é›†ï¼Œå­é›†ä¸èƒ½é‡å¤ï¼Œ[1, 2] å’Œ [2, 1] è¿™ç§å­é›†ç®—é‡å¤
+
+```java
+public List<List<Integer>> subsets(int[] nums) {
+    List<List<Integer>> subsets = new ArrayList<>();
+    List<Integer> tempSubset = new ArrayList<>();
+    for (int size = 0; size <= nums.length; size++) {
+        backtracking(0, tempSubset, subsets, size, nums); // ä¸åŒçš„å­é›†å¤§å°
+    }
+    return subsets;
+}
+
+private void backtracking(int start, List<Integer> tempSubset, List<List<Integer>> subsets,
+                          final int size, final int[] nums) {
+
+    if (tempSubset.size() == size) {
+        subsets.add(new ArrayList<>(tempSubset));
+        return;
+    }
+    for (int i = start; i < nums.length; i++) {
+        tempSubset.add(nums[i]);
+        backtracking(i + 1, tempSubset, subsets, size, nums);
+        tempSubset.remove(tempSubset.size() - 1);
+    }
+}
+```
+
+**å«æœ‰ç›¸åŒå…ƒç´ æ±‚å­é›†** 
+
+[90. Subsets II (Medium)](https://leetcode.com/problems/subsets-ii/description/)
 
 ```html
 For example,
@@ -1475,78 +2167,88 @@ If nums = [1,2,2], a solution is:
 ```
 
 ```java
-private List<List<Integer>> ret;
-private List<Integer> subsetList;
-private boolean[] visited;
-
 public List<List<Integer>> subsetsWithDup(int[] nums) {
-    ret = new ArrayList<>();
-    subsetList = new ArrayList<>();
-    visited = new boolean[nums.length];
     Arrays.sort(nums);
-    for (int i = 0; i <= nums.length; i++) {
-        backtracking(0, i, nums);
+    List<List<Integer>> subsets = new ArrayList<>();
+    List<Integer> tempSubset = new ArrayList<>();
+    boolean[] hasVisited = new boolean[nums.length];
+    for (int size = 0; size <= nums.length; size++) {
+        backtracking(0, tempSubset, subsets, hasVisited, size, nums); // ä¸åŒçš„å­é›†å¤§å°
     }
-    return ret;
+    return subsets;
 }
 
-private void backtracking(int startIdx, int size, int[] nums) {
-    if (subsetList.size() == size) {
-        ret.add(new ArrayList(subsetList));
+private void backtracking(int start, List<Integer> tempSubset, List<List<Integer>> subsets, boolean[] hasVisited,
+                          final int size, final int[] nums) {
+
+    if (tempSubset.size() == size) {
+        subsets.add(new ArrayList<>(tempSubset));
         return;
     }
-
-    for (int i = startIdx; i < nums.length; i++) {
-        if (i != 0 && nums[i] == nums[i - 1] && !visited[i - 1]) continue;
-        subsetList.add(nums[i]);
-        visited[i] = true;
-        backtracking(i + 1, size, nums);
-        visited[i] = false;
-        subsetList.remove(subsetList.size() - 1);
+    for (int i = start; i < nums.length; i++) {
+        if (i != 0 && nums[i] == nums[i - 1] && !hasVisited[i - 1]) {
+            continue;
+        }
+        tempSubset.add(nums[i]);
+        hasVisited[i] = true;
+        backtracking(i + 1, tempSubset, subsets, hasVisited, size, nums);
+        hasVisited[i] = false;
+        tempSubset.remove(tempSubset.size() - 1);
     }
 }
 ```
 
-**·Ö¸î×Ö·û´®Ê¹µÃÃ¿²¿·Ö¶¼ÊÇ»ØÎÄÊı**
+**åˆ†å‰²å­—ç¬¦ä¸²ä½¿å¾—æ¯ä¸ªéƒ¨åˆ†éƒ½æ˜¯å›æ–‡æ•°** 
 
-[Leetcode : 131. Palindrome Partitioning (Medium)](https://leetcode.com/problems/palindrome-partitioning/description/)
+[131. Palindrome Partitioning (Medium)](https://leetcode.com/problems/palindrome-partitioning/description/)
+
+```html
+For example, given s = "aab",
+Return
+
+[
+  ["aa","b"],
+  ["a","a","b"]
+]
+```
 
 ```java
-private List<List<String>> ret;
-
 public List<List<String>> partition(String s) {
-    ret = new ArrayList<>();
-    doPartion(new ArrayList<>(), s);
-    return ret;
+    List<List<String>> partitions = new ArrayList<>();
+    List<String> tempPartition = new ArrayList<>();
+    doPartition(s, partitions, tempPartition);
+    return partitions;
 }
 
-private void doPartion(List<String> list, String s) {
+private void doPartition(String s, List<List<String>> partitions, List<String> tempPartition) {
     if (s.length() == 0) {
-        ret.add(new ArrayList<>(list));
+        partitions.add(new ArrayList<>(tempPartition));
         return;
     }
     for (int i = 0; i < s.length(); i++) {
         if (isPalindrome(s, 0, i)) {
-            list.add(s.substring(0, i + 1));
-            doPartion(list, s.substring(i + 1));
-            list.remove(list.size() - 1);
+            tempPartition.add(s.substring(0, i + 1));
+            doPartition(s.substring(i + 1), partitions, tempPartition);
+            tempPartition.remove(tempPartition.size() - 1);
         }
     }
 }
 
 private boolean isPalindrome(String s, int begin, int end) {
     while (begin < end) {
-        if (s.charAt(begin++) != s.charAt(end--)) return false;
+        if (s.charAt(begin++) != s.charAt(end--)) {
+            return false;
+        }
     }
     return true;
 }
 ```
 
-**Êı¶À**
+**æ•°ç‹¬** 
 
-[Leetcode : 37. Sudoku Solver (Hard)](https://leetcode.com/problems/sudoku-solver/description/)
+[37. Sudoku Solver (Hard)](https://leetcode.com/problems/sudoku-solver/description/)
 
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/1ca52246-c443-48ae-b1f8-1cafc09ec75c.png)
+<div align="center"> <img src="../pics//1ca52246-c443-48ae-b1f8-1cafc09ec75c.png"/> </div><br>
 
 ```java
 private boolean[][] rowsUsed = new boolean[9][10];
@@ -1556,15 +2258,17 @@ private char[][] board;
 
 public void solveSudoku(char[][] board) {
     this.board = board;
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < 9; i++)
         for (int j = 0; j < 9; j++) {
-            if (board[i][j] == '.') continue;
+            if (board[i][j] == '.') {
+                continue;
+            }
             int num = board[i][j] - '0';
             rowsUsed[i][num] = true;
             colsUsed[j][num] = true;
             cubesUsed[cubeNum(i, j)][num] = true;
         }
-    }
+
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
             backtracking(i, j);
@@ -1581,10 +2285,14 @@ private boolean backtracking(int row, int col) {
         return true;
     }
     for (int num = 1; num <= 9; num++) {
-        if (rowsUsed[row][num] || colsUsed[col][num] || cubesUsed[cubeNum(row, col)][num]) continue;
+        if (rowsUsed[row][num] || colsUsed[col][num] || cubesUsed[cubeNum(row, col)][num]) {
+            continue;
+        }
         rowsUsed[row][num] = colsUsed[col][num] = cubesUsed[cubeNum(row, col)][num] = true;
         board[row][col] = (char) (num + '0');
-        if (backtracking(row, col)) return true;
+        if (backtracking(row, col)) {
+            return true;
+        }
         board[row][col] = '.';
         rowsUsed[row][num] = colsUsed[col][num] = cubesUsed[cubeNum(row, col)][num] = false;
     }
@@ -1598,189 +2306,98 @@ private int cubeNum(int i, int j) {
 }
 ```
 
-## ·ÖÖÎ
+**N çš‡å** 
 
-**¸ø±í´ïÊ½¼ÓÀ¨ºÅ**
+[51. N-Queens (Hard)](https://leetcode.com/problems/n-queens/description/)
 
-[Leetcode : 241. Different Ways to Add Parentheses (Medium)](https://leetcode.com/problems/different-ways-to-add-parentheses/description/)
+<div align="center"> <img src="../pics//1f080e53-4758-406c-bb5f-dbedf89b63ce.jpg"/> </div><br>
 
-```html
-Input: "2-1-1".
+åœ¨ n\*n çš„çŸ©é˜µä¸­æ‘†æ”¾ n ä¸ªçš‡åï¼Œå¹¶ä¸”æ¯ä¸ªçš‡åä¸èƒ½åœ¨åŒä¸€è¡Œï¼ŒåŒä¸€åˆ—ï¼ŒåŒä¸€å¯¹è§’çº¿ä¸Šï¼Œæ±‚æ‰€æœ‰çš„ n çš‡åçš„è§£ã€‚
 
-((2-1)-1) = 0
-(2-(1-1)) = 2
+ä¸€è¡Œä¸€è¡Œåœ°æ‘†æ”¾ï¼Œåœ¨ç¡®å®šä¸€è¡Œä¸­çš„é‚£ä¸ªçš‡ååº”è¯¥æ‘†åœ¨å“ªä¸€åˆ—æ—¶ï¼Œéœ€è¦ç”¨ä¸‰ä¸ªæ ‡è®°æ•°ç»„æ¥ç¡®å®šæŸä¸€åˆ—æ˜¯å¦åˆæ³•ï¼Œè¿™ä¸‰ä¸ªæ ‡è®°æ•°ç»„åˆ†åˆ«ä¸ºï¼šåˆ—æ ‡è®°æ•°ç»„ã€45 åº¦å¯¹è§’çº¿æ ‡è®°æ•°ç»„å’Œ 135 åº¦å¯¹è§’çº¿æ ‡è®°æ•°ç»„ã€‚
 
-Output : [0, 2]
-```
+45 åº¦å¯¹è§’çº¿æ ‡è®°æ•°ç»„çš„ç»´åº¦ä¸º 2 \* n - 1ï¼Œé€šè¿‡ä¸‹å›¾å¯ä»¥æ˜ç¡® (r, c) çš„ä½ç½®æ‰€åœ¨çš„æ•°ç»„ä¸‹æ ‡ä¸º r + cã€‚
+
+<div align="center"> <img src="../pics//85583359-1b45-45f2-9811-4f7bb9a64db7.jpg"/> </div><br>
+
+135 åº¦å¯¹è§’çº¿æ ‡è®°æ•°ç»„çš„ç»´åº¦ä¹Ÿæ˜¯ 2 \* n - 1ï¼Œ(r, c) çš„ä½ç½®æ‰€åœ¨çš„æ•°ç»„ä¸‹æ ‡ä¸º n - 1 - (r - c)ã€‚
+
+<div align="center"> <img src="../pics//9e80f75a-b12b-4344-80c8-1f9ccc2d5246.jpg"/> </div><br>
 
 ```java
-public List<Integer> diffWaysToCompute(String input) {
-    int n = input.length();
-    List<Integer> ret = new ArrayList<>();
+private List<List<String>> solutions;
+private char[][] nQueens;
+private boolean[] colUsed;
+private boolean[] diagonals45Used;
+private boolean[] diagonals135Used;
+private int n;
+
+public List<List<String>> solveNQueens(int n) {
+    solutions = new ArrayList<>();
+    nQueens = new char[n][n];
     for (int i = 0; i < n; i++) {
-        char c = input.charAt(i);
-        if (c == '+' || c == '-' || c == '*') {
-            List<Integer> left = diffWaysToCompute(input.substring(0, i));
-            List<Integer> right = diffWaysToCompute(input.substring(i + 1));
-            for (int l : left) {
-                for (int r : right) {
-                    switch (c) {
-                        case '+': ret.add(l + r); break;
-                        case '-': ret.add(l - r); break;
-                        case '*': ret.add(l * r); break;
-                    }
-                }
-            }
+        Arrays.fill(nQueens[i], '.');
+    }
+    colUsed = new boolean[n];
+    diagonals45Used = new boolean[2 * n - 1];
+    diagonals135Used = new boolean[2 * n - 1];
+    this.n = n;
+    backtracking(0);
+    return solutions;
+}
+
+private void backtracking(int row) {
+    if (row == n) {
+        List<String> list = new ArrayList<>();
+        for (char[] chars : nQueens) {
+            list.add(new String(chars));
         }
+        solutions.add(list);
+        return;
     }
-    if (ret.size() == 0) ret.add(Integer.valueOf(input));
-    return ret;
-}
-```
 
-## ¶¯Ì¬¹æ»®
-
-µİ¹éºÍ¶¯Ì¬¹æ»®¶¼ÊÇ½«Ô­ÎÊÌâ²ğ³É¶à¸ö×ÓÎÊÌâÈ»ºóÇó½â£¬ËûÃÇÖ®¼ä×î±¾ÖÊµÄÇø±ğÊÇ£¬¶¯Ì¬¹æ»®±£´æÁË×ÓÎÊÌâµÄ½â¡£
-
-### ·Ö¸îÕûÊı
-
-**·Ö¸îÕûÊıµÄ×î´ó³Ë»ı**
-
-[Leetcode : 343. Integer Break (Medim)](https://leetcode.com/problems/integer-break/description/)
-
-ÌâÄ¿ÃèÊö£ºFor example, given n = 2, return 1 (2 = 1 + 1); given n = 10, return 36 (10 = 3 + 3 + 4).
-
-```java
-public int integerBreak(int n) {
-    int[] dp = new int[n + 1];
-    dp[1] = 1;
-    for(int i = 2; i <= n; i++) {
-        for(int j = 1; j <= i - 1; j++) {
-            dp[i] = Math.max(dp[i], Math.max(j * dp[i - j], j * (i - j)));
+    for (int col = 0; col < n; col++) {
+        int diagonals45Idx = row + col;
+        int diagonals135Idx = n - 1 - (row - col);
+        if (colUsed[col] || diagonals45Used[diagonals45Idx] || diagonals135Used[diagonals135Idx]) {
+            continue;
         }
+        nQueens[row][col] = 'Q';
+        colUsed[col] = diagonals45Used[diagonals45Idx] = diagonals135Used[diagonals135Idx] = true;
+        backtracking(row + 1);
+        colUsed[col] = diagonals45Used[diagonals45Idx] = diagonals135Used[diagonals135Idx] = false;
+        nQueens[row][col] = '.';
     }
-    return dp[n];
 }
 ```
 
-**°´Æ½·½ÊıÀ´·Ö¸îÕûÊı**
+## åŠ¨æ€è§„åˆ’
 
-[Leetcode : 279. Perfect Squares(Medium)](https://leetcode.com/problems/perfect-squares/description/)
+é€’å½’å’ŒåŠ¨æ€è§„åˆ’éƒ½æ˜¯å°†åŸé—®é¢˜æ‹†æˆå¤šä¸ªå­é—®é¢˜ç„¶åæ±‚è§£ï¼Œä»–ä»¬ä¹‹é—´æœ€æœ¬è´¨çš„åŒºåˆ«æ˜¯ï¼ŒåŠ¨æ€è§„åˆ’ä¿å­˜äº†å­é—®é¢˜çš„è§£ï¼Œé¿å…é‡å¤è®¡ç®—ã€‚
 
-ÌâÄ¿ÃèÊö£ºFor example, given n = 12, return 3 because 12 = 4 + 4 + 4; given n = 13, return 2 because 13 = 4 + 9.
+### æ–æ³¢é‚£å¥‘æ•°åˆ—
 
-```java
-public int numSquares(int n) {
-    List<Integer> squares = new ArrayList<>(); // ´æ´¢Ğ¡ÓÚ n µÄÆ½·½Êı
-    int diff = 3;
-    while(square <= n) {
-        squares.add(square);
-        square += diff;
-        diff += 2;
-    }
-    int[] dp = new int[n + 1];
-    for(int i = 1; i <= n; i++) {
-        int max = Integer.MAX_VALUE;
-        for(int s : squares) {
-            if(s > i) break;
-            max = Math.min(max, dp[i - s] + 1);
-        }
-        dp[i] = max;
-    }
-    return dp[n];
-}
-```
+**çˆ¬æ¥¼æ¢¯** 
 
-**·Ö¸îÕûÊı¹¹³É×ÖÄ¸×Ö·û´®**
+[70. Climbing Stairs (Easy)](https://leetcode.com/problems/climbing-stairs/description/)
 
-[Leetcode : 91. Decode Ways (Medium)](https://leetcode.com/problems/decode-ways/description/)
+é¢˜ç›®æè¿°ï¼šæœ‰ N é˜¶æ¥¼æ¢¯ï¼Œæ¯æ¬¡å¯ä»¥ä¸Šä¸€é˜¶æˆ–è€…ä¸¤é˜¶ï¼Œæ±‚æœ‰å¤šå°‘ç§ä¸Šæ¥¼æ¢¯çš„æ–¹æ³•ã€‚
 
-ÌâÄ¿ÃèÊö£ºGiven encoded message "12", it could be decoded as "AB" (1 2) or "L" (12).
+å®šä¹‰ä¸€ä¸ªæ•°ç»„ dp å­˜å‚¨ä¸Šæ¥¼æ¢¯çš„æ–¹æ³•æ•°ï¼ˆä¸ºäº†æ–¹ä¾¿è®¨è®ºï¼Œæ•°ç»„ä¸‹æ ‡ä» 1 å¼€å§‹ï¼‰ï¼Œdp[i] è¡¨ç¤ºèµ°åˆ°ç¬¬ i ä¸ªæ¥¼æ¢¯çš„æ–¹æ³•æ•°ç›®ã€‚
 
-```java
-public int numDecodings(String s) {
-    if(s == null || s.length() == 0) return 0;
-    int n = s.length();
-    int[] dp = new int[n + 1];
-    dp[0] = 1;
-    dp[1] = s.charAt(0) == '0' ? 0 : 1;
-    for(int i = 2; i <= n; i++) {
-        int one = Integer.valueOf(s.substring(i - 1, i));
-        if(one != 0) dp[i] += dp[i - 1];
-        if(s.charAt(i - 2) == '0') continue;
-        int two = Integer.valueOf(s.substring(i - 2, i));
-        if(two <= 26) dp[i] += dp[i - 2];
-    }
-    return dp[n];
-}
-```
+ç¬¬ i ä¸ªæ¥¼æ¢¯å¯ä»¥ä»ç¬¬ i-1 å’Œ i-2 ä¸ªæ¥¼æ¢¯å†èµ°ä¸€æ­¥åˆ°è¾¾ï¼Œèµ°åˆ°ç¬¬ i ä¸ªæ¥¼æ¢¯çš„æ–¹æ³•æ•°ä¸ºèµ°åˆ°ç¬¬ i-1 å’Œç¬¬ i-2 ä¸ªæ¥¼æ¢¯çš„æ–¹æ³•æ•°ä¹‹å’Œã€‚
 
-### ¾ØÕóÂ·¾¶
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=dp[i-1]+dp[i-2]"/></div> <br>
 
-**¾ØÕóµÄ×ÜÂ·¾¶Êı**
-
-[Leetcode : 62. Unique Paths (Medium)](https://leetcode.com/problems/unique-paths/description/)
-
-ÌâÄ¿ÃèÊö£ºÍ³¼Æ´Ó¾ØÕó×óÉÏ½Çµ½ÓÒÏÂ½ÇµÄÂ·¾¶×ÜÊı£¬Ã¿´ÎÖ»ÄÜÏò×óºÍÏòÏÂÒÆ¶¯¡£
-
-```java
-public int uniquePaths(int m, int n) {
-    int[] dp = new int[n];
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            if(i == 0) dp[j] = 1;
-            else if(j != 0) dp[j] = dp[j] + dp[j - 1];
-        }
-    }
-    return dp[n - 1];
-}
-```
-
-**¾ØÕóµÄ×îĞ¡Â·¾¶ºÍ**
-
-[Leetcode : 64. Minimum Path Sum (Medium)](https://leetcode.com/problems/minimum-path-sum/description/)
-
-ÌâÄ¿ÃèÊö£ºÇó´Ó¾ØÕóµÄ×óÉÏ½Çµ½ÓÒÏÂ½ÇµÄ×îĞ¡Â·¾¶ºÍ£¬Ã¿´ÎÖ»ÄÜÏò×óºÍÏòÏÂÒÆ¶¯¡£
-
-```java
-public int minPathSum(int[][] grid) {
-    if(grid.length == 0 || grid[0].length == 0) return 0;
-    int m = grid.length, n = grid[0].length;
-    int[] dp = new int[n];
-    for(int i = 0; i < m; i++) {
-        for(int j = 0; j < n; j++) {
-            if(j == 0) dp[0] = dp[0] + grid[i][0];
-            else if(i == 0) dp[j] = dp[j - 1] + grid[0][j];
-            else dp[j] = Math.min(dp[j - 1], dp[j]) + grid[i][j];
-        }
-    }
-    return dp[n - 1];
-}
-```
-
-### ì³²¨ÄÇÆõÊıÁĞ
-
-**ÅÀÂ¥Ìİ**
-
-[Leetcode : 70. Climbing Stairs (Easy)](https://leetcode.com/problems/climbing-stairs/description/)
-
-ÌâÄ¿ÃèÊö£ºÓĞ N ½×Â¥Ìİ£¬Ã¿´Î¿ÉÒÔÉÏÒ»½×»òÕßÁ½½×£¬ÇóÓĞ¶àÉÙÖÖÉÏÂ¥ÌİµÄ·½·¨¡£
-
-¶¨ÒåÒ»¸öÊı×é dp ´æ´¢ÉÏÂ¥ÌİµÄ·½·¨Êı£¨ÎªÁË·½±ãÌÖÂÛ£¬Êı×éÏÂ±ê´Ó 1 ¿ªÊ¼£©£¬dp[i] ±íÊ¾×ßµ½µÚ i ¸öÂ¥ÌİµÄ·½·¨ÊıÄ¿¡£µÚ i ¸öÂ¥Ìİ¿ÉÒÔ´ÓµÚ i-1 ºÍ i-2 ¸öÂ¥ÌİÔÙ×ßÒ»²½µ½´ï£¬×ßµ½µÚ i ¸öÂ¥ÌİµÄ·½·¨ÊıÎª×ßµ½µÚ i-1 ºÍµÚ i-2 ¸öÂ¥ÌİµÄ·½·¨ÊıÖ®ºÍ¡£
-
-![](http://latex.codecogs.com/gif.latex?\\\\dp[i]=dp[i-1]+dp[i-2])
-
-dp[N] ¼´ÎªËùÇó¡£
-
-¿¼ÂÇµ½ dp[i] Ö»Óë dp[i - 1] ºÍ dp[i - 2] ÓĞ¹Ø£¬Òò´Ë¿ÉÒÔÖ»ÓÃÁ½¸ö±äÁ¿À´´æ´¢ dp[i - 1] ºÍ dp[i - 2] ¼´¿É£¬Ê¹µÃÔ­À´µÄ O(n) ¿Õ¼ä¸´ÔÓ¶ÈÓÅ»¯Îª O(1) ¸´ÔÓ¶È¡£
+è€ƒè™‘åˆ° dp[i] åªä¸ dp[i - 1] å’Œ dp[i - 2] æœ‰å…³ï¼Œå› æ­¤å¯ä»¥åªç”¨ä¸¤ä¸ªå˜é‡æ¥å­˜å‚¨ dp[i - 1] å’Œ dp[i - 2]ï¼Œä½¿å¾—åŸæ¥çš„ O(N) ç©ºé—´å¤æ‚åº¦ä¼˜åŒ–ä¸º O(1) å¤æ‚åº¦ã€‚
 
 ```java
 public int climbStairs(int n) {
-    if(n == 1) return 1;
-    if(n == 2) return 2;
-    // Ç°Ò»¸öÂ¥Ìİ¡¢ºóÒ»¸öÂ¥Ìİ
-    int pre1 = 2, pre2 = 1;
-    for(int i = 2; i < n; i++){
+    if (n <= 2) {
+        return n;
+    }
+    int pre2 = 1, pre1 = 2;
+    for (int i = 2; i < n; i++) {
         int cur = pre1 + pre2;
         pre2 = pre1;
         pre1 = cur;
@@ -1789,55 +2406,29 @@ public int climbStairs(int n) {
 }
 ```
 
-**Ä¸Å£Éú²ú**
+**å¼ºç›—æŠ¢åŠ«** 
 
-[³ÌĞòÔ±´úÂëÃæÊÔÖ¸ÄÏ-P181](#)
+[198. House Robber (Easy)](https://leetcode.com/problems/house-robber/description/)
 
-ÌâÄ¿ÃèÊö£º¼ÙÉèÅ©³¡ÖĞ³ÉÊìµÄÄ¸Å£Ã¿Äê¶¼»áÉú 1 Í·Ğ¡Ä¸Å££¬²¢ÇÒÓÀÔ¶²»»áËÀ¡£µÚÒ»ÄêÓĞ 1 Ö»Ğ¡Ä¸Å££¬´ÓµÚ¶şÄê¿ªÊ¼£¬Ä¸Å£¿ªÊ¼ÉúĞ¡Ä¸Å£¡£Ã¿Ö»Ğ¡Ä¸Å£ 3 ÄêÖ®ºó³ÉÊìÓÖ¿ÉÒÔÉúĞ¡Ä¸Å£¡£¸ø¶¨ÕûÊı N£¬Çó N ÄêºóÅ£µÄÊıÁ¿¡£
+é¢˜ç›®æè¿°ï¼šæŠ¢åŠ«ä¸€æ’ä½æˆ·ï¼Œä½†æ˜¯ä¸èƒ½æŠ¢é‚»è¿‘çš„ä½æˆ·ï¼Œæ±‚æœ€å¤§æŠ¢åŠ«é‡ã€‚
 
-µÚ i Äê³ÉÊìµÄÅ£µÄÊıÁ¿Îª£º
+å®šä¹‰ dp æ•°ç»„ç”¨æ¥å­˜å‚¨æœ€å¤§çš„æŠ¢åŠ«é‡ï¼Œå…¶ä¸­ dp[i] è¡¨ç¤ºæŠ¢åˆ°ç¬¬ i ä¸ªä½æˆ·æ—¶çš„æœ€å¤§æŠ¢åŠ«é‡ã€‚
 
-![](http://latex.codecogs.com/gif.latex?\\\\dp[i]=dp[i-1]+dp[i-3])
+ç”±äºä¸èƒ½æŠ¢åŠ«é‚»è¿‘ä½æˆ·ï¼Œå› æ­¤å¦‚æœæŠ¢åŠ«äº†ç¬¬ i ä¸ªä½æˆ·é‚£ä¹ˆåªèƒ½æŠ¢åŠ« i - 2 æˆ–è€… i - 3 çš„ä½æˆ·ï¼Œæ‰€ä»¥
 
-**Ç¿µÁÇÀ½Ù**
-
-[Leetcode : 198. House Robber (Easy)](https://leetcode.com/problems/house-robber/description/)
-
-ÌâÄ¿ÃèÊö£ºÇÀ½ÙÒ»ÅÅ×¡»§£¬µ«ÊÇ²»ÄÜÇÀÁÚ½üµÄ×¡»§£¬Çó×î´óÇÀ½ÙÁ¿¡£
-
-¶¨Òå dp Êı×éÓÃÀ´´æ´¢×î´óµÄÇÀ½ÙÁ¿£¬ÆäÖĞ dp[i] ±íÊ¾ÇÀµ½µÚ i ¸ö×¡»§Ê±µÄ×î´óÇÀ½ÙÁ¿¡£ÓÉÓÚ²»ÄÜÇÀ½ÙÁÚ½ü×¡»§£¬Òò´ËÈç¹ûÇÀ½ÙÁËµÚ i ¸ö×¡»§ÄÇÃ´Ö»ÄÜÇÀ½Ù i - 2 ºÍ i - 3 µÄ×¡»§£¬ËùÒÔ
-
-![](http://latex.codecogs.com/gif.latex?\\\\dp[i]=max(dp[i-2],dp[i-3])+nums[i])
-
-O(n) ¿Õ¼ä¸´ÔÓ¶ÈÊµÏÖ·½·¨£º
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=max(dp[i-2],dp[i-3])+nums[i]"/></div> <br>
 
 ```java
 public int rob(int[] nums) {
     int n = nums.length;
-    if(n == 0) return 0;
-    if(n == 1) return nums[0];
-    if(n == 2) return Math.max(nums[0], nums[1]);
-    int[] dp = new int[n];
-    dp[0] = nums[0];
-    dp[1] = nums[1];
-    dp[2] = nums[0] + nums[2];
-    for(int i = 3; i < n; i++){
-        dp[i] = Math.max(dp[i -2], dp[i - 3]) + nums[i];
+    if (n == 0) {
+        return 0;
     }
-    return Math.max(dp[n - 1], dp[n - 2]);
-}
-```
-
-O(1) ¿Õ¼ä¸´ÔÓ¶ÈÊµÏÖ·½·¨£º
-
-```java
-public int rob(int[] nums) {
-    int n = nums.length;
-    if(n == 0) return 0;
-    if(n == 1) return nums[0];
-    if(n == 2) return Math.max(nums[0], nums[1]);
-    int pre3 = nums[0], pre2 = nums[1], pre1 = nums[2] + nums[0];
-    for(int i = 3; i < n; i++){
+    if (n == 1) {
+        return nums[0];
+    }
+    int pre3 = 0, pre2 = 0, pre1 = 0;
+    for (int i = 0; i < n; i++) {
         int cur = Math.max(pre2, pre3) + nums[i];
         pre3 = pre2;
         pre2 = pre1;
@@ -1847,175 +2438,492 @@ public int rob(int[] nums) {
 }
 ```
 
-**Ç¿µÁÔÚ»·ĞÎ½ÖÇøÇÀ½Ù**
+**å¼ºç›—åœ¨ç¯å½¢è¡—åŒºæŠ¢åŠ«** 
 
-[Leetcode : 213. House Robber II (Medium)](https://leetcode.com/problems/house-robber-ii/description/)
+[213. House Robber II (Medium)](https://leetcode.com/problems/house-robber-ii/description/)
 
 ```java
 public int rob(int[] nums) {
-    if(nums == null || nums.length == 0) return 0;
+    if (nums == null || nums.length == 0) {
+        return 0;
+    }
     int n = nums.length;
-    if(n == 1) return nums[0];
+    if (n == 1) {
+        return nums[0];
+    }
     return Math.max(rob(nums, 0, n - 2), rob(nums, 1, n - 1));
 }
 
-private int rob(int[] nums, int s, int e) {
-    int n = nums.length;
-    if(e - s == 0) return nums[s];
-    if(e - s == 1) return Math.max(nums[s], nums[s + 1]);
-    int[] dp = new int[n];
-    dp[s] = nums[s];
-    dp[s + 1] = nums[s + 1];
-    dp[s + 2] = nums[s] + nums[s + 2];
-    for (int i = s + 3; i <= e; i++) {
-        dp[i] = Math.max(dp[i - 2], dp[i - 3]) + nums[i];
+private int rob(int[] nums, int first, int last) {
+    int pre3 = 0, pre2 = 0, pre1 = 0;
+    for (int i = first; i <= last; i++) {
+        int cur = Math.max(pre3, pre2) + nums[i];
+        pre3 = pre2;
+        pre2 = pre1;
+        pre1 = cur;
     }
-    return Math.max(dp[e], dp[e - 1]);
+    return Math.max(pre2, pre1);
 }
 ```
 
+**ä¿¡ä»¶é”™æ’** 
 
-**ĞÅ¼ş´íÅÅ**
+é¢˜ç›®æè¿°ï¼šæœ‰ N ä¸ª ä¿¡ å’Œ ä¿¡å°ï¼Œå®ƒä»¬è¢«æ‰“ä¹±ï¼Œæ±‚é”™è¯¯è£…ä¿¡æ–¹å¼çš„æ•°é‡ã€‚
 
-ÌâÄ¿ÃèÊö£ºÓĞ N ¸ö ĞÅ ºÍ ĞÅ·â£¬ËüÃÇ±»´òÂÒ£¬Çó´íÎó×°ĞÅµÄ·½Ê½ÊıÁ¿¡£
+å®šä¹‰ä¸€ä¸ªæ•°ç»„ dp å­˜å‚¨é”™è¯¯æ–¹å¼æ•°é‡ï¼Œdp[i] è¡¨ç¤ºå‰ i ä¸ªä¿¡å’Œä¿¡å°çš„é”™è¯¯æ–¹å¼æ•°é‡ã€‚å‡è®¾ç¬¬ i ä¸ªä¿¡è£…åˆ°ç¬¬ j ä¸ªä¿¡å°é‡Œé¢ï¼Œè€Œç¬¬ j ä¸ªä¿¡è£…åˆ°ç¬¬ k ä¸ªä¿¡å°é‡Œé¢ã€‚æ ¹æ® i å’Œ k æ˜¯å¦ç›¸ç­‰ï¼Œæœ‰ä¸¤ç§æƒ…å†µï¼š
 
-¶¨ÒåÒ»¸öÊı×é dp ´æ´¢´íÎó·½Ê½ÊıÁ¿£¬dp[i] ±íÊ¾Ç° i ¸öĞÅºÍĞÅ·âµÄ´íÎó·½Ê½ÊıÁ¿¡£¼ÙÉèµÚ i ¸öĞÅ×°µ½µÚ j ¸öĞÅ·âÀïÃæ£¬¶øµÚ j ¸öĞÅ×°µ½µÚ k ¸öĞÅ·âÀïÃæ¡£¸ù¾İ i ºÍ k ÊÇ·ñÏàµÈ£¬ÓĞÁ½ÖÖÇé¿ö£º
+- i==kï¼Œäº¤æ¢ i å’Œ k çš„ä¿¡åï¼Œå®ƒä»¬çš„ä¿¡å’Œä¿¡å°åœ¨æ­£ç¡®çš„ä½ç½®ï¼Œä½†æ˜¯å…¶ä½™ i-2 å°ä¿¡æœ‰ dp[i-2] ç§é”™è¯¯è£…ä¿¡çš„æ–¹å¼ã€‚ç”±äº j æœ‰ i-1 ç§å–å€¼ï¼Œå› æ­¤å…±æœ‰ (i-1)\*dp[i-2] ç§é”™è¯¯è£…ä¿¡æ–¹å¼ã€‚
+- i != kï¼Œäº¤æ¢ i å’Œ j çš„ä¿¡åï¼Œç¬¬ i ä¸ªä¿¡å’Œä¿¡å°åœ¨æ­£ç¡®çš„ä½ç½®ï¼Œå…¶ä½™ i-1 å°ä¿¡æœ‰ dp[i-1] ç§é”™è¯¯è£…ä¿¡æ–¹å¼ã€‚ç”±äº j æœ‰ i-1 ç§å–å€¼ï¼Œå› æ­¤å…±æœ‰ (i-1)\*dp[i-1] ç§é”™è¯¯è£…ä¿¡æ–¹å¼ã€‚
 
-¢Ù i==k£¬½»»» i ºÍ k µÄĞÅºó£¬ËüÃÇµÄĞÅºÍĞÅ·âÔÚÕıÈ·µÄÎ»ÖÃ£¬µ«ÊÇÆäÓà i-2 ·âĞÅÓĞ dp[i-2] ÖÖ´íÎó×°ĞÅµÄ·½Ê½¡£ÓÉÓÚ j ÓĞ i-1 ÖÖÈ¡Öµ£¬Òò´Ë¹²ÓĞ (i-1)\*dp[i-2] ÖÖ´íÎó×°ĞÅ·½Ê½¡£
+ç»¼ä¸Šæ‰€è¿°ï¼Œé”™è¯¯è£…ä¿¡æ•°é‡æ–¹å¼æ•°é‡ä¸ºï¼š
 
-¢Ú i != k£¬½»»» i ºÍ j µÄĞÅºó£¬µÚ i ¸öĞÅºÍĞÅ·âÔÚÕıÈ·µÄÎ»ÖÃ£¬ÆäÓà i-1 ·âĞÅÓĞ dp[i-1] ÖÖ´íÎó×°ĞÅ·½Ê½¡£ÓÉÓÚ j ÓĞ i-1 ÖÖÈ¡Öµ£¬Òò´Ë¹²ÓĞ (n-1)\*dp[i-1] ÖÖ´íÎó×°ĞÅ·½Ê½¡£
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=(i-1)*dp[i-2]+(i-1)*dp[i-1]"/></div> <br>
 
-×ÛÉÏËùÊö£¬´íÎó×°ĞÅÊıÁ¿·½Ê½ÊıÁ¿Îª£º
+**æ¯ç‰›ç”Ÿäº§** 
 
-![](http://latex.codecogs.com/gif.latex?\\\\dp[i]=(i-1)*dp[i-2]+(i-1)*dp[i-1])
+[ç¨‹åºå‘˜ä»£ç é¢è¯•æŒ‡å—-P181](#)
 
-dp[N] ¼´ÎªËùÇó¡£
+é¢˜ç›®æè¿°ï¼šå‡è®¾å†œåœºä¸­æˆç†Ÿçš„æ¯ç‰›æ¯å¹´éƒ½ä¼šç”Ÿ 1 å¤´å°æ¯ç‰›ï¼Œå¹¶ä¸”æ°¸è¿œä¸ä¼šæ­»ã€‚ç¬¬ä¸€å¹´æœ‰ 1 åªå°æ¯ç‰›ï¼Œä»ç¬¬äºŒå¹´å¼€å§‹ï¼Œæ¯ç‰›å¼€å§‹ç”Ÿå°æ¯ç‰›ã€‚æ¯åªå°æ¯ç‰› 3 å¹´ä¹‹åæˆç†Ÿåˆå¯ä»¥ç”Ÿå°æ¯ç‰›ã€‚ç»™å®šæ•´æ•° Nï¼Œæ±‚ N å¹´åç‰›çš„æ•°é‡ã€‚
 
-ºÍÉÏÂ¥ÌİÎÊÌâÒ»Ñù£¬dp[i] Ö»Óë dp[i-1] ºÍ dp[i-2] ÓĞ¹Ø£¬Òò´ËÒ²¿ÉÒÔÖ»ÓÃÁ½¸ö±äÁ¿À´´æ´¢ dp[i-1] ºÍ dp[i-2]¡£
+ç¬¬ i å¹´æˆç†Ÿçš„ç‰›çš„æ•°é‡ä¸ºï¼š
 
-### ×î³¤µİÔö×ÓĞòÁĞ
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=dp[i-1]+dp[i-3]"/></div> <br>
 
-ÒÑÖªÒ»¸öĞòÁĞ {S<sub>1</sub>, S<sub>2</sub>,...,S<sub>n</sub>} £¬È¡³öÈô¸ÉÊı×é³ÉĞÂµÄĞòÁĞ {S<sub>i1</sub>, S<sub>i2</sub>,..., S<sub>im</sub>}£¬ÆäÖĞ i1¡¢i2 ... im ±£³ÖµİÔö£¬¼´ĞÂĞòÁĞÖĞ¸÷¸öÊıÈÔÈ»±£³ÖÔ­ÊıÁĞÖĞµÄÏÈºóË³Ğò£¬³ÆĞÂĞòÁĞÎªÔ­ĞòÁĞµÄÒ»¸ö**×ÓĞòÁĞ**¡£
+### çŸ©é˜µè·¯å¾„
 
-Èç¹ûÔÚ×ÓĞòÁĞÖĞ£¬µ±ÏÂ±ê ix > iy Ê±£¬S<sub>ix</sub> > S<sub>iy</sub>£¬³Æ×ÓĞòÁĞÎªÔ­ĞòÁĞµÄÒ»¸ö**µİÔö×ÓĞòÁĞ**¡£
+**çŸ©é˜µçš„æœ€å°è·¯å¾„å’Œ** 
 
-¶¨ÒåÒ»¸öÊı×é dp ´æ´¢×î³¤µİÔö×ÓĞòÁĞµÄ³¤¶È£¬dp[n] ±íÊ¾ÒÔ S<sub>n</sub> ½áÎ²µÄĞòÁĞµÄ×î³¤µİÔö×ÓĞòÁĞ³¤¶È¡£¶ÔÓÚÒ»¸öµİÔö×ÓĞòÁĞ {S<sub>i1</sub>, S<sub>i2</sub>,...,S<sub>im</sub>}£¬Èç¹û im < n ²¢ÇÒ S<sub>im</sub> < S<sub>n</sub> £¬´ËÊ± {S<sub>i1</sub>, S<sub>i2</sub>,..., S<sub>im</sub>, S<sub>n</sub>} ÎªÒ»¸öµİÔö×ÓĞòÁĞ£¬µİÔö×ÓĞòÁĞµÄ³¤¶ÈÔö¼Ó 1¡£Âú×ãÉÏÊöÌõ¼şµÄµİÔö×ÓĞòÁĞÖĞ£¬³¤¶È×î³¤µÄÄÇ¸öµİÔö×ÓĞòÁĞ¾ÍÊÇÒªÕÒµÄ£¬ÔÚ³¤¶È×î³¤µÄµİÔö×ÓĞòÁĞÉÏ¼ÓÉÏ S<sub>n</sub> ¾Í¹¹³ÉÁËÒÔ S<sub>n</sub> Îª½áÎ²µÄ×î³¤µİÔö×ÓĞòÁĞ¡£Òò´Ë dp[n] = max{ dp[i]+1 | S<sub>i</sub> < S<sub>n</sub> && i < n} ¡£
+[64. Minimum Path Sum (Medium)](https://leetcode.com/problems/minimum-path-sum/description/)
 
-ÒòÎªÔÚÇó dp[n] Ê±¿ÉÄÜÎŞ·¨ÕÒµ½Ò»¸öÂú×ãÌõ¼şµÄµİÔö×ÓĞòÁĞ£¬´ËÊ± {S<sub>n</sub>} ¾Í¹¹³ÉÁËµİÔö×ÓĞòÁĞ£¬Òò´ËĞèÒª¶ÔÇ°ÃæµÄÇó½â·½³Ì×öĞŞ¸Ä£¬Áî dp[n] ×îĞ¡Îª 1£¬¼´£º
+```html
+[[1,3,1],
+ [1,5,1],
+ [4,2,1]]
+Given the above grid map, return 7. Because the path 1â†’3â†’1â†’1â†’1 minimizes the sum.
+```
 
-![](http://latex.codecogs.com/gif.latex?\\\\dp[n]=max\{1,dp[i]+1|S_i<S_n\&\&i<n\})
+é¢˜ç›®æè¿°ï¼šæ±‚ä»çŸ©é˜µçš„å·¦ä¸Šè§’åˆ°å³ä¸‹è§’çš„æœ€å°è·¯å¾„å’Œï¼Œæ¯æ¬¡åªèƒ½å‘å³å’Œå‘ä¸‹ç§»åŠ¨ã€‚
 
-¶ÔÓÚÒ»¸ö³¤¶ÈÎª N µÄĞòÁĞ£¬×î³¤×ÓĞòÁĞ²¢²»Ò»¶¨»áÒÔ S<sub>N</sub> Îª½áÎ²£¬Òò´Ë dp[N] ²»ÊÇĞòÁĞµÄ×î³¤µİÔö×ÓĞòÁĞµÄ³¤¶È£¬ĞèÒª±éÀú dp Êı×éÕÒ³ö×î´óÖµ²ÅÊÇËùÒªµÄ½á¹û£¬¼´ max{ dp[i] | 1 <= i <= N} ¼´ÎªËùÇó¡£
+```java
+public int minPathSum(int[][] grid) {
+    if (grid.length == 0 || grid[0].length == 0) {
+        return 0;
+    }
+    int m = grid.length, n = grid[0].length;
+    int[] dp = new int[n];
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == 0) {
+                dp[j] = dp[j - 1];
+            } else {
+                dp[j] = Math.min(dp[j - 1], dp[j]);
+            }
+            dp[j] += grid[i][j];
+        }
+    }
+    return dp[n - 1];
+}
+```
 
-**×î³¤µİÔö×ÓĞòÁĞ**
+**çŸ©é˜µçš„æ€»è·¯å¾„æ•°** 
 
-[Leetcode : 300. Longest Increasing Subsequence (Medium)](https://leetcode.com/problems/longest-increasing-subsequence/description/)
+[62. Unique Paths (Medium)](https://leetcode.com/problems/unique-paths/description/)
+
+é¢˜ç›®æè¿°ï¼šç»Ÿè®¡ä»çŸ©é˜µå·¦ä¸Šè§’åˆ°å³ä¸‹è§’çš„è·¯å¾„æ€»æ•°ï¼Œæ¯æ¬¡åªèƒ½å‘å³æˆ–è€…å‘ä¸‹ç§»åŠ¨ã€‚
+
+<div align="center"> <img src="../pics//7c98e1b6-c446-4cde-8513-5c11b9f52aea.jpg"/> </div><br>
+
+```java
+public int uniquePaths(int m, int n) {
+    int[] dp = new int[n];
+    Arrays.fill(dp, 1);
+    for (int i = 1; i < m; i++) {
+        for (int j = 1; j < n; j++) {
+            dp[j] = dp[j] + dp[j - 1];
+        }
+    }
+    return dp[n - 1];
+}
+```
+
+ä¹Ÿå¯ä»¥ç›´æ¥ç”¨æ•°å­¦å…¬å¼æ±‚è§£ï¼Œè¿™æ˜¯ä¸€ä¸ªç»„åˆé—®é¢˜ã€‚æœºå™¨äººæ€»å…±ç§»åŠ¨çš„æ¬¡æ•° S=m+n-2ï¼Œå‘ä¸‹ç§»åŠ¨çš„æ¬¡æ•° D=m-1ï¼Œé‚£ä¹ˆé—®é¢˜å¯ä»¥çœ‹æˆä» S ä»å–å‡º D ä¸ªä½ç½®çš„ç»„åˆæ•°é‡ï¼Œè¿™ä¸ªé—®é¢˜çš„è§£ä¸º C(S, D)ã€‚
+
+```java
+public int uniquePaths(int m, int n) {
+    int S = m + n - 2;  // æ€»å…±çš„ç§»åŠ¨æ¬¡æ•°
+    int D = m - 1;      // å‘ä¸‹çš„ç§»åŠ¨æ¬¡æ•°
+    long ret = 1;
+    for (int i = 1; i <= D; i++) {
+        ret = ret * (S - D + i) / i;
+    }
+    return (int) ret;
+}
+```
+
+### æ•°ç»„åŒºé—´
+
+**æ•°ç»„åŒºé—´å’Œ** 
+
+[303. Range Sum Query - Immutable (Easy)](https://leetcode.com/problems/range-sum-query-immutable/description/)
+
+```html
+Given nums = [-2, 0, 3, -5, 2, -1]
+
+sumRange(0, 2) -> 1
+sumRange(2, 5) -> -1
+sumRange(0, 5) -> -3
+```
+
+æ±‚åŒºé—´ i \~ j çš„å’Œï¼Œå¯ä»¥è½¬æ¢ä¸º sum[j] - sum[i-1]ï¼Œå…¶ä¸­ sum[i] ä¸º 0 \~ i çš„å’Œã€‚
+
+```java
+class NumArray {
+
+    private int[] sums;
+
+    public NumArray(int[] nums) {
+        sums = new int[nums.length + 1];
+        for (int i = 1; i <= nums.length; i++) {
+            sums[i] = sums[i - 1] + nums[i - 1];
+        }
+    }
+
+    public int sumRange(int i, int j) {
+        return sums[j + 1] - sums[i];
+    }
+}
+```
+
+**å­æ•°ç»„æœ€å¤§çš„å’Œ** 
+
+[53. Maximum Subarray (Easy)](https://leetcode.com/problems/maximum-subarray/description/)
+
+```html
+For example, given the array [-2,1,-3,4,-1,2,1,-5,4],
+the contiguous subarray [4,-1,2,1] has the largest sum = 6.
+```
+
+```java
+public int maxSubArray(int[] nums) {
+    if (nums == null || nums.length == 0) {
+        return 0;
+    }
+    int preSum = nums[0];
+    int maxSum = preSum;
+    for (int i = 1; i < nums.length; i++) {
+        preSum = preSum > 0 ? preSum + nums[i] : nums[i];
+        maxSum = Math.max(maxSum, preSum);
+    }
+    return maxSum;
+}
+```
+
+**æ•°ç»„ä¸­ç­‰å·®é€’å¢å­åŒºé—´çš„ä¸ªæ•°** 
+
+[413. Arithmetic Slices (Medium)](https://leetcode.com/problems/arithmetic-slices/description/)
+
+```html
+A = [1, 2, 3, 4]
+return: 3, for 3 arithmetic slices in A: [1, 2, 3], [2, 3, 4] and [1, 2, 3, 4] itself.
+```
+
+dp[i] è¡¨ç¤ºä»¥ A[i] ä¸ºç»“å°¾çš„ç­‰å·®é€’å¢å­åŒºé—´çš„ä¸ªæ•°ã€‚
+
+åœ¨ A[i] - A[i - 1] == A[i - 1] - A[i - 2] çš„æ¡ä»¶ä¸‹ï¼Œ{A[i - 2], A[i - 1], A[i]} æ˜¯ä¸€ä¸ªç­‰å·®é€’å¢å­åŒºé—´ã€‚å¦‚æœ {A[i - 3], A[i - 2], A[i - 1]} æ˜¯ä¸€ä¸ªç­‰å·®é€’å¢å­åŒºé—´ï¼Œé‚£ä¹ˆ {A[i - 3], A[i - 2], A[i - 1], A[i]} ä¹Ÿæ˜¯ç­‰å·®é€’å¢å­åŒºé—´ï¼Œdp[i] = dp[i-1] + 1ã€‚
+
+```java
+public int numberOfArithmeticSlices(int[] A) {
+    if (A == null || A.length == 0) {
+        return 0;
+    }
+    int n = A.length;
+    int[] dp = new int[n];
+    for (int i = 2; i < n; i++) {
+        if (A[i] - A[i - 1] == A[i - 1] - A[i - 2]) {
+            dp[i] = dp[i - 1] + 1;
+        }
+    }
+    int total = 0;
+    for (int cnt : dp) {
+        total += cnt;
+    }
+    return total;
+}
+```
+
+### åˆ†å‰²æ•´æ•°
+
+**åˆ†å‰²æ•´æ•°çš„æœ€å¤§ä¹˜ç§¯** 
+
+[343. Integer Break (Medim)](https://leetcode.com/problems/integer-break/description/)
+
+é¢˜ç›®æè¿°ï¼šFor example, given n = 2, return 1 (2 = 1 + 1); given n = 10, return 36 (10 = 3 + 3 + 4).
+
+```java
+public int integerBreak(int n) {
+    int[] dp = new int[n + 1];
+    dp[1] = 1;
+    for (int i = 2; i <= n; i++) {
+        for (int j = 1; j <= i - 1; j++) {
+            dp[i] = Math.max(dp[i], Math.max(j * dp[i - j], j * (i - j)));
+        }
+    }
+    return dp[n];
+}
+```
+
+**æŒ‰å¹³æ–¹æ•°æ¥åˆ†å‰²æ•´æ•°** 
+
+[279. Perfect Squares(Medium)](https://leetcode.com/problems/perfect-squares/description/)
+
+é¢˜ç›®æè¿°ï¼šFor example, given n = 12, return 3 because 12 = 4 + 4 + 4; given n = 13, return 2 because 13 = 4 + 9.
+
+```java
+public int numSquares(int n) {
+    List<Integer> squareList = generateSquareList(n);
+    int[] dp = new int[n + 1];
+    for (int i = 1; i <= n; i++) {
+        int min = Integer.MAX_VALUE;
+        for (int square : squareList) {
+            if (square > i) {
+                break;
+            }
+            min = Math.min(min, dp[i - square] + 1);
+        }
+        dp[i] = min;
+    }
+    return dp[n];
+}
+
+private List<Integer> generateSquareList(int n) {
+    List<Integer> squareList = new ArrayList<>();
+    int diff = 3;
+    int square = 1;
+    while (square <= n) {
+        squareList.add(square);
+        square += diff;
+        diff += 2;
+    }
+    return squareList;
+}
+```
+
+**åˆ†å‰²æ•´æ•°æ„æˆå­—æ¯å­—ç¬¦ä¸²** 
+
+[91. Decode Ways (Medium)](https://leetcode.com/problems/decode-ways/description/)
+
+é¢˜ç›®æè¿°ï¼šGiven encoded message "12", it could be decoded as "AB" (1 2) or "L" (12).
+
+```java
+public int numDecodings(String s) {
+    if (s == null || s.length() == 0) {
+        return 0;
+    }
+    int n = s.length();
+    int[] dp = new int[n + 1];
+    dp[0] = 1;
+    dp[1] = s.charAt(0) == '0' ? 0 : 1;
+    for (int i = 2; i <= n; i++) {
+        int one = Integer.valueOf(s.substring(i - 1, i));
+        if (one != 0) {
+            dp[i] += dp[i - 1];
+        }
+        if (s.charAt(i - 2) == '0') {
+            continue;
+        }
+        int two = Integer.valueOf(s.substring(i - 2, i));
+        if (two <= 26) {
+            dp[i] += dp[i - 2];
+        }
+    }
+    return dp[n];
+}
+```
+
+### æœ€é•¿é€’å¢å­åºåˆ—
+
+å·²çŸ¥ä¸€ä¸ªåºåˆ— {S<sub>1</sub>, S<sub>2</sub>,...,S<sub>n</sub>}ï¼Œå–å‡ºè‹¥å¹²æ•°ç»„æˆæ–°çš„åºåˆ— {S<sub>i1</sub>, S<sub>i2</sub>,..., S<sub>im</sub>}ï¼Œå…¶ä¸­ i1ã€i2 ... im ä¿æŒé€’å¢ï¼Œå³æ–°åºåˆ—ä¸­å„ä¸ªæ•°ä»ç„¶ä¿æŒåŸæ•°åˆ—ä¸­çš„å…ˆåé¡ºåºï¼Œç§°æ–°åºåˆ—ä¸ºåŸåºåˆ—çš„ä¸€ä¸ª **å­åºåˆ—** ã€‚
+
+å¦‚æœåœ¨å­åºåˆ—ä¸­ï¼Œå½“ä¸‹æ ‡ ix > iy æ—¶ï¼ŒS<sub>ix</sub> > S<sub>iy</sub>ï¼Œç§°å­åºåˆ—ä¸ºåŸåºåˆ—çš„ä¸€ä¸ª **é€’å¢å­åºåˆ—** ã€‚
+
+å®šä¹‰ä¸€ä¸ªæ•°ç»„ dp å­˜å‚¨æœ€é•¿é€’å¢å­åºåˆ—çš„é•¿åº¦ï¼Œdp[n] è¡¨ç¤ºä»¥ S<sub>n</sub> ç»“å°¾çš„åºåˆ—çš„æœ€é•¿é€’å¢å­åºåˆ—é•¿åº¦ã€‚å¯¹äºä¸€ä¸ªé€’å¢å­åºåˆ— {S<sub>i1</sub>, S<sub>i2</sub>,...,S<sub>im</sub>}ï¼Œå¦‚æœ im < n å¹¶ä¸” S<sub>im</sub> < S<sub>n</sub>ï¼Œæ­¤æ—¶ {S<sub>i1</sub>, S<sub>i2</sub>,..., S<sub>im</sub>, S<sub>n</sub>} ä¸ºä¸€ä¸ªé€’å¢å­åºåˆ—ï¼Œé€’å¢å­åºåˆ—çš„é•¿åº¦å¢åŠ  1ã€‚æ»¡è¶³ä¸Šè¿°æ¡ä»¶çš„é€’å¢å­åºåˆ—ä¸­ï¼Œé•¿åº¦æœ€é•¿çš„é‚£ä¸ªé€’å¢å­åºåˆ—å°±æ˜¯è¦æ‰¾çš„ï¼Œåœ¨é•¿åº¦æœ€é•¿çš„é€’å¢å­åºåˆ—ä¸ŠåŠ ä¸Š S<sub>n</sub> å°±æ„æˆäº†ä»¥ S<sub>n</sub> ä¸ºç»“å°¾çš„æœ€é•¿é€’å¢å­åºåˆ—ã€‚å› æ­¤ dp[n] = max{ dp[i]+1 | S<sub>i</sub> < S<sub>n</sub> && i < n} ã€‚
+
+å› ä¸ºåœ¨æ±‚ dp[n] æ—¶å¯èƒ½æ— æ³•æ‰¾åˆ°ä¸€ä¸ªæ»¡è¶³æ¡ä»¶çš„é€’å¢å­åºåˆ—ï¼Œæ­¤æ—¶ {S<sub>n</sub>} å°±æ„æˆäº†é€’å¢å­åºåˆ—ï¼Œéœ€è¦å¯¹å‰é¢çš„æ±‚è§£æ–¹ç¨‹åšä¿®æ”¹ï¼Œä»¤ dp[n] æœ€å°ä¸º 1ï¼Œå³ï¼š
+
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[n]=max\{1,dp[i]+1|S_i<S_n\&\&i<n\}"/></div> <br>
+
+å¯¹äºä¸€ä¸ªé•¿åº¦ä¸º N çš„åºåˆ—ï¼Œæœ€é•¿é€’å¢å­åºåˆ—å¹¶ä¸ä¸€å®šä¼šä»¥ S<sub>N</sub> ä¸ºç»“å°¾ï¼Œå› æ­¤ dp[N] ä¸æ˜¯åºåˆ—çš„æœ€é•¿é€’å¢å­åºåˆ—çš„é•¿åº¦ï¼Œéœ€è¦éå† dp æ•°ç»„æ‰¾å‡ºæœ€å¤§å€¼æ‰æ˜¯æ‰€è¦çš„ç»“æœï¼Œmax{ dp[i] | 1 <= i <= N} å³ä¸ºæ‰€æ±‚ã€‚
+
+**æœ€é•¿é€’å¢å­åºåˆ—** 
+
+[300. Longest Increasing Subsequence (Medium)](https://leetcode.com/problems/longest-increasing-subsequence/description/)
 
 ```java
 public int lengthOfLIS(int[] nums) {
     int n = nums.length;
     int[] dp = new int[n];
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++) {
         int max = 1;
-        for(int j = 0; j < i; j++){
-            if(nums[i] > nums[j]) max = Math.max(max, dp[j] + 1);
+        for (int j = 0; j < i; j++) {
+            if (nums[i] > nums[j]) {
+                max = Math.max(max, dp[j] + 1);
+            }
         }
         dp[i] = max;
     }
-    int ret = 0;
-    for(int i = 0; i < n; i++){
-        ret = Math.max(ret, dp[i]);
-    }
-    return ret;
+    return Arrays.stream(dp).max().orElse(0);
 }
 ```
 
-ÒÔÉÏ½â·¨µÄÊ±¼ä¸´ÔÓ¶ÈÎª O(n<sup>2</sup>) £¬¿ÉÒÔÊ¹ÓÃ¶ş·Ö²éÕÒÊ¹µÃÊ±¼ä¸´ÔÓ¶È½µµÍÎª O(nlog<sub>n</sub>)¡£¶¨ÒåÒ»¸ö tails Êı×é£¬ÆäÖĞ tails[i] ´æ´¢³¤¶ÈÎª i + 1 µÄ×î³¤µİÔö×ÓĞòÁĞµÄ×îºóÒ»¸öÔªËØ£¬ÀıÈç¶ÔÓÚÊı×é [4,5,6,3]£¬ÓĞ
+ä½¿ç”¨ Stream æ±‚æœ€å¤§å€¼ä¼šå¯¼è‡´è¿è¡Œæ—¶é—´è¿‡é•¿ï¼Œå¯ä»¥æ”¹æˆä»¥ä¸‹å½¢å¼ï¼š
 
-```html
-len = 1  :      [4], [5], [6], [3]  => tails[0] = 3
-len = 2  :      [4, 5], [5, 6]      => tails[1] = 5
-len = 3  :      [4, 5, 6]            => tails[2] = 6
+```java
+int ret = 0;
+for (int i = 0; i < n; i++) {
+    ret = Math.max(ret, dp[i]);
+}
+return ret;
 ```
 
-¶ÔÓÚÒ»¸öÔªËØ x£¬Èç¹ûËü´óÓÚ tails Êı×éËùÓĞµÄÖµ£¬ÄÇÃ´°ÑËüÌí¼Óµ½ tails ºóÃæ£»Èç¹û tails[i-1] < x <= tails[i]£¬ÄÇÃ´¸üĞÂ tails[i] = x ¡£
+ä»¥ä¸Šè§£æ³•çš„æ—¶é—´å¤æ‚åº¦ä¸º O(N<sup>2</sup>)ï¼Œå¯ä»¥ä½¿ç”¨äºŒåˆ†æŸ¥æ‰¾å°†æ—¶é—´å¤æ‚åº¦é™ä½ä¸º O(NlogN)ã€‚
 
-¿ÉÒÔ¿´³ö tails Êı×é±£³ÖÓĞĞò£¬Òò´ËÔÚ²éÕÒ S<sub>i</sub> Î»ÓÚ tails Êı×éµÄÎ»ÖÃÊ±¾Í¿ÉÒÔÊ¹ÓÃ¶ş·Ö²éÕÒ¡£
+å®šä¹‰ä¸€ä¸ª tails æ•°ç»„ï¼Œå…¶ä¸­ tails[i] å­˜å‚¨é•¿åº¦ä¸º i + 1 çš„æœ€é•¿é€’å¢å­åºåˆ—çš„æœ€åä¸€ä¸ªå…ƒç´ ã€‚å¯¹äºä¸€ä¸ªå…ƒç´  xï¼Œ
+
+- å¦‚æœå®ƒå¤§äº tails æ•°ç»„æ‰€æœ‰çš„å€¼ï¼Œé‚£ä¹ˆæŠŠå®ƒæ·»åŠ åˆ° tails åé¢ï¼Œè¡¨ç¤ºæœ€é•¿é€’å¢å­åºåˆ—é•¿åº¦åŠ  1ï¼›
+- å¦‚æœ tails[i-1] < x <= tails[i]ï¼Œé‚£ä¹ˆæ›´æ–° tails[i-1] = xã€‚
+
+ä¾‹å¦‚å¯¹äºæ•°ç»„ [4,3,6,5]ï¼Œæœ‰ï¼š
+
+```html
+tails      len      num
+[]         0        4
+[4]        1        3
+[3]        1        6
+[3,6]      2        5
+[3,5]      2        null
+```
+
+å¯ä»¥çœ‹å‡º tails æ•°ç»„ä¿æŒæœ‰åºï¼Œå› æ­¤åœ¨æŸ¥æ‰¾ S<sub>i</sub> ä½äº tails æ•°ç»„çš„ä½ç½®æ—¶å°±å¯ä»¥ä½¿ç”¨äºŒåˆ†æŸ¥æ‰¾ã€‚
 
 ```java
 public int lengthOfLIS(int[] nums) {
     int n = nums.length;
     int[] tails = new int[n];
-    int size = 0;
-    for(int i = 0; i < n; i++){
-        int idx = binarySearch(tails, 0, size, nums[i]);
-        tails[idx] = nums[i];
-        if(idx == size) size++;
+    int len = 0;
+    for (int num : nums) {
+        int index = binarySearch(tails, len, num);
+        tails[index] = num;
+        if (index == len) {
+            len++;
+        }
     }
-    return size;
+    return len;
 }
 
-private int binarySearch(int[] nums, int sIdx, int eIdx, int key){
-    while(sIdx < eIdx){
-        int mIdx = sIdx + (eIdx - sIdx) / 2;
-        if(nums[mIdx] == key) return mIdx;
-        else if(nums[mIdx] > key) eIdx = mIdx;
-        else sIdx = mIdx + 1;
+private int binarySearch(int[] tails, int len, int key) {
+    int l = 0, h = len;
+    while (l < h) {
+        int mid = l + (h - l) / 2;
+        if (tails[mid] == key) {
+            return mid;
+        } else if (tails[mid] > key) {
+            h = mid;
+        } else {
+            l = mid + 1;
+        }
     }
-    return sIdx;
+    return l;
 }
 ```
 
-**×î³¤°Ú¶¯×ÓĞòÁĞ**
+**ä¸€ç»„æ•´æ•°å¯¹èƒ½å¤Ÿæ„æˆçš„æœ€é•¿é“¾** 
 
-[Leetcode : 376. Wiggle Subsequence (Medium)](https://leetcode.com/problems/wiggle-subsequence/description/)
+[646. Maximum Length of Pair Chain (Medium)](https://leetcode.com/problems/maximum-length-of-pair-chain/description/)
 
-ÒªÇó£ºÊ¹ÓÃ O(n) Ê±¼ä¸´ÔÓ¶ÈÇó½â¡£
+```html
+Input: [[1,2], [2,3], [3,4]]
+Output: 2
+Explanation: The longest chain is [1,2] -> [3,4]
+```
 
-Ê¹ÓÃÁ½¸ö×´Ì¬ up ºÍ down¡£
+é¢˜ç›®æè¿°ï¼šå¯¹äº (a, b) å’Œ (c, d) ï¼Œå¦‚æœ b < cï¼Œåˆ™å®ƒä»¬å¯ä»¥æ„æˆä¸€æ¡é“¾ã€‚
+
+```java
+public int findLongestChain(int[][] pairs) {
+    if (pairs == null || pairs.length == 0) {
+        return 0;
+    }
+    Arrays.sort(pairs, (a, b) -> (a[0] - b[0]));
+    int n = pairs.length;
+    int[] dp = new int[n];
+    Arrays.fill(dp, 1);
+    for (int i = 1; i < n; i++) {
+        for (int j = 0; j < i; j++) {
+            if (pairs[j][1] < pairs[i][0]) {
+                dp[i] = Math.max(dp[i], dp[j] + 1);
+            }
+        }
+    }
+    return Arrays.stream(dp).max().orElse(0);
+}
+```
+
+**æœ€é•¿æ‘†åŠ¨å­åºåˆ—** 
+
+[376. Wiggle Subsequence (Medium)](https://leetcode.com/problems/wiggle-subsequence/description/)
+
+```html
+Input: [1,7,4,9,2,5]
+Output: 6
+The entire sequence is a wiggle sequence.
+
+Input: [1,17,5,10,13,15,10,5,16,8]
+Output: 7
+There are several subsequences that achieve this length. One is [1,17,10,13,10,16,8].
+
+Input: [1,2,3,4,5,6,7,8,9]
+Output: 2
+```
+
+è¦æ±‚ï¼šä½¿ç”¨ O(N) æ—¶é—´å¤æ‚åº¦æ±‚è§£ã€‚
 
 ```java
 public int wiggleMaxLength(int[] nums) {
-    int len = nums.length;
-    if (len == 0) return 0;
+    if (nums == null || nums.length == 0) {
+        return 0;
+    }
     int up = 1, down = 1;
-    for (int i = 1; i < len; i++) {
-        if (nums[i] > nums[i - 1]) up = down + 1;
-        else if (nums[i] < nums[i - 1]) down = up + 1;
+    for (int i = 1; i < nums.length; i++) {
+        if (nums[i] > nums[i - 1]) {
+            up = down + 1;
+        } else if (nums[i] < nums[i - 1]) {
+            down = up + 1;
+        }
     }
     return Math.max(up, down);
 }
 ```
 
-### ×î³¤¹«¹²×ÓÏµÁĞ
+### æœ€é•¿å…¬å…±å­åºåˆ—
 
-¶ÔÓÚÁ½¸ö×ÓĞòÁĞ S1 ºÍ S2£¬ÕÒ³öËüÃÇ×î³¤µÄ¹«¹²×ÓĞòÁĞ¡£
+å¯¹äºä¸¤ä¸ªå­åºåˆ— S1 å’Œ S2ï¼Œæ‰¾å‡ºå®ƒä»¬æœ€é•¿çš„å…¬å…±å­åºåˆ—ã€‚
 
-¶¨ÒåÒ»¸ö¶şÎ¬Êı×é dp ÓÃÀ´´æ´¢×î³¤¹«¹²×ÓĞòÁĞµÄ³¤¶È£¬ÆäÖĞ dp[i][j] ±íÊ¾ S1 µÄÇ° i ¸ö×Ö·ûÓë S2 µÄÇ° j ¸ö×Ö·û×î³¤¹«¹²×ÓĞòÁĞµÄ³¤¶È¡£¿¼ÂÇ S1<sub>i</sub> Óë S2<sub>j</sub> ÖµÊÇ·ñÏàµÈ£¬·ÖÎªÁ½ÖÖÇé¿ö£º
+å®šä¹‰ä¸€ä¸ªäºŒç»´æ•°ç»„ dp ç”¨æ¥å­˜å‚¨æœ€é•¿å…¬å…±å­åºåˆ—çš„é•¿åº¦ï¼Œå…¶ä¸­ dp[i][j] è¡¨ç¤º S1 çš„å‰ i ä¸ªå­—ç¬¦ä¸ S2 çš„å‰ j ä¸ªå­—ç¬¦æœ€é•¿å…¬å…±å­åºåˆ—çš„é•¿åº¦ã€‚è€ƒè™‘ S1<sub>i</sub> ä¸ S2<sub>j</sub> å€¼æ˜¯å¦ç›¸ç­‰ï¼Œåˆ†ä¸ºä¸¤ç§æƒ…å†µï¼š
 
-¢Ù µ± S1<sub>i</sub>==S2<sub>j</sub> Ê±£¬ÄÇÃ´¾ÍÄÜÔÚ S1 µÄÇ° i-1 ¸ö×Ö·ûÓë S2 µÄÇ° j-1 ¸ö×Ö·û×î³¤¹«¹²×ÓĞòÁĞµÄ»ù´¡ÉÏÔÙ¼ÓÉÏ S1<sub>i</sub> Õâ¸öÖµ£¬×î³¤¹«¹²×ÓĞòÁĞ³¤¶È¼Ó 1 £¬¼´ dp[i][j] = dp[i-1][j-1] + 1¡£
+- å½“ S1<sub>i</sub>==S2<sub>j</sub> æ—¶ï¼Œé‚£ä¹ˆå°±èƒ½åœ¨ S1 çš„å‰ i-1 ä¸ªå­—ç¬¦ä¸ S2 çš„å‰ j-1 ä¸ªå­—ç¬¦æœ€é•¿å…¬å…±å­åºåˆ—çš„åŸºç¡€ä¸Šå†åŠ ä¸Š S1<sub>i</sub> è¿™ä¸ªå€¼ï¼Œæœ€é•¿å…¬å…±å­åºåˆ—é•¿åº¦åŠ  1ï¼Œå³ dp[i][j] = dp[i-1][j-1] + 1ã€‚
+- å½“ S1<sub>i</sub> != S2<sub>j</sub> æ—¶ï¼Œæ­¤æ—¶æœ€é•¿å…¬å…±å­åºåˆ—ä¸º S1 çš„å‰ i-1 ä¸ªå­—ç¬¦å’Œ S2 çš„å‰ j ä¸ªå­—ç¬¦æœ€é•¿å…¬å…±å­åºåˆ—ï¼Œæˆ–è€… S1 çš„å‰ i ä¸ªå­—ç¬¦å’Œ S2 çš„å‰ j-1 ä¸ªå­—ç¬¦æœ€é•¿å…¬å…±å­åºåˆ—ï¼Œå–å®ƒä»¬çš„æœ€å¤§è€…ï¼Œå³ dp[i][j] = max{ dp[i-1][j], dp[i][j-1] }ã€‚
 
-¢Ú µ± S1<sub>i</sub> != S2<sub>j</sub> Ê±£¬´ËÊ±×î³¤¹«¹²×ÓĞòÁĞÎª S1 µÄÇ° i-1 ¸ö×Ö·ûºÍ S2 µÄÇ° j ¸ö×Ö·û×î³¤¹«¹²×ÓĞòÁĞ£¬Óë S1 µÄÇ° i ¸ö×Ö·ûºÍ S2 µÄÇ° j-1 ¸ö×Ö·û×î³¤¹«¹²×ÓĞòÁĞ£¬ËüÃÇµÄ×î´óÕß£¬¼´ dp[i][j] = max{ dp[i-1][j], dp[i][j-1] }¡£
+ç»¼ä¸Šï¼Œæœ€é•¿å…¬å…±å­åºåˆ—çš„çŠ¶æ€è½¬ç§»æ–¹ç¨‹ä¸ºï¼š
 
-×ÛÉÏ£¬×î³¤¹«¹²×ÓÏµÁĞµÄ×´Ì¬×ªÒÆ·½³ÌÎª£º
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i][j]=\left\{\begin{array}{rcl}dp[i-1][j-1]&&{S1_i==S2_j}\\max(dp[i-1][j],dp[i][j-1])&&{S1_i<>S2_j}\end{array}\right."/></div> <br>
 
-![](http://latex.codecogs.com/gif.latex?\\\\
-dp[i][j]=\left\{
-\begin{array}{rcl}
-dp[i-1][j-1]&&{S1_i==S2_j}\\
-max(dp[i-1][j],dp[i][j-1])&&{S1_i<>S2_j}
-\end{array}\right.
-)
+å¯¹äºé•¿åº¦ä¸º N çš„åºåˆ— S<sub>1</sub> å’Œé•¿åº¦ä¸º M çš„åºåˆ— S<sub>2</sub>ï¼Œdp[N][M] å°±æ˜¯åºåˆ— S<sub>1</sub> å’Œåºåˆ— S<sub>2</sub> çš„æœ€é•¿å…¬å…±å­åºåˆ—é•¿åº¦ã€‚
 
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/1dc481cc-99f6-4fa8-8f68-fbd563995bf5.png)
+ä¸æœ€é•¿é€’å¢å­åºåˆ—ç›¸æ¯”ï¼Œæœ€é•¿å…¬å…±å­åºåˆ—æœ‰ä»¥ä¸‹ä¸åŒç‚¹ï¼š
 
-¶ÔÓÚ³¤¶ÈÎª N µÄĞòÁĞ S<sub>1</sub> ºÍ ³¤¶ÈÎª M µÄĞòÁĞ S<sub>2</sub>£¬dp[N][M] ¾ÍÊÇĞòÁĞ S<sub>1</sub> ºÍĞòÁĞ S<sub>2</sub> µÄ×î³¤¹«¹²×ÓĞòÁĞ³¤¶È¡£
-
-Óë×î³¤µİÔö×ÓĞòÁĞÏà±È£¬×î³¤¹«¹²×ÓĞòÁĞÓĞÒÔÏÂ²»Í¬µã£º
-
-¢Ù Õë¶ÔµÄÊÇÁ½¸öĞòÁĞ£¬ÇóËüÃÇµÄ×î³¤¹«¹²×ÓĞòÁĞ¡£
-¢Ú ÔÚ×î³¤µİÔö×ÓĞòÁĞÖĞ£¬dp[i] ±íÊ¾ÒÔ S<sub>i</sub> Îª½áÎ²µÄ×î³¤µİÔö×ÓĞòÁĞ³¤¶È£¬×ÓĞòÁĞ±ØĞë°üº¬ S<sub>i</sub> £»ÔÚ×î³¤¹«¹²×ÓĞòÁĞÖĞ£¬dp[i][j] ±íÊ¾ S1 ÖĞÇ° i ¸ö×Ö·ûÓë S2 ÖĞÇ° j ¸ö×Ö·ûµÄ×î³¤¹«¹²×ÓĞòÁĞ³¤¶È£¬²»Ò»¶¨°üº¬ S1<sub>i</sub> ºÍ S2<sub>j</sub> ¡£
-¢Û ÓÉÓÚ 2 £¬ÔÚÇó×îÖÕ½âÊ±£¬×î³¤¹«¹²×ÓĞòÁĞÖĞ dp[N][M] ¾ÍÊÇ×îÖÕ½â£¬¶ø×î³¤µİÔö×ÓĞòÁĞÖĞ dp[N] ²»ÊÇ×îÖÕ½â£¬ÒòÎªÒÔ S<sub>N</sub> Îª½áÎ²µÄ×î³¤µİÔö×ÓĞòÁĞ²»Ò»¶¨ÊÇÕû¸öĞòÁĞ×î³¤µİÔö×ÓĞòÁĞ£¬ĞèÒª±éÀúÒ»±é dp Êı×éÕÒµ½×î´óÕß¡£
+- é’ˆå¯¹çš„æ˜¯ä¸¤ä¸ªåºåˆ—ï¼Œæ±‚å®ƒä»¬çš„æœ€é•¿å…¬å…±å­åºåˆ—ã€‚
+- åœ¨æœ€é•¿é€’å¢å­åºåˆ—ä¸­ï¼Œdp[i] è¡¨ç¤ºä»¥ S<sub>i</sub> ä¸ºç»“å°¾çš„æœ€é•¿é€’å¢å­åºåˆ—é•¿åº¦ï¼Œå­åºåˆ—å¿…é¡»åŒ…å« S<sub>i</sub> ï¼›åœ¨æœ€é•¿å…¬å…±å­åºåˆ—ä¸­ï¼Œdp[i][j] è¡¨ç¤º S1 ä¸­å‰ i ä¸ªå­—ç¬¦ä¸ S2 ä¸­å‰ j ä¸ªå­—ç¬¦çš„æœ€é•¿å…¬å…±å­åºåˆ—é•¿åº¦ï¼Œä¸ä¸€å®šåŒ…å« S1<sub>i</sub> å’Œ S2<sub>j</sub>ã€‚
+- åœ¨æ±‚æœ€ç»ˆè§£æ—¶ï¼Œæœ€é•¿å…¬å…±å­åºåˆ—ä¸­ dp[N][M] å°±æ˜¯æœ€ç»ˆè§£ï¼Œè€Œæœ€é•¿é€’å¢å­åºåˆ—ä¸­ dp[N] ä¸æ˜¯æœ€ç»ˆè§£ï¼Œå› ä¸ºä»¥ S<sub>N</sub> ä¸ºç»“å°¾çš„æœ€é•¿é€’å¢å­åºåˆ—ä¸ä¸€å®šæ˜¯æ•´ä¸ªåºåˆ—æœ€é•¿é€’å¢å­åºåˆ—ï¼Œéœ€è¦éå†ä¸€é dp æ•°ç»„æ‰¾åˆ°æœ€å¤§è€…ã€‚
 
 ```java
 public int lengthOfLCS(int[] nums1, int[] nums2) {
@@ -2023,58 +2931,73 @@ public int lengthOfLCS(int[] nums1, int[] nums2) {
     int[][] dp = new int[n1 + 1][n2 + 1];
     for (int i = 1; i <= n1; i++) {
         for (int j = 1; j <= n2; j++) {
-            if (nums1[i - 1] == nums2[j - 1]) dp[i][j] = dp[i - 1][j - 1] + 1;
-            else dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+            if (nums1[i - 1] == nums2[j - 1]) {
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            } else {
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+            }
         }
     }
     return dp[n1][n2];
 }
 ```
 
-### 0-1 ±³°ü
+### 0-1 èƒŒåŒ…
 
-ÓĞÒ»¸öÈİÁ¿Îª N µÄ±³°ü£¬ÒªÓÃÕâ¸ö±³°ü×°ÏÂÎïÆ·µÄ¼ÛÖµ×î´ó£¬ÕâĞ©ÎïÆ·ÓĞÁ½¸öÊôĞÔ£ºÌå»ı w ºÍ¼ÛÖµ v¡£
+æœ‰ä¸€ä¸ªå®¹é‡ä¸º N çš„èƒŒåŒ…ï¼Œè¦ç”¨è¿™ä¸ªèƒŒåŒ…è£…ä¸‹ç‰©å“çš„ä»·å€¼æœ€å¤§ï¼Œè¿™äº›ç‰©å“æœ‰ä¸¤ä¸ªå±æ€§ï¼šä½“ç§¯ w å’Œä»·å€¼ vã€‚
 
-¶¨ÒåÒ»¸ö¶şÎ¬Êı×é dp ´æ´¢×î´ó¼ÛÖµ£¬ÆäÖĞ dp[i][j] ±íÊ¾Ìå»ı²»³¬¹ı j µÄÇé¿öÏÂ£¬Ç° i ¼şÎïÆ·ÄÜ´ïµ½µÄ×î´ó¼ÛÖµ¡£ÉèµÚ i ¼şÎïÆ·Ìå»ıÎª w£¬¼ÛÖµÎª v£¬¸ù¾İµÚ i ¼şÎïÆ·ÊÇ·ñÌí¼Óµ½±³°üÖĞ£¬¿ÉÒÔ·ÖÁ½ÖÖÇé¿öÌÖÂÛ£º
+å®šä¹‰ä¸€ä¸ªäºŒç»´æ•°ç»„ dp å­˜å‚¨æœ€å¤§ä»·å€¼ï¼Œå…¶ä¸­ dp[i][j] è¡¨ç¤ºå‰ i ä»¶ç‰©å“ä½“ç§¯ä¸è¶…è¿‡ j çš„æƒ…å†µä¸‹èƒ½è¾¾åˆ°çš„æœ€å¤§ä»·å€¼ã€‚è®¾ç¬¬ i ä»¶ç‰©å“ä½“ç§¯ä¸º wï¼Œä»·å€¼ä¸º vï¼Œæ ¹æ®ç¬¬ i ä»¶ç‰©å“æ˜¯å¦æ·»åŠ åˆ°èƒŒåŒ…ä¸­ï¼Œå¯ä»¥åˆ†ä¸¤ç§æƒ…å†µè®¨è®ºï¼š
 
-¢Ù µÚ i ¼şÎïÆ·Ã»Ìí¼Óµ½±³°ü£¬×ÜÌå»ı²»³¬¹ı j µÄÇ° i ¼şÎïÆ·µÄ×î´ó¼ÛÖµ¾ÍÊÇ×ÜÌå»ı²»³¬¹ı j µÄÇ° i-1 ¼şÎïÆ·µÄ×î´ó¼ÛÖµ£¬dp[i][j] = dp[i-1][j]¡£
-¢Ú µÚ i ¼şÎïÆ·Ìí¼Óµ½±³°üÖĞ£¬dp[i][j] = dp[i-1][j-w] + v¡£
+- ç¬¬ i ä»¶ç‰©å“æ²¡æ·»åŠ åˆ°èƒŒåŒ…ï¼Œæ€»ä½“ç§¯ä¸è¶…è¿‡ j çš„å‰ i ä»¶ç‰©å“çš„æœ€å¤§ä»·å€¼å°±æ˜¯æ€»ä½“ç§¯ä¸è¶…è¿‡ j çš„å‰ i-1 ä»¶ç‰©å“çš„æœ€å¤§ä»·å€¼ï¼Œdp[i][j] = dp[i-1][j]ã€‚
+- ç¬¬ i ä»¶ç‰©å“æ·»åŠ åˆ°èƒŒåŒ…ä¸­ï¼Œdp[i][j] = dp[i-1][j-w] + vã€‚
 
-µÚ i ¼şÎïÆ·¿ÉÌí¼ÓÒ²¿ÉÒÔ²»Ìí¼Ó£¬È¡¾öÓÚÄÄÖÖÇé¿öÏÂ×î´ó¼ÛÖµ¸ü´ó¡£
+ç¬¬ i ä»¶ç‰©å“å¯æ·»åŠ ä¹Ÿå¯ä»¥ä¸æ·»åŠ ï¼Œå–å†³äºå“ªç§æƒ…å†µä¸‹æœ€å¤§ä»·å€¼æ›´å¤§ã€‚å› æ­¤ï¼Œ0-1 èƒŒåŒ…çš„çŠ¶æ€è½¬ç§»æ–¹ç¨‹ä¸ºï¼š
 
-×ÛÉÏ£¬0-1 ±³°üµÄ×´Ì¬×ªÒÆ·½³ÌÎª£º
-
-![](http://latex.codecogs.com/gif.latex?\\\\dp[i][j]=max(dp[i-1][j],dp[i-1][j-w]+v))
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i][j]=max(dp[i-1][j],dp[i-1][j-w]+v)"/></div> <br>
 
 ```java
 public int knapsack(int W, int N, int[] weights, int[] values) {
-    int[][] dp = new int[N][W];
-    for (int i = W - 1; i >= 0; i--) {
-        dp[0][i] = i > weights[0] ? values[0] : 0;
-    }
-    for (int i = 1; i < N; i++) {
-        for (int j = W - 1; j >= weights[i]; j--) {
-            dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - weights[i]] + values[i]);
+    int[][] dp = new int[N + 1][W + 1];
+    for (int i = 1; i <= N; i++) {
+        int w = weights[i - 1], v = values[i - 1];
+        for (int j = 1; j <= W; j++) {
+            if (j >= w) {
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - w] + v);
+            } else {
+                dp[i][j] = dp[i - 1][j];
+            }
         }
-        for (int j = weights[i - 1] - 1; j >= 0; j--) {
-            dp[i][j] = dp[i - 1][j];
-        }
     }
-    return dp[N - 1][W - 1];
+    return dp[N][W];
 }
 ```
 
-**¿Õ¼äÓÅ»¯**
+**ç©ºé—´ä¼˜åŒ–** 
 
-ÔÚ³ÌĞòÊµÏÖÊ±¿ÉÒÔ¶Ô 0-1 ±³°ü×öÓÅ»¯¡£¹Û²ì×´Ì¬×ªÒÆ·½³Ì¿ÉÒÔÖªµÀ£¬Ç° i ¼şÎïÆ·µÄ×´Ì¬½öÓÉÇ° i-1 ¼şÎïÆ·µÄ×´Ì¬ÓĞ¹Ø£¬Òò´Ë¿ÉÒÔ½« dp ¶¨ÒåÎªÒ»Î¬Êı×é£¬ÆäÖĞ dp[j] ¼È¿ÉÒÔ±íÊ¾ dp[i-1][j] Ò²¿ÉÒÔ±íÊ¾ dp[i][j]¡£´ËÊ±£¬
+åœ¨ç¨‹åºå®ç°æ—¶å¯ä»¥å¯¹ 0-1 èƒŒåŒ…åšä¼˜åŒ–ã€‚è§‚å¯ŸçŠ¶æ€è½¬ç§»æ–¹ç¨‹å¯ä»¥çŸ¥é“ï¼Œå‰ i ä»¶ç‰©å“çš„çŠ¶æ€ä»…ä¸å‰ i-1 ä»¶ç‰©å“çš„çŠ¶æ€æœ‰å…³ï¼Œå› æ­¤å¯ä»¥å°† dp å®šä¹‰ä¸ºä¸€ç»´æ•°ç»„ï¼Œå…¶ä¸­ dp[j] æ—¢å¯ä»¥è¡¨ç¤º dp[i-1][j] ä¹Ÿå¯ä»¥è¡¨ç¤º dp[i][j]ã€‚æ­¤æ—¶ï¼Œ
 
-![](http://latex.codecogs.com/gif.latex?\\\\dp[j]=max(dp[j],dp[j-w]+v))
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[j]=max(dp[j],dp[j-w]+v)"/></div> <br>
 
-ÒòÎª dp[j-w] ±íÊ¾ dp[i-1][j-w]£¬Òò´Ë²»ÄÜÏÈÇó dp[i][j-w] ·ÀÖ¹½« dp[i-1][j-w] ¸²¸Ç¡£Ò²¾ÍÊÇËµÒªÏÈ¼ÆËã dp[i][j] ÔÙ¼ÆËã dp[i][j-w]£¬ÔÚ³ÌĞòÊµÏÖÊ±ĞèÒª°´µ¹ĞòÀ´Ñ­»·Çó½â¡£
+å› ä¸º dp[j-w] è¡¨ç¤º dp[i-1][j-w]ï¼Œå› æ­¤ä¸èƒ½å…ˆæ±‚ dp[i][j-w]ï¼Œä»¥é˜²å°† dp[i-1][j-w] è¦†ç›–ã€‚ä¹Ÿå°±æ˜¯è¯´è¦å…ˆè®¡ç®— dp[i][j] å†è®¡ç®— dp[i][j-w]ï¼Œåœ¨ç¨‹åºå®ç°æ—¶éœ€è¦æŒ‰å€’åºæ¥å¾ªç¯æ±‚è§£ã€‚
 
-**ÎŞ·¨Ê¹ÓÃÌ°ĞÄËã·¨µÄ½âÊÍ**
+```java
+public int knapsack(int W, int N, int[] weights, int[] values) {
+    int[] dp = new int[W + 1];
+    for (int i = 1; i <= N; i++) {
+        int w = weights[i - 1], v = values[i - 1];
+        for (int j = W; j >= 1; j--) {
+            if (j >= w) {
+                dp[j] = Math.max(dp[j], dp[j - w] + v);
+            }
+        }
+    }
+    return dp[W];
+}
+```
 
-0-1 ±³°üÎÊÌâÎŞ·¨Ê¹ÓÃÌ°ĞÄËã·¨À´Çó½â£¬Ò²¾ÍÊÇËµ²»ÄÜ°´ÕÕÏÈÌí¼ÓĞÔ¼Û±È×î¸ßµÄÎïÆ·À´´ïµ½×îÓÅ£¬ÕâÊÇÒòÎªÕâÖÖ·½Ê½¿ÉÄÜÔì³É±³°ü¿Õ¼äµÄÀË·Ñ£¬´Ó¶øÎŞ·¨´ïµ½×îÓÅ¡£¿¼ÂÇÏÂÃæµÄÎïÆ·ºÍÒ»¸öÈİÁ¿Îª 5 µÄ±³°ü£¬Èç¹ûÏÈÌí¼ÓÎïÆ· 0 ÔÙÌí¼ÓÎïÆ· 1£¬ÄÇÃ´Ö»ÄÜ´æ·ÅµÄ¼ÛÖµÎª 16£¬ÀË·ÑÁË´óĞ¡Îª 2 µÄ¿Õ¼ä¡£×îÓÅµÄ·½Ê½ÊÇ´æ·ÅÎïÆ· 1 ºÍÎïÆ· 2£¬¼ÛÖµÎª 22.
+**æ— æ³•ä½¿ç”¨è´ªå¿ƒç®—æ³•çš„è§£é‡Š** 
+
+0-1 èƒŒåŒ…é—®é¢˜æ— æ³•ä½¿ç”¨è´ªå¿ƒç®—æ³•æ¥æ±‚è§£ï¼Œä¹Ÿå°±æ˜¯è¯´ä¸èƒ½æŒ‰ç…§å…ˆæ·»åŠ æ€§ä»·æ¯”æœ€é«˜çš„ç‰©å“æ¥è¾¾åˆ°æœ€ä¼˜ï¼Œè¿™æ˜¯å› ä¸ºè¿™ç§æ–¹å¼å¯èƒ½é€ æˆèƒŒåŒ…ç©ºé—´çš„æµªè´¹ï¼Œä»è€Œæ— æ³•è¾¾åˆ°æœ€ä¼˜ã€‚è€ƒè™‘ä¸‹é¢çš„ç‰©å“å’Œä¸€ä¸ªå®¹é‡ä¸º 5 çš„èƒŒåŒ…ï¼Œå¦‚æœå…ˆæ·»åŠ ç‰©å“ 0 å†æ·»åŠ ç‰©å“ 1ï¼Œé‚£ä¹ˆåªèƒ½å­˜æ”¾çš„ä»·å€¼ä¸º 16ï¼Œæµªè´¹äº†å¤§å°ä¸º 2 çš„ç©ºé—´ã€‚æœ€ä¼˜çš„æ–¹å¼æ˜¯å­˜æ”¾ç‰©å“ 1 å’Œç‰©å“ 2ï¼Œä»·å€¼ä¸º 22.
 
 | id | w | v | v/w |
 | --- | --- | --- | --- |
@@ -2082,84 +3005,65 @@ public int knapsack(int W, int N, int[] weights, int[] values) {
 | 1 | 2 | 10 | 5 |
 | 2 | 3 | 12 | 4 |
 
-**±äÖÖ**
+**å˜ç§** 
 
-ÍêÈ«±³°ü£ºÎïÆ·¿ÉÒÔÎŞÏŞ¸ö£¬¿ÉÒÔ×ª»»Îª 0-1 ±³°ü£¬ÁîÃ¿ÖÖÎïÆ·µÄÌå»ıºÍ¼ÛÖµ±äÎª 1/2/4... ±¶Êı£¬°ÑËüÃÇ¶¼µ±³ÉÒ»¸öĞÂÎïÆ·£¬È»ºóÒ»ÖÖÎïÆ·Ö»ÄÜÌí¼ÓÒ»´Î¡£
+- å®Œå…¨èƒŒåŒ…ï¼šç‰©å“æ•°é‡ä¸ºæ— é™ä¸ª
 
-¶àÖØ±³°ü£ºÎïÆ·ÊıÁ¿ÓĞÏŞÖÆ£¬Í¬Ñù¿ÉÒÔ×ª»»Îª 0-1 ±³°ü¡£
+- å¤šé‡èƒŒåŒ…ï¼šç‰©å“æ•°é‡æœ‰é™åˆ¶
 
-¶àÎ¬·ÑÓÃ±³°ü£ºÎïÆ·²»½öÓĞÖØÁ¿£¬»¹ÓĞÌå»ı£¬Í¬Ê±¿¼ÂÇÕâÁ½ÖÖÏŞÖÆ¡£
+- å¤šç»´è´¹ç”¨èƒŒåŒ…ï¼šç‰©å“ä¸ä»…æœ‰é‡é‡ï¼Œè¿˜æœ‰ä½“ç§¯ï¼ŒåŒæ—¶è€ƒè™‘è¿™ä¸¤ç§é™åˆ¶
 
-ÆäËü£ºÎïÆ·Ö®¼äÏà»¥Ô¼Êø»òÕßÒÀÀµ¡£
+- å…¶å®ƒï¼šç‰©å“ä¹‹é—´ç›¸äº’çº¦æŸæˆ–è€…ä¾èµ–
 
-**»®·ÖÊı×éÎªºÍÏàµÈµÄÁ½²¿·Ö**
+**åˆ’åˆ†æ•°ç»„ä¸ºå’Œç›¸ç­‰çš„ä¸¤éƒ¨åˆ†** 
 
-[Leetcode : 416. Partition Equal Subset Sum (Medium)](https://leetcode.com/problems/partition-equal-subset-sum/description/)
+[416. Partition Equal Subset Sum (Medium)](https://leetcode.com/problems/partition-equal-subset-sum/description/)
 
-¿ÉÒÔ¿´³ÉÒ»¸ö±³°ü´óĞ¡Îª sum/2 µÄ 0-1 ±³°üÎÊÌâ£¬µ«ÊÇÒ²ÓĞ²»Í¬µÄµØ·½£¬ÕâÀïÃ»ÓĞ¼ÛÖµÊôĞÔ£¬²¢ÇÒ±³°ü±ØĞë±»ÌîÂú¡£
+```html
+Input: [1, 5, 11, 5]
 
-ÒÔÏÂÊµÏÖÊ¹ÓÃÁË¿Õ¼äÓÅ»¯¡£
+Output: true
+
+Explanation: The array can be partitioned as [1, 5, 5] and [11].
+```
+
+å¯ä»¥çœ‹æˆä¸€ä¸ªèƒŒåŒ…å¤§å°ä¸º sum/2 çš„ 0-1 èƒŒåŒ…é—®é¢˜ã€‚
 
 ```java
 public boolean canPartition(int[] nums) {
-    int sum = 0;
-    for (int num : nums) {
-        sum += num;
-    }
+    int sum = computeArraySum(nums);
     if (sum % 2 != 0) {
         return false;
     }
     int W = sum / 2;
     boolean[] dp = new boolean[W + 1];
-    int n = nums.length;
-    for(int i = 0; i <= W; i++) {
-        if(nums[0] == i) dp[i] = true;
-    }
-    for(int i = 1; i < n; i++) {
-        for(int j = W; j >= nums[i]; j--) {
-            dp[j] = dp[j] || dp[j - nums[i]];
+    dp[0] = true;
+    Arrays.sort(nums);
+    for (int num : nums) {                 // 0-1 èƒŒåŒ…ä¸€ä¸ªç‰©å“åªèƒ½ç”¨ä¸€æ¬¡
+        for (int i = W; i >= num; i--) {   // ä»åå¾€å‰ï¼Œå…ˆè®¡ç®— dp[i] å†è®¡ç®— dp[i-num]
+            dp[i] = dp[i] || dp[i - num];
         }
     }
-
     return dp[W];
 }
-```
 
-**×Ö·û´®°´µ¥´ÊÁĞ±í·Ö¸î**
-
-[Leetcode : 139. Word Break (Medium)](https://leetcode.com/problems/word-break/description/)
-
-```html
-s = "leetcode",
-dict = ["leet", "code"].
-Return true because "leetcode" can be segmented as "leet code".
-```
-
-```java
-public boolean wordBreak(String s, List<String> wordDict) {
-    int n = s.length();
-    boolean[] dp = new boolean[n + 1];
-    dp[0] = true;
-    for (int i = 1; i <= n; i++) {
-        for (String word : wordDict) {
-            if (word.length() <= i
-                    && word.equals(s.substring(i - word.length(), i))) {
-                dp[i] = dp[i] || dp[i - word.length()];
-            }
-        }
+private int computeArraySum(int[] nums) {
+    int sum = 0;
+    for (int num : nums) {
+        sum += num;
     }
-    return dp[n];
+    return sum;
 }
 ```
 
-**¸Ä±äÒ»×éÊıµÄÕı¸ººÅÊ¹µÃËüÃÇµÄºÍÎªÒ»¸ø¶¨Êı**
+**æ”¹å˜ä¸€ç»„æ•°çš„æ­£è´Ÿå·ä½¿å¾—å®ƒä»¬çš„å’Œä¸ºä¸€ç»™å®šæ•°** 
 
-[Leetcode : 494. Target Sum (Medium)](https://leetcode.com/problems/target-sum/description/)
+[494. Target Sum (Medium)](https://leetcode.com/problems/target-sum/description/)
 
 ```html
-Input: nums is [1, 1, 1, 1, 1], S is 3. 
+Input: nums is [1, 1, 1, 1, 1], S is 3.
 Output: 5
-Explanation: 
+Explanation:
 
 -1+1+1+1+1 = 3
 +1-1+1+1+1 = 3
@@ -2170,7 +3074,9 @@ Explanation:
 There are 5 ways to assign symbols to make the sum of nums be target 3.
 ```
 
-¸ÃÎÊÌâ¿ÉÒÔ×ª»»Îª subset sum ÎÊÌâ£¬´Ó¶øÊ¹ÓÃ 0-1 ±³°üµÄ·½·¨À´Çó½â¡£¿ÉÒÔ½«Õâ×éÊı¿´³ÉÁ½²¿·Ö£¬P ºÍ N£¬ÆäÖĞ P Ê¹ÓÃÕıºÅ£¬N Ê¹ÓÃ¸ººÅ£¬ÓĞÒÔÏÂÍÆµ¼£º
+è¯¥é—®é¢˜å¯ä»¥è½¬æ¢ä¸º Subset Sum é—®é¢˜ï¼Œä»è€Œä½¿ç”¨ 0-1 èƒŒåŒ…çš„æ–¹æ³•æ¥æ±‚è§£ã€‚
+
+å¯ä»¥å°†è¿™ç»„æ•°çœ‹æˆä¸¤éƒ¨åˆ†ï¼ŒP å’Œ Nï¼Œå…¶ä¸­ P ä½¿ç”¨æ­£å·ï¼ŒN ä½¿ç”¨è´Ÿå·ï¼Œæœ‰ä»¥ä¸‹æ¨å¯¼ï¼š
 
 ```html
                   sum(P) - sum(N) = target
@@ -2178,64 +3084,113 @@ sum(P) + sum(N) + sum(P) - sum(N) = target + sum(P) + sum(N)
                        2 * sum(P) = target + sum(nums)
 ```
 
-Òò´ËÖ»ÒªÕÒµ½Ò»¸ö×Ó¼¯£¬ÁîËüÃÇ¶¼È¡ÕıºÅ£¬²¢ÇÒºÍµÈÓÚ (target + sum(nums))/2£¬¾ÍÖ¤Ã÷´æÔÚ½â¡£
+å› æ­¤åªè¦æ‰¾åˆ°ä¸€ä¸ªå­é›†ï¼Œä»¤å®ƒä»¬éƒ½å–æ­£å·ï¼Œå¹¶ä¸”å’Œç­‰äº (target + sum(nums))/2ï¼Œå°±è¯æ˜å­˜åœ¨è§£ã€‚
 
 ```java
 public int findTargetSumWays(int[] nums, int S) {
+    int sum = computeArraySum(nums);
+    if (sum < S || (sum + S) % 2 == 1) {
+        return 0;
+    }
+    int W = (sum + S) / 2;
+    int[] dp = new int[W + 1];
+    dp[0] = 1;
+    Arrays.sort(nums);
+    for (int num : nums) {
+        for (int i = W; i >= num; i--) {
+            dp[i] = dp[i] + dp[i - num];
+        }
+    }
+    return dp[W];
+}
+
+private int computeArraySum(int[] nums) {
     int sum = 0;
     for (int num : nums) {
         sum += num;
     }
-    if (sum < S || (sum + S) % 2 == 1) {
-        return 0;
-    }
-    return subsetSum(nums, (sum + S) >>> 1);
-}
-
-private int subsetSum(int[] nums, int targetSum) {
-    Arrays.sort(nums);
-    int[] dp = new int[targetSum + 1];
-    dp[0] = 1;
-    for (int i = 0; i < nums.length; i++) {
-        int num = nums[i];
-        for (int j = targetSum; j >= num; j--) {
-            dp[j] = dp[j] + dp[j - num];
-        }
-    }
-    return dp[targetSum];
+    return sum;
 }
 ```
 
-**01×Ö·û¹¹³É×î¶àµÄ×Ö·û´®**
+DFS è§£æ³•ï¼š
 
-[Leetcode : 474. Ones and Zeroes (Medium)](https://leetcode.com/problems/ones-and-zeroes/description/)
+```java
+public int findTargetSumWays(int[] nums, int S) {
+    return findTargetSumWays(nums, 0, S);
+}
+
+private int findTargetSumWays(int[] nums, int start, int S) {
+    if (start == nums.length) {
+        return S == 0 ? 1 : 0;
+    }
+    return findTargetSumWays(nums, start + 1, S + nums[start])
+            + findTargetSumWays(nums, start + 1, S - nums[start]);
+}
+```
+
+**å­—ç¬¦ä¸²æŒ‰å•è¯åˆ—è¡¨åˆ†å‰²** 
+
+[139. Word Break (Medium)](https://leetcode.com/problems/word-break/description/)
+
+```html
+s = "leetcode",
+dict = ["leet", "code"].
+Return true because "leetcode" can be segmented as "leet code".
+```
+
+dict ä¸­çš„å•è¯æ²¡æœ‰ä½¿ç”¨æ¬¡æ•°çš„é™åˆ¶ï¼Œå› æ­¤è¿™æ˜¯ä¸€ä¸ªå®Œå…¨èƒŒåŒ…é—®é¢˜ã€‚
+
+0-1 èƒŒåŒ…å’Œå®Œå…¨èƒŒåŒ…åœ¨å®ç°ä¸Šçš„ä¸åŒä¹‹å¤„æ˜¯ï¼Œ0-1 èƒŒåŒ…å¯¹ç‰©å“çš„è¿­ä»£æ˜¯åœ¨æœ€å¤–å±‚ï¼Œè€Œå®Œå…¨èƒŒåŒ…å¯¹ç‰©å“çš„è¿­ä»£æ˜¯åœ¨æœ€é‡Œå±‚ã€‚
+
+```java
+public boolean wordBreak(String s, List<String> wordDict) {
+    int n = s.length();
+    boolean[] dp = new boolean[n + 1];
+    dp[0] = true;
+    for (int i = 1; i <= n; i++) {
+        for (String word : wordDict) {   // å®Œå…¨ä¸€ä¸ªç‰©å“å¯ä»¥ä½¿ç”¨å¤šæ¬¡
+            int len = word.length();
+            if (len <= i && word.equals(s.substring(i - len, i))) {
+                dp[i] = dp[i] || dp[i - len];
+            }
+        }
+    }
+    return dp[n];
+}
+```
+
+**01 å­—ç¬¦æ„æˆæœ€å¤šçš„å­—ç¬¦ä¸²** 
+
+[474. Ones and Zeroes (Medium)](https://leetcode.com/problems/ones-and-zeroes/description/)
 
 ```html
 Input: Array = {"10", "0001", "111001", "1", "0"}, m = 5, n = 3
 Output: 4
 
-Explanation: This are totally 4 strings can be formed by the using of 5 0s and 3 1s, which are ¡°10,¡±0001¡±,¡±1¡±,¡±0¡±
+Explanation: There are totally 4 strings can be formed by the using of 5 0s and 3 1s, which are "10","0001","1","0"
 ```
 
-ÕâÊÇÒ»¸ö¶àÎ¬·ÑÓÃµÄ 0-1 ±³°üÎÊÌâ£¬ÓĞÁ½¸ö±³°ü´óĞ¡£¬0 µÄÊıÁ¿ºÍ 1 µÄÊıÁ¿¡£
+è¿™æ˜¯ä¸€ä¸ªå¤šç»´è´¹ç”¨çš„ 0-1 èƒŒåŒ…é—®é¢˜ï¼Œæœ‰ä¸¤ä¸ªèƒŒåŒ…å¤§å°ï¼Œ0 çš„æ•°é‡å’Œ 1 çš„æ•°é‡ã€‚
 
 ```java
 public int findMaxForm(String[] strs, int m, int n) {
-    if (strs == null || strs.length == 0) return 0;
-    int l = strs.length;
+    if (strs == null || strs.length == 0) {
+        return 0;
+    }
     int[][] dp = new int[m + 1][n + 1];
-    for (int i = 0; i < l; i++) {
-        String s = strs[i];
+    for (String s : strs) {    // æ¯ä¸ªå­—ç¬¦ä¸²åªèƒ½ç”¨ä¸€æ¬¡
         int ones = 0, zeros = 0;
         for (char c : s.toCharArray()) {
-            if (c == '0') zeros++;
-            else if (c == '1') ones++;
+            if (c == '0') {
+                zeros++;
+            } else {
+                ones++;
+            }
         }
-        for (int j = m; j >= zeros; j--) {
-            for (int k = n; k >= ones; k--) {
-                if (zeros <= j && ones <= k) {
-                    dp[j][k] = Math.max(dp[j][k], dp[j - zeros][k - ones] + 1);
-                }
+        for (int i = m; i >= zeros; i--) {
+            for (int j = n; j >= ones; j--) {
+                dp[i][j] = Math.max(dp[i][j], dp[i - zeros][j - ones] + 1);
             }
         }
     }
@@ -2243,33 +3198,49 @@ public int findMaxForm(String[] strs, int m, int n) {
 }
 ```
 
-**ÕÒÁãÇ®**
+**æ‰¾é›¶é’±çš„æœ€å°‘ç¡¬å¸æ•°** 
 
-[Leetcode : 322. Coin Change (Medium)](https://leetcode.com/problems/coin-change/description/)
+[322. Coin Change (Medium)](https://leetcode.com/problems/coin-change/description/)
 
-ÌâÄ¿ÃèÊö£º¸øÒ»Ğ©Ãæ¶îµÄÓ²±Ò£¬ÒªÇóÓÃÕâĞ©Ó²±ÒÀ´×é³É¸ø¶¨Ãæ¶îµÄÇ®Êı£¬²¢ÇÒÊ¹µÃÓ²±ÒÊıÁ¿×îÉÙ¡£Ó²±Ò¿ÉÒÔÖØ¸´Ê¹ÓÃ¡£
+```html
+Example 1:
+coins = [1, 2, 5], amount = 11
+return 3 (11 = 5 + 5 + 1)
 
-ÕâÊÇÒ»¸öÍêÈ«±³°üÎÊÌâ£¬ÍêÈ«±³°üÎÊÌâºÍ 0-1±³°üÎÊÌâÔÚÊµÏÖÉÏÎ¨Ò»µÄ²»Í¬ÊÇ£¬µÚ¶ş²ãÑ­»·ÊÇ´Ó 0 ¿ªÊ¼µÄ£¬¶ø²»ÊÇ´ÓÎ²²¿¿ªÊ¼¡£
+Example 2:
+coins = [2], amount = 3
+return -1.
+```
+
+é¢˜ç›®æè¿°ï¼šç»™ä¸€äº›é¢é¢çš„ç¡¬å¸ï¼Œè¦æ±‚ç”¨è¿™äº›ç¡¬å¸æ¥ç»„æˆç»™å®šé¢é¢çš„é’±æ•°ï¼Œå¹¶ä¸”ä½¿å¾—ç¡¬å¸æ•°é‡æœ€å°‘ã€‚ç¡¬å¸å¯ä»¥é‡å¤ä½¿ç”¨ã€‚
+
+- ç‰©å“ï¼šç¡¬å¸
+- ç‰©å“å¤§å°ï¼šé¢é¢
+- ç‰©å“ä»·å€¼ï¼šæ•°é‡
+
+å› ä¸ºç¡¬å¸å¯ä»¥é‡å¤ä½¿ç”¨ï¼Œå› æ­¤è¿™æ˜¯ä¸€ä¸ªå®Œå…¨èƒŒåŒ…é—®é¢˜ã€‚
 
 ```java
 public int coinChange(int[] coins, int amount) {
-    int[] dp = new int[amount + 1];
-    Arrays.fill(dp, amount + 1);
-    dp[0] = 0;
+    if (coins == null || coins.length == 0) {
+        return 0;
+    }
+    int[] minimum = new int[amount + 1];
+    Arrays.fill(minimum, amount + 1);
+    minimum[0] = 0;
+    Arrays.sort(coins);
     for (int i = 1; i <= amount; i++) {
-        for (int j = 0; j < coins.length; j++) {
-            if (coins[j] <= i) {
-                dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
-            }
+        for (int j = 0; j < coins.length && coins[j] <= i; j++) {
+            minimum[i] = Math.min(minimum[i], minimum[i - coins[j]] + 1);
         }
     }
-    return dp[amount] > amount ? -1 : dp[amount];
+    return minimum[amount] > amount ? -1 : minimum[amount];
 }
 ```
 
-**×éºÏ×ÜºÍ**
+**ç»„åˆæ€»å’Œ** 
 
-[Leetcode : 377. Combination Sum IV (Medium)](https://leetcode.com/problems/combination-sum-iv/description/)
+[377. Combination Sum IV (Medium)](https://leetcode.com/problems/combination-sum-iv/description/)
 
 ```html
 nums = [1, 2, 3]
@@ -2289,297 +3260,269 @@ Note that different sequences are counted as different combinations.
 Therefore the output is 7.
 ```
 
+å®Œå…¨èƒŒåŒ…ã€‚
+
 ```java
 public int combinationSum4(int[] nums, int target) {
-    int[] dp = new int[target + 1];
-    dp[0] = 1;
-    for (int i = 1; i <= target; i++) {
-        for (int j = 0; j < nums.length; j++) {
-            if(nums[j] <= i) {
-                dp[i] += dp[i - nums[j]];
-            }
-        }
-    }
-    return dp[target];
-}
-```
-
-**Ö»ÄÜ½øĞĞÁ½´ÎµÄ¹ÉÆ±½»Ò×**
-
-[Leetcode : 123. Best Time to Buy and Sell Stock III (Hard)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/)
-
-```java
-public int maxProfit(int[] prices) {
-    int firstBuy = Integer.MIN_VALUE, firstSell = 0;
-    int secondBuy = Integer.MIN_VALUE, secondSell = 0;
-    for (int curPrice : prices) {
-        if (firstBuy < -curPrice) firstBuy = -curPrice;
-        if (firstSell < firstBuy + curPrice) firstSell = firstBuy + curPrice;
-        if (secondBuy < firstSell - curPrice) secondBuy = firstSell - curPrice;
-        if (secondSell < secondBuy + curPrice) secondSell = secondBuy + curPrice;
-    }
-    return secondSell;
-}
-```
-
-**Ö»ÄÜ½øĞĞ k ´ÎµÄ¹ÉÆ±½»Ò×**
-
-[Leetcode : 188. Best Time to Buy and Sell Stock IV (Hard)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description/)
-
-```html
-dp[i, j] = max(dp[i, j-1], prices[j] - prices[jj] + dp[i-1, jj]) { jj in range of [0, j-1] } = max(dp[i, j-1], prices[j] + max(dp[i-1, jj] - prices[jj]))
-```
-
-```java
-public int maxProfit(int k, int[] prices) {
-    int n = prices.length;
-    if (k >= n/2) {
-        int maxPro = 0;
-        for (int i = 1; i < n; i++) {
-            if (prices[i] > prices[i-1])
-                maxPro += prices[i] - prices[i-1];
-        }
-        return maxPro;
-    }
-    int[][] dp = new int[k + 1][n];
-    for (int i = 1; i <= k; i++) {
-        int localMax = dp[i - 1][0] - prices[0];
-        for (int j = 1; j < n; j++) {
-            dp[i][j] = Math.max(dp[i][j - 1], prices[j] + localMax);
-            localMax = Math.max(localMax, dp[i - 1][j] - prices[j]);
-        }
-    }
-    return dp[k][n - 1];
-}
-```
-
-### Êı×éÇø¼ä
-
-**Êı×éÇø¼äºÍ**
-
-[Leetcode : 303. Range Sum Query - Immutable (Easy)](https://leetcode.com/problems/range-sum-query-immutable/description/)
-
-ÇóÇø¼ä i \~ j µÄºÍ£¬¿ÉÒÔ×ª»»Îª sum[j] - sum[i-1]£¬ÆäÖĞ sum[i] Îª 0 \~ j µÄºÍ¡£
-
-```java
-class NumArray {
-    
-    int[] nums;
-    
-    public NumArray(int[] nums) {
-        for(int i = 1; i < nums.length; i++)
-            nums[i] += nums[i - 1];
-        this.nums = nums;
-    }
-    
-    public int sumRange(int i, int j) {
-        return i == 0 ? nums[j] : nums[j] - nums[i - 1];
-    }
-}
-```
-
-**×ÓÊı×é×î´óµÄºÍ**
-
-[Leetcode : 53. Maximum Subarray (Easy)](https://leetcode.com/problems/maximum-subarray/description/)
-
-Áî sum[i] ÎªÒÔ num[i] Îª½áÎ²µÄ×ÓÊı×é×î´óµÄºÍ£¬¿ÉÒÔÓÉ sum[i-1] µÃµ½ sum[i] µÄÖµ£¬Èç¹û sum[i-1] Ğ¡ÓÚ 0£¬ÄÇÃ´ÒÔ num[i] Îª½áÎ²µÄ×ÓÊı×é²»ÄÜ°üº¬Ç°ÃæµÄÄÚÈİ£¬ÒòÎª¼ÓÉÏÇ°ÃæµÄ²¿·Ö£¬ÄÇÃ´ºÍÒ»¶¨»á±È num[i] »¹Ğ¡¡£
-
-```java
-public int maxSubArray(int[] nums) {
-    int n = nums.length;
-    int[] sum = new int[n];
-    sum[0] = nums[0];
-    int max = sum[0];
-    for(int i = 1; i < n; i++){
-        sum[i] = (sum[i-1] > 0 ? sum[i-1] : 0) + nums[i];
-        max = Math.max(max, sum[i]);
-    }
-    return max;
-}
-```
-
-**Êı×éÖĞµÈ²îµİÔö×ÓÇø¼äµÄ¸öÊı**
-
-[Leetcode : 413. Arithmetic Slices (Medium)](https://leetcode.com/problems/arithmetic-slices/description/)
-
-```html
-A = [1, 2, 3, 4]
-
-return: 3, for 3 arithmetic slices in A: [1, 2, 3], [2, 3, 4] and [1, 2, 3, 4] itself.
-```
-
-¶ÔÓÚ (1,2,3,4)£¬ËüÓĞÈıÖÖ×é³ÉµİÔö×ÓÇø¼äµÄ·½Ê½£¬¶ø¶ÔÓÚ (1,2,3,4,5)£¬Ëü×é³ÉµİÔö×ÓÇø¼äµÄ·½Ê½³ıÁË (1,2,3,4) µÄÈıÖÖÍâ»¹¶àÁËÒ»ÖÖ£¬¼´ (1,2,3,4,5)£¬Òò´Ë dp[i] = dp[i - 1] + 1¡£
-
-```java
-public int numberOfArithmeticSlices(int[] A) {
-    int n = A.length;
-    int[] dp = new int[n];
-    for(int i = 2; i < n; i++) {
-        if(A[i] - A[i - 1] == A[i - 1] - A[i - 2]) {
-            dp[i] = dp[i - 1] + 1;
-        }
-    }
-    int ret = 0;
-    for(int cnt : dp) {
-        ret += cnt;
-    }
-    return ret;
-}
-```
-
-### ×Ö·û´®±à¼­
-
-**É¾³ıÁ½¸ö×Ö·û´®µÄ×Ö·ûÊ¹ËüÃÇÏàµÈ**
-
-[Leetcode : 583. Delete Operation for Two Strings (Medium)](https://leetcode.com/problems/delete-operation-for-two-strings/description/)
-
-¿ÉÒÔ×ª»»ÎªÇóÁ½¸ö×Ö·û´®µÄ×î³¤¹«¹²×ÓĞòÁĞÎÊÌâ¡£
-
-```java
-public int minDistance(String word1, String word2) {
-    int m = word1.length(), n = word2.length();
-    int[][] dp = new int[m + 1][n + 1];
-    for (int i = 0; i <= m; i++) {
-        for (int j = 0; j <= n; j++) {
-            if (i == 0 || j == 0) continue;
-            dp[i][j] = word1.charAt(i - 1) == word2.charAt(j - 1) ? dp[i - 1][j - 1] + 1
-                    : Math.max(dp[i][j - 1], dp[i - 1][j]);
-        }
-    }
-    return m + n - 2 * dp[m][n];
-}
-```
-
-
-**ĞŞ¸ÄÒ»¸ö×Ö·û´®³ÆÎªÁíÒ»¸ö×Ö·û´®** // TODO
-
-[Leetcode : 72. Edit Distance (Hard)](https://leetcode.com/problems/edit-distance/description/)
-
-
-### ÆäËüÎÊÌâ
-
-**ĞèÒªÀäÈ´ÆÚµÄ¹ÉÆ±½»Ò×**
-
-[Leetcode : 309. Best Time to Buy and Sell Stock with Cooldown(Medium)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/)
-
-ÌâÄ¿ÃèÊö£º½»Ò×Ö®ºóĞèÒªÓĞÒ»ÌìµÄÀäÈ´Ê±¼ä¡£
-
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/ac9b31ec-cef1-4880-a875-fc4571ca10e1.png)
-
-```html
-s0[i] = max(s0[i - 1], s2[i - 1]); // Stay at s0, or rest from s2
-s1[i] = max(s1[i - 1], s0[i - 1] - prices[i]); // Stay at s1, or buy from s0
-s2[i] = s1[i - 1] + prices[i]; // Only one way from s1
-```
-
-
-```java
-public int maxProfit(int[] prices) {
-    if (prices == null || prices.length == 0) return 0;
-    int n = prices.length;
-    int[] s0 = new int[n];
-    int[] s1 = new int[n];
-    int[] s2 = new int[n];
-    s0[0] = 0;
-    s1[0] = -prices[0];
-    s2[0] = Integer.MIN_VALUE;
-    for (int i = 1; i < n; i++) {
-        s0[i] = Math.max(s0[i - 1], s2[i - 1]);
-        s1[i] = Math.max(s1[i - 1], s0[i - 1] - prices[i]);
-        s2[i] = Math.max(s2[i - 1], s1[i - 1] + prices[i]);
-    }
-    return Math.max(s0[n - 1], s2[n - 1]);
-}
-```
-
-
-**Í³¼Æ´Ó 0 \~ n Ã¿¸öÊıµÄ¶ş½øÖÆ±íÊ¾ÖĞ 1 µÄ¸öÊı**
-
-[Leetcode : 338. Counting Bits (Medium)](https://leetcode.com/problems/counting-bits/description/)
-
-¶ÔÓÚÊı×Ö 6(110)£¬Ëü¿ÉÒÔ¿´³ÉÊÇÊı×Ö 2(10) Ç°Ãæ¼ÓÉÏÒ»¸ö 1 £¬Òò´Ë dp[i] = dp[i&(i-1)] + 1;
-
-```java
-    public int[] countBits(int num) {
-        int[] ret = new int[num + 1];
-        for(int i = 1; i <= num; i++){
-            ret[i] = ret[i&(i-1)] + 1;
-        }
-        return ret;
-    }
-```
-
-**Ò»×éÕûÊı¶ÔÄÜ¹»¹¹³ÉµÄ×î³¤Á´**
-
-[Leetcode : 646. Maximum Length of Pair Chain (Medium)](https://leetcode.com/problems/maximum-length-of-pair-chain/description/)
-
-¶ÔÓÚ (a, b) ºÍ (c, d) £¬Èç¹û b < c£¬ÔòËüÃÇ¿ÉÒÔ¹¹³ÉÒ»ÌõÁ´¡£
-
-```java
-public int findLongestChain(int[][] pairs) {
-    if(pairs == null || pairs.length == 0) {
+    if (nums == null || nums.length == 0) {
         return 0;
     }
-    Arrays.sort(pairs, (a, b) -> (a[0] - b[0]));
-    int n = pairs.length;
-    int[] dp = new int[n];
-    Arrays.fill(dp, 1);
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < i; j++) {
-            if(pairs[i][0] > pairs[j][1]){
-                dp[i] = Math.max(dp[i], dp[j] + 1);
-            }
+    int[] maximum = new int[target + 1];
+    maximum[0] = 1;
+    Arrays.sort(nums);
+    for (int i = 1; i <= target; i++) {
+        for (int j = 0; j < nums.length && nums[j] <= i; j++) {
+            maximum[i] += maximum[i - nums[j]];
         }
     }
-    
-    int ret = 0;
-    for(int num : dp) {
-        ret = Math.max(ret, num);
-    }
-    return ret;
+    return maximum[target];
 }
 ```
 
-**ÂòÈëºÍÊÛ³ö¹ÉÆ±×î´óµÄÊÕÒæ**
+### è‚¡ç¥¨äº¤æ˜“
 
-[Leetcode : 121. Best Time to Buy and Sell Stock (Easy)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
+**éœ€è¦å†·å´æœŸçš„è‚¡ç¥¨äº¤æ˜“** 
 
-Ö»½øĞĞÒ»´Î½»Ò×¡£
+[309. Best Time to Buy and Sell Stock with Cooldown(Medium)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/)
 
-Ö»Òª¼ÇÂ¼Ç°ÃæµÄ×îĞ¡¼Û¸ñ£¬½«Õâ¸ö×îĞ¡¼Û¸ñ×÷ÎªÂòÈë¼Û¸ñ£¬È»ºó½«µ±Ç°µÄ¼Û¸ñ×÷ÎªÊÛ³ö¼Û¸ñ£¬²é¿´Õâ¸ö¼Û¸ñÊÇ·ñÊÇµ±Ç°µÄ×î´ó¼Û¸ñ¡£
+é¢˜ç›®æè¿°ï¼šäº¤æ˜“ä¹‹åéœ€è¦æœ‰ä¸€å¤©çš„å†·å´æ—¶é—´ã€‚
+
+<div align="center"> <img src="../pics//a3da4342-078b-43e2-b748-7e71bec50dc4.png"/> </div><br>
+
+```java
+public int maxProfit(int[] prices) {
+    if (prices == null || prices.length == 0) {
+        return 0;
+    }
+    int N = prices.length;
+    int[] buy = new int[N];
+    int[] s1 = new int[N];
+    int[] sell = new int[N];
+    int[] s2 = new int[N];
+    s1[0] = buy[0] = -prices[0];
+    sell[0] = s2[0] = 0;
+    for (int i = 1; i < N; i++) {
+        buy[i] = s2[i - 1] - prices[i];
+        s1[i] = Math.max(buy[i - 1], s1[i - 1]);
+        sell[i] = Math.max(buy[i - 1], s1[i - 1]) + prices[i];
+        s2[i] = Math.max(s2[i - 1], sell[i - 1]);
+    }
+    return Math.max(sell[N - 1], s2[N - 1]);
+}
+```
+
+**éœ€è¦äº¤æ˜“è´¹ç”¨çš„è‚¡ç¥¨äº¤æ˜“** 
+
+[714. Best Time to Buy and Sell Stock with Transaction Fee (Medium)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/)
+
+```html
+Input: prices = [1, 3, 2, 8, 4, 9], fee = 2
+Output: 8
+Explanation: The maximum profit can be achieved by:
+Buying at prices[0] = 1
+Selling at prices[3] = 8
+Buying at prices[4] = 4
+Selling at prices[5] = 9
+The total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8.
+```
+
+é¢˜ç›®æè¿°ï¼šæ¯äº¤æ˜“ä¸€æ¬¡ï¼Œéƒ½è¦æ”¯ä»˜ä¸€å®šçš„è´¹ç”¨ã€‚
+
+<div align="center"> <img src="../pics//61942711-45a0-4e11-bbc9-434e31436f33.png"/> </div><br>
+
+```java
+public int maxProfit(int[] prices, int fee) {
+    int N = prices.length;
+    int[] buy = new int[N];
+    int[] s1 = new int[N];
+    int[] sell = new int[N];
+    int[] s2 = new int[N];
+    s1[0] = buy[0] = -prices[0];
+    sell[0] = s2[0] = 0;
+    for (int i = 1; i < N; i++) {
+        buy[i] = Math.max(sell[i - 1], s2[i - 1]) - prices[i];
+        s1[i] = Math.max(buy[i - 1], s1[i - 1]);
+        sell[i] = Math.max(buy[i - 1], s1[i - 1]) - fee + prices[i];
+        s2[i] = Math.max(s2[i - 1], sell[i - 1]);
+    }
+    return Math.max(sell[N - 1], s2[N - 1]);
+}
+```
+
+**ä¹°å…¥å’Œå”®å‡ºè‚¡ç¥¨æœ€å¤§çš„æ”¶ç›Š** 
+
+[121. Best Time to Buy and Sell Stock (Easy)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
+
+é¢˜ç›®æè¿°ï¼šåªè¿›è¡Œä¸€æ¬¡äº¤æ˜“ã€‚
+
+åªè¦è®°å½•å‰é¢çš„æœ€å°ä»·æ ¼ï¼Œå°†è¿™ä¸ªæœ€å°ä»·æ ¼ä½œä¸ºä¹°å…¥ä»·æ ¼ï¼Œç„¶åå°†å½“å‰çš„ä»·æ ¼ä½œä¸ºå”®å‡ºä»·æ ¼ï¼ŒæŸ¥çœ‹å½“å‰æ”¶ç›Šæ˜¯ä¸æ˜¯æœ€å¤§æ”¶ç›Šã€‚
 
 ```java
 public int maxProfit(int[] prices) {
     int n = prices.length;
-    if(n == 0) return 0;
+    if (n == 0) return 0;
     int soFarMin = prices[0];
     int max = 0;
-    for(int i = 1; i < n; i++){
-        if(soFarMin > prices[i]) soFarMin = prices[i];
+    for (int i = 1; i < n; i++) {
+        if (soFarMin > prices[i]) soFarMin = prices[i];
         else max = Math.max(max, prices[i] - soFarMin);
     }
     return max;
 }
 ```
 
-**¸´ÖÆÕ³Ìù×Ö·û**
+**åªèƒ½è¿›è¡Œä¸¤æ¬¡çš„è‚¡ç¥¨äº¤æ˜“** 
 
-[Leetcode : 650. 2 Keys Keyboard (Medium)](https://leetcode.com/problems/2-keys-keyboard/description/)
+[123. Best Time to Buy and Sell Stock III (Hard)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/)
 
 ```java
-public int minSteps(int n) {
-    int[] dp = new int[n + 1];
-    for (int i = 2; i <= n; i++) {
-        dp[i] = i;
-        for (int j = i - 1; j >= 0; j--) {
-            if (i % j == 0) {
-                dp[i] = dp[j] + dp[i / j];
-                break;
+public int maxProfit(int[] prices) {
+    int firstBuy = Integer.MIN_VALUE, firstSell = 0;
+    int secondBuy = Integer.MIN_VALUE, secondSell = 0;
+    for (int curPrice : prices) {
+        if (firstBuy < -curPrice) {
+            firstBuy = -curPrice;
+        }
+        if (firstSell < firstBuy + curPrice) {
+            firstSell = firstBuy + curPrice;
+        }
+        if (secondBuy < firstSell - curPrice) {
+            secondBuy = firstSell - curPrice;
+        }
+        if (secondSell < secondBuy + curPrice) {
+            secondSell = secondBuy + curPrice;
+        }
+    }
+    return secondSell;
+}
+```
+
+**åªèƒ½è¿›è¡Œ k æ¬¡çš„è‚¡ç¥¨äº¤æ˜“** 
+
+[188. Best Time to Buy and Sell Stock IV (Hard)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description/)
+
+```java
+public int maxProfit(int k, int[] prices) {
+    int n = prices.length;
+    if (k >= n / 2) {   // è¿™ç§æƒ…å†µä¸‹è¯¥é—®é¢˜é€€åŒ–ä¸ºæ™®é€šçš„è‚¡ç¥¨äº¤æ˜“é—®é¢˜
+        int maxProfit = 0;
+        for (int i = 1; i < n; i++) {
+            if (prices[i] > prices[i - 1]) {
+                maxProfit += prices[i] - prices[i - 1];
+            }
+        }
+        return maxProfit;
+    }
+    int[][] maxProfit = new int[k + 1][n];
+    for (int i = 1; i <= k; i++) {
+        int localMax = maxProfit[i - 1][0] - prices[0];
+        for (int j = 1; j < n; j++) {
+            maxProfit[i][j] = Math.max(maxProfit[i][j - 1], prices[j] + localMax);
+            localMax = Math.max(localMax, maxProfit[i - 1][j] - prices[j]);
+        }
+    }
+    return maxProfit[k][n - 1];
+}
+```
+
+### å­—ç¬¦ä¸²ç¼–è¾‘
+
+**åˆ é™¤ä¸¤ä¸ªå­—ç¬¦ä¸²çš„å­—ç¬¦ä½¿å®ƒä»¬ç›¸ç­‰** 
+
+[583. Delete Operation for Two Strings (Medium)](https://leetcode.com/problems/delete-operation-for-two-strings/description/)
+
+```html
+Input: "sea", "eat"
+Output: 2
+Explanation: You need one step to make "sea" to "ea" and another step to make "eat" to "ea".
+```
+
+å¯ä»¥è½¬æ¢ä¸ºæ±‚ä¸¤ä¸ªå­—ç¬¦ä¸²çš„æœ€é•¿å…¬å…±å­åºåˆ—é—®é¢˜ã€‚
+
+```java
+public int minDistance(String word1, String word2) {
+    int m = word1.length(), n = word2.length();
+    int[][] dp = new int[m + 1][n + 1];
+    for (int i = 1; i <= m; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            } else {
+                dp[i][j] = Math.max(dp[i][j - 1], dp[i - 1][j]);
             }
         }
     }
-    return dp[n];
+    return m + n - 2 * dp[m][n];
 }
+```
+
+**ç¼–è¾‘è·ç¦»** 
+
+[72. Edit Distance (Hard)](https://leetcode.com/problems/edit-distance/description/)
+
+```html
+Example 1:
+
+Input: word1 = "horse", word2 = "ros"
+Output: 3
+Explanation:
+horse -> rorse (replace 'h' with 'r')
+rorse -> rose (remove 'r')
+rose -> ros (remove 'e')
+Example 2:
+
+Input: word1 = "intention", word2 = "execution"
+Output: 5
+Explanation:
+intention -> inention (remove 't')
+inention -> enention (replace 'i' with 'e')
+enention -> exention (replace 'n' with 'x')
+exention -> exection (replace 'n' with 'c')
+exection -> execution (insert 'u')
+```
+
+é¢˜ç›®æè¿°ï¼šä¿®æ”¹ä¸€ä¸ªå­—ç¬¦ä¸²æˆä¸ºå¦ä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œä½¿å¾—ä¿®æ”¹æ¬¡æ•°æœ€å°‘ã€‚ä¸€æ¬¡ä¿®æ”¹æ“ä½œåŒ…æ‹¬ï¼šæ’å…¥ä¸€ä¸ªå­—ç¬¦ã€åˆ é™¤ä¸€ä¸ªå­—ç¬¦ã€æ›¿æ¢ä¸€ä¸ªå­—ç¬¦ã€‚
+
+```java
+public int minDistance(String word1, String word2) {
+    if (word1 == null || word2 == null) {
+        return 0;
+    }
+    int m = word1.length(), n = word2.length();
+    int[][] dp = new int[m + 1][n + 1];
+    for (int i = 1; i <= m; i++) {
+        dp[i][0] = i;
+    }
+    for (int i = 1; i <= n; i++) {
+        dp[0][i] = i;
+    }
+    for (int i = 1; i <= m; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
+                dp[i][j] = dp[i - 1][j - 1];
+            } else {
+                dp[i][j] = Math.min(dp[i - 1][j - 1], Math.min(dp[i][j - 1], dp[i - 1][j])) + 1;
+            }
+        }
+    }
+    return dp[m][n];
+}
+```
+
+**å¤åˆ¶ç²˜è´´å­—ç¬¦** 
+
+[650. 2 Keys Keyboard (Medium)](https://leetcode.com/problems/2-keys-keyboard/description/)
+
+é¢˜ç›®æè¿°ï¼šæœ€å¼€å§‹åªæœ‰ä¸€ä¸ªå­—ç¬¦ Aï¼Œé—®éœ€è¦å¤šå°‘æ¬¡æ“ä½œèƒ½å¤Ÿå¾—åˆ° n ä¸ªå­—ç¬¦ Aï¼Œæ¯æ¬¡æ“ä½œå¯ä»¥å¤åˆ¶å½“å‰æ‰€æœ‰çš„å­—ç¬¦ï¼Œæˆ–è€…ç²˜è´´ã€‚
+
+```
+Input: 3
+Output: 3
+Explanation:
+Intitally, we have one character 'A'.
+In step 1, we use Copy All operation.
+In step 2, we use Paste operation to get 'AA'.
+In step 3, we use Paste operation to get 'AAA'.
 ```
 
 ```java
@@ -2592,121 +3535,220 @@ public int minSteps(int n) {
 }
 ```
 
-## ÊıÑ§
+```java
+public int minSteps(int n) {
+    int[] dp = new int[n + 1];
+    int h = (int) Math.sqrt(n);
+    for (int i = 2; i <= n; i++) {
+        dp[i] = i;
+        for (int j = 2; j <= h; j++) {
+            if (i % j == 0) {
+                dp[i] = dp[j] + dp[i / j];
+                break;
+            }
+        }
+    }
+    return dp[n];
+}
+```
 
-### ËØÊı
+## æ•°å­¦
 
-**ËØÊı·Ö½â**
+### ç´ æ•°
 
-Ã¿Ò»¸öÊı¶¼¿ÉÒÔ·Ö½â³ÉËØÊıµÄ³Ë»ı£¬ÀıÈç 84 = 2<sup>2</sup> \* 3<sup>1</sup> \* 5<sup>0</sup> \* 7<sup>1</sup> \* 11<sup>0</sup> \* 13<sup>0</sup> \* 17<sup>0</sup> \* ¡­
+**ç´ æ•°åˆ†è§£** 
 
-**Õû³ı**
+æ¯ä¸€ä¸ªæ•°éƒ½å¯ä»¥åˆ†è§£æˆç´ æ•°çš„ä¹˜ç§¯ï¼Œä¾‹å¦‚ 84 = 2<sup>2</sup> \* 3<sup>1</sup> \* 5<sup>0</sup> \* 7<sup>1</sup> \* 11<sup>0</sup> \* 13<sup>0</sup> \* 17<sup>0</sup> \* â€¦
 
-Áî x = 2<sup>m0</sup> \* 3<sup>m1</sup> \* 5<sup>m2</sup> \* 7<sup>m3</sup> \* 11<sup>m4</sup> \* ¡­
-Áî y = 2<sup>n0</sup> \* 3<sup>n1</sup> \* 5<sup>n2</sup> \* 7<sup>n3</sup> \* 11<sup>n4</sup> \* ¡­
+**æ•´é™¤** 
 
-Èç¹û x Õû³ı y£¨y mod x == 0£©£¬Ôò¶ÔÓÚËùÓĞ i£¬mi <= ni¡£
+ä»¤ x = 2<sup>m0</sup> \* 3<sup>m1</sup> \* 5<sup>m2</sup> \* 7<sup>m3</sup> \* 11<sup>m4</sup> \* â€¦
 
-x ºÍ y µÄ **×î´ó¹«Ô¼Êı** Îª£ºgcd(x,y) =  2<sup>min(m0,n0)</sup> \* 3<sup>min(m1,n1)</sup> \* 5<sup>min(m2,n2)</sup> \* ...
+ä»¤ y = 2<sup>n0</sup> \* 3<sup>n1</sup> \* 5<sup>n2</sup> \* 7<sup>n3</sup> \* 11<sup>n4</sup> \* â€¦
 
-x ºÍ y µÄ **×îĞ¡¹«±¶Êı** Îª£ºlcm(x,y) =  2<sup>max(m0,n0)</sup> \* 3<sup>max(m1,n1)</sup> \* 5<sup>max(m2,n2)</sup> \* ...
+å¦‚æœ x æ•´é™¤ yï¼ˆy mod x == 0ï¼‰ï¼Œåˆ™å¯¹äºæ‰€æœ‰ iï¼Œmi <= niã€‚
 
-**Éú³ÉËØÊıĞòÁĞ**
+**æœ€å¤§å…¬çº¦æ•°æœ€å°å…¬å€æ•°** 
 
-[Leetcode : 204. Count Primes (Easy)](https://leetcode.com/problems/count-primes/description/)
+x å’Œ y çš„æœ€å¤§å…¬çº¦æ•°ä¸ºï¼šgcd(x,y) =  2<sup>min(m0,n0)</sup> \* 3<sup>min(m1,n1)</sup> \* 5<sup>min(m2,n2)</sup> \* ...
 
-°£À­ÍĞË¹ÌØÄáÉ¸·¨ÔÚÃ¿´ÎÕÒµ½Ò»¸öËØÊıÊ±£¬½«ÄÜ±»ËØÊıÕû³ıµÄÊıÅÅ³ıµô¡£
+x å’Œ y çš„æœ€å°å…¬å€æ•°ä¸ºï¼šlcm(x,y) =  2<sup>max(m0,n0)</sup> \* 3<sup>max(m1,n1)</sup> \* 5<sup>max(m2,n2)</sup> \* ...
+
+**ç”Ÿæˆç´ æ•°åºåˆ—** 
+
+[204. Count Primes (Easy)](https://leetcode.com/problems/count-primes/description/)
+
+åŸƒæ‹‰æ‰˜æ–¯ç‰¹å°¼ç­›æ³•åœ¨æ¯æ¬¡æ‰¾åˆ°ä¸€ä¸ªç´ æ•°æ—¶ï¼Œå°†èƒ½è¢«ç´ æ•°æ•´é™¤çš„æ•°æ’é™¤æ‰ã€‚
 
 ```java
 public int countPrimes(int n) {
     boolean[] notPrimes = new boolean[n + 1];
-    int cnt = 0;
-    for(int i = 2; i < n; i++){
-        if(notPrimes[i]) continue;
-        cnt++;
-        // ´Ó i * i ¿ªÊ¼£¬ÒòÎªÈç¹û k < i£¬ÄÇÃ´ k * i ÔÚÖ®Ç°¾ÍÒÑ¾­±»È¥³ı¹ıÁË
-        for(long j = (long) i * i; j < n; j += i){
+    int count = 0;
+    for (int i = 2; i < n; i++) {
+        if (notPrimes[i]) {
+            continue;
+        }
+        count++;
+        // ä» i * i å¼€å§‹ï¼Œå› ä¸ºå¦‚æœ k < iï¼Œé‚£ä¹ˆ k * i åœ¨ä¹‹å‰å°±å·²ç»è¢«å»é™¤è¿‡äº†
+        for (long j = (long) (i) * i; j < n; j += i) {
             notPrimes[(int) j] = true;
         }
     }
-    return cnt;
+    return count;
 }
 ```
 
-### ×î´ó¹«Ô¼Êı
+### æœ€å¤§å…¬çº¦æ•°
 
 ```java
 int gcd(int a, int b) {
-    if (b == 0) return a;
-    return gcd(b, a % b);
+    return b == 0 ? a : gcd(b, a % b);
 }
 ```
 
-×î´ó¹«±¶ÊıÎªÁ½ÊıµÄ³Ë»ı³ıÒÔ×î´ó¹«Ô¼Êı¡£
+æœ€å°å…¬å€æ•°ä¸ºä¸¤æ•°çš„ä¹˜ç§¯é™¤ä»¥æœ€å¤§å…¬çº¦æ•°ã€‚
 
 ```java
-int lcm(int a, int b){
+int lcm(int a, int b) {
     return a * b / gcd(a, b);
 }
 ```
 
-¶ÔÓÚ×î´ó¹«Ô¼ÊıÎÊÌâ£¬ÒòÎªĞèÒª¼ÆËã a % b £¬¶øÕâ¸ö²Ù×÷ÊÇ±È½ÏºÄÊ±µÄ£¬¿ÉÒÔÊ¹ÓÃ [ ±à³ÌÖ®ÃÀ£º2.7]() µÄ·½·¨£¬ÀûÓÃ¼õ·¨ºÍÒÆÎ»²Ù×÷À´Ìæ»»Ëü¡£
+**ä½¿ç”¨ä½æ“ä½œå’Œå‡æ³•æ±‚è§£æœ€å¤§å…¬çº¦æ•°** 
 
-¶ÔÓÚ a ºÍ b µÄ×î´ó¹«Ô¼Êı f(a, b)£¬ÓĞ£º
+[ç¼–ç¨‹ä¹‹ç¾ï¼š2.7](#)
 
-1\. Èç¹û a ºÍ b ¾ùÎªÅ¼Êı£¬f(a, b) = 2\*f(a/2, b/2);
-2\. Èç¹û a ÊÇÅ¼Êı b ÊÇÆæÊı£¬f(a, b) = f(a/2, b);
-3\. Èç¹û b ÊÇÅ¼Êı a ÊÇÆæÊı£¬f(a, b) = f(a, b/2);
-4\. Èç¹û a ºÍ b ¾ùÎªÆæÊı£¬f(a, b) = f(a, a-b);
+å¯¹äº a å’Œ b çš„æœ€å¤§å…¬çº¦æ•° f(a, b)ï¼Œæœ‰ï¼š
 
-³Ë 2 ºÍ³ı 2 ¶¼¿ÉÒÔ×ª»»ÎªÒÆÎ»²Ù×÷¡£
+- å¦‚æœ a å’Œ b å‡ä¸ºå¶æ•°ï¼Œf(a, b) = 2\*f(a/2, b/2);
+- å¦‚æœ a æ˜¯å¶æ•° b æ˜¯å¥‡æ•°ï¼Œf(a, b) = f(a/2, b);
+- å¦‚æœ b æ˜¯å¶æ•° a æ˜¯å¥‡æ•°ï¼Œf(a, b) = f(a, b/2);
+- å¦‚æœ a å’Œ b å‡ä¸ºå¥‡æ•°ï¼Œf(a, b) = f(b, a-b);
 
-### ½øÖÆ×ª»»
+ä¹˜ 2 å’Œé™¤ 2 éƒ½å¯ä»¥è½¬æ¢ä¸ºç§»ä½æ“ä½œã€‚
 
-Java ÖĞ static String toString(int num, int radix) ¿ÉÒÔ½«Ò»¸öÕûÊı×°»»Îª redix ½øÖÆ±íÊ¾µÄ×Ö·û´®¡£
+```java
+public int gcd(int a, int b) {
+    if (a < b) {
+        return gcd(b, a);
+    }
+    if (b == 0) {
+        return a;
+    }
+    boolean isAEven = isEven(a), isBEven = isEven(b);
+    if (isAEven && isBEven) {
+        return 2 * gcd(a >> 1, b >> 1);
+    } else if (isAEven && !isBEven) {
+        return gcd(a >> 1, b);
+    } else if (!isAEven && isBEven) {
+        return gcd(a, b >> 1);
+    } else {
+        return gcd(b, a - b);
+    }
+}
+```
 
-**7 ½øÖÆ**
+### è¿›åˆ¶è½¬æ¢
 
-[Leetcode : 504. Base 7 (Easy)](https://leetcode.com/problems/base-7/description/)
+**7 è¿›åˆ¶** 
+
+[504. Base 7 (Easy)](https://leetcode.com/problems/base-7/description/)
 
 ```java
 public String convertToBase7(int num) {
-    if (num < 0) {
-        return '-' + convertToBase7(-num);
+    if (num == 0) {
+        return "0";
     }
-    if (num < 7) {
-        return num + "";
+    StringBuilder sb = new StringBuilder();
+    boolean isNegative = num < 0;
+    if (isNegative) {
+        num = -num;
     }
-    return convertToBase7(num / 7) + num % 7;
+    while (num > 0) {
+        sb.append(num % 7);
+        num /= 7;
+    }
+    String ret = sb.reverse().toString();
+    return isNegative ? "-" + ret : ret;
 }
 ```
 
-**16 ½øÖÆ**
+Java ä¸­ static String toString(int num, int radix) å¯ä»¥å°†ä¸€ä¸ªæ•´æ•°è½¬æ¢ä¸º radix è¿›åˆ¶è¡¨ç¤ºçš„å­—ç¬¦ä¸²ã€‚
 
-[Leetcode : 405. Convert a Number to Hexadecimal (Easy)](https://leetcode.com/problems/convert-a-number-to-hexadecimal/description/)
+```java
+public String convertToBase7(int num) {
+    return Integer.toString(num, 7);
+}
+```
+
+**16 è¿›åˆ¶** 
+
+[405. Convert a Number to Hexadecimal (Easy)](https://leetcode.com/problems/convert-a-number-to-hexadecimal/description/)
+
+```html
+Input:
+26
+
+Output:
+"1a"
+
+Input:
+-1
+
+Output:
+"ffffffff"
+```
+
+è´Ÿæ•°è¦ç”¨å®ƒçš„è¡¥ç å½¢å¼ã€‚
 
 ```java
 public String toHex(int num) {
-    char[] map = {'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};
-    if(num == 0) return "0";
-    String ret = "";
-    while(num != 0){
-        ret = map[(num & 0b1111)] + ret;
-        num >>>= 4;
+    char[] map = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+    if (num == 0) return "0";
+    StringBuilder sb = new StringBuilder();
+    while (num != 0) {
+        sb.append(map[num & 0b1111]);
+        num >>>= 4; // å› ä¸ºè€ƒè™‘çš„æ˜¯è¡¥ç å½¢å¼ï¼Œå› æ­¤ç¬¦å·ä½å°±ä¸èƒ½æœ‰ç‰¹æ®Šçš„æ„ä¹‰ï¼Œéœ€è¦ä½¿ç”¨æ— ç¬¦å·å³ç§»ï¼Œå·¦è¾¹å¡« 0
     }
-    return ret;
+    return sb.reverse().toString();
 }
 ```
 
-### ½×³Ë
+**26 è¿›åˆ¶** 
 
-**Í³¼Æ½×³ËÎ²²¿ÓĞ¶àÉÙ¸ö 0**
+[168. Excel Sheet Column Title (Easy)](https://leetcode.com/problems/excel-sheet-column-title/description/)
 
-[Leetcode : 172. Factorial Trailing Zeroes (Easy)](https://leetcode.com/problems/factorial-trailing-zeroes/description/)
+```html
+1 -> A
+2 -> B
+3 -> C
+...
+26 -> Z
+27 -> AA
+28 -> AB
+```
 
-Î²²¿µÄ 0 ÓÉ 2 * 5 µÃÀ´£¬2 µÄÊıÁ¿Ã÷ÏÔ¶àÓÚ 5 µÄÊıÁ¿£¬Òò´ËÖ»ÒªÍ³¼ÆÓĞ¶àÉÙ¸ö 5 ¼´¿É¡£
+å› ä¸ºæ˜¯ä» 1 å¼€å§‹è®¡ç®—çš„ï¼Œè€Œä¸æ˜¯ä» 0 å¼€å§‹ï¼Œå› æ­¤éœ€è¦å¯¹ n æ‰§è¡Œ -1 æ“ä½œã€‚
 
-¶ÔÓÚÒ»¸öÊı N£¬ËüËù°üº¬ 5 µÄ¸öÊıÎª£ºN/5 + N/5<sup>2</sup> + N/5<sup>3</sup> + ...£¬ÆäÖĞ N/5 ±íÊ¾²»´óÓÚ N µÄÊıÖĞ 5 µÄ±¶Êı¹±Ï×Ò»¸ö 5£¬N/5<sup>2</sup> ±íÊ¾²»´óÓÚ N µÄÊıÖĞ 5<sup>2</sup> µÄ±¶ÊıÔÙ¹±Ï×Ò»¸ö 5 ...¡£
+```java
+public String convertToTitle(int n) {
+    if (n == 0) {
+        return "";
+    }
+    n--;
+    return convertToTitle(n / 26) + (char) (n % 26 + 'A');
+}
+```
+
+### é˜¶ä¹˜
+
+**ç»Ÿè®¡é˜¶ä¹˜å°¾éƒ¨æœ‰å¤šå°‘ä¸ª 0** 
+
+[172. Factorial Trailing Zeroes (Easy)](https://leetcode.com/problems/factorial-trailing-zeroes/description/)
+
+å°¾éƒ¨çš„ 0 ç”± 2 * 5 å¾—æ¥ï¼Œ2 çš„æ•°é‡æ˜æ˜¾å¤šäº 5 çš„æ•°é‡ï¼Œå› æ­¤åªè¦ç»Ÿè®¡æœ‰å¤šå°‘ä¸ª 5 å³å¯ã€‚
+
+å¯¹äºä¸€ä¸ªæ•° Nï¼Œå®ƒæ‰€åŒ…å« 5 çš„ä¸ªæ•°ä¸ºï¼šN/5 + N/5<sup>2</sup> + N/5<sup>3</sup> + ...ï¼Œå…¶ä¸­ N/5 è¡¨ç¤ºä¸å¤§äº N çš„æ•°ä¸­ 5 çš„å€æ•°è´¡çŒ®ä¸€ä¸ª 5ï¼ŒN/5<sup>2</sup> è¡¨ç¤ºä¸å¤§äº N çš„æ•°ä¸­ 5<sup>2</sup> çš„å€æ•°å†è´¡çŒ®ä¸€ä¸ª 5 ...ã€‚
 
 ```java
 public int trailingZeroes(int n) {
@@ -2714,122 +3756,161 @@ public int trailingZeroes(int n) {
 }
 ```
 
-Èç¹ûÍ³¼ÆµÄÊÇ N! µÄ¶ş½øÖÆ±íÊ¾ÖĞ×îµÍÎ» 1 µÄÎ»ÖÃ£¬Ö»ÒªÍ³¼ÆÓĞ¶àÉÙ¸ö 2 ¼´¿É£¬¸ÃÌâÄ¿³ö×Ô [ ±à³ÌÖ®ÃÀ£º2.2](#) ¡£ºÍÇó½âÓĞ¶àÉÙ¸ö 5 Ò»Ñù£¬2 µÄ¸öÊıÎª N/2 + N/2<sup>2</sup> + N/2<sup>3</sup> + ...
+å¦‚æœç»Ÿè®¡çš„æ˜¯ N! çš„äºŒè¿›åˆ¶è¡¨ç¤ºä¸­æœ€ä½ä½ 1 çš„ä½ç½®ï¼Œåªè¦ç»Ÿè®¡æœ‰å¤šå°‘ä¸ª 2 å³å¯ï¼Œè¯¥é¢˜ç›®å‡ºè‡ª [ç¼–ç¨‹ä¹‹ç¾ï¼š2.2](#) ã€‚å’Œæ±‚è§£æœ‰å¤šå°‘ä¸ª 5 ä¸€æ ·ï¼Œ2 çš„ä¸ªæ•°ä¸º N/2 + N/2<sup>2</sup> + N/2<sup>3</sup> + ...
 
-### ×Ö·û´®¼Ó·¨¼õ·¨
+### å­—ç¬¦ä¸²åŠ æ³•å‡æ³•
 
-**¶ş½øÖÆ¼Ó·¨**
+**äºŒè¿›åˆ¶åŠ æ³•** 
 
-[Leetcode : 67. Add Binary (Easy)](https://leetcode.com/problems/add-binary/description/)
+[67. Add Binary (Easy)](https://leetcode.com/problems/add-binary/description/)
+
+```html
+a = "11"
+b = "1"
+Return "100".
+```
 
 ```java
 public String addBinary(String a, String b) {
     int i = a.length() - 1, j = b.length() - 1, carry = 0;
-    String str = "";
-    while(i >= 0 || j >= 0){
-        if(i >= 0 && a.charAt(i--) == '1') carry++;
-        if(j >= 0 && b.charAt(j--) == '1') carry++;
-        str = (carry % 2) + str;
+    StringBuilder str = new StringBuilder();
+    while (carry == 1 || i >= 0 || j >= 0) {
+        if (i >= 0 && a.charAt(i--) == '1') {
+            carry++;
+        }
+        if (j >= 0 && b.charAt(j--) == '1') {
+            carry++;
+        }
+        str.append(carry % 2);
         carry /= 2;
     }
-    if(carry == 1) str = "1" + str;
-    return str;
+    return str.reverse().toString();
 }
 ```
 
-**×Ö·û´®¼Ó·¨**
+**å­—ç¬¦ä¸²åŠ æ³•** 
 
-[Leetcode : 415. Add Strings (Easy)](https://leetcode.com/problems/add-strings/description/)
+[415. Add Strings (Easy)](https://leetcode.com/problems/add-strings/description/)
 
-ÌâÄ¿ÃèÊö£º×Ö·û´®µÄÖµÎª·Ç¸ºÕûÊı
+å­—ç¬¦ä¸²çš„å€¼ä¸ºéè´Ÿæ•´æ•°ã€‚
 
 ```java
 public String addStrings(String num1, String num2) {
-    StringBuilder sb = new StringBuilder();
-    int carry = 0;
-    for(int i = num1.length() - 1, j = num2.length() - 1; i >= 0 || j >= 0 || carry == 1; i--, j--){
-        int x = i < 0 ? 0 : num1.charAt(i) - '0';
-        int y = j < 0 ? 0 : num2.charAt(j) - '0';
-        sb.append((x + y + carry) % 10);
+    StringBuilder str = new StringBuilder();
+    int carry = 0, i = num1.length() - 1, j = num2.length() - 1;
+    while (carry == 1 || i >= 0 || j >= 0) {
+        int x = i < 0 ? 0 : num1.charAt(i--) - '0';
+        int y = j < 0 ? 0 : num2.charAt(j--) - '0';
+        str.append((x + y + carry) % 10);
         carry = (x + y + carry) / 10;
     }
-    return sb.reverse().toString();
+    return str.reverse().toString();
 }
 ```
 
-### ÏàÓöÎÊÌâ
+### ç›¸é‡é—®é¢˜
 
-**¸Ä±äÊı×éÔªËØÊ¹ËùÓĞµÄÊı×éÔªËØ¶¼ÏàµÈ**
+**æ”¹å˜æ•°ç»„å…ƒç´ ä½¿æ‰€æœ‰çš„æ•°ç»„å…ƒç´ éƒ½ç›¸ç­‰** 
 
-[Leetcode : 462. Minimum Moves to Equal Array Elements II (Medium)](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/description/)
+[462. Minimum Moves to Equal Array Elements II (Medium)](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/description/)
 
-ÌâÄ¿ÃèÊö£ºÃ¿´Î¿ÉÒÔ¶ÔÒ»¸öÊı×éÔªËØ¼ÓÒ»»òÕß¼õÒ»£¬Çó×îĞ¡µÄ¸Ä±ä´ÎÊı¡£
+```html
+Input:
+[1,2,3]
 
-ÕâÊÇ¸öµäĞÍµÄÏàÓöÎÊÌâ£¬ÒÆ¶¯¾àÀë×îĞ¡µÄ·½Ê½ÊÇËùÓĞÔªËØ¶¼ÒÆ¶¯µ½ÖĞÎ»Êı¡£ÀíÓÉÈçÏÂ£º
+Output:
+2
 
-Éè m ÎªÖĞÎ»Êı¡£a ºÍ b ÊÇ m Á½±ßµÄÁ½¸öÔªËØ£¬ÇÒ b > a¡£ÒªÊ¹ a ºÍ b ÏàµÈ£¬ËüÃÇ×Ü¹²ÒÆ¶¯µÄ´ÎÊıÎª b - a£¬Õâ¸öÖµµÈÓÚ (b - m) + (m - a)£¬Ò²¾ÍÊÇ°ÑÕâÁ½¸öÊıÒÆ¶¯µ½ÖĞÎ»ÊıµÄÒÆ¶¯´ÎÊı¡£
+Explanation:
+Only two moves are needed (remember each move increments or decrements one element):
 
-ÉèÊı×é³¤¶ÈÎª N£¬Ôò¿ÉÒÔÕÒµ½ N/2 ¶Ô a ºÍ b µÄ×éºÏ£¬Ê¹ËüÃÇ¶¼ÒÆ¶¯µ½ m µÄÎ»ÖÃ¡£
+[1,2,3]  =>  [2,2,3]  =>  [2,2,2]
+```
 
-**½â·¨ 1**
+æ¯æ¬¡å¯ä»¥å¯¹ä¸€ä¸ªæ•°ç»„å…ƒç´ åŠ ä¸€æˆ–è€…å‡ä¸€ï¼Œæ±‚æœ€å°çš„æ”¹å˜æ¬¡æ•°ã€‚
 
-ÏÈÅÅĞò£¬Ê±¼ä¸´ÔÓ¶È£ºO(NlgN)
+è¿™æ˜¯ä¸ªå…¸å‹çš„ç›¸é‡é—®é¢˜ï¼Œç§»åŠ¨è·ç¦»æœ€å°çš„æ–¹å¼æ˜¯æ‰€æœ‰å…ƒç´ éƒ½ç§»åŠ¨åˆ°ä¸­ä½æ•°ã€‚ç†ç”±å¦‚ä¸‹ï¼š
+
+è®¾ m ä¸ºä¸­ä½æ•°ã€‚a å’Œ b æ˜¯ m ä¸¤è¾¹çš„ä¸¤ä¸ªå…ƒç´ ï¼Œä¸” b > aã€‚è¦ä½¿ a å’Œ b ç›¸ç­‰ï¼Œå®ƒä»¬æ€»å…±ç§»åŠ¨çš„æ¬¡æ•°ä¸º b - aï¼Œè¿™ä¸ªå€¼ç­‰äº (b - m) + (m - a)ï¼Œä¹Ÿå°±æ˜¯æŠŠè¿™ä¸¤ä¸ªæ•°ç§»åŠ¨åˆ°ä¸­ä½æ•°çš„ç§»åŠ¨æ¬¡æ•°ã€‚
+
+è®¾æ•°ç»„é•¿åº¦ä¸º Nï¼Œåˆ™å¯ä»¥æ‰¾åˆ° N/2 å¯¹ a å’Œ b çš„ç»„åˆï¼Œä½¿å®ƒä»¬éƒ½ç§»åŠ¨åˆ° m çš„ä½ç½®ã€‚
+
+**è§£æ³• 1** 
+
+å…ˆæ’åºï¼Œæ—¶é—´å¤æ‚åº¦ï¼šO(NlogN)
 
 ```java
 public int minMoves2(int[] nums) {
     Arrays.sort(nums);
-    int ret = 0;
+    int move = 0;
     int l = 0, h = nums.length - 1;
-    while(l <= h) {
-        ret += nums[h] - nums[l];
+    while (l <= h) {
+        move += nums[h] - nums[l];
         l++;
         h--;
     }
-    return ret;
+    return move;
 }
 ```
 
-**½â·¨ 2**
+**è§£æ³• 2** 
 
-Ê¹ÓÃ¿ìËÙÅÅĞòÕÒµ½ÖĞÎ»Êı£¬Ê±¼ä¸´ÔÓ¶È O(N)
+ä½¿ç”¨å¿«é€Ÿé€‰æ‹©æ‰¾åˆ°ä¸­ä½æ•°ï¼Œæ—¶é—´å¤æ‚åº¦ O(N)
 
 ```java
 public int minMoves2(int[] nums) {
-    int ret = 0;
-    int n = nums.length;
-    int median = quickSelect(nums, 0, n - 1, n / 2 + 1);
-    for(int num : nums) ret += Math.abs(num - median);
-    return ret;
+    int move = 0;
+    int median = findKthSmallest(nums, nums.length / 2);
+    for (int num : nums) {
+        move += Math.abs(num - median);
+    }
+    return move;
 }
 
-private int quickSelect(int[] nums, int start, int end, int k) {
-    int l = start, r = end, privot = nums[(l + r) / 2];
-    while(l <= r) {
-        while(nums[l] < privot) l++;
-        while(nums[r] > privot) r--;
-        if(l >= r) break;
-        swap(nums, l, r);
-        l++; r--;
+private int findKthSmallest(int[] nums, int k) {
+    int l = 0, h = nums.length - 1;
+    while (l < h) {
+        int j = partition(nums, l, h);
+        if (j == k) {
+            break;
+        }
+        if (j < k) {
+            l = j + 1;
+        } else {
+            h = j - 1;
+        }
     }
-    int left = l - start + 1;
-    if(left > k) return quickSelect(nums, start, l - 1, k);
-    if(left == k && l == r) return nums[l];
-    int right = r - start + 1;
-    return quickSelect(nums, r + 1, end, k - right);
+    return nums[k];
+}
+
+private int partition(int[] nums, int l, int h) {
+    int i = l, j = h + 1;
+    while (true) {
+        while (nums[++i] < nums[l] && i < h) ;
+        while (nums[--j] > nums[l] && j > l) ;
+        if (i >= j) {
+            break;
+        }
+        swap(nums, i, j);
+    }
+    swap(nums, l, j);
+    return j;
 }
 
 private void swap(int[] nums, int i, int j) {
-    int tmp = nums[i]; nums[i] = nums[j]; nums[j] = tmp;
+    int tmp = nums[i];
+    nums[i] = nums[j];
+    nums[j] = tmp;
 }
 ```
 
-### ¶àÊıÍ¶Æ±ÎÊÌâ
+### å¤šæ•°æŠ•ç¥¨é—®é¢˜
 
-**Êı×éÖĞ³öÏÖ´ÎÊı¶àÓÚ n / 2 µÄÔªËØ**
+**æ•°ç»„ä¸­å‡ºç°æ¬¡æ•°å¤šäº n / 2 çš„å…ƒç´ ** 
 
-[Leetcode : 169. Majority Element (Easy)](https://leetcode.com/problems/majority-element/description/)
+[169. Majority Element (Easy)](https://leetcode.com/problems/majority-element/description/)
 
-ÏÈ¶ÔÊı×éÅÅĞò£¬×îÖĞ¼äÄÇ¸öÊı³öÏÖ´ÎÊıÒ»¶¨¶àÓÚ n / 2
+å…ˆå¯¹æ•°ç»„æ’åºï¼Œæœ€ä¸­é—´é‚£ä¸ªæ•°å‡ºç°æ¬¡æ•°ä¸€å®šå¤šäº n / 2ã€‚
 
 ```java
 public int majorityElement(int[] nums) {
@@ -2838,33 +3919,35 @@ public int majorityElement(int[] nums) {
 }
 ```
 
-¿ÉÒÔÀûÓÃ Boyer-Moore Majority Vote Algorithm À´½â¾öÕâ¸öÎÊÌâ£¬Ê¹µÃÊ±¼ä¸´ÔÓ¶ÈÎª O(n)¡£¿ÉÒÔÕâÃ´Àí½â¸ÃËã·¨£ºÊ¹ÓÃ cnt À´Í³¼ÆÒ»¸öÔªËØ³öÏÖµÄ´ÎÊı£¬µ±±éÀúµ½µÄÔªËØºÍÍ³¼ÆÔªËØ²»ÏëµÈÊ±£¬Áî cnt--¡£Èç¹ûÇ°Ãæ²éÕÒÁË i ¸öÔªËØ£¬ÇÒ cnt == 0 £¬ËµÃ÷Ç° i ¸öÔªËØÃ»ÓĞ majority£¬»òÕßÓĞ majority£¬µ«ÊÇ³öÏÖµÄ´ÎÊıÉÙÓÚ i / 2 £¬ÒòÎªÈç¹û¶àÓÚ i / 2 µÄ»° cnt ¾ÍÒ»¶¨²»»áÎª 0 ¡£´ËÊ±Ê£ÏÂµÄ n - i ¸öÔªËØÖĞ£¬majority µÄÊıÄ¿¶àÓÚ (n - i) / 2£¬Òò´Ë¼ÌĞø²éÕÒ¾ÍÄÜÕÒ³ö majority¡£
+å¯ä»¥åˆ©ç”¨ Boyer-Moore Majority Vote Algorithm æ¥è§£å†³è¿™ä¸ªé—®é¢˜ï¼Œä½¿å¾—æ—¶é—´å¤æ‚åº¦ä¸º O(N)ã€‚å¯ä»¥è¿™ä¹ˆç†è§£è¯¥ç®—æ³•ï¼šä½¿ç”¨ cnt æ¥ç»Ÿè®¡ä¸€ä¸ªå…ƒç´ å‡ºç°çš„æ¬¡æ•°ï¼Œå½“éå†åˆ°çš„å…ƒç´ å’Œç»Ÿè®¡å…ƒç´ ä¸ç›¸ç­‰æ—¶ï¼Œä»¤ cnt--ã€‚å¦‚æœå‰é¢æŸ¥æ‰¾äº† i ä¸ªå…ƒç´ ï¼Œä¸” cnt == 0ï¼Œè¯´æ˜å‰ i ä¸ªå…ƒç´ æ²¡æœ‰ majorityï¼Œæˆ–è€…æœ‰ majorityï¼Œä½†æ˜¯å‡ºç°çš„æ¬¡æ•°å°‘äº i / 2ï¼Œå› ä¸ºå¦‚æœå¤šäº i / 2 çš„è¯ cnt å°±ä¸€å®šä¸ä¼šä¸º 0ã€‚æ­¤æ—¶å‰©ä¸‹çš„ n - i ä¸ªå…ƒç´ ä¸­ï¼Œmajority çš„æ•°ç›®ä¾ç„¶å¤šäº (n - i) / 2ï¼Œå› æ­¤ç»§ç»­æŸ¥æ‰¾å°±èƒ½æ‰¾å‡º majorityã€‚
 
 ```java
 public int majorityElement(int[] nums) {
-    int cnt = 0, majority = 0;
-    for(int i = 0; i < nums.length; i++){
-        if(cnt == 0) {
-            majority = nums[i];
-            cnt++;
-        }
-        else if(majority == nums[i]) cnt++;
-        else cnt--;
+    int cnt = 0, majority = nums[0];
+    for (int num : nums) {
+        majority = (cnt == 0) ? num : majority;
+        cnt = (majority == num) ? cnt + 1 : cnt - 1;
     }
     return majority;
 }
 ```
 
-### ÆäËü
+### å…¶å®ƒ
 
-**Æ½·½Êı**
+**å¹³æ–¹æ•°** 
 
-[Leetcode : 367. Valid Perfect Square (Easy)](https://leetcode.com/problems/valid-perfect-square/description/)
+[367. Valid Perfect Square (Easy)](https://leetcode.com/problems/valid-perfect-square/description/)
 
-Æ½·½ĞòÁĞ£º1,4,9,16,..
-¼ä¸ô£º3,5,7,...
+```html
+Input: 16
+Returns: True
+```
 
-¼ä¸ôÎªµÈ²îÊıÁĞ£¬Ê¹ÓÃÕâ¸öÌØĞÔ¿ÉÒÔµÃµ½´Ó 1 ¿ªÊ¼µÄÆ½·½ĞòÁĞ¡£
+å¹³æ–¹åºåˆ—ï¼š1,4,9,16,..
+
+é—´éš”ï¼š3,5,7,...
+
+é—´éš”ä¸ºç­‰å·®æ•°åˆ—ï¼Œä½¿ç”¨è¿™ä¸ªç‰¹æ€§å¯ä»¥å¾—åˆ°ä» 1 å¼€å§‹çš„å¹³æ–¹åºåˆ—ã€‚
 
 ```java
 public boolean isPerfectSquare(int num) {
@@ -2877,9 +3960,9 @@ public boolean isPerfectSquare(int num) {
 }
 ```
 
-**3 µÄ n ´Î·½**
+**3 çš„ n æ¬¡æ–¹** 
 
-[Leetcode : 326. Power of Three (Easy)](https://leetcode.com/problems/power-of-three/description/)
+[326. Power of Three (Easy)](https://leetcode.com/problems/power-of-three/description/)
 
 ```java
 public boolean isPowerOfThree(int n) {
@@ -2887,9 +3970,45 @@ public boolean isPowerOfThree(int n) {
 }
 ```
 
-**ÕÒ³öÊı×éÖĞµÄ³Ë»ı×î´óµÄÈı¸öÊı**
+**ä¹˜ç§¯æ•°ç»„** 
 
-[Leetcode : 628. Maximum Product of Three Numbers (Easy)](https://leetcode.com/problems/maximum-product-of-three-numbers/description/)
+[238. Product of Array Except Self (Medium)](https://leetcode.com/problems/product-of-array-except-self/description/)
+
+```html
+For example, given [1,2,3,4], return [24,12,8,6].
+```
+
+ç»™å®šä¸€ä¸ªæ•°ç»„ï¼Œåˆ›å»ºä¸€ä¸ªæ–°æ•°ç»„ï¼Œæ–°æ•°ç»„çš„æ¯ä¸ªå…ƒç´ ä¸ºåŸå§‹æ•°ç»„ä¸­é™¤äº†è¯¥ä½ç½®ä¸Šçš„å…ƒç´ ä¹‹å¤–æ‰€æœ‰å…ƒç´ çš„ä¹˜ç§¯ã€‚
+
+è¦æ±‚æ—¶é—´å¤æ‚åº¦ä¸º O(N)ï¼Œå¹¶ä¸”ä¸èƒ½ä½¿ç”¨é™¤æ³•ã€‚
+
+```java
+public int[] productExceptSelf(int[] nums) {
+    int n = nums.length;
+    int[] products = new int[n];
+    Arrays.fill(products, 1);
+    int left = 1;
+    for (int i = 1; i < n; i++) {
+        left *= nums[i - 1];
+        products[i] *= left;
+    }
+    int right = 1;
+    for (int i = n - 2; i >= 0; i--) {
+        right *= nums[i + 1];
+        products[i] *= right;
+    }
+    return products;
+}
+```
+
+**æ‰¾å‡ºæ•°ç»„ä¸­çš„ä¹˜ç§¯æœ€å¤§çš„ä¸‰ä¸ªæ•°** 
+
+[628. Maximum Product of Three Numbers (Easy)](https://leetcode.com/problems/maximum-product-of-three-numbers/description/)
+
+```html
+Input: [1,2,3,4]
+Output: 24
+```
 
 ```java
 public int maximumProduct(int[] nums) {
@@ -2917,75 +4036,1421 @@ public int maximumProduct(int[] nums) {
 }
 ```
 
-**³Ë»ıÊı×é**
+# æ•°æ®ç»“æ„ç›¸å…³
 
-[Leetcode : 238. Product of Array Except Self (Medium)](https://leetcode.com/problems/product-of-array-except-self/description/)
+## é“¾è¡¨
 
-ÌâÄ¿ÃèÊö£º¸ø¶¨Ò»¸öÊı×é£¬´´½¨Ò»¸öĞÂÊı×é£¬ĞÂÊı×éµÄÃ¿¸öÔªËØÎªÔ­Ê¼Êı×éÖĞ³ıÁË¸ÃÎ»ÖÃÉÏµÄÔªËØÖ®ÍâËùÓĞÔªËØµÄ³Ë»ı¡£
+é“¾è¡¨æ˜¯ç©ºèŠ‚ç‚¹ï¼Œæˆ–è€…æœ‰ä¸€ä¸ªå€¼å’Œä¸€ä¸ªæŒ‡å‘ä¸‹ä¸€ä¸ªé“¾è¡¨çš„æŒ‡é’ˆï¼Œå› æ­¤å¾ˆå¤šé“¾è¡¨é—®é¢˜å¯ä»¥ç”¨é€’å½’æ¥å¤„ç†ã€‚
 
-ÌâÄ¿ÒªÇó£ºÊ±¼ä¸´ÔÓ¶ÈÎª O(n)£¬²¢ÇÒ²»ÄÜÊ¹ÓÃ³ı·¨¡£
+**æ‰¾å‡ºä¸¤ä¸ªé“¾è¡¨çš„äº¤ç‚¹** 
+
+[160. Intersection of Two Linked Lists (Easy)](https://leetcode.com/problems/intersection-of-two-linked-lists/description/)
+
+```html
+A:          a1 â†’ a2
+                    â†˜
+                      c1 â†’ c2 â†’ c3
+                    â†—
+B:    b1 â†’ b2 â†’ b3
+```
+
+è¦æ±‚ï¼šæ—¶é—´å¤æ‚åº¦ä¸º O(N)ï¼Œç©ºé—´å¤æ‚åº¦ä¸º O(1)
+
+è®¾ A çš„é•¿åº¦ä¸º a + cï¼ŒB çš„é•¿åº¦ä¸º b + cï¼Œå…¶ä¸­ c ä¸ºå°¾éƒ¨å…¬å…±éƒ¨åˆ†é•¿åº¦ï¼Œå¯çŸ¥ a + c + b = b + c + aã€‚
+
+å½“è®¿é—® A é“¾è¡¨çš„æŒ‡é’ˆè®¿é—®åˆ°é“¾è¡¨å°¾éƒ¨æ—¶ï¼Œä»¤å®ƒä»é“¾è¡¨ B çš„å¤´éƒ¨å¼€å§‹è®¿é—®é“¾è¡¨ Bï¼›åŒæ ·åœ°ï¼Œå½“è®¿é—® B é“¾è¡¨çš„æŒ‡é’ˆè®¿é—®åˆ°é“¾è¡¨å°¾éƒ¨æ—¶ï¼Œä»¤å®ƒä»é“¾è¡¨ A çš„å¤´éƒ¨å¼€å§‹è®¿é—®é“¾è¡¨ Aã€‚è¿™æ ·å°±èƒ½æ§åˆ¶è®¿é—® A å’Œ B ä¸¤ä¸ªé“¾è¡¨çš„æŒ‡é’ˆèƒ½åŒæ—¶è®¿é—®åˆ°äº¤ç‚¹ã€‚
 
 ```java
-public int[] productExceptSelf(int[] nums) {
-    int n = nums.length;
-    int[] ret = new int[n];
-    ret[0] = 1;
-    for(int i = 1; i < n; i++) {
-        ret[i] = ret[i - 1] * nums[i - 1];
+public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    ListNode l1 = headA, l2 = headB;
+    while (l1 != l2) {
+        l1 = (l1 == null) ? headB : l1.next;
+        l2 = (l2 == null) ? headA : l2.next;
     }
-    int right = 1;
-    for(int i = n - 1; i >= 0; i--) {
-        ret[i] *= right;
-        right *= nums[i];
+    return l1;
+}
+```
+
+å¦‚æœåªæ˜¯åˆ¤æ–­æ˜¯å¦å­˜åœ¨äº¤ç‚¹ï¼Œé‚£ä¹ˆå°±æ˜¯å¦ä¸€ä¸ªé—®é¢˜ï¼Œå³ [ç¼–ç¨‹ä¹‹ç¾ 3.6]() çš„é—®é¢˜ã€‚æœ‰ä¸¤ç§è§£æ³•ï¼š
+
+- æŠŠç¬¬ä¸€ä¸ªé“¾è¡¨çš„ç»“å°¾è¿æ¥åˆ°ç¬¬äºŒä¸ªé“¾è¡¨çš„å¼€å¤´ï¼Œçœ‹ç¬¬äºŒä¸ªé“¾è¡¨æ˜¯å¦å­˜åœ¨ç¯ï¼›
+- æˆ–è€…ç›´æ¥æ¯”è¾ƒä¸¤ä¸ªé“¾è¡¨çš„æœ€åä¸€ä¸ªèŠ‚ç‚¹æ˜¯å¦ç›¸åŒã€‚
+
+**é“¾è¡¨åè½¬** 
+
+[206. Reverse Linked List (Easy)](https://leetcode.com/problems/reverse-linked-list/description/)
+
+é€’å½’
+
+```java
+public ListNode reverseList(ListNode head) {
+    if (head == null || head.next == null) {
+        return head;
+    }
+    ListNode next = head.next;
+    ListNode newHead = reverseList(next);
+    next.next = head;
+    head.next = null;
+    return newHead;
+}
+```
+
+å¤´æ’æ³•
+
+```java
+public ListNode reverseList(ListNode head) {
+    ListNode newHead = new ListNode(-1);
+    while (head != null) {
+        ListNode next = head.next;
+        head.next = newHead.next;
+        newHead.next = head;
+        head = next;
+    }
+    return newHead.next;
+}
+```
+
+**å½’å¹¶ä¸¤ä¸ªæœ‰åºçš„é“¾è¡¨** 
+
+[21. Merge Two Sorted Lists (Easy)](https://leetcode.com/problems/merge-two-sorted-lists/description/)
+
+```java
+public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    if (l1 == null) return l2;
+    if (l2 == null) return l1;
+    if (l1.val < l2.val) {
+        l1.next = mergeTwoLists(l1.next, l2);
+        return l1;
+    } else {
+        l2.next = mergeTwoLists(l1, l2.next);
+        return l2;
+    }
+}
+```
+
+**ä»æœ‰åºé“¾è¡¨ä¸­åˆ é™¤é‡å¤èŠ‚ç‚¹** 
+
+[83. Remove Duplicates from Sorted List (Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/)
+
+```html
+Given 1->1->2, return 1->2.
+Given 1->1->2->3->3, return 1->2->3.
+```
+
+```java
+public ListNode deleteDuplicates(ListNode head) {
+    if (head == null || head.next == null) return head;
+    head.next = deleteDuplicates(head.next);
+    return head.val == head.next.val ? head.next : head;
+}
+```
+
+**åˆ é™¤é“¾è¡¨çš„å€’æ•°ç¬¬ n ä¸ªèŠ‚ç‚¹** 
+
+[19. Remove Nth Node From End of List (Medium)](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/)
+
+```html
+Given linked list: 1->2->3->4->5, and n = 2.
+After removing the second node from the end, the linked list becomes 1->2->3->5.
+```
+
+```java
+public ListNode removeNthFromEnd(ListNode head, int n) {
+    ListNode fast = head;
+    while (n-- > 0) {
+        fast = fast.next;
+    }
+    if (fast == null) return head.next;
+    ListNode slow = head;
+    while (fast.next != null) {
+        fast = fast.next;
+        slow = slow.next;
+    }
+    slow.next = slow.next.next;
+    return head;
+}
+```
+
+**äº¤æ¢é“¾è¡¨ä¸­çš„ç›¸é‚»ç»“ç‚¹** 
+
+[24. Swap Nodes in Pairs (Medium)](https://leetcode.com/problems/swap-nodes-in-pairs/description/)
+
+```html
+Given 1->2->3->4, you should return the list as 2->1->4->3.
+```
+
+é¢˜ç›®è¦æ±‚ï¼šä¸èƒ½ä¿®æ”¹ç»“ç‚¹çš„ val å€¼ï¼ŒO(1) ç©ºé—´å¤æ‚åº¦ã€‚
+
+```java
+public ListNode swapPairs(ListNode head) {
+    ListNode node = new ListNode(-1);
+    node.next = head;
+    ListNode pre = node;
+    while (pre.next != null && pre.next.next != null) {
+        ListNode l1 = pre.next, l2 = pre.next.next;
+        ListNode next = l2.next;
+        l1.next = next;
+        l2.next = l1;
+        pre.next = l2;
+
+        pre = l1;
+    }
+    return node.next;
+}
+```
+
+**é“¾è¡¨æ±‚å’Œ** 
+
+[445. Add Two Numbers II (Medium)](https://leetcode.com/problems/add-two-numbers-ii/description/)
+
+```html
+Input: (7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 8 -> 0 -> 7
+```
+
+é¢˜ç›®è¦æ±‚ï¼šä¸èƒ½ä¿®æ”¹åŸå§‹é“¾è¡¨ã€‚
+
+```java
+public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    Stack<Integer> l1Stack = buildStack(l1);
+    Stack<Integer> l2Stack = buildStack(l2);
+    ListNode head = new ListNode(-1);
+    int carry = 0;
+    while (!l1Stack.isEmpty() || !l2Stack.isEmpty() || carry != 0) {
+        int x = l1Stack.isEmpty() ? 0 : l1Stack.pop();
+        int y = l2Stack.isEmpty() ? 0 : l2Stack.pop();
+        int sum = x + y + carry;
+        ListNode node = new ListNode(sum % 10);
+        node.next = head.next;
+        head.next = node;
+        carry = sum / 10;
+    }
+    return head.next;
+}
+
+private Stack<Integer> buildStack(ListNode l) {
+    Stack<Integer> stack = new Stack<>();
+    while (l != null) {
+        stack.push(l.val);
+        l = l.next;
+    }
+    return stack;
+}
+```
+
+**å›æ–‡é“¾è¡¨** 
+
+[234. Palindrome Linked List (Easy)](https://leetcode.com/problems/palindrome-linked-list/description/)
+
+é¢˜ç›®è¦æ±‚ï¼šä»¥ O(1) çš„ç©ºé—´å¤æ‚åº¦æ¥æ±‚è§£ã€‚
+
+åˆ‡æˆä¸¤åŠï¼ŒæŠŠååŠæ®µåè½¬ï¼Œç„¶åæ¯”è¾ƒä¸¤åŠæ˜¯å¦ç›¸ç­‰ã€‚
+
+```java
+public boolean isPalindrome(ListNode head) {
+    if (head == null || head.next == null) return true;
+    ListNode slow = head, fast = head.next;
+    while (fast != null && fast.next != null) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    if (fast != null) slow = slow.next;  // å¶æ•°èŠ‚ç‚¹ï¼Œè®© slow æŒ‡å‘ä¸‹ä¸€ä¸ªèŠ‚ç‚¹
+    cut(head, slow);                     // åˆ‡æˆä¸¤ä¸ªé“¾è¡¨
+    return isEqual(head, reverse(slow));
+}
+
+private void cut(ListNode head, ListNode cutNode) {
+    while (head.next != cutNode) {
+        head = head.next;
+    }
+    head.next = null;
+}
+
+private ListNode reverse(ListNode head) {
+    ListNode newHead = null;
+    while (head != null) {
+        ListNode nextNode = head.next;
+        head.next = newHead;
+        newHead = head;
+        head = nextNode;
+    }
+    return newHead;
+}
+
+private boolean isEqual(ListNode l1, ListNode l2) {
+    while (l1 != null && l2 != null) {
+        if (l1.val != l2.val) return false;
+        l1 = l1.next;
+        l2 = l2.next;
+    }
+    return true;
+}
+```
+
+**åˆ†éš”é“¾è¡¨** 
+
+[725. Split Linked List in Parts(Medium)](https://leetcode.com/problems/split-linked-list-in-parts/description/)
+
+```html
+Input:
+root = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], k = 3
+Output: [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
+Explanation:
+The input has been split into consecutive parts with size difference at most 1, and earlier parts are a larger size than the later parts.
+```
+
+é¢˜ç›®æè¿°ï¼šæŠŠé“¾è¡¨åˆ†éš”æˆ k éƒ¨åˆ†ï¼Œæ¯éƒ¨åˆ†çš„é•¿åº¦éƒ½åº”è¯¥å°½å¯èƒ½ç›¸åŒï¼Œæ’åœ¨å‰é¢çš„é•¿åº¦åº”è¯¥å¤§äºç­‰äºåé¢çš„ã€‚
+
+```java
+public ListNode[] splitListToParts(ListNode root, int k) {
+    int N = 0;
+    ListNode cur = root;
+    while (cur != null) {
+        N++;
+        cur = cur.next;
+    }
+    int mod = N % k;
+    int size = N / k;
+    ListNode[] ret = new ListNode[k];
+    cur = root;
+    for (int i = 0; cur != null && i < k; i++) {
+        ret[i] = cur;
+        int curSize = size + (mod-- > 0 ? 1 : 0);
+        for (int j = 0; j < curSize - 1; j++) {
+            cur = cur.next;
+        }
+        ListNode next = cur.next;
+        cur.next = null;
+        cur = next;
     }
     return ret;
 }
 ```
 
-# Êı¾İ½á¹¹Ïà¹Ø
+**é“¾è¡¨å…ƒç´ æŒ‰å¥‡å¶èšé›†** 
 
-## Õ»ºÍ¶ÓÁĞ
+[328. Odd Even Linked List (Medium)](https://leetcode.com/problems/odd-even-linked-list/description/)
 
-**ÓÃÕ»ÊµÏÖ¶ÓÁĞ**
-
-Ò»¸öÕ»ÊµÏÖ£º
+```html
+Example:
+Given 1->2->3->4->5->NULL,
+return 1->3->5->2->4->NULL.
+```
 
 ```java
-class  MyQueue {
-    private Stack<Integer> st = new Stack();
+public ListNode oddEvenList(ListNode head) {
+    if (head == null) {
+        return head;
+    }
+    ListNode odd = head, even = head.next, evenHead = even;
+    while (even != null && even.next != null) {
+        odd.next = odd.next.next;
+        odd = odd.next;
+        even.next = even.next.next;
+        even = even.next;
+    }
+    odd.next = evenHead;
+    return head;
+}
+```
 
-    public void push(int x) {
-        Stack<Integer> temp = new Stack();
-        while(!st.isEmpty()){
-            temp.push(st.pop());
+## æ ‘
+
+### é€’å½’
+
+ä¸€æ£µæ ‘è¦ä¹ˆæ˜¯ç©ºæ ‘ï¼Œè¦ä¹ˆæœ‰ä¸¤ä¸ªæŒ‡é’ˆï¼Œæ¯ä¸ªæŒ‡é’ˆæŒ‡å‘ä¸€æ£µæ ‘ã€‚æ ‘æ˜¯ä¸€ç§é€’å½’ç»“æ„ï¼Œå¾ˆå¤šæ ‘çš„é—®é¢˜å¯ä»¥ä½¿ç”¨é€’å½’æ¥å¤„ç†ã€‚
+
+**æ ‘çš„é«˜åº¦** 
+
+[104. Maximum Depth of Binary Tree (Easy)](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/)
+
+```java
+public int maxDepth(TreeNode root) {
+    if (root == null) return 0;
+    return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+}
+```
+
+**å¹³è¡¡æ ‘** 
+
+[110. Balanced Binary Tree (Easy)](https://leetcode.com/problems/balanced-binary-tree/description/)
+
+```html
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+
+å¹³è¡¡æ ‘å·¦å³å­æ ‘é«˜åº¦å·®éƒ½å°äºç­‰äº 1
+
+```java
+private boolean result = true;
+
+public boolean isBalanced(TreeNode root) {
+    maxDepth(root);
+    return result;
+}
+
+public int maxDepth(TreeNode root) {
+    if (root == null) return 0;
+    int l = maxDepth(root.left);
+    int r = maxDepth(root.right);
+    if (Math.abs(l - r) > 1) result = false;
+    return 1 + Math.max(l, r);
+}
+```
+
+**ä¸¤èŠ‚ç‚¹çš„æœ€é•¿è·¯å¾„** 
+
+[543. Diameter of Binary Tree (Easy)](https://leetcode.com/problems/diameter-of-binary-tree/description/)
+
+```html
+Input:
+
+         1
+        / \
+       2  3
+      / \
+     4   5
+
+Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].
+```
+
+```java
+private int max = 0;
+
+public int diameterOfBinaryTree(TreeNode root) {
+    depth(root);
+    return max;
+}
+
+private int depth(TreeNode root) {
+    if (root == null) return 0;
+    int leftDepth = depth(root.left);
+    int rightDepth = depth(root.right);
+    max = Math.max(max, leftDepth + rightDepth);
+    return Math.max(leftDepth, rightDepth) + 1;
+}
+```
+
+**ç¿»è½¬æ ‘** 
+
+[226. Invert Binary Tree (Easy)](https://leetcode.com/problems/invert-binary-tree/description/)
+
+```java
+public TreeNode invertTree(TreeNode root) {
+    if (root == null) return null;
+    TreeNode left = root.left;  // åé¢çš„æ“ä½œä¼šæ”¹å˜ left æŒ‡é’ˆï¼Œå› æ­¤å…ˆä¿å­˜ä¸‹æ¥
+    root.left = invertTree(root.right);
+    root.right = invertTree(left);
+    return root;
+}
+```
+
+**å½’å¹¶ä¸¤æ£µæ ‘** 
+
+[617. Merge Two Binary Trees (Easy)](https://leetcode.com/problems/merge-two-binary-trees/description/)
+
+```html
+Input:
+       Tree 1                     Tree 2
+          1                         2
+         / \                       / \
+        3   2                     1   3
+       /                           \   \
+      5                             4   7
+
+Output:
+         3
+        / \
+       4   5
+      / \   \
+     5   4   7
+```
+
+```java
+public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+    if (t1 == null && t2 == null) return null;
+    if (t1 == null) return t2;
+    if (t2 == null) return t1;
+    TreeNode root = new TreeNode(t1.val + t2.val);
+    root.left = mergeTrees(t1.left, t2.left);
+    root.right = mergeTrees(t1.right, t2.right);
+    return root;
+}
+```
+
+**åˆ¤æ–­è·¯å¾„å’Œæ˜¯å¦ç­‰äºä¸€ä¸ªæ•°** 
+
+[Leetcdoe : 112. Path Sum (Easy)](https://leetcode.com/problems/path-sum/description/)
+
+```html
+Given the below binary tree and sum = 22,
+
+              5
+             / \
+            4   8
+           /   / \
+          11  13  4
+         /  \      \
+        7    2      1
+
+return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
+```
+
+è·¯å¾„å’Œå®šä¹‰ä¸ºä» root åˆ° leaf çš„æ‰€æœ‰èŠ‚ç‚¹çš„å’Œã€‚
+
+```java
+public boolean hasPathSum(TreeNode root, int sum) {
+    if (root == null) return false;
+    if (root.left == null && root.right == null && root.val == sum) return true;
+    return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
+}
+```
+
+**ç»Ÿè®¡è·¯å¾„å’Œç­‰äºä¸€ä¸ªæ•°çš„è·¯å¾„æ•°é‡** 
+
+[437. Path Sum III (Easy)](https://leetcode.com/problems/path-sum-iii/description/)
+
+```html
+root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8
+
+      10
+     /  \
+    5   -3
+   / \    \
+  3   2   11
+ / \   \
+3  -2   1
+
+Return 3. The paths that sum to 8 are:
+
+1.  5 -> 3
+2.  5 -> 2 -> 1
+3. -3 -> 11
+```
+
+è·¯å¾„ä¸ä¸€å®šä»¥ root å¼€å¤´ï¼Œä¹Ÿä¸ä¸€å®šä»¥ leaf ç»“å°¾ï¼Œä½†æ˜¯å¿…é¡»è¿ç»­ã€‚
+
+```java
+public int pathSum(TreeNode root, int sum) {
+    if (root == null) return 0;
+    int ret = pathSumStartWithRoot(root, sum) + pathSum(root.left, sum) + pathSum(root.right, sum);
+    return ret;
+}
+
+private int pathSumStartWithRoot(TreeNode root, int sum) {
+    if (root == null) return 0;
+    int ret = 0;
+    if (root.val == sum) ret++;
+    ret += pathSumStartWithRoot(root.left, sum - root.val) + pathSumStartWithRoot(root.right, sum - root.val);
+    return ret;
+}
+```
+
+**å­æ ‘** 
+
+[572. Subtree of Another Tree (Easy)](https://leetcode.com/problems/subtree-of-another-tree/description/)
+
+```html
+Given tree s:
+     3
+    / \
+   4   5
+  / \
+ 1   2
+
+Given tree t:
+   4
+  / \
+ 1   2
+
+Return true, because t has the same structure and node values with a subtree of s.
+
+Given tree s:
+
+     3
+    / \
+   4   5
+  / \
+ 1   2
+    /
+   0
+
+Given tree t:
+   4
+  / \
+ 1   2
+
+Return false.
+```
+
+```java
+public boolean isSubtree(TreeNode s, TreeNode t) {
+    if (s == null) return false;
+    return isSubtreeWithRoot(s, t) || isSubtree(s.left, t) || isSubtree(s.right, t);
+}
+
+private boolean isSubtreeWithRoot(TreeNode s, TreeNode t) {
+    if (t == null && s == null) return true;
+    if (t == null || s == null) return false;
+    if (t.val != s.val) return false;
+    return isSubtreeWithRoot(s.left, t.left) && isSubtreeWithRoot(s.right, t.right);
+}
+```
+
+**æ ‘çš„å¯¹ç§°** 
+
+[101. Symmetric Tree (Easy)](https://leetcode.com/problems/symmetric-tree/description/)
+
+```html
+    1
+   / \
+  2   2
+ / \ / \
+3  4 4  3
+```
+
+```java
+public boolean isSymmetric(TreeNode root) {
+    if (root == null) return true;
+    return isSymmetric(root.left, root.right);
+}
+
+private boolean isSymmetric(TreeNode t1, TreeNode t2) {
+    if (t1 == null && t2 == null) return true;
+    if (t1 == null || t2 == null) return false;
+    if (t1.val != t2.val) return false;
+    return isSymmetric(t1.left, t2.right) && isSymmetric(t1.right, t2.left);
+}
+```
+
+**æœ€å°è·¯å¾„** 
+
+[111. Minimum Depth of Binary Tree (Easy)](https://leetcode.com/problems/minimum-depth-of-binary-tree/description/)
+
+æ ‘çš„æ ¹èŠ‚ç‚¹åˆ°å¶å­èŠ‚ç‚¹çš„æœ€å°è·¯å¾„é•¿åº¦
+
+```java
+public int minDepth(TreeNode root) {
+    if (root == null) return 0;
+    int left = minDepth(root.left);
+    int right = minDepth(root.right);
+    if (left == 0 || right == 0) return left + right + 1;
+    return Math.min(left, right) + 1;
+}
+```
+
+**ç»Ÿè®¡å·¦å¶å­èŠ‚ç‚¹çš„å’Œ** 
+
+[404. Sum of Left Leaves (Easy)](https://leetcode.com/problems/sum-of-left-leaves/description/)
+
+```html
+    3
+   / \
+  9  20
+    /  \
+   15   7
+
+There are two left leaves in the binary tree, with values 9 and 15 respectively. Return 24.
+```
+
+```java
+public int sumOfLeftLeaves(TreeNode root) {
+    if (root == null) return 0;
+    if (isLeaf(root.left)) return root.left.val + sumOfLeftLeaves(root.right);
+    return sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right);
+}
+
+private boolean isLeaf(TreeNode node){
+    if (node == null) return false;
+    return node.left == null && node.right == null;
+}
+```
+
+**ç›¸åŒèŠ‚ç‚¹å€¼çš„æœ€å¤§è·¯å¾„é•¿åº¦** 
+
+[687. Longest Univalue Path (Easy)](https://leetcode.com/problems/longest-univalue-path/)
+
+```html
+             1
+            / \
+           4   5
+          / \   \
+         4   4   5
+
+Output : 2
+```
+
+```java
+private int path = 0;
+
+public int longestUnivaluePath(TreeNode root) {
+    dfs(root);
+    return path;
+}
+
+private int dfs(TreeNode root){
+    if (root == null) return 0;
+    int left = dfs(root.left);
+    int right = dfs(root.right);
+    int leftPath = root.left != null && root.left.val == root.val ? left + 1 : 0;
+    int rightPath = root.right != null && root.right.val == root.val ? right + 1 : 0;
+    path = Math.max(path, leftPath + rightPath);
+    return Math.max(leftPath, rightPath);
+}
+```
+
+**é—´éš”éå†** 
+
+[337. House Robber III (Medium)](https://leetcode.com/problems/house-robber-iii/description/)
+
+```html
+     3
+    / \
+   2   3
+    \   \
+     3   1
+Maximum amount of money the thief can rob = 3 + 3 + 1 = 7.
+```
+
+```java
+public int rob(TreeNode root) {
+    if (root == null) return 0;
+    int val1 = root.val;
+    if (root.left != null) val1 += rob(root.left.left) + rob(root.left.right);
+    if (root.right != null) val1 += rob(root.right.left) + rob(root.right.right);
+    int val2 = rob(root.left) + rob(root.right);
+    return Math.max(val1, val2);
+}
+```
+
+**æ‰¾å‡ºäºŒå‰æ ‘ä¸­ç¬¬äºŒå°çš„èŠ‚ç‚¹** 
+
+[671. Second Minimum Node In a Binary Tree (Easy)](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/description/)
+
+```html
+Input:
+   2
+  / \
+ 2   5
+    / \
+    5  7
+
+Output: 5
+```
+
+ä¸€ä¸ªèŠ‚ç‚¹è¦ä¹ˆå…·æœ‰ 0 ä¸ªæˆ– 2 ä¸ªå­èŠ‚ç‚¹ï¼Œå¦‚æœæœ‰å­èŠ‚ç‚¹ï¼Œé‚£ä¹ˆæ ¹èŠ‚ç‚¹æ˜¯æœ€å°çš„èŠ‚ç‚¹ã€‚
+
+```java
+public int findSecondMinimumValue(TreeNode root) {
+    if (root == null) return -1;
+    if (root.left == null && root.right == null) return -1;
+    int leftVal = root.left.val;
+    int rightVal = root.right.val;
+    if (leftVal == root.val) leftVal = findSecondMinimumValue(root.left);
+    if (rightVal == root.val) rightVal = findSecondMinimumValue(root.right);
+    if (leftVal != -1 && rightVal != -1) return Math.min(leftVal, rightVal);
+    if (leftVal != -1) return leftVal;
+    return rightVal;
+}
+```
+
+### å±‚æ¬¡éå†
+
+ä½¿ç”¨ BFS è¿›è¡Œå±‚æ¬¡éå†ã€‚ä¸éœ€è¦ä½¿ç”¨ä¸¤ä¸ªé˜Ÿåˆ—æ¥åˆ†åˆ«å­˜å‚¨å½“å‰å±‚çš„èŠ‚ç‚¹å’Œä¸‹ä¸€å±‚çš„èŠ‚ç‚¹ï¼Œå› ä¸ºåœ¨å¼€å§‹éå†ä¸€å±‚çš„èŠ‚ç‚¹æ—¶ï¼Œå½“å‰é˜Ÿåˆ—ä¸­çš„èŠ‚ç‚¹æ•°å°±æ˜¯å½“å‰å±‚çš„èŠ‚ç‚¹æ•°ï¼Œåªè¦æ§åˆ¶éå†è¿™ä¹ˆå¤šèŠ‚ç‚¹æ•°ï¼Œå°±èƒ½ä¿è¯è¿™æ¬¡éå†çš„éƒ½æ˜¯å½“å‰å±‚çš„èŠ‚ç‚¹ã€‚
+
+**ä¸€æ£µæ ‘æ¯å±‚èŠ‚ç‚¹çš„å¹³å‡æ•°** 
+
+[637. Average of Levels in Binary Tree (Easy)](https://leetcode.com/problems/average-of-levels-in-binary-tree/description/)
+
+```java
+public List<Double> averageOfLevels(TreeNode root) {
+    List<Double> ret = new ArrayList<>();
+    if (root == null) return ret;
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.add(root);
+    while (!queue.isEmpty()) {
+        int cnt = queue.size();
+        double sum = 0;
+        for (int i = 0; i < cnt; i++) {
+            TreeNode node = queue.poll();
+            sum += node.val;
+            if (node.left != null) queue.add(node.left);
+            if (node.right != null) queue.add(node.right);
         }
-        st.push(x);
-        while(!temp.isEmpty()){
-            st.push(temp.pop());
+        ret.add(sum / cnt);
+    }
+    return ret;
+}
+```
+
+**å¾—åˆ°å·¦ä¸‹è§’çš„èŠ‚ç‚¹** 
+
+[513. Find Bottom Left Tree Value (Easy)](https://leetcode.com/problems/find-bottom-left-tree-value/description/)
+
+```html
+Input:
+
+        1
+       / \
+      2   3
+     /   / \
+    4   5   6
+       /
+      7
+
+Output:
+7
+```
+
+```java
+public int findBottomLeftValue(TreeNode root) {
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.add(root);
+    while (!queue.isEmpty()) {
+        root = queue.poll();
+        if (root.right != null) queue.add(root.right);
+        if (root.left != null) queue.add(root.left);
+    }
+    return root.val;
+}
+```
+
+### å‰ä¸­ååºéå†
+
+```html
+    1
+   / \
+  2   3
+ / \   \
+4   5   6
+```
+
+- å±‚æ¬¡éå†é¡ºåºï¼š[1 2 3 4 5 6]
+- å‰åºéå†é¡ºåºï¼š[1 2 4 5 3 6]
+- ä¸­åºéå†é¡ºåºï¼š[4 2 5 1 3 6]
+- ååºéå†é¡ºåºï¼š[4 5 2 6 3 1]
+
+å±‚æ¬¡éå†ä½¿ç”¨ BFS å®ç°ï¼Œåˆ©ç”¨çš„å°±æ˜¯ BFS ä¸€å±‚ä¸€å±‚éå†çš„ç‰¹æ€§ï¼›è€Œå‰åºã€ä¸­åºã€ååºéå†åˆ©ç”¨äº† DFS å®ç°ã€‚
+
+å‰åºã€ä¸­åºã€ååºéåªæ˜¯åœ¨å¯¹èŠ‚ç‚¹è®¿é—®çš„é¡ºåºæœ‰ä¸€ç‚¹ä¸åŒï¼Œå…¶å®ƒéƒ½ç›¸åŒã€‚
+
+â‘  å‰åº
+
+```java
+void dfs(TreeNode root) {
+    visit(root);
+    dfs(root.left);
+    dfs(root.right);
+}
+```
+
+â‘¡ ä¸­åº
+
+```java
+void dfs(TreeNode root) {
+    dfs(root.left);
+    visit(root);
+    dfs(root.right);
+}
+```
+
+â‘¢ ååº
+
+```java
+void dfs(TreeNode root) {
+    dfs(root.left);
+    dfs(root.right);
+    visit(root);
+}
+```
+
+**éé€’å½’å®ç°äºŒå‰æ ‘çš„å‰åºéå†** 
+
+[144. Binary Tree Preorder Traversal (Medium)](https://leetcode.com/problems/binary-tree-preorder-traversal/description/)
+
+```java
+public List<Integer> preorderTraversal(TreeNode root) {
+    List<Integer> ret = new ArrayList<>();
+    Stack<TreeNode> stack = new Stack<>();
+    stack.push(root);
+    while (!stack.isEmpty()) {
+        TreeNode node = stack.pop();
+        if (node == null) continue;
+        ret.add(node.val);
+        stack.push(node.right);  // å…ˆå³åå·¦ï¼Œä¿è¯å·¦å­æ ‘å…ˆéå†
+        stack.push(node.left);
+    }
+    return ret;
+}
+```
+
+**éé€’å½’å®ç°äºŒå‰æ ‘çš„ååºéå†** 
+
+[145. Binary Tree Postorder Traversal (Medium)](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)
+
+å‰åºéå†ä¸º root -> left -> rightï¼Œååºéå†ä¸º left -> right -> rootã€‚å¯ä»¥ä¿®æ”¹å‰åºéå†æˆä¸º root -> right -> leftï¼Œé‚£ä¹ˆè¿™ä¸ªé¡ºåºå°±å’Œååºéå†æ­£å¥½ç›¸åã€‚
+
+```java
+public List<Integer> postorderTraversal(TreeNode root) {
+    List<Integer> ret = new ArrayList<>();
+    Stack<TreeNode> stack = new Stack<>();
+    stack.push(root);
+    while (!stack.isEmpty()) {
+        TreeNode node = stack.pop();
+        if (node == null) continue;
+        ret.add(node.val);
+        stack.push(node.left);
+        stack.push(node.right);
+    }
+    Collections.reverse(ret);
+    return ret;
+}
+```
+
+**éé€’å½’å®ç°äºŒå‰æ ‘çš„ä¸­åºéå†** 
+
+[94. Binary Tree Inorder Traversal (Medium)](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)
+
+```java
+public List<Integer> inorderTraversal(TreeNode root) {
+    List<Integer> ret = new ArrayList<>();
+    if (root == null) return ret;
+    Stack<TreeNode> stack = new Stack<>();
+    TreeNode cur = root;
+    while (cur != null || !stack.isEmpty()) {
+        while (cur != null) {
+            stack.push(cur);
+            cur = cur.left;
         }
+        TreeNode node = stack.pop();
+        ret.add(node.val);
+        cur = node.right;
+    }
+    return ret;
+}
+```
+
+### BST
+
+äºŒå‰æŸ¥æ‰¾æ ‘ï¼ˆBSTï¼‰ï¼šæ ¹èŠ‚ç‚¹å¤§äºç­‰äºå·¦å­æ ‘æ‰€æœ‰èŠ‚ç‚¹ï¼Œå°äºç­‰äºå³å­æ ‘æ‰€æœ‰èŠ‚ç‚¹ã€‚
+
+äºŒå‰æŸ¥æ‰¾æ ‘ä¸­åºéå†æœ‰åºã€‚
+
+**ä¿®å‰ªäºŒå‰æŸ¥æ‰¾æ ‘** 
+
+[669. Trim a Binary Search Tree (Easy)](https://leetcode.com/problems/trim-a-binary-search-tree/description/)
+
+```html
+Input:
+
+    3
+   / \
+  0   4
+   \
+    2
+   /
+  1
+
+  L = 1
+  R = 3
+
+Output:
+
+      3
+     /
+   2
+  /
+ 1
+```
+
+é¢˜ç›®æè¿°ï¼šåªä¿ç•™å€¼åœ¨ L \~ R ä¹‹é—´çš„èŠ‚ç‚¹
+
+```java
+public TreeNode trimBST(TreeNode root, int L, int R) {
+    if (root == null) return null;
+    if (root.val > R) return trimBST(root.left, L, R);
+    if (root.val < L) return trimBST(root.right, L, R);
+    root.left = trimBST(root.left, L, R);
+    root.right = trimBST(root.right, L, R);
+    return root;
+}
+```
+
+**å¯»æ‰¾äºŒå‰æŸ¥æ‰¾æ ‘çš„ç¬¬ k ä¸ªå…ƒç´ ** 
+
+[230. Kth Smallest Element in a BST (Medium)](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
+
+
+ä¸­åºéå†è§£æ³•ï¼š
+
+```java
+private int cnt = 0;
+private int val;
+
+public int kthSmallest(TreeNode root, int k) {
+    inOrder(root, k);
+    return val;
+}
+
+private void inOrder(TreeNode node, int k) {
+    if (node == null) return;
+    inOrder(node.left, k);
+    cnt++;
+    if (cnt == k) {
+        val = node.val;
+        return;
+    }
+    inOrder(node.right, k);
+}
+```
+
+é€’å½’è§£æ³•ï¼š
+
+```java
+public int kthSmallest(TreeNode root, int k) {
+    int leftCnt = count(root.left);
+    if (leftCnt == k - 1) return root.val;
+    if (leftCnt > k - 1) return kthSmallest(root.left, k);
+    return kthSmallest(root.right, k - leftCnt - 1);
+}
+
+private int count(TreeNode node) {
+    if (node == null) return 0;
+    return 1 + count(node.left) + count(node.right);
+}
+```
+
+**æŠŠäºŒå‰æŸ¥æ‰¾æ ‘æ¯ä¸ªèŠ‚ç‚¹çš„å€¼éƒ½åŠ ä¸Šæ¯”å®ƒå¤§çš„èŠ‚ç‚¹çš„å€¼** 
+
+[Convert BST to Greater Tree (Easy)](https://leetcode.com/problems/convert-bst-to-greater-tree/description/)
+
+```html
+Input: The root of a Binary Search Tree like this:
+
+              5
+            /   \
+           2     13
+
+Output: The root of a Greater Tree like this:
+
+             18
+            /   \
+          20     13
+```
+
+å…ˆéå†å³å­æ ‘ã€‚
+
+```java
+private int sum = 0;
+
+public TreeNode convertBST(TreeNode root) {
+    traver(root);
+    return root;
+}
+
+private void traver(TreeNode node) {
+    if (node == null) return;
+    traver(node.right);
+    sum += node.val;
+    node.val = sum;
+    traver(node.left);
+}
+```
+
+**äºŒå‰æŸ¥æ‰¾æ ‘çš„æœ€è¿‘å…¬å…±ç¥–å…ˆ** 
+
+[235. Lowest Common Ancestor of a Binary Search Tree (Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
+
+```html
+        _______6______
+      /                \
+  ___2__             ___8__
+ /      \           /      \
+0        4         7        9
+        /  \
+       3   5
+
+For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. Another example is LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.
+```
+
+```java
+public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    if (root.val > p.val && root.val > q.val) return lowestCommonAncestor(root.left, p, q);
+    if (root.val < p.val && root.val < q.val) return lowestCommonAncestor(root.right, p, q);
+    return root;
+}
+```
+
+**äºŒå‰æ ‘çš„æœ€è¿‘å…¬å…±ç¥–å…ˆ** 
+
+[236. Lowest Common Ancestor of a Binary Tree (Medium) ](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/)
+
+```html
+       _______3______
+      /              \
+  ___5__           ___1__
+ /      \         /      \
+6        2       0        8
+        /  \
+       7    4
+
+For example, the lowest common ancestor (LCA) of nodes 5 and 1 is 3. Another example is LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
+```
+
+```java
+public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    if (root == null || root == p || root == q) return root;
+    TreeNode left = lowestCommonAncestor(root.left, p, q);
+    TreeNode right = lowestCommonAncestor(root.right, p, q);
+    return left == null ? right : right == null ? left : root;
+}
+```
+
+**ä»æœ‰åºæ•°ç»„ä¸­æ„é€ äºŒå‰æŸ¥æ‰¾æ ‘** 
+
+[108. Convert Sorted Array to Binary Search Tree (Easy)](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/)
+
+```java
+public TreeNode sortedArrayToBST(int[] nums) {
+    return toBST(nums, 0, nums.length - 1);
+}
+
+private TreeNode toBST(int[] nums, int sIdx, int eIdx){
+    if (sIdx > eIdx) return null;
+    int mIdx = (sIdx + eIdx) / 2;
+    TreeNode root = new TreeNode(nums[mIdx]);
+    root.left =  toBST(nums, sIdx, mIdx - 1);
+    root.right = toBST(nums, mIdx + 1, eIdx);
+    return root;
+}
+```
+
+**æ ¹æ®æœ‰åºé“¾è¡¨æ„é€ å¹³è¡¡çš„äºŒå‰æŸ¥æ‰¾æ ‘** 
+
+[109. Convert Sorted List to Binary Search Tree (Medium)](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/description/)
+
+```html
+Given the sorted linked list: [-10,-3,0,5,9],
+
+One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:
+
+      0
+     / \
+   -3   9
+   /   /
+ -10  5
+```
+
+```java
+public TreeNode sortedListToBST(ListNode head) {
+    if (head == null) return null;
+    if (head.next == null) return new TreeNode(head.val);
+    ListNode preMid = preMid(head);
+    ListNode mid = preMid.next;
+    preMid.next = null;  // æ–­å¼€é“¾è¡¨
+    TreeNode t = new TreeNode(mid.val);
+    t.left = sortedListToBST(head);
+    t.right = sortedListToBST(mid.next);
+    return t;
+}
+
+private ListNode preMid(ListNode head) {
+    ListNode slow = head, fast = head.next;
+    ListNode pre = head;
+    while (fast != null && fast.next != null) {
+        pre = slow;
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    return pre;
+}
+```
+
+**åœ¨äºŒå‰æŸ¥æ‰¾æ ‘ä¸­å¯»æ‰¾ä¸¤ä¸ªèŠ‚ç‚¹ï¼Œä½¿å®ƒä»¬çš„å’Œä¸ºä¸€ä¸ªç»™å®šå€¼** 
+
+[653. Two Sum IV - Input is a BST (Easy)](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/)
+
+```html
+Input:
+
+    5
+   / \
+  3   6
+ / \   \
+2   4   7
+
+Target = 9
+
+Output: True
+```
+
+ä½¿ç”¨ä¸­åºéå†å¾—åˆ°æœ‰åºæ•°ç»„ä¹‹åï¼Œå†åˆ©ç”¨åŒæŒ‡é’ˆå¯¹æ•°ç»„è¿›è¡ŒæŸ¥æ‰¾ã€‚
+
+åº”è¯¥æ³¨æ„åˆ°ï¼Œè¿™ä¸€é¢˜ä¸èƒ½ç”¨åˆ†åˆ«åœ¨å·¦å³å­æ ‘ä¸¤éƒ¨åˆ†æ¥å¤„ç†è¿™ç§æ€æƒ³ï¼Œå› ä¸ºä¸¤ä¸ªå¾…æ±‚çš„èŠ‚ç‚¹å¯èƒ½åˆ†åˆ«åœ¨å·¦å³å­æ ‘ä¸­ã€‚
+
+```java
+public boolean findTarget(TreeNode root, int k) {
+    List<Integer> nums = new ArrayList<>();
+    inOrder(root, nums);
+    int i = 0, j = nums.size() - 1;
+    while (i < j) {
+        int sum = nums.get(i) + nums.get(j);
+        if (sum == k) return true;
+        if (sum < k) i++;
+        else j--;
+    }
+    return false;
+}
+
+private void inOrder(TreeNode root, List<Integer> nums) {
+    if (root == null) return;
+    inOrder(root.left, nums);
+    nums.add(root.val);
+    inOrder(root.right, nums);
+}
+```
+
+**åœ¨äºŒå‰æŸ¥æ‰¾æ ‘ä¸­æŸ¥æ‰¾ä¸¤ä¸ªèŠ‚ç‚¹ä¹‹å·®çš„æœ€å°ç»å¯¹å€¼** 
+
+[530. Minimum Absolute Difference in BST (Easy)](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/)
+
+```html
+Input:
+
+   1
+    \
+     3
+    /
+   2
+
+Output:
+
+1
+```
+
+åˆ©ç”¨äºŒå‰æŸ¥æ‰¾æ ‘çš„ä¸­åºéå†ä¸ºæœ‰åºçš„æ€§è´¨ï¼Œè®¡ç®—ä¸­åºéå†ä¸­ä¸´è¿‘çš„ä¸¤ä¸ªèŠ‚ç‚¹ä¹‹å·®çš„ç»å¯¹å€¼ï¼Œå–æœ€å°å€¼ã€‚
+
+```java
+private int minDiff = Integer.MAX_VALUE;
+private TreeNode preNode = null;
+
+public int getMinimumDifference(TreeNode root) {
+    inOrder(root);
+    return minDiff;
+}
+
+private void inOrder(TreeNode node) {
+    if (node == null) return;
+    inOrder(node.left);
+    if (preNode != null) minDiff = Math.min(minDiff, node.val - preNode.val);
+    preNode = node;
+    inOrder(node.right);
+}
+```
+
+**å¯»æ‰¾äºŒå‰æŸ¥æ‰¾æ ‘ä¸­å‡ºç°æ¬¡æ•°æœ€å¤šçš„å€¼** 
+
+[501. Find Mode in Binary Search Tree (Easy)](https://leetcode.com/problems/find-mode-in-binary-search-tree/description/)
+
+```html
+   1
+    \
+     2
+    /
+   2
+
+return [2].
+```
+
+ç­”æ¡ˆå¯èƒ½ä¸æ­¢ä¸€ä¸ªï¼Œä¹Ÿå°±æ˜¯æœ‰å¤šä¸ªå€¼å‡ºç°çš„æ¬¡æ•°ä¸€æ ·å¤šã€‚
+
+```java
+private int curCnt = 1;
+private int maxCnt = 1;
+private TreeNode preNode = null;
+
+public int[] findMode(TreeNode root) {
+    List<Integer> maxCntNums = new ArrayList<>();
+    inOrder(root, maxCntNums);
+    int[] ret = new int[maxCntNums.size()];
+    int idx = 0;
+    for (int num : maxCntNums) {
+        ret[idx++] = num;
+    }
+    return ret;
+}
+
+private void inOrder(TreeNode node, List<Integer> nums) {
+    if (node == null) return;
+    inOrder(node.left, nums);
+    if (preNode != null) {
+        if (preNode.val == node.val) curCnt++;
+        else curCnt = 1;
+    }
+    if (curCnt > maxCnt) {
+        maxCnt = curCnt;
+        nums.clear();
+        nums.add(node.val);
+    } else if (curCnt == maxCnt) {
+        nums.add(node.val);
+    }
+    preNode = node;
+    inOrder(node.right, nums);
+}
+```
+
+### Trie
+
+<div align="center"> <img src="../pics//5c638d59-d4ae-4ba4-ad44-80bdc30f38dd.jpg"/> </div><br>
+
+Trieï¼Œåˆç§°å‰ç¼€æ ‘æˆ–å­—å…¸æ ‘ï¼Œç”¨äºåˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦å­˜åœ¨æˆ–è€…æ˜¯å¦å…·æœ‰æŸç§å­—ç¬¦ä¸²å‰ç¼€ã€‚
+
+**å®ç°ä¸€ä¸ª Trie** 
+
+[208. Implement Trie (Prefix Tree) (Medium)](https://leetcode.com/problems/implement-trie-prefix-tree/description/)
+
+```java
+class Trie {
+
+    private class Node {
+        Node[] childs = new Node[26];
+        boolean isLeaf;
     }
 
-    public int pop() {
-        return st.pop();
+    private Node root = new Node();
+
+    public Trie() {
     }
 
-    public int peek() {
-        return st.peek();
+    public void insert(String word) {
+        insert(word, root);
     }
 
-    public boolean empty() {
-        return st.isEmpty();
+    private void insert(String word, Node node) {
+        if (node == null) return;
+        if (word.length() == 0) {
+            node.isLeaf = true;
+            return;
+        }
+        int index = indexForChar(word.charAt(0));
+        if (node.childs[index] == null) {
+            node.childs[index] = new Node();
+        }
+        insert(word.substring(1), node.childs[index]);
+    }
+
+    public boolean search(String word) {
+        return search(word, root);
+    }
+
+    private boolean search(String word, Node node) {
+        if (node == null) return false;
+        if (word.length() == 0) return node.isLeaf;
+        int index = indexForChar(word.charAt(0));
+        return search(word.substring(1), node.childs[index]);
+    }
+
+    public boolean startsWith(String prefix) {
+        return startWith(prefix, root);
+    }
+
+    private boolean startWith(String prefix, Node node) {
+        if (node == null) return false;
+        if (prefix.length() == 0) return true;
+        int index = indexForChar(prefix.charAt(0));
+        return startWith(prefix.substring(1), node.childs[index]);
+    }
+
+    private int indexForChar(char c) {
+        return c - 'a';
     }
 }
 ```
 
-Á½¸öÕ»ÊµÏÖ£º
+**å®ç°ä¸€ä¸ª Trieï¼Œç”¨æ¥æ±‚å‰ç¼€å’Œ** 
+
+[677. Map Sum Pairs (Medium)](https://leetcode.com/problems/map-sum-pairs/description/)
+
+```html
+Input: insert("apple", 3), Output: Null
+Input: sum("ap"), Output: 3
+Input: insert("app", 2), Output: Null
+Input: sum("ap"), Output: 5
+```
 
 ```java
-class  MyQueue {
-    private Stack<Integer> in = new Stack();
-    private Stack<Integer> out = new Stack();
-  
+class MapSum {
+
+    private class Node {
+        Node[] child = new Node[26];
+        int value;
+    }
+
+    private Node root = new Node();
+
+    public MapSum() {
+
+    }
+
+    public void insert(String key, int val) {
+        insert(key, root, val);
+    }
+
+    private void insert(String key, Node node, int val) {
+        if (node == null) return;
+        if (key.length() == 0) {
+            node.value = val;
+            return;
+        }
+        int index = indexForChar(key.charAt(0));
+        if (node.child[index] == null) {
+            node.child[index] = new Node();
+        }
+        insert(key.substring(1), node.child[index], val);
+    }
+
+    public int sum(String prefix) {
+        return sum(prefix, root);
+    }
+
+    private int sum(String prefix, Node node) {
+        if (node == null) return 0;
+        if (prefix.length() != 0) {
+            int index = indexForChar(prefix.charAt(0));
+            return sum(prefix.substring(1), node.child[index]);
+        }
+        int sum = node.value;
+        for (Node child : node.child) {
+            sum += sum(prefix, child);
+        }
+        return sum;
+    }
+
+    private int indexForChar(char c) {
+        return c - 'a';
+    }
+}
+```
+
+
+## æ ˆå’Œé˜Ÿåˆ—
+
+**ç”¨æ ˆå®ç°é˜Ÿåˆ—** 
+
+[232. Implement Queue using Stacks (Easy)](https://leetcode.com/problems/implement-queue-using-stacks/description/)
+
+æ ˆçš„é¡ºåºä¸ºåè¿›å…ˆå‡ºï¼Œè€Œé˜Ÿåˆ—çš„é¡ºåºä¸ºå…ˆè¿›å…ˆå‡ºã€‚ä½¿ç”¨ä¸¤ä¸ªæ ˆå®ç°é˜Ÿåˆ—ï¼Œä¸€ä¸ªå…ƒç´ éœ€è¦ç»è¿‡ä¸¤ä¸ªæ ˆæ‰èƒ½å‡ºé˜Ÿåˆ—ï¼Œåœ¨ç»è¿‡ç¬¬ä¸€ä¸ªæ ˆæ—¶å…ƒç´ é¡ºåºè¢«åè½¬ï¼Œç»è¿‡ç¬¬äºŒä¸ªæ ˆæ—¶å†æ¬¡è¢«åè½¬ï¼Œæ­¤æ—¶å°±æ˜¯å…ˆè¿›å…ˆå‡ºé¡ºåºã€‚
+
+```java
+class MyQueue {
+
+    private Stack<Integer> in = new Stack<>();
+    private Stack<Integer> out = new Stack<>();
+
     public void push(int x) {
         in.push(x);
     }
@@ -2999,10 +5464,10 @@ class  MyQueue {
         in2out();
         return out.peek();
     }
-    
-    private void in2out(){
-        if(out.isEmpty()){
-            while(!in.isEmpty()){
+
+    private void in2out() {
+        if (out.isEmpty()) {
+            while (!in.isEmpty()) {
                 out.push(in.pop());
             }
         }
@@ -3014,49 +5479,50 @@ class  MyQueue {
 }
 ```
 
-**ÓÃ¶ÓÁĞÊµÏÖÕ»**
+**ç”¨é˜Ÿåˆ—å®ç°æ ˆ** 
 
-[Leetcode : 225. Implement Stack using Queues (Easy)](https://leetcode.com/problems/implement-stack-using-queues/description/)
+[225. Implement Stack using Queues (Easy)](https://leetcode.com/problems/implement-stack-using-queues/description/)
+
+åœ¨å°†ä¸€ä¸ªå…ƒç´  x æ’å…¥é˜Ÿåˆ—æ—¶ï¼Œä¸ºäº†ç»´æŠ¤åŸæ¥çš„åè¿›å…ˆå‡ºé¡ºåºï¼Œéœ€è¦è®© x æ’å…¥é˜Ÿåˆ—é¦–éƒ¨ã€‚è€Œé˜Ÿåˆ—çš„é»˜è®¤æ’å…¥é¡ºåºæ˜¯é˜Ÿåˆ—å°¾éƒ¨ï¼Œå› æ­¤åœ¨å°† x æ’å…¥é˜Ÿåˆ—å°¾éƒ¨ä¹‹åï¼Œéœ€è¦è®©é™¤äº† x ä¹‹å¤–çš„æ‰€æœ‰å…ƒç´ å‡ºé˜Ÿåˆ—ï¼Œå†å…¥é˜Ÿåˆ—ã€‚
 
 ```java
 class MyStack {
-    
+
     private Queue<Integer> queue;
 
     public MyStack() {
         queue = new LinkedList<>();
     }
-    
+
     public void push(int x) {
         queue.add(x);
-        for(int i = 1; i < queue.size(); i++){ // ·­×ª
-            queue.add(queue.remove());
+        int cnt = queue.size();
+        while (cnt-- > 1) {
+            queue.add(queue.poll());
         }
     }
-    
+
     public int pop() {
         return queue.remove();
     }
-    
+
     public int top() {
         return queue.peek();
     }
-    
+
     public boolean empty() {
         return queue.isEmpty();
     }
 }
 ```
 
-**×îĞ¡ÖµÕ»**
+**æœ€å°å€¼æ ˆ** 
 
-[Leetcode : 155. Min Stack (Easy)](https://leetcode.com/problems/min-stack/description/)
-
-ÓÃÁ½¸öÕ»ÊµÏÖ£¬Ò»¸ö´æ´¢Êı¾İ£¬Ò»¸ö´æ´¢×îĞ¡Öµ¡£
+[155. Min Stack (Easy)](https://leetcode.com/problems/min-stack/description/)
 
 ```java
 class MinStack {
-    
+
     private Stack<Integer> dataStack;
     private Stack<Integer> minStack;
     private int min;
@@ -3066,40 +5532,34 @@ class MinStack {
         minStack = new Stack<>();
         min = Integer.MAX_VALUE;
     }
-    
+
     public void push(int x) {
         dataStack.add(x);
-        if(x < min) {
-            min = x;
-        }
+        min = Math.min(min, x);
         minStack.add(min);
     }
-    
+
     public void pop() {
         dataStack.pop();
         minStack.pop();
-        if(!minStack.isEmpty()) {
-            min = minStack.peek();
-        } else{
-            min = Integer.MAX_VALUE;
-        }
+        min = minStack.isEmpty() ? Integer.MAX_VALUE : minStack.peek();
     }
-    
+
     public int top() {
         return dataStack.peek();
     }
-    
+
     public int getMin() {
-        return min;
+        return minStack.peek();
     }
 }
 ```
 
-¶ÔÓÚÊµÏÖ×îĞ¡Öµ¶ÓÁĞÎÊÌâ£¬¿ÉÒÔÏÈ½«¶ÓÁĞÊ¹ÓÃÕ»À´ÊµÏÖ£¬È»ºó¾Í½«ÎÊÌâ×ª»»Îª×îĞ¡ÖµÕ»£¬Õâ¸öÎÊÌâ³öÏÖÔÚ ±à³ÌÖ®ÃÀ£º3.7¡£
+å¯¹äºå®ç°æœ€å°å€¼é˜Ÿåˆ—é—®é¢˜ï¼Œå¯ä»¥å…ˆå°†é˜Ÿåˆ—ä½¿ç”¨æ ˆæ¥å®ç°ï¼Œç„¶åå°±å°†é—®é¢˜è½¬æ¢ä¸ºæœ€å°å€¼æ ˆï¼Œè¿™ä¸ªé—®é¢˜å‡ºç°åœ¨ ç¼–ç¨‹ä¹‹ç¾ï¼š3.7ã€‚
 
-**ÓÃÕ»ÊµÏÖÀ¨ºÅÆ¥Åä**
+**ç”¨æ ˆå®ç°æ‹¬å·åŒ¹é…** 
 
-[Leetcode : 20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/description/)
+[20. Valid Parentheses (Easy)](https://leetcode.com/problems/valid-parentheses/description/)
 
 ```html
 "()[]{}"
@@ -3110,15 +5570,18 @@ Output : true
 ```java
 public boolean isValid(String s) {
     Stack<Character> stack = new Stack<>();
-    for(int i = 0; i < s.length(); i++){
-        char c = s.charAt(i);
-        if(c == '(' || c == '{' || c == '[') stack.push(c);
-        else{
-            if(stack.isEmpty()) return false;
+    for (char c : s.toCharArray()) {
+        if (c == '(' || c == '{' || c == '[') {
+            stack.push(c);
+        } else {
+            if (stack.isEmpty()) {
+                return false;
+            }
             char cStack = stack.pop();
-            if(c == ')' && cStack != '(' ||
-              c == ']' && cStack != '[' ||
-              c == '}' && cStack != '{' ) {
+            boolean b1 = c == ')' && cStack != '(';
+            boolean b2 = c == ']' && cStack != '[';
+            boolean b3 = c == '}' && cStack != '{';
+            if (b1 || b2 || b3) {
                 return false;
             }
         }
@@ -3127,239 +5590,338 @@ public boolean isValid(String s) {
 }
 ```
 
-**Êı×éÖĞ±Èµ±Ç°ÔªËØ´óµÄÏÂÒ»¸öÊı×éÔªËØµÄ¾àÀë**
+**æ•°ç»„ä¸­å…ƒç´ ä¸ä¸‹ä¸€ä¸ªæ¯”å®ƒå¤§çš„å…ƒç´ ä¹‹é—´çš„è·ç¦»** 
+
+[739. Daily Temperatures (Medium)](https://leetcode.com/problems/daily-temperatures/description/)
 
 ```html
 Input: [73, 74, 75, 71, 69, 72, 76, 73]
 Output: [1, 1, 4, 2, 1, 1, 0, 0]
 ```
 
-[Leetcode : 739. Daily Temperatures (Medium)](https://leetcode.com/problems/daily-temperatures/description/)
-
-Ê¹ÓÃÕ»À´´æ´¢»¹Î´¼ÆËãµÄÔªËØ¡£¿ÉÒÔ±£Ö¤´ÓÕ»¶¥ÏòÏÂÔªËØµİÔö£¬·ñÔòÉÏÃæÓĞÒ»¸ö±ÈÏÂÃæÄ³¸öÔªËØ´óµÄÔªËØ½øÈëÕ»ÖĞ£¬ÏÂÃæÄÇ¸öÔªËØÒÑ¾­ÕÒµ½±ÈËü´óµÄÔªËØ£¬Òò´Ë»á³öÕ»¡£
+åœ¨éå†æ•°ç»„æ—¶ç”¨æ ˆæŠŠæ•°ç»„ä¸­çš„æ•°å­˜èµ·æ¥ï¼Œå¦‚æœå½“å‰éå†çš„æ•°æ¯”æ ˆé¡¶å…ƒç´ æ¥çš„å¤§ï¼Œè¯´æ˜æ ˆé¡¶å…ƒç´ çš„ä¸‹ä¸€ä¸ªæ¯”å®ƒå¤§çš„æ•°å°±æ˜¯å½“å‰å…ƒç´ ã€‚
 
 ```java
 public int[] dailyTemperatures(int[] temperatures) {
     int n = temperatures.length;
-    int[] ret = new int[n];
-    Stack<Integer> stack = new Stack<>();
-    for(int i = 0; i < n; i++) {
-        while(!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
-            int idx = stack.pop();
-            ret[idx] = i - idx;
+    int[] dist = new int[n];
+    Stack<Integer> indexs = new Stack<>();
+    for (int curIndex = 0; curIndex < n; curIndex++) {
+        while (!indexs.isEmpty() && temperatures[curIndex] > temperatures[indexs.peek()]) {
+            int preIndex = indexs.pop();
+            dist[preIndex] = curIndex - preIndex;
         }
-        stack.add(i);
+        indexs.add(curIndex);
     }
-    return ret;
+    return dist;
 }
 ```
 
-**Êı×éÖĞÏÂÒ»¸ö±Èµ±Ç°Êı´óµÄÊı**
+**å¾ªç¯æ•°ç»„ä¸­æ¯”å½“å‰å…ƒç´ å¤§çš„ä¸‹ä¸€ä¸ªå…ƒç´ ** 
 
-[Leetcode : 496. Next Greater Element I (Easy)](https://leetcode.com/problems/next-greater-element-i/description/)
+[503. Next Greater Element II (Medium)](https://leetcode.com/problems/next-greater-element-ii/description/)
 
-```html
-Input: nums1 = [4,1,2], nums2 = [1,3,4,2].
-Output: [-1,3,-1]
+```text
+Input: [1,2,1]
+Output: [2,-1,2]
+Explanation: The first 1's next greater number is 2;
+The number 2 can't find next greater number;
+The second 1's next greater number needs to search circularly, which is also 2.
 ```
 
-ÔÚ±éÀúÊı×éÊ±ÓÃ Stack °ÑÊı×éÖĞµÄÊı´æÆğÀ´£¬Èç¹ûµ±Ç°±éÀúµÄÊı±ÈÕ»¶¥ÔªËØÀ´µÄ´ó£¬ËµÃ÷Õ»¶¥ÔªËØµÄÏÂÒ»¸ö±ÈËü´óµÄÊı¾ÍÊÇµ±Ç°ÔªËØ¡£
-
-```java
-public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-    Map<Integer, Integer> map = new HashMap<>();
-    Stack<Integer> stack = new Stack<>();
-    for(int num : nums2){
-        while(!stack.isEmpty() && num > stack.peek()){
-            map.put(stack.pop(), num);
-        }
-        stack.add(num);
-    }
-    int[] ret = new int[nums1.length];
-    for(int i = 0; i < nums1.length; i++){
-        if(map.containsKey(nums1[i])) ret[i] = map.get(nums1[i]);
-        else ret[i] = -1;
-    }
-    return ret;
-}
-```
-
-**Ñ­»·Êı×éÖĞÏÂÒ»¸ö±Èµ±Ç°ÔªËØ´óµÄÊı**
-
-[Leetcode : 503. Next Greater Element II (Medium)](https://leetcode.com/problems/next-greater-element-ii/description/)
+ä¸ 739. Daily Temperatures (Medium) ä¸åŒçš„æ˜¯ï¼Œæ•°ç»„æ˜¯å¾ªç¯æ•°ç»„ï¼Œå¹¶ä¸”æœ€åè¦æ±‚çš„ä¸æ˜¯è·ç¦»è€Œæ˜¯ä¸‹ä¸€ä¸ªå…ƒç´ ã€‚
 
 ```java
 public int[] nextGreaterElements(int[] nums) {
-    int n = nums.length, next[] = new int[n];
+    int n = nums.length;
+    int[] next = new int[n];
     Arrays.fill(next, -1);
-    Stack<Integer> stack = new Stack<>();
+    Stack<Integer> pre = new Stack<>();
     for (int i = 0; i < n * 2; i++) {
         int num = nums[i % n];
-        while (!stack.isEmpty() && nums[stack.peek()] < num)
-            next[stack.pop()] = num;
-        if (i < n) stack.push(i);
+        while (!pre.isEmpty() && nums[pre.peek()] < num) {
+            next[pre.pop()] = num;
+        }
+        if (i < n){
+            pre.push(i);
+        }
     }
     return next;
 }
 ```
 
+## å“ˆå¸Œè¡¨
 
-## ¹şÏ£±í
+å“ˆå¸Œè¡¨ä½¿ç”¨ O(N) ç©ºé—´å¤æ‚åº¦å­˜å‚¨æ•°æ®ï¼Œå¹¶ä¸”ä»¥ O(1) æ—¶é—´å¤æ‚åº¦æ±‚è§£é—®é¢˜ã€‚
 
-ÀûÓÃ Hash Table ¿ÉÒÔ¿ìËÙ²éÕÒÒ»¸öÔªËØÊÇ·ñ´æÔÚµÈÎÊÌâ£¬µ«ÊÇĞèÒªÒ»¶¨µÄ¿Õ¼äÀ´´æ´¢¡£ÔÚÓÅÏÈ¿¼ÂÇÊ±¼ä¸´ÔÓ¶ÈµÄÇé¿öÏÂ£¬¿ÉÒÔÀûÓÃ Hash Table ÕâÖÖ¿Õ¼ä»»È¡Ê±¼äµÄ×ö·¨¡£
+- Java ä¸­çš„  **HashSet**  ç”¨äºå­˜å‚¨ä¸€ä¸ªé›†åˆï¼Œå¯ä»¥æŸ¥æ‰¾å…ƒç´ æ˜¯å¦åœ¨é›†åˆä¸­ã€‚å¦‚æœå…ƒç´ æœ‰ç©·ï¼Œå¹¶ä¸”èŒƒå›´ä¸å¤§ï¼Œé‚£ä¹ˆå¯ä»¥ç”¨ä¸€ä¸ªå¸ƒå°”æ•°ç»„æ¥å­˜å‚¨ä¸€ä¸ªå…ƒç´ æ˜¯å¦å­˜åœ¨ã€‚ä¾‹å¦‚å¯¹äºåªæœ‰å°å†™å­—ç¬¦çš„å…ƒç´ ï¼Œå°±å¯ä»¥ç”¨ä¸€ä¸ªé•¿åº¦ä¸º 26 çš„å¸ƒå°”æ•°ç»„æ¥å­˜å‚¨ä¸€ä¸ªå­—ç¬¦é›†åˆï¼Œä½¿å¾—ç©ºé—´å¤æ‚åº¦é™ä½ä¸º O(1)ã€‚
 
-Java ÖĞµÄ **HashSet** ÓÃÓÚ´æ´¢Ò»¸ö¼¯ºÏ£¬²¢ÒÔ O(1) µÄÊ±¼ä¸´ÔÓ¶È²éÕÒÔªËØÊÇ·ñÔÚ¼¯ºÏÖĞ¡£
-
-Èç¹ûÔªËØÓĞÇî£¬²¢ÇÒ·¶Î§²»´ó£¬ÄÇÃ´¿ÉÒÔÓÃÒ»¸ö²¼¶ûÊı×éÀ´´æ´¢Ò»¸öÔªËØÊÇ·ñ´æÔÚ£¬ÀıÈç¶ÔÓÚÖ»ÓĞĞ¡Ğ´×Ö·ûµÄÔªËØ£¬¾Í¿ÉÒÔÓÃÒ»¸ö³¤¶ÈÎª 26 µÄ²¼¶ûÊı×éÀ´´æ´¢Ò»¸ö×Ö·û¼¯ºÏ£¬Ê¹µÃ¿Õ¼ä¸´ÔÓ¶È½µµÍÎª O(1)¡£
-
-Java ÖĞµÄ **HashMap** Ö÷ÒªÓÃÓÚÓ³Éä¹ØÏµ£¬´Ó¶ø°ÑÁ½¸öÔªËØÁªÏµÆğÀ´¡£
-
-ÔÚ¶ÔÒ»¸öÄÚÈİ½øĞĞÑ¹Ëõ»òÕßÆäËü×ª»»Ê±£¬ÀûÓÃ HashMap ¿ÉÒÔ°ÑÔ­Ê¼ÄÚÈİºÍ×ª»»ºóµÄÄÚÈİÁªÏµÆğÀ´¡£ÀıÈçÔÚÒ»¸ö¼ò»¯ url µÄÏµÍ³ÖĞ£¨[Leetcdoe : 535. Encode and Decode TinyURL (Medium)](https://leetcode.com/problems/encode-and-decode-tinyurl/description/)£©£¬ÀûÓÃ HashMap ¾Í¿ÉÒÔ´æ´¢¾«¼òºóµÄ url µ½Ô­Ê¼ url µÄÓ³Éä£¬Ê¹µÃ²»½ö¿ÉÒÔÏÔÊ¾¼ò»¯µÄ url£¬Ò²¿ÉÒÔ¸ù¾İ¼ò»¯µÄ url µÃµ½Ô­Ê¼ url ´Ó¶ø¶¨Î»µ½ÕıÈ·µÄ×ÊÔ´¡£
-
-HashMap Ò²¿ÉÒÔÓÃÀ´¶ÔÔªËØ½øĞĞ¼ÆÊıÍ³¼Æ£¬´ËÊ±¼üÎªÔªËØ£¬ÖµÎª¼ÆÊı¡£ºÍ HashSet ÀàËÆ£¬Èç¹ûÔªËØÓĞÇî²¢ÇÒ·¶Î§²»´ó£¬¿ÉÒÔÓÃÕûĞÍÊı×éÀ´½øĞĞÍ³¼Æ¡£
+- Java ä¸­çš„  **HashMap**  ä¸»è¦ç”¨äºæ˜ å°„å…³ç³»ï¼Œä»è€ŒæŠŠä¸¤ä¸ªå…ƒç´ è”ç³»èµ·æ¥ã€‚HashMap ä¹Ÿå¯ä»¥ç”¨æ¥å¯¹å…ƒç´ è¿›è¡Œè®¡æ•°ç»Ÿè®¡ï¼Œæ­¤æ—¶é”®ä¸ºå…ƒç´ ï¼Œå€¼ä¸ºè®¡æ•°ã€‚å’Œ HashSet ç±»ä¼¼ï¼Œå¦‚æœå…ƒç´ æœ‰ç©·å¹¶ä¸”èŒƒå›´ä¸å¤§ï¼Œå¯ä»¥ç”¨æ•´å‹æ•°ç»„æ¥è¿›è¡Œç»Ÿè®¡ã€‚åœ¨å¯¹ä¸€ä¸ªå†…å®¹è¿›è¡Œå‹ç¼©æˆ–è€…å…¶å®ƒè½¬æ¢æ—¶ï¼Œåˆ©ç”¨ HashMap å¯ä»¥æŠŠåŸå§‹å†…å®¹å’Œè½¬æ¢åçš„å†…å®¹è”ç³»èµ·æ¥ã€‚ä¾‹å¦‚åœ¨ä¸€ä¸ªç®€åŒ– url çš„ç³»ç»Ÿä¸­ [Leetcdoe : 535. Encode and Decode TinyURL (Medium)](https://leetcode.com/problems/encode-and-decode-tinyurl/description/)ï¼Œåˆ©ç”¨ HashMap å°±å¯ä»¥å­˜å‚¨ç²¾ç®€åçš„ url åˆ°åŸå§‹ url çš„æ˜ å°„ï¼Œä½¿å¾—ä¸ä»…å¯ä»¥æ˜¾ç¤ºç®€åŒ–çš„ urlï¼Œä¹Ÿå¯ä»¥æ ¹æ®ç®€åŒ–çš„ url å¾—åˆ°åŸå§‹ url ä»è€Œå®šä½åˆ°æ­£ç¡®çš„èµ„æºã€‚
 
 
-**Êı×éÖĞµÄÁ½¸öÊıºÍÎª¸ø¶¨Öµ**
+**æ•°ç»„ä¸­ä¸¤ä¸ªæ•°çš„å’Œä¸ºç»™å®šå€¼** 
 
-[Leetcode : 1. Two Sum (Easy)](https://leetcode.com/problems/two-sum/description/)
+[1. Two Sum (Easy)](https://leetcode.com/problems/two-sum/description/)
 
-¿ÉÒÔÏÈ¶ÔÊı×é½øĞĞÅÅĞò£¬È»ºóÊ¹ÓÃË«Ö¸Õë·½·¨»òÕß¶ş·Ö²éÕÒ·½·¨¡£ÕâÑù×öµÄÊ±¼ä¸´ÔÓ¶ÈÎª O(nlg<sub>n</sub>)£¬¿Õ¼ä¸´ÔÓ¶ÈÎª O(1)¡£
+å¯ä»¥å…ˆå¯¹æ•°ç»„è¿›è¡Œæ’åºï¼Œç„¶åä½¿ç”¨åŒæŒ‡é’ˆæ–¹æ³•æˆ–è€…äºŒåˆ†æŸ¥æ‰¾æ–¹æ³•ã€‚è¿™æ ·åšçš„æ—¶é—´å¤æ‚åº¦ä¸º O(NlogN)ï¼Œç©ºé—´å¤æ‚åº¦ä¸º O(1)ã€‚
 
-ÓÃ HashMap ´æ´¢Êı×éÔªËØºÍË÷ÒıµÄÓ³Éä£¬ÔÚ·ÃÎÊµ½ nums[i] Ê±£¬ÅĞ¶Ï HashMap ÖĞÊÇ·ñ´æÔÚ target - nums[i] £¬Èç¹û´æÔÚËµÃ÷ target - nums[i] ËùÔÚµÄË÷ÒıºÍ i ¾ÍÊÇÒªÕÒµÄÁ½¸öÊı¡£¸Ã·½·¨µÄÊ±¼ä¸´ÔÓ¶ÈÎª O(n)£¬¿Õ¼ä¸´ÔÓ¶ÈÎª O(n)£¬Ê¹ÓÃ¿Õ¼äÀ´»»È¡Ê±¼ä¡£
+ç”¨ HashMap å­˜å‚¨æ•°ç»„å…ƒç´ å’Œç´¢å¼•çš„æ˜ å°„ï¼Œåœ¨è®¿é—®åˆ° nums[i] æ—¶ï¼Œåˆ¤æ–­ HashMap ä¸­æ˜¯å¦å­˜åœ¨ target - nums[i]ï¼Œå¦‚æœå­˜åœ¨è¯´æ˜ target - nums[i] æ‰€åœ¨çš„ç´¢å¼•å’Œ i å°±æ˜¯è¦æ‰¾çš„ä¸¤ä¸ªæ•°ã€‚è¯¥æ–¹æ³•çš„æ—¶é—´å¤æ‚åº¦ä¸º O(N)ï¼Œç©ºé—´å¤æ‚åº¦ä¸º O(N)ï¼Œä½¿ç”¨ç©ºé—´æ¥æ¢å–æ—¶é—´ã€‚
 
 ```java
 public int[] twoSum(int[] nums, int target) {
-    HashMap<Integer, Integer> map = new HashMap<>();
-    for(int i = 0; i < nums.length; i++){
-        if(map.containsKey(target - nums[i])) return new int[]{map.get(target - nums[i]), i};
-        else map.put(nums[i], i);
+    HashMap<Integer, Integer> indexForNum = new HashMap<>();
+    for (int i = 0; i < nums.length; i++) {
+        if (indexForNum.containsKey(target - nums[i])) {
+            return new int[]{indexForNum.get(target - nums[i]), i};
+        } else {
+            indexForNum.put(nums[i], i);
+        }
     }
     return null;
 }
 ```
 
-**×î³¤ºÍĞ³ĞòÁĞ**
+**åˆ¤æ–­æ•°ç»„æ˜¯å¦å«æœ‰é‡å¤å…ƒç´ ** 
 
-ºÍĞ³ĞòÁĞÖĞ×î´óÊıºÍ×îĞ¡ÊıÖ»²îÕıºÃÎª 1
-
-[Leetcode : 594. Longest Harmonious Subsequence (Easy)](https://leetcode.com/problems/longest-harmonious-subsequence/description/)
+[217. Contains Duplicate (Easy)](https://leetcode.com/problems/contains-duplicate/description/)
 
 ```java
-public int findLHS(int[] nums) {
-    Map<Long, Integer> map = new HashMap<>();
-    for (long num : nums) {
-        map.put(num, map.getOrDefault(num, 0) + 1);
+public boolean containsDuplicate(int[] nums) {
+    Set<Integer> set = new HashSet<>();
+    for (int num : nums) {
+        set.add(num);
     }
-    int result = 0;
-    for (long key : map.keySet()) {
-        if (map.containsKey(key + 1)) {
-            result = Math.max(result, map.get(key + 1) + map.get(key));
-        }
-    }
-    return result;
+    return set.size() < nums.length;
 }
 ```
 
-## ×Ö·û´®
+**æœ€é•¿å’Œè°åºåˆ—** 
 
-**Á½¸ö×Ö·û´®µÄ°üº¬µÄ×Ö·ûÊÇ·ñÍêÈ«ÏàÍ¬**
+[594. Longest Harmonious Subsequence (Easy)](https://leetcode.com/problems/longest-harmonious-subsequence/description/)
 
-[Leetcode : 242. Valid Anagram (Easy)](https://leetcode.com/problems/valid-anagram/description/)
+```html
+Input: [1,3,2,2,5,2,3,7]
+Output: 5
+Explanation: The longest harmonious subsequence is [3,2,2,2,3].
+```
 
-×Ö·û´®Ö»°üº¬Ğ¡Ğ´×Ö·û£¬×Ü¹²ÓĞ 26 ¸öĞ¡Ğ´×Ö·û¡£¿ÉÒÔÓÃ Hash Table À´Ó³Éä×Ö·ûÓë³öÏÖ´ÎÊı£¬ÒòÎª¼üÖµ·¶Î§ºÜĞ¡£¬Òò´Ë¿ÉÒÔÓÃÊı×éÀ´½øĞĞÓ³Éä¡£
+å’Œè°åºåˆ—ä¸­æœ€å¤§æ•°å’Œæœ€å°æ•°åªå·®æ­£å¥½ä¸º 1ï¼Œåº”è¯¥æ³¨æ„çš„æ˜¯åºåˆ—çš„å…ƒç´ ä¸ä¸€å®šæ˜¯æ•°ç»„çš„è¿ç»­å…ƒç´ ã€‚
 
-Ê¹ÓÃ³¤¶ÈÎª 26 µÄÕûĞÍÊı×é¶Ô×Ö·û´®³öÏÖµÄ×Ö·û½øĞĞÍ³¼Æ£¬±È½ÏÁ½¸ö×Ö·û´®³öÏÖµÄ×Ö·ûÊıÁ¿ÊÇ·ñÏàÍ¬¡£
+```java
+public int findLHS(int[] nums) {
+    Map<Integer, Integer> countForNum = new HashMap<>();
+    for (int num : nums) {
+        countForNum.put(num, countForNum.getOrDefault(num, 0) + 1);
+    }
+    int longest = 0;
+    for (int num : countForNum.keySet()) {
+        if (countForNum.containsKey(num + 1)) {
+            longest = Math.max(longest, countForNum.get(num + 1) + countForNum.get(num));
+        }
+    }
+    return longest;
+}
+```
+
+**æœ€é•¿è¿ç»­åºåˆ—** 
+
+[128. Longest Consecutive Sequence (Hard)](https://leetcode.com/problems/longest-consecutive-sequence/description/)
+
+```html
+Given [100, 4, 200, 1, 3, 2],
+The longest consecutive elements sequence is [1, 2, 3, 4]. Return its length: 4.
+```
+
+è¦æ±‚ä»¥ O(N) çš„æ—¶é—´å¤æ‚åº¦æ±‚è§£ã€‚
+
+```java
+public int longestConsecutive(int[] nums) {
+    Map<Integer, Integer> countForNum = new HashMap<>();
+    for (int num : nums) {
+        countForNum.put(num, 1);
+    }
+    for (int num : nums) {
+        forward(countForNum, num);
+    }
+    return maxCount(countForNum);
+}
+
+private int forward(Map<Integer, Integer> countForNum, int num) {
+    if (!countForNum.containsKey(num)) {
+        return 0;
+    }
+    int cnt = countForNum.get(num);
+    if (cnt > 1) {
+        return cnt;
+    }
+    cnt = forward(countForNum, num + 1) + 1;
+    countForNum.put(num, cnt);
+    return cnt;
+}
+
+private int maxCount(Map<Integer, Integer> countForNum) {
+    int max = 0;
+    for (int num : countForNum.keySet()) {
+        max = Math.max(max, countForNum.get(num));
+    }
+    return max;
+}
+```
+
+## å­—ç¬¦ä¸²
+
+**å­—ç¬¦ä¸²å¾ªç¯ç§»ä½åŒ…å«** 
+
+[ç¼–ç¨‹ä¹‹ç¾ 3.1](#)
+
+```html
+s1 = AABCD, s2 = CDAA
+Return : true
+```
+
+ç»™å®šä¸¤ä¸ªå­—ç¬¦ä¸² s1 å’Œ s2ï¼Œè¦æ±‚åˆ¤å®š s2 æ˜¯å¦èƒ½å¤Ÿè¢« s1 åšå¾ªç¯ç§»ä½å¾—åˆ°çš„å­—ç¬¦ä¸²åŒ…å«ã€‚
+
+s1 è¿›è¡Œå¾ªç¯ç§»ä½çš„ç»“æœæ˜¯ s1s1 çš„å­å­—ç¬¦ä¸²ï¼Œå› æ­¤åªè¦åˆ¤æ–­ s2 æ˜¯å¦æ˜¯ s1s1 çš„å­å­—ç¬¦ä¸²å³å¯ã€‚
+
+**å­—ç¬¦ä¸²å¾ªç¯ç§»ä½** 
+
+[ç¼–ç¨‹ä¹‹ç¾ 2.17](#)
+
+```html
+s = "abcd123" k = 3
+Return "123abcd"
+```
+
+å°†å­—ç¬¦ä¸²å‘å³å¾ªç¯ç§»åŠ¨ k ä½ã€‚
+
+å°† abcd123 ä¸­çš„ abcd å’Œ 123 å•ç‹¬ç¿»è½¬ï¼Œå¾—åˆ° dcba321ï¼Œç„¶åå¯¹æ•´ä¸ªå­—ç¬¦ä¸²è¿›è¡Œç¿»è½¬ï¼Œå¾—åˆ° 123abcdã€‚
+
+**å­—ç¬¦ä¸²ä¸­å•è¯çš„ç¿»è½¬** 
+
+[ç¨‹åºå‘˜ä»£ç é¢è¯•æŒ‡å—](#)
+
+```html
+s = "I am a student"
+Return "student a am I"
+```
+
+å°†æ¯ä¸ªå•è¯ç¿»è½¬ï¼Œç„¶åå°†æ•´ä¸ªå­—ç¬¦ä¸²ç¿»è½¬ã€‚
+
+**ä¸¤ä¸ªå­—ç¬¦ä¸²åŒ…å«çš„å­—ç¬¦æ˜¯å¦å®Œå…¨ç›¸åŒ** 
+
+[242. Valid Anagram (Easy)](https://leetcode.com/problems/valid-anagram/description/)
+
+```html
+s = "anagram", t = "nagaram", return true.
+s = "rat", t = "car", return false.
+```
+
+å¯ä»¥ç”¨ HashMap æ¥æ˜ å°„å­—ç¬¦ä¸å‡ºç°æ¬¡æ•°ï¼Œç„¶åæ¯”è¾ƒä¸¤ä¸ªå­—ç¬¦ä¸²å‡ºç°çš„å­—ç¬¦æ•°é‡æ˜¯å¦ç›¸åŒã€‚
+
+ç”±äºæœ¬é¢˜çš„å­—ç¬¦ä¸²åªåŒ…å« 26 ä¸ªå°å†™å­—ç¬¦ï¼Œå› æ­¤å¯ä»¥ä½¿ç”¨é•¿åº¦ä¸º 26 çš„æ•´å‹æ•°ç»„å¯¹å­—ç¬¦ä¸²å‡ºç°çš„å­—ç¬¦è¿›è¡Œç»Ÿè®¡ï¼Œä¸å†ä½¿ç”¨ HashMapã€‚
 
 ```java
 public boolean isAnagram(String s, String t) {
     int[] cnts = new int[26];
-    for(int i  = 0; i < s.length(); i++) cnts[s.charAt(i) - 'a'] ++;
-    for(int i  = 0; i < t.length(); i++) cnts[t.charAt(i) - 'a'] --;
-    for(int i  = 0; i < 26; i++) if(cnts[i] != 0) return false;
-    return true;
-}
-```
-
-**×Ö·û´®Í¬¹¹**
-
-[Leetcode : 205. Isomorphic Strings (Easy)](https://leetcode.com/problems/isomorphic-strings/description/)
-
-ÀıÈç "egg" ºÍ "add" ¾ÍÊôÓÚÍ¬¹¹×Ö·û´®¡£
-
-¼ÇÂ¼Ò»¸ö×Ö·ûÉÏ´Î³öÏÖµÄÎ»ÖÃ£¬Èç¹ûÁ½¸ö×Ö·û´®ÖĞÄ³¸ö×Ö·ûÉÏ´Î³öÏÖµÄÎ»ÖÃÒ»Ñù£¬ÄÇÃ´¾ÍÊôÓÚÍ¬¹¹¡£
-
-```java
-public boolean isIsomorphic(String s, String t) {
-    int[] m1 = new int[256];
-    int[] m2 = new int[256];
-    for(int i = 0; i < s.length(); i++){
-        if(m1[s.charAt(i)] != m2[t.charAt(i)]) {
+    for (char c : s.toCharArray()) {
+        cnts[c - 'a']++;
+    }
+    for (char c : t.toCharArray()) {
+        cnts[c - 'a']--;
+    }
+    for (int cnt : cnts) {
+        if (cnt != 0) {
             return false;
         }
-        m1[s.charAt(i)] = i + 1;
-        m2[t.charAt(i)] = i + 1;
     }
     return true;
 }
 ```
 
-**¼ÆËãÒ»×é×Ö·û¼¯ºÏ¿ÉÒÔ×é³ÉµÄ»ØÎÄ×Ö·û´®µÄ×î´ó³¤¶È**
+**è®¡ç®—ä¸€ç»„å­—ç¬¦é›†åˆå¯ä»¥ç»„æˆçš„å›æ–‡å­—ç¬¦ä¸²çš„æœ€å¤§é•¿åº¦** 
 
-[Leetcode : 409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome/description/)
+[409. Longest Palindrome (Easy)](https://leetcode.com/problems/longest-palindrome/description/)
 
-Ê¹ÓÃ³¤¶ÈÎª 128 µÄÕûĞÍÊı×éÀ´Í³¼ÆÃ¿¸ö×Ö·û³öÏÖµÄ¸öÊı£¬Ã¿¸ö×Ö·ûÓĞÅ¼Êı¸ö¿ÉÒÔÓÃÀ´¹¹³É»ØÎÄ×Ö·û´®¡£ÒòÎª»ØÎÄ×Ö·û´®×îÖĞ¼äµÄÄÇ¸ö×Ö·û¿ÉÒÔµ¥¶À³öÏÖ£¬ËùÒÔÈç¹ûÓĞµ¥¶ÀµÄ×Ö·û¾Í°ÑËü·Åµ½×îÖĞ¼ä¡£
+```html
+Input : "abccccdd"
+Output : 7
+Explanation : One longest palindrome that can be built is "dccaccd", whose length is 7.
+```
+
+ä½¿ç”¨é•¿åº¦ä¸º 256 çš„æ•´å‹æ•°ç»„æ¥ç»Ÿè®¡æ¯ä¸ªå­—ç¬¦å‡ºç°çš„ä¸ªæ•°ï¼Œæ¯ä¸ªå­—ç¬¦æœ‰å¶æ•°ä¸ªå¯ä»¥ç”¨æ¥æ„æˆå›æ–‡å­—ç¬¦ä¸²ã€‚
+
+å› ä¸ºå›æ–‡å­—ç¬¦ä¸²æœ€ä¸­é—´çš„é‚£ä¸ªå­—ç¬¦å¯ä»¥å•ç‹¬å‡ºç°ï¼Œæ‰€ä»¥å¦‚æœæœ‰å•ç‹¬çš„å­—ç¬¦å°±æŠŠå®ƒæ”¾åˆ°æœ€ä¸­é—´ã€‚
 
 ```java
 public int longestPalindrome(String s) {
-    int[] cnts = new int[128]; // ascii Âë×Ü¹² 128 ¸ö
-    for(char c : s.toCharArray()) cnts[c]++;
-    int ret = 0;
-    for(int cnt : cnts)  ret += (cnt / 2) * 2;
-    if(ret < s.length()) ret ++; // Õâ¸öÌõ¼şÏÂ s ÖĞÒ»¶¨ÓĞµ¥¸öÎ´Ê¹ÓÃµÄ×Ö·û´æÔÚ£¬¿ÉÒÔ°ÑÕâ¸ö×Ö·û·Åµ½»ØÎÄµÄ×îÖĞ¼ä
-    return ret;
+    int[] cnts = new int[256];
+    for (char c : s.toCharArray()) {
+        cnts[c]++;
+    }
+    int palindrome = 0;
+    for (int cnt : cnts) {
+        palindrome += (cnt / 2) * 2;
+    }
+    if (palindrome < s.length()) {
+        palindrome++;   // è¿™ä¸ªæ¡ä»¶ä¸‹ s ä¸­ä¸€å®šæœ‰å•ä¸ªæœªä½¿ç”¨çš„å­—ç¬¦å­˜åœ¨ï¼Œå¯ä»¥æŠŠè¿™ä¸ªå­—ç¬¦æ”¾åˆ°å›æ–‡çš„æœ€ä¸­é—´
+    }
+    return palindrome;
 }
 ```
 
-**ÅĞ¶ÏÒ»¸öÕûÊıÊÇ·ñÊÇ»ØÎÄÊı**
+**å­—ç¬¦ä¸²åŒæ„** 
 
-[Leetcode : 9. Palindrome Number (Easy)](https://leetcode.com/problems/palindrome-number/description/)
+[205. Isomorphic Strings (Easy)](https://leetcode.com/problems/isomorphic-strings/description/)
 
-ÒªÇó²»ÄÜÊ¹ÓÃ¶îÍâ¿Õ¼ä£¬Ò²¾Í²»ÄÜ½«ÕûÊı×ª»»Îª×Ö·û´®½øĞĞÅĞ¶Ï¡£
+```html
+Given "egg", "add", return true.
+Given "foo", "bar", return false.
+Given "paper", "title", return true.
+```
 
-½«ÕûÊı·Ö³É×óÓÒÁ½²¿·Ö£¬ÓÒ±ßÄÇ²¿·ÖĞèÒª×ªÖÃ£¬È»ºóÅĞ¶ÏÕâÁ½²¿·ÖÊÇ·ñÏàµÈ¡£
+è®°å½•ä¸€ä¸ªå­—ç¬¦ä¸Šæ¬¡å‡ºç°çš„ä½ç½®ï¼Œå¦‚æœä¸¤ä¸ªå­—ç¬¦ä¸²ä¸­çš„å­—ç¬¦ä¸Šæ¬¡å‡ºç°çš„ä½ç½®ä¸€æ ·ï¼Œé‚£ä¹ˆå°±å±äºåŒæ„ã€‚
 
 ```java
-public boolean isPalindrome(int x) {
-    if(x == 0) return true;
-    if(x < 0) return false;
-    if(x % 10 == 0) return false;
-    int right = 0;
-    while(x > right){
-        right = right * 10 + x % 10;
-        x /= 10;
+public boolean isIsomorphic(String s, String t) {
+    int[] preIndexOfS = new int[256];
+    int[] preIndexOfT = new int[256];
+    for (int i = 0; i < s.length(); i++) {
+        char sc = s.charAt(i), tc = t.charAt(i);
+        if (preIndexOfS[sc] != preIndexOfT[tc]) {
+            return false;
+        }
+        preIndexOfS[sc] = i + 1;
+        preIndexOfT[tc] = i + 1;
     }
-    return x == right || x == right / 10;
+    return true;
 }
 ```
 
-**»ØÎÄ×Ó×Ö·û´®**
+**å›æ–‡å­å­—ç¬¦ä¸²ä¸ªæ•°** 
 
-[Leetcode : 647. Palindromic Substrings (Medium)](https://leetcode.com/problems/palindromic-substrings/description/)
+[647. Palindromic Substrings (Medium)](https://leetcode.com/problems/palindromic-substrings/description/)
 
-½â¾ö·½°¸ÊÇ´Ó×Ö·û´®µÄÄ³Ò»Î»¿ªÊ¼£¬³¢ÊÔ×ÅÈ¥À©Õ¹×Ó×Ö·û´®¡£
+```html
+Input: "aaa"
+Output: 6
+Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
+```
+
+ä»å­—ç¬¦ä¸²çš„æŸä¸€ä½å¼€å§‹ï¼Œå°è¯•ç€å»æ‰©å±•å­å­—ç¬¦ä¸²ã€‚
 
 ```java
 private int cnt = 0;
+
 public int countSubstrings(String s) {
-    for(int i = 0; i < s.length(); i++) {
-        extendSubstrings(s, i, i);    // ÆæÊı³¤¶È
-        extendSubstrings(s, i, i + 1); // Å¼Êı³¤¶È
+    for (int i = 0; i < s.length(); i++) {
+        extendSubstrings(s, i, i);     // å¥‡æ•°é•¿åº¦
+        extendSubstrings(s, i, i + 1); // å¶æ•°é•¿åº¦
     }
     return cnt;
 }
 
 private void extendSubstrings(String s, int start, int end) {
-    while(start >= 0 && end < s.length() && s.charAt(start) == s.charAt(end)) {
+    while (start >= 0 && end < s.length() && s.charAt(start) == s.charAt(end)) {
         start--;
         end++;
         cnt++;
@@ -3367,7 +5929,34 @@ private void extendSubstrings(String s, int start, int end) {
 }
 ```
 
-**Í³¼Æ¶ş½øÖÆ×Ö·û´®ÖĞÁ¬Ğø 1 ºÍ Á¬Ğø 0 ÊıÁ¿ÏàÍ¬µÄ×Ó×Ö·û´®¸öÊı**
+**åˆ¤æ–­ä¸€ä¸ªæ•´æ•°æ˜¯å¦æ˜¯å›æ–‡æ•°** 
+
+[9. Palindrome Number (Easy)](https://leetcode.com/problems/palindrome-number/description/)
+
+è¦æ±‚ä¸èƒ½ä½¿ç”¨é¢å¤–ç©ºé—´ï¼Œä¹Ÿå°±ä¸èƒ½å°†æ•´æ•°è½¬æ¢ä¸ºå­—ç¬¦ä¸²è¿›è¡Œåˆ¤æ–­ã€‚
+
+å°†æ•´æ•°åˆ†æˆå·¦å³ä¸¤éƒ¨åˆ†ï¼Œå³è¾¹é‚£éƒ¨åˆ†éœ€è¦è½¬ç½®ï¼Œç„¶ååˆ¤æ–­è¿™ä¸¤éƒ¨åˆ†æ˜¯å¦ç›¸ç­‰ã€‚
+
+```java
+public boolean isPalindrome(int x) {
+    if (x == 0) {
+        return true;
+    }
+    if (x < 0 || x % 10 == 0) {
+        return false;
+    }
+    int right = 0;
+    while (x > right) {
+        right = right * 10 + x % 10;
+        x /= 10;
+    }
+    return x == right || x == right / 10;
+}
+```
+
+**ç»Ÿè®¡äºŒè¿›åˆ¶å­—ç¬¦ä¸²ä¸­è¿ç»­ 1 å’Œè¿ç»­ 0 æ•°é‡ç›¸åŒçš„å­å­—ç¬¦ä¸²ä¸ªæ•°** 
+
+[696. Count Binary Substrings (Easy)](https://leetcode.com/problems/count-binary-substrings/description/)
 
 ```html
 Input: "00110011"
@@ -3375,155 +5964,103 @@ Output: 6
 Explanation: There are 6 substrings that have equal number of consecutive 1's and 0's: "0011", "01", "1100", "10", "0011", and "01".
 ```
 
-[Leetcode : 696. Count Binary Substrings (Easy)](https://leetcode.com/problems/count-binary-substrings/description/)
-
 ```java
 public int countBinarySubstrings(String s) {
-    int preLen = 0, curLen = 1, ret = 0;
-    for(int i = 1; i < s.length(); i++){
-        if(s.charAt(i) == s.charAt(i-1)) curLen++;
-        else{
+    int preLen = 0, curLen = 1, count = 0;
+    for (int i = 1; i < s.length(); i++) {
+        if (s.charAt(i) == s.charAt(i - 1)) {
+            curLen++;
+        } else {
             preLen = curLen;
             curLen = 1;
         }
 
-        if(preLen >= curLen) ret++;
+        if (preLen >= curLen) {
+            count++;
+        }
     }
-    return ret;
+    return count;
 }
 ```
 
-**×Ö·û´®Ñ­»·ÒÆÎ»°üº¬**
+## æ•°ç»„ä¸çŸ©é˜µ
 
-[ ±à³ÌÖ®ÃÀ£º3.1](#)
+**æŠŠæ•°ç»„ä¸­çš„ 0 ç§»åˆ°æœ«å°¾** 
 
-¸ø¶¨Á½¸ö×Ö·û´® s1 ºÍ s2 £¬ÒªÇóÅĞ¶¨ s2 ÊÇ·ñÄÜ¹»±» s1 ×öÑ­»·ÒÆÎ»µÃµ½µÄ×Ö·û´®°üº¬¡£
+[283. Move Zeroes (Easy)](https://leetcode.com/problems/move-zeroes/description/)
 
 ```html
-s1 = AABCD, s2 = CDAA
-Return : true
+For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
 ```
 
-s1 ½øĞĞÑ­»·ÒÆÎ»µÄ½á¹ûÊÇ s1s1 µÄ×Ó×Ö·û´®£¬Òò´ËÖ»ÒªÅĞ¶Ï s2 ÊÇ·ñÊÇ s1s1 µÄ×Ó×Ö·û´®¼´¿É¡£
-
-**×Ö·û´®Ñ­»·ÒÆÎ»**
-
-[ ±à³ÌÖ®ÃÀ£º2.17](#)
-
-½«×Ö·û´®ÏòÓÒÑ­»·ÒÆ¶¯ k Î»¡£
-
-ÀıÈç abcd123 ÏòÓÒÒÆ¶¯ 3 Î» µÃµ½ 123abcd
-
-½« abcd123 ÖĞµÄ abcd ºÍ 123 µ¥¶ÀÄæĞò£¬µÃµ½ dcba321£¬È»ºó¶ÔÕû¸ö×Ö·û´®½øĞĞÄæĞò£¬µÃµ½123abcd¡£
-
-**×Ö·û´®ÖĞµ¥´ÊµÄ·­×ª**
-
-[³ÌĞòÔ±´úÂëÃæÊÔÖ¸ÄÏ](#)
-
-ÀıÈç½« "I am a student" ·­×ª³É "student a am I"
-
-½«Ã¿¸öµ¥´ÊÄæĞò£¬È»ºó½«Õû¸ö×Ö·û´®ÄæĞò¡£
-
-## Êı×éÓë¾ØÕó
-
-**°ÑÊı×éÖĞµÄ 0 ÒÆµ½Ä©Î²**
-
-[Leetcode : 283. Move Zeroes (Easy)](https://leetcode.com/problems/move-zeroes/description/)
-
 ```java
-    public void moveZeroes(int[] nums) {
-        int n = nums.length;
-        int idx = 0;
-        for(int i = 0; i < n; i++){
-            if(nums[i] != 0) nums[idx++] = nums[i];
-        }
-        while(idx < n){
-            nums[idx++] = 0;
+public void moveZeroes(int[] nums) {
+    int idx = 0;
+    for (int num : nums) {
+        if (num != 0) {
+            nums[idx++] = num;
         }
     }
-```
-
-**Ò»¸öÊı×éÔªËØÔÚ [1, n] Ö®¼ä£¬ÆäÖĞÒ»¸öÊı±»Ìæ»»ÎªÁíÒ»¸öÊı£¬ÕÒ³ö¶ªÊ§µÄÊıºÍÖØ¸´µÄÊı**
-
-[Leetcode : 645. Set Mismatch (Easy)](https://leetcode.com/problems/set-mismatch/description/)
-
-×îÖ±½ÓµÄ·½·¨ÊÇÏÈ¶ÔÊı×é½øĞĞÅÅĞò£¬ÕâÖÖ·½·¨Ê±¼ä¸´ÔÓ¶ÈÎª O(nlog<sub>n</sub>)£¬±¾Ìâ¿ÉÒÔÒÔ O(n) µÄÊ±¼ä¸´ÔÓ¶È¡¢O(1) ¿Õ¼ä¸´ÔÓ¶ÈÀ´Çó½â¡£
-
-Ö÷ÒªË¼ÏëÊÇÈÃÍ¨¹ı½»»»Êı×éÔªËØ£¬Ê¹µÃÊı×éÉÏµÄÔªËØÔÚÕıÈ·µÄÎ»ÖÃÉÏ¡£
-
-±éÀúÊı×é£¬Èç¹ûµÚ i Î»ÉÏµÄÔªËØ²»ÊÇ i + 1 £¬ÄÇÃ´¾Í½»»»µÚ i Î» ºÍ nums[i] - 1 Î»ÉÏµÄÔªËØ£¬Ê¹µÃ num[i] - 1 µÄÔªËØÎª nums[i] £¬Ò²¾ÍÊÇ¸ÃÎ»µÄÔªËØÊÇÕıÈ·µÄ¡£½»»»²Ù×÷ĞèÒªÑ­»·½øĞĞ£¬ÒòÎªÒ»´Î½»»»Ã»°ì·¨Ê¹µÃµÚ i Î»ÉÏµÄÔªËØÊÇÕıÈ·µÄ¡£µ«ÊÇÒª½»»»µÄÁ½¸öÔªËØ¿ÉÄÜ¾ÍÊÇÖØ¸´ÔªËØ£¬ÄÇÃ´Ñ­»·¾Í¿ÉÄÜÓÀÔ¶½øĞĞÏÂÈ¥£¬ÖÕÖ¹Ñ­»·µÄ·½·¨ÊÇ¼ÓÉÏ nums[i] != nums[nums[i] - 1 Ìõ¼ş¡£
-
-ÀàËÆÌâÄ¿£º
-
-- [Leetcode :448. Find All Numbers Disappeared in an Array (Easy)](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/)£¬Ñ°ÕÒËùÓĞ¶ªÊ§µÄÔªËØ
-- [Leetcode : 442. Find All Duplicates in an Array (Medium)](https://leetcode.com/problems/find-all-duplicates-in-an-array/description/)£¬Ñ°ÕÒËùÓĞÖØ¸´µÄÔªËØ¡£
-
-```java
-public int[] findErrorNums(int[] nums) {
-    for(int i = 0; i < nums.length; i++){
-        while(nums[i] != i + 1 && nums[i] != nums[nums[i] - 1]) swap(nums, i, nums[i] - 1);
+    while (idx < nums.length) {
+        nums[idx++] = 0;
     }
-    
-    for(int i = 0; i < nums.length; i++){
-        if(i + 1 != nums[i]) return new int[]{nums[i], i + 1};
+}
+```
+
+**æ”¹å˜çŸ©é˜µç»´åº¦** 
+
+[566. Reshape the Matrix (Easy)](https://leetcode.com/problems/reshape-the-matrix/description/)
+
+```html
+Input:
+nums =
+[[1,2],
+ [3,4]]
+r = 1, c = 4
+
+Output:
+[[1,2,3,4]]
+
+Explanation:
+The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
+```
+
+```java
+public int[][] matrixReshape(int[][] nums, int r, int c) {
+    int m = nums.length, n = nums[0].length;
+    if (m * n != r * c) {
+        return nums;
     }
-    
-    return null;
-}
-
-private void swap(int[] nums, int i, int j){
-    int tmp = nums[i];
-    nums[i] = nums[j];
-    nums[j] = tmp;
+    int[][] reshapedNums = new int[r][c];
+    int index = 0;
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            reshapedNums[i][j] = nums[index / n][index % n];
+            index++;
+        }
+    }
+    return reshapedNums;
 }
 ```
 
-**ÕÒ³öÊı×éÖĞÖØ¸´µÄÊı£¬Êı×éÖµÔÚ [0, n-1] Ö®¼ä**
+**æ‰¾å‡ºæ•°ç»„ä¸­æœ€é•¿çš„è¿ç»­ 1** 
 
-[Leetcode : 287. Find the Duplicate Number (Medium)](https://leetcode.com/problems/find-the-duplicate-number/description/)
-
-¶ş·Ö²éÕÒ½â·¨£º
+[485. Max Consecutive Ones (Easy)](https://leetcode.com/problems/max-consecutive-ones/description/)
 
 ```java
-public int findDuplicate(int[] nums) {
-     int l = 1, h = nums.length - 1;
-     while (l <= h) {
-         int mid = l + (h - l) / 2;
-         int cnt = 0;
-         for (int i = 0; i < nums.length; i++) {
-             if (nums[i] <= mid) cnt++;
-         }
-         if (cnt > mid) h = mid - 1;
-         else l = mid + 1;
-     }
-     return l;
+public int findMaxConsecutiveOnes(int[] nums) {
+    int max = 0, cur = 0;
+    for (int x : nums) {
+        cur = x == 0 ? 0 : cur + 1;
+        max = Math.max(max, cur);
+    }
+    return max;
 }
 ```
 
-Ë«Ö¸Õë½â·¨£¬ÀàËÆÓÚÓĞ»·Á´±íÖĞÕÒ³ö»·µÄÈë¿Ú£º
+**æœ‰åºçŸ©é˜µæŸ¥æ‰¾** 
 
-```java
-public int findDuplicate(int[] nums) {
-      int slow = nums[0], fast = nums[nums[0]];
-      while (slow != fast) {
-          slow = nums[slow];
-          fast = nums[nums[fast]];
-      }
-
-      fast = 0;
-      while (slow != fast) {
-          slow = nums[slow];
-          fast = nums[fast];
-      }
-      return slow;
-}
-```
-
-### ÓĞĞò¾ØÕó
-
-ÓĞĞò¾ØÕóÖ¸µÄÊÇĞĞºÍÁĞ·Ö±ğÓĞĞòµÄ¾ØÕó¡£
-
-Ò»°ã¿ÉÒÔÀûÓÃÓĞĞòĞÔÊ¹ÓÃ¶ş·Ö²éÕÒ·½·¨¡£
+[240. Search a 2D Matrix II (Medium)](https://leetcode.com/problems/search-a-2d-matrix-ii/description/)
 
 ```html
 [
@@ -3532,10 +6069,6 @@ public int findDuplicate(int[] nums) {
    [12, 13, 15]
 ]
 ```
-
-**ÓĞĞò¾ØÕó²éÕÒ**
-
-[Leetocde : 240. Search a 2D Matrix II (Medium)](https://leetcode.com/problems/search-a-2d-matrix-ii/description/)
 
 ```java
 public boolean searchMatrix(int[][] matrix, int target) {
@@ -3551,9 +6084,9 @@ public boolean searchMatrix(int[][] matrix, int target) {
 }
 ```
 
-**ÓĞĞò¾ØÕóµÄ Kth Element**
+**æœ‰åºçŸ©é˜µçš„ Kth Element** 
 
-[Leetcode : 378. Kth Smallest Element in a Sorted Matrix ((Medium))](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/)
+[378. Kth Smallest Element in a Sorted Matrix ((Medium))](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/)
 
 ```html
 matrix = [
@@ -3566,37 +6099,37 @@ k = 8,
 return 13.
 ```
 
-½âÌâ²Î¿¼£º[Share my thoughts and Clean Java Code](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/discuss/85173)
+è§£é¢˜å‚è€ƒï¼š[Share my thoughts and Clean Java Code](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/discuss/85173)
 
-¶ş·Ö²éÕÒ½â·¨£º
+äºŒåˆ†æŸ¥æ‰¾è§£æ³•ï¼š
 
 ```java
 public int kthSmallest(int[][] matrix, int k) {
     int m = matrix.length, n = matrix[0].length;
     int lo = matrix[0][0], hi = matrix[m - 1][n - 1];
-    while(lo <= hi) {
+    while (lo <= hi) {
         int mid = lo + (hi - lo) / 2;
         int cnt = 0;
-        for(int i = 0; i < m; i++) {
-            for(int j = 0; j < n && matrix[i][j] <= mid; j++) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n && matrix[i][j] <= mid; j++) {
                 cnt++;
             }
         }
-        if(cnt < k) lo = mid + 1;
+        if (cnt < k) lo = mid + 1;
         else hi = mid - 1;
     }
     return lo;
 }
 ```
 
-¶Ñ½â·¨£º
+å †è§£æ³•ï¼š
 
 ```java
 public int kthSmallest(int[][] matrix, int k) {
     int m = matrix.length, n = matrix[0].length;
     PriorityQueue<Tuple> pq = new PriorityQueue<Tuple>();
     for(int j = 0; j < n; j++) pq.offer(new Tuple(0, j, matrix[0][j]));
-    for(int i = 0; i < k - 1; i++) { // Ğ¡¸ù¶Ñ£¬È¥µô k - 1 ¸ö¶Ñ¶¥ÔªËØ£¬´ËÊ±¶Ñ¶¥ÔªËØ¾ÍÊÇµÚ k µÄÊı
+    for(int i = 0; i < k - 1; i++) { // å°æ ¹å †ï¼Œå»æ‰ k - 1 ä¸ªå †é¡¶å…ƒç´ ï¼Œæ­¤æ—¶å †é¡¶å…ƒç´ å°±æ˜¯ç¬¬ k çš„æ•°
         Tuple t = pq.poll();
         if(t.x == m - 1) continue;
         pq.offer(new Tuple(t.x + 1, t.y, matrix[t.x + 1][t.y]));
@@ -3617,1102 +6150,600 @@ class Tuple implements Comparable<Tuple> {
 }
 ```
 
-## Á´±í
+**ä¸€ä¸ªæ•°ç»„å…ƒç´ åœ¨ [1, n] ä¹‹é—´ï¼Œå…¶ä¸­ä¸€ä¸ªæ•°è¢«æ›¿æ¢ä¸ºå¦ä¸€ä¸ªæ•°ï¼Œæ‰¾å‡ºé‡å¤çš„æ•°å’Œä¸¢å¤±çš„æ•°** 
 
-**ÅĞ¶ÏÁ½¸öÁ´±íµÄ½»µã**
-
-[Leetcode : 160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/description/)
+[645. Set Mismatch (Easy)](https://leetcode.com/problems/set-mismatch/description/)
 
 ```html
-A:          a1 ¡ú a2
-                  ¨K
-                    c1 ¡ú c2 ¡ú c3
-                  ¨J
-B:    b1 ¡ú b2 ¡ú b3
+Input: nums = [1,2,2,4]
+Output: [2,3]
 ```
 
-ÒªÇó£ºÊ±¼ä¸´ÔÓ¶ÈÎª O(n) ¿Õ¼ä¸´ÔÓ¶ÈÎª O(1)
+```html
+Input: nums = [1,2,2,4]
+Output: [2,3]
+```
 
-Éè A µÄ³¤¶ÈÎª a + c£¬B µÄ³¤¶ÈÎª b + c£¬ÆäÖĞ c ÎªÎ²²¿¹«¹²²¿·Ö³¤¶È£¬¿ÉÖª a + c + b = b + c + a¡£
+æœ€ç›´æ¥çš„æ–¹æ³•æ˜¯å…ˆå¯¹æ•°ç»„è¿›è¡Œæ’åºï¼Œè¿™ç§æ–¹æ³•æ—¶é—´å¤æ‚åº¦ä¸º O(NlogN)ã€‚æœ¬é¢˜å¯ä»¥ä»¥ O(N) çš„æ—¶é—´å¤æ‚åº¦ã€O(1) ç©ºé—´å¤æ‚åº¦æ¥æ±‚è§£ã€‚
 
-µ±·ÃÎÊ A Á´±íµÄÖ¸Õë·ÃÎÊµ½Á´±íÎ²²¿Ê±£¬ÁîËü´ÓÁ´±í B µÄÍ·²¿¿ªÊ¼·ÃÎÊÁ´±í B£»Í¬ÑùµØ£¬µ±·ÃÎÊ B Á´±íµÄÖ¸Õë·ÃÎÊµ½Á´±íÎ²²¿Ê±£¬ÁîËü´ÓÁ´±í A µÄÍ·²¿¿ªÊ¼·ÃÎÊÁ´±í A¡£ÕâÑù¾ÍÄÜ¿ØÖÆ·ÃÎÊ A ºÍ B Á½¸öÁ´±íµÄÖ¸ÕëÄÜÍ¬Ê±·ÃÎÊµ½½»µã¡£
+ä¸»è¦æ€æƒ³æ˜¯é€šè¿‡äº¤æ¢æ•°ç»„å…ƒç´ ï¼Œä½¿å¾—æ•°ç»„ä¸Šçš„å…ƒç´ åœ¨æ­£ç¡®çš„ä½ç½®ä¸Šã€‚
 
 ```java
-public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-    if(headA == null || headB == null) return null;
-    ListNode l1 = headA, l2 = headB;
-    while(l1 != l2){
-        l1 = (l1 == null) ? headB : l1.next;
-        l2 = (l2 == null) ? headA : l2.next;
+public int[] findErrorNums(int[] nums) {
+    for (int i = 0; i < nums.length; i++) {
+        while (nums[i] != i + 1 && nums[nums[i] - 1] != nums[i]) {
+            swap(nums, i, nums[i] - 1);
+        }
     }
-    return l1;
+    for (int i = 0; i < nums.length; i++) {
+        if (nums[i] != i + 1) {
+            return new int[]{nums[i], i + 1};
+        }
+    }
+    return null;
 }
-```
 
-Èç¹ûÖ»ÊÇÅĞ¶ÏÊÇ·ñ´æÔÚ½»µã£¬ÄÇÃ´¾ÍÊÇÁíÒ»¸öÎÊÌâ£¬¼´ ±à³ÌÖ®ÃÀ£º3.6 µÄÎÊÌâ¡£ÓĞÁ½ÖÖ½â·¨£º°ÑµÚÒ»¸öÁ´±íµÄ½áÎ²Á¬½Óµ½µÚ¶ş¸öÁ´±íµÄ¿ªÍ·£¬¿´µÚ¶ş¸öÁ´±íÊÇ·ñ´æÔÚ»·£»»òÕßÖ±½Ó±È½ÏµÚÒ»¸öÁ´±í×îºóÒ»¸ö½ÚµãºÍµÚ¶ş¸öÁ´±í×îºóÒ»¸ö½ÚµãÊÇ·ñÏàÍ¬¡£
-
-
-
-**Á´±í·´×ª**
-
-[Leetcode : 206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
-
-Í·²å·¨ÄÜ¹»°´ÄæĞò¹¹½¨Á´±í¡£
-
-```java
-public ListNode reverseList(ListNode head) {
-    ListNode newHead = null; // ÉèÎª null £¬×÷ÎªĞÂÁ´±íµÄ½áÎ²
-    while(head != null){
-        ListNode nextNode = head.next;
-        head.next = newHead;
-        newHead = head;
-        head = nextNode;
-    }
-    return newHead;
+private void swap(int[] nums, int i, int j) {
+    int tmp = nums[i];
+    nums[i] = nums[j];
+    nums[j] = tmp;
 }
 ```
 
-**¹é²¢Á½¸öÓĞĞòµÄÁ´±í**
+ç±»ä¼¼é¢˜ç›®ï¼š
 
-[Leetcode : 21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
+- [448. Find All Numbers Disappeared in an Array (Easy)](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/)ï¼Œå¯»æ‰¾æ‰€æœ‰ä¸¢å¤±çš„å…ƒç´ 
+- [442. Find All Duplicates in an Array (Medium)](https://leetcode.com/problems/find-all-duplicates-in-an-array/description/)ï¼Œå¯»æ‰¾æ‰€æœ‰é‡å¤çš„å…ƒç´ ã€‚
 
-Á´±íºÍÊ÷Ò»Ñù£¬¿ÉÒÔÓÃµİ¹é·½Ê½À´¶¨Òå£ºÁ´±íÊÇ¿Õ½Úµã£¬»òÕßÓĞÒ»¸öÖµºÍÒ»¸öÖ¸ÏòÏÂÒ»¸öÁ´±íµÄÖ¸Õë£¬Òò´ËºÜ¶àÁ´±íÎÊÌâ¿ÉÒÔÓÃµİ¹éÀ´´¦Àí¡£
+**æ‰¾å‡ºæ•°ç»„ä¸­é‡å¤çš„æ•°ï¼Œæ•°ç»„å€¼åœ¨ [1, n] ä¹‹é—´** 
+
+[287. Find the Duplicate Number (Medium)](https://leetcode.com/problems/find-the-duplicate-number/description/)
+
+è¦æ±‚ä¸èƒ½ä¿®æ”¹æ•°ç»„ï¼Œä¹Ÿä¸èƒ½ä½¿ç”¨é¢å¤–çš„ç©ºé—´ã€‚
+
+äºŒåˆ†æŸ¥æ‰¾è§£æ³•ï¼š
 
 ```java
-public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-    if(l1 == null) return l2;
-    if(l2 == null) return l1;
-    ListNode newHead = null;
-    if(l1.val < l2.val){
-        newHead = l1;
-        newHead.next = mergeTwoLists(l1.next, l2);
-    } else{
-        newHead = l2;
-        newHead.next = mergeTwoLists(l1, l2.next);
-    }
-    return newHead;
+public int findDuplicate(int[] nums) {
+     int l = 1, h = nums.length - 1;
+     while (l <= h) {
+         int mid = l + (h - l) / 2;
+         int cnt = 0;
+         for (int i = 0; i < nums.length; i++) {
+             if (nums[i] <= mid) cnt++;
+         }
+         if (cnt > mid) h = mid - 1;
+         else l = mid + 1;
+     }
+     return l;
 }
 ```
 
-**´ÓÓĞĞòÁ´±íÖĞÉ¾³ıÖØ¸´½Úµã**
-
-[Leetcode : 83. Remove Duplicates from Sorted List (Easy)](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/)
+åŒæŒ‡é’ˆè§£æ³•ï¼Œç±»ä¼¼äºæœ‰ç¯é“¾è¡¨ä¸­æ‰¾å‡ºç¯çš„å…¥å£ï¼š
 
 ```java
-public ListNode deleteDuplicates(ListNode head) {
-    if(head == null || head.next == null) return head;
-    head.next = deleteDuplicates(head.next);
-    return head.next != null && head.val == head.next.val ? head.next : head;
+public int findDuplicate(int[] nums) {
+    int slow = nums[0], fast = nums[nums[0]];
+    while (slow != fast) {
+        slow = nums[slow];
+        fast = nums[nums[fast]];
+    }
+    fast = 0;
+    while (slow != fast) {
+        slow = nums[slow];
+        fast = nums[fast];
+    }
+    return slow;
 }
 ```
 
-**»ØÎÄÁ´±í**
+**æ•°ç»„ç›¸é‚»å·®å€¼çš„ä¸ªæ•°** 
 
-[Leetcode : 234. Palindrome Linked List (Easy)](https://leetcode.com/problems/palindrome-linked-list/description/)
+[667. Beautiful Arrangement II (Medium)](https://leetcode.com/problems/beautiful-arrangement-ii/description/)
 
-ÇĞ³ÉÁ½°ë£¬°Ñºó°ë¶Î·´×ª£¬È»ºó±È½ÏÁ½°ëÊÇ·ñÏàµÈ¡£
+```html
+Input: n = 3, k = 2
+Output: [1, 3, 2]
+Explanation: The [1, 3, 2] has three different positive integers ranging from 1 to 3, and the [2, 1] has exactly 2 distinct integers: 1 and 2.
+```
+
+é¢˜ç›®æè¿°ï¼šæ•°ç»„å…ƒç´ ä¸º 1\~n çš„æ•´æ•°ï¼Œè¦æ±‚æ„å»ºæ•°ç»„ï¼Œä½¿å¾—ç›¸é‚»å…ƒç´ çš„å·®å€¼ä¸ç›¸åŒçš„ä¸ªæ•°ä¸º kã€‚
+
+è®©å‰ k+1 ä¸ªå…ƒç´ æ„å»ºå‡º k ä¸ªä¸ç›¸åŒçš„å·®å€¼ï¼Œåºåˆ—ä¸ºï¼š1 k+1 2 k 3 k-1 ... k/2 k/2+1.
 
 ```java
-public boolean isPalindrome(ListNode head) {
-    if(head == null || head.next == null) return true;
-    ListNode slow = head, fast = head.next;
-    while(fast != null && fast.next != null){
-        slow = slow.next;
-        fast = fast.next.next;
+public int[] constructArray(int n, int k) {
+    int[] ret = new int[n];
+    ret[0] = 1;
+    for (int i = 1, interval = k; i <= k; i++, interval--) {
+        ret[i] = i % 2 == 1 ? ret[i - 1] + interval : ret[i - 1] - interval;
     }
-
-    if(fast != null){  // Å¼Êı½Úµã£¬ÈÃ slow Ö¸ÏòÏÂÒ»¸ö½Úµã
-        slow = slow.next;
+    for (int i = k + 1; i < n; i++) {
+        ret[i] = i + 1;
     }
+    return ret;
+}
+```
 
-    cut(head, slow); // ÇĞ³ÉÁ½¸öÁ´±í
-    ListNode l1 = head, l2 = slow;
-    l2 = reverse(l2);
-    return isEqual(l1, l2);
+**æ•°ç»„çš„åº¦** 
+
+[697. Degree of an Array (Easy)](https://leetcode.com/problems/degree-of-an-array/description/)
+
+```html
+Input: [1,2,2,3,1,4,2]
+Output: 6
+```
+
+é¢˜ç›®æè¿°ï¼šæ•°ç»„çš„åº¦å®šä¹‰ä¸ºå…ƒç´ å‡ºç°çš„æœ€é«˜é¢‘ç‡ï¼Œä¾‹å¦‚ä¸Šé¢çš„æ•°ç»„åº¦ä¸º 3ã€‚è¦æ±‚æ‰¾åˆ°ä¸€ä¸ªæœ€å°çš„å­æ•°ç»„ï¼Œè¿™ä¸ªå­æ•°ç»„çš„åº¦å’ŒåŸæ•°ç»„ä¸€æ ·ã€‚
+
+```java
+public int findShortestSubArray(int[] nums) {
+    Map<Integer, Integer> numsCnt = new HashMap<>();
+    Map<Integer, Integer> numsLastIndex = new HashMap<>();
+    Map<Integer, Integer> numsFirstIndex = new HashMap<>();
+    for (int i = 0; i < nums.length; i++) {
+        int num = nums[i];
+        numsCnt.put(num, numsCnt.getOrDefault(num, 0) + 1);
+        numsLastIndex.put(num, i);
+        if (!numsFirstIndex.containsKey(num)) {
+            numsFirstIndex.put(num, i);
+        }
+    }
+    int maxCnt = 0;
+    for (int num : nums) {
+        maxCnt = Math.max(maxCnt, numsCnt.get(num));
+    }
+    int ret = nums.length;
+    for (int i = 0; i < nums.length; i++) {
+        int num = nums[i];
+        int cnt = numsCnt.get(num);
+        if (cnt != maxCnt) continue;
+        ret = Math.min(ret, numsLastIndex.get(num) - numsFirstIndex.get(num) + 1);
+    }
+    return ret;
+}
+```
+
+**å¯¹è§’å…ƒç´ ç›¸ç­‰çš„çŸ©é˜µ** 
+
+[766. Toeplitz Matrix (Easy)](https://leetcode.com/problems/toeplitz-matrix/description/)
+
+```html
+1234
+5123
+9512
+
+In the above grid, the diagonals are "[9]", "[5, 5]", "[1, 1, 1]", "[2, 2, 2]", "[3, 3]", "[4]", and in each diagonal all elements are the same, so the answer is True.
+```
+
+```java
+public boolean isToeplitzMatrix(int[][] matrix) {
+    for (int i = 0; i < matrix[0].length; i++) {
+        if (!check(matrix, matrix[0][i], 0, i)) {
+            return false;
+        }
+    }
+    for (int i = 0; i < matrix.length; i++) {
+        if (!check(matrix, matrix[i][0], i, 0)) {
+            return false;
+        }
+    }
+    return true;
 }
 
-private void cut(ListNode head, ListNode cutNode){
-    while( head.next != cutNode ) head = head.next;
-    head.next = null;
-}
-
-private ListNode reverse(ListNode head){
-    ListNode newHead = null;
-    while(head != null){
-        ListNode nextNode = head.next;
-        head.next = newHead;
-        newHead = head;
-        head = nextNode;
+private boolean check(int[][] matrix, int expectValue, int row, int col) {
+    if (row >= matrix.length || col >= matrix[0].length) {
+        return true;
     }
-    return newHead;
+    if (matrix[row][col] != expectValue) {
+        return false;
+    }
+    return check(matrix, expectValue, row + 1, col + 1);
+}
+```
+
+**åµŒå¥—æ•°ç»„** 
+
+[565. Array Nesting (Medium)](https://leetcode.com/problems/array-nesting/description/)
+
+```html
+Input: A = [5,4,0,3,1,6,2]
+Output: 4
+Explanation:
+A[0] = 5, A[1] = 4, A[2] = 0, A[3] = 3, A[4] = 1, A[5] = 6, A[6] = 2.
+
+One of the longest S[K]:
+S[0] = {A[0], A[5], A[6], A[2]} = {5, 6, 2, 0}
+```
+
+é¢˜ç›®æè¿°ï¼šS[i] è¡¨ç¤ºä¸€ä¸ªé›†åˆï¼Œé›†åˆçš„ç¬¬ä¸€ä¸ªå…ƒç´ æ˜¯ A[i]ï¼Œç¬¬äºŒä¸ªå…ƒç´ æ˜¯ A[A[i]]ï¼Œå¦‚æ­¤åµŒå¥—ä¸‹å»ã€‚æ±‚æœ€å¤§çš„ S[i]ã€‚
+
+```java
+public int arrayNesting(int[] nums) {
+    int max = 0;
+    for (int i = 0; i < nums.length; i++) {
+        int cnt = 0;
+        for (int j = i; nums[j] != -1; ) {
+            cnt++;
+            int t = nums[j];
+            nums[j] = -1; // æ ‡è®°è¯¥ä½ç½®å·²ç»è¢«è®¿é—®
+            j = t;
+
+        }
+        max = Math.max(max, cnt);
+    }
+    return max;
+}
+```
+
+**åˆ†éš”æ•°ç»„** 
+
+[769. Max Chunks To Make Sorted (Medium)](https://leetcode.com/problems/max-chunks-to-make-sorted/description/)
+
+```html
+Input: arr = [1,0,2,3,4]
+Output: 4
+Explanation:
+We can split into two chunks, such as [1, 0], [2, 3, 4].
+However, splitting into [1, 0], [2], [3], [4] is the highest number of chunks possible.
+```
+
+é¢˜ç›®æè¿°ï¼šåˆ†éš”æ•°ç»„ï¼Œä½¿å¾—å¯¹æ¯éƒ¨åˆ†æ’åºåæ•°ç»„å°±ä¸ºæœ‰åºã€‚
+
+```java
+public int maxChunksToSorted(int[] arr) {
+    if (arr == null) return 0;
+    int ret = 0;
+    int right = arr[0];
+    for (int i = 0; i < arr.length; i++) {
+        right = Math.max(right, arr[i]);
+        if (right == i) ret++;
+    }
+    return ret;
+}
+```
+
+## å›¾
+
+### äºŒåˆ†å›¾
+
+å¦‚æœå¯ä»¥ç”¨ä¸¤ç§é¢œè‰²å¯¹å›¾ä¸­çš„èŠ‚ç‚¹è¿›è¡Œç€è‰²ï¼Œå¹¶ä¸”ä¿è¯ç›¸é‚»çš„èŠ‚ç‚¹é¢œè‰²ä¸åŒï¼Œé‚£ä¹ˆè¿™ä¸ªå›¾å°±æ˜¯äºŒåˆ†å›¾ã€‚
+
+**åˆ¤æ–­æ˜¯å¦ä¸ºäºŒåˆ†å›¾** 
+
+[785. Is Graph Bipartite? (Medium)](https://leetcode.com/problems/is-graph-bipartite/description/)
+
+```html
+Input: [[1,3], [0,2], [1,3], [0,2]]
+Output: true
+Explanation:
+The graph looks like this:
+0----1
+|    |
+|    |
+3----2
+We can divide the vertices into two groups: {0, 2} and {1, 3}.
+```
+
+```html
+Example 2:
+Input: [[1,2,3], [0,2], [0,1,3], [0,2]]
+Output: false
+Explanation:
+The graph looks like this:
+0----1
+| \  |
+|  \ |
+3----2
+We cannot find a way to divide the set of nodes into two independent subsets.
+```
+
+```java
+public boolean isBipartite(int[][] graph) {
+    int[] colors = new int[graph.length];
+    Arrays.fill(colors, -1);
+    for (int i = 0; i < graph.length; i++) {  // å¤„ç†å›¾ä¸æ˜¯è¿é€šçš„æƒ…å†µ
+        if (colors[i] == -1 && !isBipartite(i, 0, colors, graph)) {
+            return false;
+        }
+    }
+    return true;
 }
 
-private boolean isEqual(ListNode l1, ListNode l2){
-    while(l1 != null && l2 != null){
-        if(l1.val != l2.val) return false;
-        l1 = l1.next;
-        l2 = l2.next;
+private boolean isBipartite(int curNode, int curColor, int[] colors, int[][] graph) {
+    if (colors[curNode] != -1) {
+        return colors[curNode] == curColor;
+    }
+    colors[curNode] = curColor;
+    for (int nextNode : graph[curNode]) {
+        if (!isBipartite(nextNode, 1 - curColor, colors, graph)) {
+            return false;
+        }
     }
     return true;
 }
 ```
 
-**´ÓÁ´±íÖĞÉ¾³ı½Úµã**
+### æ‹“æ‰‘æ’åº
 
-[±à³ÌÖ®ÃÀ£º3.4]()
+å¸¸ç”¨äºåœ¨å…·æœ‰å…ˆåºå…³ç³»çš„ä»»åŠ¡è§„åˆ’ä¸­ã€‚
 
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/2c968ec5-0967-49ce-ac06-f8f5c9ab33bc.jpg)
+**è¯¾ç¨‹å®‰æ’çš„åˆæ³•æ€§** 
 
-```java
-B.val = C.val;
-B.next = C.next;
-```
-
-**Á´±íÔªËØ°´ÆæÅ¼¾Û¼¯**
-
-[Leetcode : 328. Odd Even Linked List (Medium)](https://leetcode.com/problems/odd-even-linked-list/description/)
-
-```java
-public ListNode oddEvenList(ListNode head) {
-    if (head == null) {
-        return head;
-    }
-    ListNode odd = head, even = head.next, evenHead = even;
-    while (even != null && even.next != null) {
-        odd.next = odd.next.next;
-        odd = odd.next;
-        even.next = even.next.next;
-        even = even.next;
-    }
-    odd.next = evenHead;
-    return head;
-}
-```
-
-## Ê÷
-
-### µİ¹é
-
-Ò»¿ÃÊ÷ÒªÃ´ÊÇ¿ÕÊ÷£¬ÒªÃ´ÓĞÁ½¸öÖ¸Õë£¬Ã¿¸öÖ¸ÕëÖ¸ÏòÒ»¿ÃÊ÷¡£Ê÷ÊÇÒ»ÖÖµİ¹é½á¹¹£¬ºÜ¶àÊ÷µÄÎÊÌâ¿ÉÒÔÊ¹ÓÃµİ¹éÀ´´¦Àí¡£
-
-**Ê÷µÄ¸ß¶È**
-
-[Leetcode : 104. Maximum Depth of Binary Tree (Easy)](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/)
-
-```java
-public int maxDepth(TreeNode root) {
-    if(root == null) return 0;
-    return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
-}
-```
-
-**·­×ªÊ÷**
-
-[Leetcode : 226. Invert Binary Tree (Easy)](https://leetcode.com/problems/invert-binary-tree/description/)
-
-```java
-public TreeNode invertTree(TreeNode root) {
-    if(root == null) return null;
-    TreeNode left = root.left; // ºóÃæµÄ²Ù×÷»á¸Ä±ä left Ö¸Õë£¬Òò´ËÏÈ±£´æÏÂÀ´
-    root.left = invertTree(root.right);
-    root.right = invertTree(left);
-    return root;
-}
-```
-
-**¹é²¢Á½¿ÃÊ÷**
-
-[Leetcode : 617. Merge Two Binary Trees (Easy)](https://leetcode.com/problems/merge-two-binary-trees/description/)
-
-```java
-public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
-    if(t1 == null && t2 == null) return null;
-    if(t1 == null) return t2;
-    if(t2 == null) return t1;
-    TreeNode root = new TreeNode(t1.val + t2.val);
-    root.left = mergeTrees(t1.left, t2.left);
-    root.right = mergeTrees(t1.right, t2.right);
-    return root;
-}
-```
-
-**ÅĞ¶ÏÂ·¾¶ºÍÊÇ·ñµÈÓÚÒ»¸öÊı**
-
-[Leetcdoe : 112. Path Sum (Easy)](https://leetcode.com/problems/path-sum/description/)
-
-ÌâÄ¿ÃèÊö£ºÂ·¾¶ºÍ¶¨ÒåÎª´Ó root µ½ leaf µÄËùÓĞ½ÚµãµÄºÍ
-
-```java
-public boolean hasPathSum(TreeNode root, int sum) {
-    if(root == null) return false;
-    if(root.left == null && root.right == null && root.val == sum) return true;
-    return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
-}
-```
-
-**Í³¼ÆÂ·¾¶ºÍµÈÓÚÒ»¸öÊıµÄÂ·¾¶ÊıÁ¿**
-
-[Leetcode : 437. Path Sum III (Easy)](https://leetcode.com/problems/path-sum-iii/description/)
-
-ÌâÄ¿ÃèÊö£ºÂ·¾¶²»Ò»¶¨ÒÔ root ¿ªÍ·²¢ÒÔ leaf ½áÎ²£¬µ«ÊÇ±ØĞëÁ¬Ğø
-
-pathSumStartWithRoot() ·½·¨Í³¼ÆÒÔÄ³¸ö½Úµã¿ªÍ·µÄÂ·¾¶¸öÊı¡£
-
-```java
-public int pathSum(TreeNode root, int sum) {
-    if(root == null) return 0;
-    int ret = pathSumStartWithRoot(root, sum) + pathSum(root.left, sum) + pathSum(root.right, sum);
-    return ret;
-}
-
-private int pathSumStartWithRoot(TreeNode root, int sum){
-    if(root == null) return 0;
-    int ret = 0;
-    if(root.val == sum) ret++;
-    ret += pathSumStartWithRoot(root.left, sum - root.val) + pathSumStartWithRoot(root.right, sum - root.val);
-    return ret;
-}
-```
-
-**Ê÷µÄ¶Ô³Æ**
-
-[Leetcode : 101. Symmetric Tree (Easy)](https://leetcode.com/problems/symmetric-tree/description/)
-
-```java
-public boolean isSymmetric(TreeNode root) {
-    if(root == null) return true;
-    return isSymmetric(root.left, root.right);
-}
-
-private boolean isSymmetric(TreeNode t1, TreeNode t2){
-    if(t1 == null && t2 == null) return true;
-    if(t1 == null || t2 == null) return false;
-    if(t1.val != t2.val) return false;
-    return isSymmetric(t1.left, t2.right) && isSymmetric(t1.right, t2.left);
-}
-```
-
-**Æ½ºâÊ÷**
-
-[Leetcode : 110. Balanced Binary Tree (Easy)](https://leetcode.com/problems/balanced-binary-tree/description/)
-
-ÌâÄ¿ÃèÊö£º×óÓÒ×ÓÊ÷¸ß¶È²îÊÇ·ñ¶¼Ğ¡ÓÚµÈÓÚ 1
-
-```java
-private boolean result = true;
-
-public boolean isBalanced(TreeNode root) {
-    maxDepth(root);
-    return result;
-}
-
-public int maxDepth(TreeNode root) {
-    if (root == null) return 0;
-    int l = maxDepth(root.left);
-    int r = maxDepth(root.right);
-    if (Math.abs(l - r) > 1) result = false;
-    return 1 + Math.max(l, r);
-}
-```
-
-**×îĞ¡Â·¾¶**
-
-[Leetcode : 111. Minimum Depth of Binary Tree (Easy)](https://leetcode.com/problems/minimum-depth-of-binary-tree/description/)
-
-ÌâÄ¿ÃèÊö£ºÊ÷µÄ¸ù½Úµãµ½Ò¶×Ó½ÚµãµÄ×îĞ¡³¤¶È
-
-```java
-public int minDepth(TreeNode root) {
-    if(root == null) return 0;
-    int left = minDepth(root.left);
-    int right = minDepth(root.right);
-    if(left == 0 || right == 0) return left + right + 1;
-    return Math.min(left, right) + 1;
-}
-```
-
-**Í³¼Æ×óÒ¶×Ó½ÚµãµÄºÍ**
-
-[Leetcode : 404. Sum of Left Leaves (Easy)](https://leetcode.com/problems/sum-of-left-leaves/description/)
-
-```java
-public int sumOfLeftLeaves(TreeNode root) {
-    if(root == null) return 0;
-    if(isLeaf(root.left)) return root.left.val +  sumOfLeftLeaves(root.right);
-    return sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right);
-}
-
-private boolean isLeaf(TreeNode node){
-    if(node == null) return false;
-    return node.left == null && node.right == null;
-}
-```
-
-**ĞŞ¼ôÒ»¿ÃÊ÷**
-
-[Leetcode : 669. Trim a Binary Search Tree (Easy)](https://leetcode.com/problems/trim-a-binary-search-tree/description/)
-
-ÌâÄ¿ÃèÊö£ºÖ»±£ÁôÖµÔÚ L \~ R Ö®¼äµÄ½Úµã
-
-```java
-public TreeNode trimBST(TreeNode root, int L, int R) {
-    if(root == null) return null;
-    if(root.val > R) return trimBST(root.left, L, R);
-    if(root.val < L) return trimBST(root.right, L, R);
-    root.left = trimBST(root.left, L, R);
-    root.right = trimBST(root.right, L, R);
-    return root;
-}
-```
-
-**×ÓÊ÷**
-
-[Leetcode : 572. Subtree of Another Tree (Easy)](https://leetcode.com/problems/subtree-of-another-tree/description/)
-
-```java
-public boolean isSubtree(TreeNode s, TreeNode t) {
-    if(s == null && t == null) return true;
-    if(s == null || t == null) return false;
-    if(s.val == t.val && isSame(s, t)) return true;
-    return isSubtree(s.left, t) || isSubtree(s.right, t);
-}
-
-private boolean isSame(TreeNode s, TreeNode t){
-    if(s == null && t == null) return true;
-    if(s == null || t == null) return false;
-    if(s.val != t.val) return false;
-    return isSame(s.left, t.left) && isSame(s.right, t.right);
-}
-```
-
-**´ÓÓĞĞòÊı×éÖĞ¹¹Ôì¶ş²æ²éÕÒÊ÷**
-
-[Leetcode : 108. Convert Sorted Array to Binary Search Tree (Easy)](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/)
-
-¶ş²æ²éÕÒÊ÷£¨BST£©£º¸ù½Úµã´óÓÚµÈÓÚ×ó×ÓÊ÷ËùÓĞ½Úµã£¬Ğ¡ÓÚµÈÓÚÓÒ×ÓÊ÷ËùÓĞ½Úµã¡£
-
-```java
-public TreeNode sortedArrayToBST(int[] nums) {
-    return toBST(nums, 0, nums.length - 1);
-}
-
-private TreeNode toBST(int[] nums, int sIdx, int eIdx){
-    if(sIdx > eIdx) return null;
-    int mIdx = (sIdx + eIdx) / 2;
-    TreeNode root = new TreeNode(nums[mIdx]);
-    root.left =  toBST(nums, sIdx, mIdx - 1);
-    root.right = toBST(nums, mIdx + 1, eIdx);
-    return root;
-}
-```
-
-**Á½½ÚµãµÄ×î³¤Â·¾¶**
+[207. Course Schedule (Medium)](https://leetcode.com/problems/course-schedule/description/)
 
 ```html
-          1
-        / \
-        2  3
-      / \
-      4  5
-
-Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].
+2, [[1,0]]
+return true
 ```
-
-```java
-private int max = 0;
-
-public int diameterOfBinaryTree(TreeNode root) {
-    depth(root);
-    return max;
-}
-
-private int depth(TreeNode root) {
-    if (root == null) {
-        return 0;
-    }
-    int leftDepth = depth(root.left);
-    int rightDepth = depth(root.right);
-    max = Math.max(max, leftDepth + rightDepth);
-    return Math.max(leftDepth, rightDepth) + 1;
-}
-```
-
-**ÕÒ³ö¶ş²æÊ÷ÖĞµÚ¶şĞ¡µÄ½Úµã**
-
-[Leetcode : 671. Second Minimum Node In a Binary Tree (Easy)](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/description/)
 
 ```html
-Input:
-    2
-  / \
-  2  5
-    / \
-    5  7
-
-Output: 5
+2, [[1,0],[0,1]]
+return false
 ```
 
-Ò»¸ö½ÚµãÒªÃ´¾ßÓĞ 0 ¸ö»ò 2 ¸ö×Ó½Úµã£¬Èç¹ûÓĞ×Ó½Úµã£¬ÄÇÃ´¸ù½ÚµãÊÇ×îĞ¡µÄ½Úµã¡£
+é¢˜ç›®æè¿°ï¼šä¸€ä¸ªè¯¾ç¨‹å¯èƒ½ä¼šå…ˆä¿®è¯¾ç¨‹ï¼Œåˆ¤æ–­ç»™å®šçš„å…ˆä¿®è¯¾ç¨‹è§„å®šæ˜¯å¦åˆæ³•ã€‚
+
+æœ¬é¢˜ä¸éœ€è¦ä½¿ç”¨æ‹“æ‰‘æ’åºï¼Œåªéœ€è¦æ£€æµ‹æœ‰å‘å›¾æ˜¯å¦å­˜åœ¨ç¯å³å¯ã€‚
 
 ```java
-public int findSecondMinimumValue(TreeNode root) {
-    if(root == null) return -1;
-    if(root.left == null && root.right == null) return -1;
-    int leftVal = root.left.val;
-    int rightVal = root.right.val;
-    if(leftVal == root.val) leftVal = findSecondMinimumValue(root.left);
-    if(rightVal == root.val) rightVal = findSecondMinimumValue(root.right);
-    if(leftVal != -1 && rightVal != -1) return Math.min(leftVal, rightVal);
-    if(leftVal != -1) return leftVal;
-    return rightVal;
-}
-```
-
-**Ñ°ÕÒÁ½¸ö½ÚµãµÄ×î½ü¹«¹²×æÏÈ**
-
-[Leetcode : 235. Lowest Common Ancestor of a Binary Search Tree (Easy)](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
-
-```java
-public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-    if(root.val > p.val && root.val > q.val) return lowestCommonAncestor(root.left, p, q);
-    if(root.val < p.val && root.val < q.val) return lowestCommonAncestor(root.right, p, q);
-    return root;
-}
-```
-
-**×î½ü¹«¹²×æÏÈ**
-
-[Leetcode : 236. Lowest Common Ancestor of a Binary Tree (Medium) ](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/)
-
-```java
-public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-    if (root == null || root == p || root == q) return root;
-    TreeNode left = lowestCommonAncestor(root.left, p, q);
-    TreeNode right = lowestCommonAncestor(root.right, p, q);
-    return left == null ? right : right == null ? left : root;
-}
-```
-
-**×î´óÏàÍ¬½ÚµãÖµµÄÂ·¾¶³¤¶È**
-
-[Leetcode : 687. Longest Univalue Path (Easy)](https://pomotodo.com/app/)
-
-```html
-              1
-            / \
-            4  5
-          / \  \
-          4  4  5
-
-Output : 2
-```
-
-```java
-private int path = 0;
-public int longestUnivaluePath(TreeNode root) {
-    dfs(root);
-    return path;
-}
-
-private int dfs(TreeNode root){
-    if(root == null) return 0;
-    int left = dfs(root.left);
-    int right = dfs(root.right);
-    int leftPath = root.left != null && root.left.val == root.val ? left + 1 : 0;
-    int rightPath = root.right != null && root.right.val == root.val ? right + 1 : 0;
-    path = Math.max(path, leftPath + rightPath);
-    return Math.max(leftPath, rightPath);
-}
-```
-
-**¼ä¸ô±éÀú**
-
-[Leetcode : 337. House Robber III (Medium)](https://leetcode.com/problems/house-robber-iii/description/)
-
-```java
-public int rob(TreeNode root) {
-    if (root == null) return 0;
-    int val1 = root.val;
-    if (root.left != null) {
-        val1 += rob(root.left.left) + rob(root.left.right);
+public boolean canFinish(int numCourses, int[][] prerequisites) {
+    List<Integer>[] graphic = new List[numCourses];
+    for (int i = 0; i < numCourses; i++) {
+        graphic[i] = new ArrayList<>();
     }
-    if (root.right != null) {
-        val1 += rob(root.right.left) + rob(root.right.right);
+    for (int[] pre : prerequisites) {
+        graphic[pre[0]].add(pre[1]);
     }
-    int val2 = rob(root.left) + rob(root.right);
-    return Math.max(val1, val2);
-}
-```
-
-### ²ã´Î±éÀú
-
-Ê¹ÓÃ BFS£¬²»ĞèÒªÊ¹ÓÃÁ½¸ö¶ÓÁĞÀ´·Ö±ğ´æ´¢µ±Ç°²ãµÄ½ÚµãºÍÏÂÒ»²ãµÄ½Úµã£¬ ÒòÎªÔÚ¿ªÊ¼±éÀúÒ»²ãµÄ½ÚµãÊ±£¬µ±Ç°¶ÓÁĞÖĞµÄ½ÚµãÊı¾ÍÊÇµ±Ç°²ãµÄ½ÚµãÊı£¬Ö»Òª¿ØÖÆ±éÀúÕâÃ´¶à½ÚµãÊı£¬¾ÍÄÜ±£Ö¤Õâ´Î±éÀúµÄ¶¼ÊÇµ±Ç°²ãµÄ½Úµã¡£
-
-**¼ÆËãÒ»¿ÃÊ÷Ã¿²ã½ÚµãµÄÆ½¾ùÊı**
-
-[637. Average of Levels in Binary Tree (Easy)](https://leetcode.com/problems/average-of-levels-in-binary-tree/description/)
-
-```java
-public List<Double> averageOfLevels(TreeNode root) {
-    List<Double> ret = new ArrayList<>();
-    if(root == null) return ret;
-    Queue<TreeNode> queue = new LinkedList<>();
-    queue.add(root);
-    while(!queue.isEmpty()){
-        int cnt = queue.size();
-        double sum = 0;
-        for(int i = 0; i < cnt; i++){
-            TreeNode node = queue.poll();
-            sum += node.val;
-            if(node.left != null) queue.add(node.left);
-            if(node.right != null) queue.add(node.right);
+    boolean[] globalMarked = new boolean[numCourses];
+    boolean[] localMarked = new boolean[numCourses];
+    for (int i = 0; i < numCourses; i++) {
+        if (hasCycle(globalMarked, localMarked, graphic, i)) {
+            return false;
         }
-        ret.add(sum / cnt);
     }
-    return ret;
+    return true;
 }
-```
 
-**µÃµ½×óÏÂ½ÇµÄ½Úµã**
+private boolean hasCycle(boolean[] globalMarked, boolean[] localMarked,
+                         List<Integer>[] graphic, int curNode) {
 
-[Leetcode : 513. Find Bottom Left Tree Value (Easy)](https://leetcode.com/problems/find-bottom-left-tree-value/description/)
-
-```java
-public int findBottomLeftValue(TreeNode root) {
-    Queue<TreeNode> queue = new LinkedList<>();
-    queue.add(root);
-    while(!queue.isEmpty()){
-        root = queue.poll();
-        if(root.right != null) queue.add(root.right);
-        if(root.left != null) queue.add(root.left);
+    if (localMarked[curNode]) {
+        return true;
     }
-    return root.val;
-}
-```
-
-### Ç°ÖĞºóĞò±éÀú
-
-```html
-   1
-  / \
-  2  3
- / \  \
-4  5  6
-```
-
-²ã´Î±éÀúË³Ğò£º[1 2 3 4 5 6]
-Ç°Ğò±éÀúË³Ğò£º[1 2 4 5 3 6]
-ÖĞĞò±éÀúË³Ğò£º[4 2 5 1 3 6]
-ºóĞò±éÀúË³Ğò£º[4 5 2 6 3 1]
-
-²ã´Î±éÀúÊ¹ÓÃ BFS ÊµÏÖ£¬ÀûÓÃµÄ¾ÍÊÇ BFS Ò»²ãÒ»²ã±éÀúµÄÌØĞÔ£»¶øÇ°Ğò¡¢ÖĞĞò¡¢ºóĞò±éÀúÀûÓÃÁË DFS ÊµÏÖ¡£
-
-Ç°Ğò¡¢ÖĞĞò¡¢ºóĞò±éÖ»ÊÇÔÚ¶Ô½Úµã·ÃÎÊµÄË³ĞòÓĞÒ»µã²»Í¬£¬ÆäËü¶¼ÏàÍ¬¡£
-
-¢Ù Ç°Ğò
-
-```java
-void dfs(TreeNode root){
-    visit(root);
-    dfs(root.left);
-    dfs(root.right);
-}
-```
-
-¢Ú ÖĞĞò
-
-```java
-void dfs(TreeNode root){
-    dfs(root.left);
-    visit(root);
-    dfs(root.right);
-}
-```
-
-¢Û ºóĞò
-
-```java
-void dfs(TreeNode root){
-    dfs(root.left);
-    dfs(root.right);
-    visit(root);
-}
-```
-
-**·Çµİ¹éÊµÏÖ¶ş²æÊ÷µÄÇ°Ğò±éÀú**
-
-[Leetcode : 144. Binary Tree Preorder Traversal (Medium)](https://leetcode.com/problems/binary-tree-preorder-traversal/description/)
-
-```java
-public List<Integer> preorderTraversal(TreeNode root) {
-    List<Integer> ret = new ArrayList<>();
-    if (root == null) return ret;
-    Stack<TreeNode> stack = new Stack<>();
-    stack.push(root);
-    while (!stack.isEmpty()) {
-        TreeNode node = stack.pop();
-        ret.add(node.val);
-        if (node.right != null) stack.push(node.right);
-        if (node.left != null) stack.push(node.left); // ÏÈÌí¼ÓÓÒ×ÓÊ÷ÔÙÌí¼Ó×ó×ÓÊ÷£¬ÕâÑùÊÇÎªÁËÈÃ×ó×ÓÊ÷ÔÚÕ»¶¥
+    if (globalMarked[curNode]) {
+        return false;
     }
-    return ret;
-}
-```
-
-**·Çµİ¹éÊµÏÖ¶ş²æÊ÷µÄºóĞø±éÀú**
-
-[Leetcode : ### 145. Binary Tree Postorder Traversal (Medium)](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)
-
-Ç°Ğò±éÀúÎª root -> left -> right£¬ºóĞò±éÀúÎª left -> right -> root£¬¿ÉÒÔĞŞ¸ÄÇ°Ğò±éÀú³ÉÎª root -> right -> left£¬ÄÇÃ´Õâ¸öË³Ğò¾ÍºÍºóĞò±éÀúÕıºÃÏà·´¡£
-
-```java
-public List<Integer> postorderTraversal(TreeNode root) {
-    List<Integer> ret = new ArrayList<>();
-    if (root == null) return ret;
-    Stack<TreeNode> stack = new Stack<>();
-    stack.push(root);
-    while (!stack.isEmpty()) {
-        TreeNode node = stack.pop();
-        ret.add(node.val);
-        if (node.left != null) stack.push(node.left);
-        if (node.right != null) stack.push(node.right);
-    }
-    Collections.reverse(ret);
-    return ret;
-}
-```
-
-**·Çµİ¹éÊµÏÖ¶ş²æÊ÷µÄÖĞĞò±éÀú**
-
-[Leetcode : 94. Binary Tree Inorder Traversal (Medium)](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)
-
-```java
-public List<Integer> inorderTraversal(TreeNode root) {
-    List<Integer> ret = new ArrayList<>();
-    Stack<TreeNode> stack = new Stack<>();
-    TreeNode cur = root;
-    while(cur != null || !stack.isEmpty()) {
-        while(cur != null) { // Ä£Äâµİ¹éÕ»µÄ²»¶ÏÉîÈë
-            stack.add(cur);
-            cur = cur.left;
+    globalMarked[curNode] = true;
+    localMarked[curNode] = true;
+    for (int nextNode : graphic[curNode]) {
+        if (hasCycle(globalMarked, localMarked, graphic, nextNode)) {
+            return true;
         }
-        TreeNode node = stack.pop();
-        ret.add(node.val);
-        cur = node.right;
     }
-    return ret;
-}
-```
-
-**Ê¹ÓÃÖĞĞò±éÀúºÍÇ°Ğò±éÀúĞòÁĞÖØ½¨¶ş²æÊ÷** //TODO
-
-### BST
-
-Ö÷ÒªÀûÓÃ BST ÖĞĞò±éÀúÓĞĞòµÄÌØµã¡£
-
-**ÔÚ BST ÖĞÑ°ÕÒÁ½¸ö½Úµã£¬Ê¹ËüÃÇµÄºÍÎªÒ»¸ö¸ø¶¨Öµ¡£**
-
-[653. Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/)
-
-Ê¹ÓÃÖĞĞò±éÀúµÃµ½ÓĞĞòÊı×éÖ®ºó£¬ÔÙÀûÓÃË«Ö¸Õë¶ÔÊı×é½øĞĞ²éÕÒ¡£
-
-Ó¦¸Ã×¢Òâµ½£¬ÕâÒ»Ìâ²»ÄÜÓÃ·Ö±ğÔÚ×óÓÒ×ÓÊ÷Á½²¿·ÖÀ´´¦ÀíÕâÖÖË¼Ïë£¬ÒòÎªÁ½¸ö´ıÇóµÄ½Úµã¿ÉÄÜ·Ö±ğÔÚ×óÓÒ×ÓÊ÷ÖĞ¡£
-
-```java
-public boolean findTarget(TreeNode root, int k) {
-    List<Integer> nums = new ArrayList<>();
-    inOrder(root, nums);
-    int i = 0, j = nums.size() - 1;
-    while(i < j){
-        int sum = nums.get(i) + nums.get(j);
-        if(sum == k) return true;
-        if(sum < k) i++;
-        else j--;
-    }
+    localMarked[curNode] = false;
     return false;
 }
-
-private void inOrder(TreeNode root, List<Integer> nums){
-    if(root == null) return;
-    inOrder(root.left, nums);
-    nums.add(root.val);
-    inOrder(root.right, nums);
-}
 ```
 
-**ÔÚ BST ÖĞ²éÕÒ×îĞ¡µÄÁ½¸ö½ÚµãÖ®²îµÄ¾ø¶ÔÖµ**
+**è¯¾ç¨‹å®‰æ’çš„é¡ºåº** 
 
-[Leetcode : 530. Minimum Absolute Difference in BST (Easy)](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/)
+[210. Course Schedule II (Medium)](https://leetcode.com/problems/course-schedule-ii/description/)
 
-ÀûÓÃ BST µÄÖĞĞò±éÀúÎªÓĞĞòµÄĞÔÖÊ£¬¼ÆËãÖĞĞò±éÀúÖĞÁÙ½üµÄÁ½¸ö½ÚµãÖ®²îµÄ¾ø¶ÔÖµ£¬È¡×îĞ¡Öµ¡£
-
-```java
-private int minDiff = Integer.MAX_VALUE;
-private int preVal = -1;
-
-public int getMinimumDifference(TreeNode root) {
-    inorder(root);
-    return minDiff;
-}
-
-private void inorder(TreeNode node){
-    if(node == null) return;
-    inorder(node.left);
-    if(preVal != -1) minDiff = Math.min(minDiff, Math.abs(node.val - preVal));
-    preVal = node.val;
-    inorder(node.right);
-}
+```html
+4, [[1,0],[2,0],[3,1],[3,2]]
+There are a total of 4 courses to take. To take course 3 you should have finished both courses 1 and 2. Both courses 1 and 2 should be taken after you finished course 0. So one correct course order is [0,1,2,3]. Another correct ordering is[0,2,1,3].
 ```
 
-**°Ñ BST Ã¿¸ö½ÚµãµÄÖµ¶¼¼ÓÉÏ±ÈËü´óµÄ½ÚµãµÄÖµ**
+ä½¿ç”¨ DFS æ¥å®ç°æ‹“æ‰‘æ’åºï¼Œä½¿ç”¨ä¸€ä¸ªæ ˆå­˜å‚¨ååºéå†ç»“æœï¼Œè¿™ä¸ªæ ˆçš„é€†åºç»“æœå°±æ˜¯æ‹“æ‰‘æ’åºç»“æœã€‚
 
-[Leetcode : Convert BST to Greater Tree (Easy)](https://leetcode.com/problems/convert-bst-to-greater-tree/description/)
-
-ÏÈ±éÀúÓÒ×ÓÊ÷¡£
+è¯æ˜ï¼šå¯¹äºä»»ä½•å…ˆåºå…³ç³»ï¼šv->wï¼Œååºéå†ç»“æœå¯ä»¥ä¿è¯ w å…ˆè¿›å…¥æ ˆä¸­ï¼Œå› æ­¤æ ˆçš„é€†åºç»“æœä¸­ v ä¼šåœ¨ w ä¹‹å‰ã€‚
 
 ```java
-private int sum = 0;
-
-public TreeNode convertBST(TreeNode root) {
-    traver(root);
-    return root;
-}
-
-private void traver(TreeNode root) {
-    if (root == null) {
-        return;
+public int[] findOrder(int numCourses, int[][] prerequisites) {
+    List<Integer>[] graphic = new List[numCourses];
+    for (int i = 0; i < numCourses; i++) {
+        graphic[i] = new ArrayList<>();
     }
-    if (root.right != null) {
-        traver(root.right);
+    for (int[] pre : prerequisites) {
+        graphic[pre[0]].add(pre[1]);
     }
-    sum += root.val;
-    root.val = sum;
-    if (root.left != null) {
-        traver(root.left);
-    }
-}
-```
-
-**Ñ°ÕÒ BST ÖĞ³öÏÖ´ÎÊı×î¶àµÄ½Úµã**
-
-```java
-private int cnt = 1;
-private int maxCnt = 1;
-private TreeNode preNode = null;
-private List<Integer> list;
-
-public int[] findMode(TreeNode root) {
-    list = new ArrayList<>();
-    inorder(root);
-    int[] ret = new int[list.size()];
-    int idx = 0;
-    for(int num : list){
-        ret[idx++] = num;
-    }
-    return ret;
-}
-
-private void inorder(TreeNode node){
-    if(node == null) return;
-    inorder(node.left);
-    if(preNode != null){
-        if(preNode.val == node.val) cnt++;
-        else cnt = 1;
-    }
-    if(cnt > maxCnt){
-        maxCnt = cnt;
-        list.clear();
-        list.add(node.val);
-    } else if(cnt == maxCnt){
-        list.add(node.val);
-    }
-    preNode = node;
-    inorder(node.right);
-}
-```
-
-**Ñ°ÕÒ BST µÄµÚ k ¸öÔªËØ**
-
-[Leetcode : 230. Kth Smallest Element in a BST (Medium)](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)
-
-µİ¹é½â·¨£º
-
-```java
-public int kthSmallest(TreeNode root, int k) {
-    int leftCnt = count(root.left);
-    if(leftCnt == k - 1) return root.val;
-    if(leftCnt > k - 1) return kthSmallest(root.left, k);
-    return kthSmallest(root.right, k - leftCnt - 1);
-}
-
-private int count(TreeNode node) {
-    if(node == null) return 0;
-    return 1 + count(node.left) + count(node.right);
-}
-```
-
-ÖĞĞò±éÀú½â·¨£º
-
-```java
-private int cnt = 0;
-private int val;
-
-public int kthSmallest(TreeNode root, int k) {
-    inorder(root, k);
-    return val;
-}
-
-private void inorder(TreeNode node, int k) {
-    if(node == null) return;
-    inorder(node.left, k);
-    cnt++;
-    if(cnt == k) {
-        val = node.val;
-        return;
-    }
-    inorder(node.right, k);
-}
-```
-
-
-### Trie
-
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/5c638d59-d4ae-4ba4-ad44-80bdc30f38dd.jpg)
-
-Trie£¬ÓÖ³ÆÇ°×ºÊ÷»ò×ÖµäÊ÷£¬ÓÃÓÚÅĞ¶Ï×Ö·û´®ÊÇ·ñ´æÔÚ»òÕßÊÇ·ñ¾ßÓĞÄ³ÖÖ×Ö·û´®Ç°×º¡£
-
-**ÊµÏÖÒ»¸ö Trie**
-
-[Leetcode : 208. Implement Trie (Prefix Tree) (Medium)](https://leetcode.com/problems/implement-trie-prefix-tree/description/)
-
-```java
-class Trie {
-    
-    private class Node{
-        Node[] childs = new Node[26];
-        boolean isLeaf;
-    }
-    
-    private Node root = new Node();
-    
-    /** Initialize your data structure here. */
-    public Trie() {
-    }
-    
-    /** Inserts a word into the trie. */
-    public void insert(String word) {
-        int idx = word.charAt(0) - 'a';
-        insert(word, root);
-    }
-    
-    private void insert(String word, Node node){
-        int idx = word.charAt(0) - 'a';
-        if(node.childs[idx] == null){
-            node.childs[idx] = new Node();
-        }
-        if(word.length() == 1) node.childs[idx].isLeaf = true;
-        else insert(word.substring(1), node.childs[idx]);
-    }
-    
-    /** Returns if the word is in the trie. */
-    public boolean search(String word) {
-        return search(word, root); 
-    }
-    
-    private boolean search(String word, Node node){
-        if(node == null) return false;
-        int idx = word.charAt(0) - 'a';
-        if(node.childs[idx] == null) return false;
-        if(word.length() == 1) return node.childs[idx].isLeaf;
-        return search(word.substring(1), node.childs[idx]);
-    }
-    
-    /** Returns if there is any word in the trie that starts with the given prefix. */
-    public boolean startsWith(String prefix) {
-        return startWith(prefix, root);
-    }
-    
-    private boolean startWith(String prefix, Node node){
-        if(node == null) return false;
-        if(prefix.length() == 0) return true;
-        int idx = prefix.charAt(0) - 'a';
-        return startWith(prefix.substring(1), node.childs[idx]);
-    }
-}
-```
-
-**ÊµÏÖÒ»¸ö Trie£¬ÓÃÀ´ÇóÇ°×ººÍ**
-
-[Leetcode : 677. Map Sum Pairs (Medium)](https://leetcode.com/problems/map-sum-pairs/description/)
-
-```java
-class MapSum {
-    private class Trie {
-        int val;
-        Map<Character, Trie> childs;
-        boolean isWord;
-        
-        Trie() {
-            childs = new HashMap<>();
+    Stack<Integer> postOrder = new Stack<>();
+    boolean[] globalMarked = new boolean[numCourses];
+    boolean[] localMarked = new boolean[numCourses];
+    for (int i = 0; i < numCourses; i++) {
+        if (hasCycle(globalMarked, localMarked, graphic, i, postOrder)) {
+            return new int[0];
         }
     }
-    
-    private Trie root;
-
-    public MapSum() {
-        root = new Trie();
+    int[] orders = new int[numCourses];
+    for (int i = numCourses - 1; i >= 0; i--) {
+        orders[i] = postOrder.pop();
     }
-    
-    public void insert(String key, int val) {
-        Trie cur = root;
-        for(char c : key.toCharArray()) {
-            if(!cur.childs.containsKey(c)) {
-                Trie next = new Trie();
-                cur.childs.put(c, next);
+    return orders;
+}
+
+private boolean hasCycle(boolean[] globalMarked, boolean[] localMarked, List<Integer>[] graphic,
+                         int curNode, Stack<Integer> postOrder) {
+
+    if (localMarked[curNode]) {
+        return true;
+    }
+    if (globalMarked[curNode]) {
+        return false;
+    }
+    globalMarked[curNode] = true;
+    localMarked[curNode] = true;
+    for (int nextNode : graphic[curNode]) {
+        if (hasCycle(globalMarked, localMarked, graphic, nextNode, postOrder)) {
+            return true;
+        }
+    }
+    localMarked[curNode] = false;
+    postOrder.push(curNode);
+    return false;
+}
+```
+
+### å¹¶æŸ¥é›†
+
+å¹¶æŸ¥é›†å¯ä»¥åŠ¨æ€åœ°è¿é€šä¸¤ä¸ªç‚¹ï¼Œå¹¶ä¸”å¯ä»¥éå¸¸å¿«é€Ÿåœ°åˆ¤æ–­ä¸¤ä¸ªç‚¹æ˜¯å¦è¿é€šã€‚
+
+**å†—ä½™è¿æ¥** 
+
+[684. Redundant Connection (Medium)](https://leetcode.com/problems/redundant-connection/description/)
+
+```html
+Input: [[1,2], [1,3], [2,3]]
+Output: [2,3]
+Explanation: The given undirected graph will be like this:
+  1
+ / \
+2 - 3
+```
+
+é¢˜ç›®æè¿°ï¼šæœ‰ä¸€ç³»åˆ—çš„è¾¹è¿æˆçš„å›¾ï¼Œæ‰¾å‡ºä¸€æ¡è¾¹ï¼Œç§»é™¤å®ƒä¹‹åè¯¥å›¾èƒ½å¤Ÿæˆä¸ºä¸€æ£µæ ‘ã€‚
+
+```java
+public int[] findRedundantConnection(int[][] edges) {
+    int N = edges.length;
+    UF uf = new UF(N);
+    for (int[] e : edges) {
+        int u = e[0], v = e[1];
+        if (uf.connect(u, v)) {
+            return e;
+        }
+        uf.union(u, v);
+    }
+    return new int[]{-1, -1};
+}
+
+private class UF {
+
+    private int[] id;
+
+    UF(int N) {
+        id = new int[N + 1];
+        for (int i = 0; i < id.length; i++) {
+            id[i] = i;
+        }
+    }
+
+    void union(int u, int v) {
+        int uID = find(u);
+        int vID = find(v);
+        if (uID == vID) {
+            return;
+        }
+        for (int i = 0; i < id.length; i++) {
+            if (id[i] == uID) {
+                id[i] = vID;
             }
-            cur = cur.childs.get(c);
         }
-        cur.val = val;
-        cur.isWord = true;
     }
-    
-    public int sum(String prefix) {
-        Trie cur = root;
-        for(char c : prefix.toCharArray()) {
-            if(!cur.childs.containsKey(c)) return 0;
-            cur = cur.childs.get(c);
-        }
-        return dfs(cur);
+
+    int find(int p) {
+        return id[p];
     }
-    
-    private int dfs(Trie cur) {
-        int sum = 0;
-        if(cur.isWord) {
-            sum += cur.val;
-        }
-        for(Trie next : cur.childs.values()) {
-            sum += dfs(next);
-        }
-        return sum;
+
+    boolean connect(int u, int v) {
+        return find(u) == find(v);
     }
 }
 ```
 
-## Í¼
+## ä½è¿ç®—
 
-## Î»ÔËËã
+**1. åŸºæœ¬åŸç†** 
 
-**1. »ù±¾Ô­Àí**
-
-0s ±íÊ¾ Ò»´® 0 £¬1s ±íÊ¾Ò»´® 1¡£
+0s è¡¨ç¤ºä¸€ä¸² 0ï¼Œ1s è¡¨ç¤ºä¸€ä¸² 1ã€‚
 
 ```
 x ^ 0s = x      x & 0s = 0      x | 0s = x
-x ^ 1s = \~x     x & 1s = x      x | 1s = 1s
+x ^ 1s = ~x     x & 1s = x      x | 1s = 1s
 x ^ x = 0       x & x = x       x | x = x
 ```
 
-¢Ù ÀûÓÃ x ^ 1s = \~x µÄÌØµã£¬¿ÉÒÔ½«Î»¼¶±íÊ¾·­×ª£»ÀûÓÃ x ^ x = 0 µÄÌØµã£¬¿ÉÒÔ½«Èı¸öÊıÖĞÖØ¸´µÄÁ½¸öÊıÈ¥³ı£¬Ö»ÁôÏÂÁíÒ»¸öÊı£»
-¢Ú ÀûÓÃ x & 0s = 0 ºÍ x & 1s = x µÄÌØµã£¬¿ÉÒÔÊµÏÖÑÚÂë²Ù×÷¡£Ò»¸öÊı num Óë mask £º00111100 ½øĞĞÎ»Óë²Ù×÷£¬Ö»±£Áô num ÖĞÓë mask µÄ 1 ²¿·ÖÏà¶ÔÓ¦µÄÎ»£»
-¢Û ÀûÓÃ x | 0s = x ºÍ x | 1s = 1s µÄÌØµã£¬¿ÉÒÔÊµÏÖÉèÖÃ²Ù×÷¡£Ò»¸öÊı num Óë mask£º00111100 ½øĞĞÎ»»ò²Ù×÷£¬½« num ÖĞÓë mask µÄ 1 ²¿·ÖÏà¶ÔÓ¦µÄÎ»¶¼ÉèÖÃÎª 1 ¡£
+- åˆ©ç”¨ x ^ 1s = \~x çš„ç‰¹ç‚¹ï¼Œå¯ä»¥å°†ä½çº§è¡¨ç¤ºç¿»è½¬ï¼›åˆ©ç”¨ x ^ x = 0 çš„ç‰¹ç‚¹ï¼Œå¯ä»¥å°†ä¸‰ä¸ªæ•°ä¸­é‡å¤çš„ä¸¤ä¸ªæ•°å»é™¤ï¼Œåªç•™ä¸‹å¦ä¸€ä¸ªæ•°ã€‚
+- åˆ©ç”¨ x & 0s = 0 å’Œ x & 1s = x çš„ç‰¹ç‚¹ï¼Œå¯ä»¥å®ç°æ©ç æ“ä½œã€‚ä¸€ä¸ªæ•° num ä¸ maskï¼š00111100 è¿›è¡Œä½ä¸æ“ä½œï¼Œåªä¿ç•™ num ä¸­ä¸ mask çš„ 1 éƒ¨åˆ†ç›¸å¯¹åº”çš„ä½ã€‚
+- åˆ©ç”¨ x | 0s = x å’Œ x | 1s = 1s çš„ç‰¹ç‚¹ï¼Œå¯ä»¥å®ç°è®¾å€¼æ“ä½œã€‚ä¸€ä¸ªæ•° num ä¸ maskï¼š00111100 è¿›è¡Œä½æˆ–æ“ä½œï¼Œå°† num ä¸­ä¸ mask çš„ 1 éƒ¨åˆ†ç›¸å¯¹åº”çš„ä½éƒ½è®¾ç½®ä¸º 1ã€‚
 
-\>\> n ÎªËãÊõÓÒÒÆ£¬Ïàµ±ÓÚ³ıÒÔ 2<sup>n</sup>£»
-\>\>\> n ÎªÎŞ·ûºÅÓÒÒÆ£¬×ó±ß»á²¹ÉÏ 0¡£
-&lt;&lt; n ÎªËãÊõ×óÒÆ£¬Ïàµ±ÓÚ³ËÒÔ 2<sup>n</sup>¡£
+ä½ä¸è¿ç®—æŠ€å·§ï¼š
 
-n&(n-1) ¸ÃÎ»ÔËËãÊÇÈ¥³ı n µÄÎ»¼¶±íÊ¾ÖĞ×îµÍµÄÄÇÒ»Î»¡£ÀıÈç¶ÔÓÚ¶ş½øÖÆ±íÊ¾ 10110**100**£¬¼õÈ¥ 1 µÃµ½ 10110**011**£¬ÕâÁ½¸öÊıÏàÓëµÃµ½ 10110**000**¡£
+- n&(n-1) å»é™¤ n çš„ä½çº§è¡¨ç¤ºä¸­æœ€ä½çš„é‚£ä¸€ä½ã€‚ä¾‹å¦‚å¯¹äºäºŒè¿›åˆ¶è¡¨ç¤º 10110 **100** ï¼Œå‡å» 1 å¾—åˆ° 10110**011**ï¼Œè¿™ä¸¤ä¸ªæ•°ç›¸ä¸å¾—åˆ° 10110**000**ã€‚
+- n&(-n) å¾—åˆ° n çš„ä½çº§è¡¨ç¤ºä¸­æœ€ä½çš„é‚£ä¸€ä½ã€‚-n å¾—åˆ° n çš„åç åŠ  1ï¼Œå¯¹äºäºŒè¿›åˆ¶è¡¨ç¤º 10110 **100** ï¼Œ-n å¾—åˆ° 01001**100**ï¼Œç›¸ä¸å¾—åˆ° 00000**100**ã€‚
+- n-n&(\~n+1) å»é™¤ n çš„ä½çº§è¡¨ç¤ºä¸­æœ€é«˜çš„é‚£ä¸€ä½ã€‚
 
-n-n&(\~n+1) ¸ÅÔËËãÊÇÈ¥³ı n µÄÎ»¼¶±íÊ¾ÖĞ×î¸ßµÄÄÇÒ»Î»¡£
+ç§»ä½è¿ç®—ï¼š
 
-n&(-n) ¸ÃÔËËãµÃµ½ n µÄÎ»¼¶±íÊ¾ÖĞ×îµÍµÄÄÇÒ»Î»¡£-n µÃµ½ n µÄ·´Âë¼Ó 1£¬¶ÔÓÚ¶ş½øÖÆ±íÊ¾ 10110**100**£¬-n µÃµ½ 01001**100**£¬ÏàÓëµÃµ½ 00000**100**
+- \>\> n ä¸ºç®—æœ¯å³ç§»ï¼Œç›¸å½“äºé™¤ä»¥ 2<sup>n</sup>ï¼›
+- \>\>\> n ä¸ºæ— ç¬¦å·å³ç§»ï¼Œå·¦è¾¹ä¼šè¡¥ä¸Š 0ã€‚
+- &lt;&lt; n ä¸ºç®—æœ¯å·¦ç§»ï¼Œç›¸å½“äºä¹˜ä»¥ 2<sup>n</sup>ã€‚
 
-**2. mask ¼ÆËã**
+**2. mask è®¡ç®—** 
 
-Òª»ñÈ¡ 111111111£¬½« 0 È¡·´¼´¿É£¬\~0¡£
+è¦è·å– 111111111ï¼Œå°† 0 å–åå³å¯ï¼Œ\~0ã€‚
 
-ÒªµÃµ½Ö»ÓĞµÚ i Î»Îª 1 µÄ mask£¬½« 1 Ïò×óÒÆ¶¯ i Î»¼´¿É£¬1&lt;&lt;i ¡£ÀıÈç 1&lt;&lt;5 µÃµ½Ö»ÓĞµÚ 5 Î»Îª 1 µÄ mask £º00010000¡£
+è¦å¾—åˆ°åªæœ‰ç¬¬ i ä½ä¸º 1 çš„ maskï¼Œå°† 1 å‘å·¦ç§»åŠ¨ i-1 ä½å³å¯ï¼Œ1&lt;&lt;(i-1) ã€‚ä¾‹å¦‚ 1&lt;&lt;4 å¾—åˆ°åªæœ‰ç¬¬ 5 ä½ä¸º 1 çš„ mask ï¼š00010000ã€‚
 
-ÒªµÃµ½ 1 µ½ i Î»Îª 1 µÄ mask£¬1&lt;&lt;(i+1)-1 ¼´¿É£¬ÀıÈç½« 1&lt;&lt;(4+1)-1 = 00010000-1 = 00001111¡£
+è¦å¾—åˆ° 1 åˆ° i ä½ä¸º 1 çš„ maskï¼Œ1&lt;&lt;(i+1)-1 å³å¯ï¼Œä¾‹å¦‚å°† 1&lt;&lt;(4+1)-1 = 00010000-1 = 00001111ã€‚
 
-ÒªµÃµ½ 1 µ½ i Î»Îª 0 µÄ mask£¬Ö»Ğè½« 1 µ½ i Î»Îª 1 µÄ mask È¡·´£¬¼´ \~(1&lt;&lt;(i+1)-1)¡£
+è¦å¾—åˆ° 1 åˆ° i ä½ä¸º 0 çš„ maskï¼Œåªéœ€å°† 1 åˆ° i ä½ä¸º 1 çš„ mask å–åï¼Œå³ \~(1&lt;&lt;(i+1)-1)ã€‚
 
-**3. Î»²Ù×÷¾ÙÀı**
-
-¢Ù »ñÈ¡µÚ i Î»
-
-num & 00010000 != 0
-
-```java
-(num & (1 << i)) != 0;
-```
-
-¢Ú ½«µÚ i Î»ÉèÖÃÎª 1
-
-num | 00010000
-
-```java
-num | (1 << i);
-```
-
-¢Û ½«µÚ i Î»Çå³ıÎª 0
-
-num & 11101111
-
-```java
-num & (\~(1 << i))
-```
-
-¢Ü ½«×î¸ßÎ»µ½µÚ i Î»Çå³ıÎª 0
-
-num & 00001111
-
-```java
-num & ((1 << i) - 1);
-```
-
-¢İ ½«µÚ 0 Î»µ½µÚ i Î»Çå³ıÎª 0
-
-num & 11110000
-
-```java
-num & (\~((1 << (i+1)) - 1));
-```
-
-¢Ş ½«µÚ i Î»ÉèÖÃÎª 0 »òÕß 1
-
-ÏÈ½«µÚ i Î»ÇåÁã£¬È»ºó½« v ×óÒÆ i Î»£¬Ö´ĞĞ¡°Î»»ò¡±ÔËËã¡£
-
-```java
-(num & (1 << i)) | (v << i);
-```
-
-**4. Java ÖĞµÄÎ»²Ù×÷**
+**3. Java ä¸­çš„ä½æ“ä½œ** 
 
 ```html
-static int Integer.bitCount()            // Í³¼Æ 1 µÄÊıÁ¿
-static int Integer.highestOneBit()       // »ñµÃ×î¸ßÎ»
-static String toBinaryString(int i)      // ×ª»»Î»¶ş½øÖÆ±íÊ¾µÄ×Ö·û´®
+static int Integer.bitCount();           // ç»Ÿè®¡ 1 çš„æ•°é‡
+static int Integer.highestOneBit();      // è·å¾—æœ€é«˜ä½
+static String toBinaryString(int i);     // è½¬æ¢ä¸ºäºŒè¿›åˆ¶è¡¨ç¤ºçš„å­—ç¬¦ä¸²
 ```
 
-**Í³¼ÆÁ½¸öÊıµÄ¶ş½øÖÆ±íÊ¾ÓĞ¶àÉÙÎ»²»Í¬**
+**ç»Ÿè®¡ä¸¤ä¸ªæ•°çš„äºŒè¿›åˆ¶è¡¨ç¤ºæœ‰å¤šå°‘ä½ä¸åŒ** 
 
-[Leetcode : 461. Hamming Distance (Easy)](https://leetcode.com/problems/hamming-distance/)
+[461. Hamming Distance (Easy)](https://leetcode.com/problems/hamming-distance/)
 
-¶ÔÁ½¸öÊı½øĞĞÒì»ò²Ù×÷£¬²»Í¬µÄÄÇÒ»Î»½á¹ûÎª 1 £¬Í³¼ÆÓĞ¶àÉÙ¸ö 1 ¼´¿É¡£
+```html
+Input: x = 1, y = 4
+
+Output: 2
+
+Explanation:
+1   (0 0 0 1)
+4   (0 1 0 0)
+       â†‘   â†‘
+
+The above arrows point to positions where the corresponding bits are different.
+```
+
+å¯¹ä¸¤ä¸ªæ•°è¿›è¡Œå¼‚æˆ–æ“ä½œï¼Œä½çº§è¡¨ç¤ºä¸åŒçš„é‚£ä¸€ä½ä¸º 1ï¼Œç»Ÿè®¡æœ‰å¤šå°‘ä¸ª 1 å³å¯ã€‚
 
 ```java
 public int hammingDistance(int x, int y) {
     int z = x ^ y;
     int cnt = 0;
-    while(z != 0){
-        if((z & 1) == 1) cnt++;
+    while(z != 0) {
+        if ((z & 1) == 1) cnt++;
         z = z >> 1;
     }
     return cnt;
 }
 ```
 
-¿ÉÒÔÊ¹ÓÃ Integer.bitcount() À´Í³¼Æ 1 ¸öµÄ¸öÊı¡£
+ä½¿ç”¨ z&(z-1) å»é™¤ z ä½çº§è¡¨ç¤ºæœ€ä½çš„é‚£ä¸€ä½ã€‚
+
+```java
+public int hammingDistance(int x, int y) {
+    int z = x ^ y;
+    int cnt = 0;
+    while (z != 0) {
+        z &= (z - 1);
+        cnt++;
+    }
+    return cnt;
+}
+```
+
+å¯ä»¥ä½¿ç”¨ Integer.bitcount() æ¥ç»Ÿè®¡ 1 ä¸ªçš„ä¸ªæ•°ã€‚
 
 ```java
 public int hammingDistance(int x, int y) {
@@ -4720,14 +6751,78 @@ public int hammingDistance(int x, int y) {
 }
 ```
 
-**·­×ªÒ»¸öÊıµÄ±ÈÌØÎ»**
+**æ•°ç»„ä¸­å”¯ä¸€ä¸€ä¸ªä¸é‡å¤çš„å…ƒç´ ** 
 
-[Leetcode : 190. Reverse Bits (Easy)](https://leetcode.com/problems/reverse-bits/description/)
+[136. Single Number (Easy)](https://leetcode.com/problems/single-number/description/)
+
+```html
+Input: [4,1,2,1,2]
+Output: 4
+```
+
+ä¸¤ä¸ªç›¸åŒçš„æ•°å¼‚æˆ–çš„ç»“æœä¸º 0ï¼Œå¯¹æ‰€æœ‰æ•°è¿›è¡Œå¼‚æˆ–æ“ä½œï¼Œæœ€åçš„ç»“æœå°±æ˜¯å•ç‹¬å‡ºç°çš„é‚£ä¸ªæ•°ã€‚
+
+```java
+public int singleNumber(int[] nums) {
+    int ret = 0;
+    for (int n : nums) ret = ret ^ n;
+    return ret;
+}
+```
+
+**æ‰¾å‡ºæ•°ç»„ä¸­ç¼ºå¤±çš„é‚£ä¸ªæ•°** 
+
+[268. Missing Number (Easy)](https://leetcode.com/problems/missing-number/description/)
+
+```html
+Input: [3,0,1]
+Output: 2
+```
+
+é¢˜ç›®æè¿°ï¼šæ•°ç»„å…ƒç´ åœ¨ 0-n ä¹‹é—´ï¼Œä½†æ˜¯æœ‰ä¸€ä¸ªæ•°æ˜¯ç¼ºå¤±çš„ï¼Œè¦æ±‚æ‰¾åˆ°è¿™ä¸ªç¼ºå¤±çš„æ•°ã€‚
+
+```java
+public int missingNumber(int[] nums) {
+    int ret = 0;
+    for (int i = 0; i < nums.length; i++) {
+        ret = ret ^ i ^ nums[i];
+    }
+    return ret ^ nums.length;
+}
+```
+
+**æ•°ç»„ä¸­ä¸é‡å¤çš„ä¸¤ä¸ªå…ƒç´ ** 
+
+[260. Single Number III (Medium)](https://leetcode.com/problems/single-number-iii/description/)
+
+ä¸¤ä¸ªä¸ç›¸ç­‰çš„å…ƒç´ åœ¨ä½çº§è¡¨ç¤ºä¸Šå¿…å®šä¼šæœ‰ä¸€ä½å­˜åœ¨ä¸åŒã€‚
+
+å°†æ•°ç»„çš„æ‰€æœ‰å…ƒç´ å¼‚æˆ–å¾—åˆ°çš„ç»“æœä¸ºä¸å­˜åœ¨é‡å¤çš„ä¸¤ä¸ªå…ƒç´ å¼‚æˆ–çš„ç»“æœã€‚
+
+diff &= -diff å¾—åˆ°å‡º diff æœ€å³ä¾§ä¸ä¸º 0 çš„ä½ï¼Œä¹Ÿå°±æ˜¯ä¸å­˜åœ¨é‡å¤çš„ä¸¤ä¸ªå…ƒç´ åœ¨ä½çº§è¡¨ç¤ºä¸Šæœ€å³ä¾§ä¸åŒçš„é‚£ä¸€ä½ï¼Œåˆ©ç”¨è¿™ä¸€ä½å°±å¯ä»¥å°†ä¸¤ä¸ªå…ƒç´ åŒºåˆ†å¼€æ¥ã€‚
+
+```java
+public int[] singleNumber(int[] nums) {
+    int diff = 0;
+    for (int num : nums) diff ^= num;
+    diff &= -diff;  // å¾—åˆ°æœ€å³ä¸€ä½
+    int[] ret = new int[2];
+    for (int num : nums) {
+        if ((num & diff) == 0) ret[0] ^= num;
+        else ret[1] ^= num;
+    }
+    return ret;
+}
+```
+
+**ç¿»è½¬ä¸€ä¸ªæ•°çš„æ¯”ç‰¹ä½** 
+
+[190. Reverse Bits (Easy)](https://leetcode.com/problems/reverse-bits/description/)
 
 ```java
 public int reverseBits(int n) {
     int ret = 0;
-    for(int i = 0; i < 32; i++){
+    for (int i = 0; i < 32; i++) {
         ret <<= 1;
         ret |= (n & 1);
         n >>>= 1;
@@ -4736,9 +6831,38 @@ public int reverseBits(int n) {
 }
 ```
 
-**²»ÓÃ¶îÍâ±äÁ¿½»»»Á½¸öÕûÊı**
+å¦‚æœè¯¥å‡½æ•°éœ€è¦è¢«è°ƒç”¨å¾ˆå¤šæ¬¡ï¼Œå¯ä»¥å°† int æ‹†æˆ 4 ä¸ª byteï¼Œç„¶åç¼“å­˜ byte å¯¹åº”çš„æ¯”ç‰¹ä½ç¿»è½¬ï¼Œæœ€åå†æ‹¼æ¥èµ·æ¥ã€‚
 
-[³ÌĞòÔ±´úÂëÃæÊÔÖ¸ÄÏ £ºP317](#)
+```java
+private static Map<Byte, Integer> cache = new HashMap<>();
+
+public int reverseBits(int n) {
+    int ret = 0;
+    for (int i = 0; i < 4; i++) {
+        ret <<= 8;
+        ret |= reverseByte((byte) (n & 0b11111111));
+        n >>= 8;
+    }
+    return ret;
+}
+
+private int reverseByte(byte b) {
+    if (cache.containsKey(b)) return cache.get(b);
+    int ret = 0;
+    byte t = b;
+    for (int i = 0; i < 8; i++) {
+        ret <<= 1;
+        ret |= t & 1;
+        t >>= 1;
+    }
+    cache.put(b, ret);
+    return ret;
+}
+```
+
+**ä¸ç”¨é¢å¤–å˜é‡äº¤æ¢ä¸¤ä¸ªæ•´æ•°** 
+
+[ç¨‹åºå‘˜ä»£ç é¢è¯•æŒ‡å— ï¼šP317](#)
 
 ```java
 a = a ^ b;
@@ -4746,38 +6870,11 @@ b = a ^ b;
 a = a ^ b;
 ```
 
-½« c = a ^ b£¬ÄÇÃ´ b ^ c = b ^ b ^ a = a£¬a ^ c = a ^ a ^ b = b¡£
+**åˆ¤æ–­ä¸€ä¸ªæ•°æ˜¯ä¸æ˜¯ 2 çš„ n æ¬¡æ–¹** 
 
-**ÅĞ¶ÏÒ»¸öÊıÊÇ²»ÊÇ 4 µÄ n ´Î·½**
+[231. Power of Two (Easy)](https://leetcode.com/problems/power-of-two/description/)
 
-[Leetcode : 342. Power of Four (Easy)](https://leetcode.com/problems/power-of-four/)
-
-¸ÃÊı¶ş½øÖÆ±íÊ¾ÓĞÇÒÖ»ÓĞÒ»¸öÆæÊıÎ»Îª 1 £¬ÆäÓàµÄ¶¼Îª 0 £¬ÀıÈç 16 £º 10000¡£¿ÉÒÔÃ¿´Î°Ñ 1 Ïò×óÒÆ¶¯ 2 Î»£¬¾ÍÄÜ¹¹Ôì³öÕâÖÖÊı×Ö£¬È»ºó±È½Ï¹¹Ôì³öÀ´µÄÊıÓëÒªÅĞ¶ÏµÄÊıÊÇ·ñÏàÍ¬¡£
-
-```java
-public boolean isPowerOfFour(int num) {
-    int i = 1;
-    while(i > 0){
-        if(i == num) return true;
-        i = i << 2;
-    }
-    return false;
-}
-```
-
-Ò²¿ÉÒÔÓÃ Java µÄ Integer.toString() ·½·¨½«¸ÃÊı×ª»»Îª 4 ½øÖÆĞÎÊ½µÄ×Ö·û´®£¬È»ºóÅĞ¶Ï×Ö·û´®ÊÇ·ñÒÔ 1 ¿ªÍ·¡£
-
-```java
-public boolean isPowerOfFour(int num) {
-    return Integer.toString(num, 4).matches("10*");
-}
-```
-
-**ÅĞ¶ÏÒ»¸öÊıÊÇ²»ÊÇ 2 µÄ n ´Î·½**
-
-[Leetcode : 231. Power of Two (Easy)](https://leetcode.com/problems/power-of-two/description/)
-
-Í¬Ñù¿ÉÒÔÓÃ Power of Four µÄ·½·¨£¬µ«ÊÇ 2 µÄ n ´Î·½¸üÌØÊâ£¬ËüµÄ¶ş½øÖÆ±íÊ¾Ö»ÓĞÒ»¸ö 1 ´æÔÚ¡£
+äºŒè¿›åˆ¶è¡¨ç¤ºåªæœ‰ä¸€ä¸ª 1 å­˜åœ¨ã€‚
 
 ```java
 public boolean isPowerOfTwo(int n) {
@@ -4785,7 +6882,7 @@ public boolean isPowerOfTwo(int n) {
 }
 ```
 
-ÀûÓÃ 1000 & 0111 == 0 ÕâÖÖĞÔÖÊ£¬µÃµ½ÒÔÏÂ½â·¨£º
+åˆ©ç”¨ 1000 & 0111 == 0 è¿™ç§æ€§è´¨ï¼Œå¾—åˆ°ä»¥ä¸‹è§£æ³•ï¼š
 
 ```java
 public boolean isPowerOfTwo(int n) {
@@ -4793,53 +6890,43 @@ public boolean isPowerOfTwo(int n) {
 }
 ```
 
-**Êı×éÖĞÎ¨Ò»Ò»¸ö²»ÖØ¸´µÄÔªËØ**
+**åˆ¤æ–­ä¸€ä¸ªæ•°æ˜¯ä¸æ˜¯ 4 çš„ n æ¬¡æ–¹** 
 
-[Leetcode : 136. Single Number (Easy)](https://leetcode.com/problems/single-number/description/)
+[342. Power of Four (Easy)](https://leetcode.com/problems/power-of-four/)
 
-Á½¸öÏàÍ¬µÄÊıÒì»òµÄ½á¹ûÎª 0£¬¶ÔËùÓĞÊı½øĞĞÒì»ò²Ù×÷£¬×îºóµÄ½á¹û¾ÍÊÇµ¥¶À³öÏÖµÄÄÇ¸öÊı¡£
-
-ÀàËÆµÄÓĞ£º[Leetcode : 389. Find the Difference (Easy)](https://leetcode.com/problems/find-the-difference/description/)£¬Á½¸ö×Ö·û´®½öÓĞÒ»¸ö×Ö·û²»ÏàÍ¬£¬Ê¹ÓÃÒì»ò²Ù×÷¿ÉÒÔÒÔ O(1) µÄ¿Õ¼ä¸´ÔÓ¶ÈÀ´Çó½â£¬¶ø²»ĞèÒªÊ¹ÓÃ HashSet¡£
+è¿™ç§æ•°åœ¨äºŒè¿›åˆ¶è¡¨ç¤ºä¸­æœ‰ä¸”åªæœ‰ä¸€ä¸ªå¥‡æ•°ä½ä¸º 1ï¼Œä¾‹å¦‚ 16ï¼ˆ10000ï¼‰ã€‚
 
 ```java
-public int singleNumber(int[] nums) {
-    int ret = 0;
-    for(int n : nums) ret = ret ^ n;
-    return ret;
+public boolean isPowerOfFour(int num) {
+    return num > 0 && (num & (num - 1)) == 0 && (num & 0b01010101010101010101010101010101) != 0;
 }
 ```
 
-**Êı×éÖĞ²»ÖØ¸´µÄÁ½¸öÔªËØ**
-
-[Leetcode : 260. Single Number III (Medium)](https://leetcode.com/problems/single-number-iii/description/)
-
-Á½¸ö²»ÏàµÈµÄÔªËØÔÚÎ»¼¶±íÊ¾ÉÏ±Ø¶¨»áÓĞÒ»Î»´æÔÚ²»Í¬¡£
-
-½«Êı×éµÄËùÓĞÔªËØÒì»òµÃµ½µÄ½á¹ûÎª²»´æÔÚÖØ¸´µÄÁ½¸öÔªËØÒì»òµÄ½á¹û¡£
-
-diff &= -diff µÃµ½³ö diff ×îÓÒ²à²»Îª 0 µÄÎ»£¬Ò²¾ÍÊÇ²»´æÔÚÖØ¸´µÄÁ½¸öÔªËØÔÚÎ»¼¶±íÊ¾ÉÏ×îÓÒ²à²»Í¬µÄÄÇÒ»Î»£¬ÀûÓÃÕâÒ»Î»¾Í¿ÉÒÔ½«Á½¸öÔªËØÇø·Ö¿ªÀ´¡£
-
+ä¹Ÿå¯ä»¥ä½¿ç”¨æ­£åˆ™è¡¨è¾¾å¼è¿›è¡ŒåŒ¹é…ã€‚
 
 ```java
-public int[] singleNumber(int[] nums) {
-    int diff = 0;
-    for(int num : nums) diff ^= num;
-    // µÃµ½×îÓÒÒ»Î»
-    diff &= -diff;
-    int[] ret = new int[2];
-    for(int num : nums) {
-        if((num & diff) == 0) ret[0] ^= num;
-        else ret[1] ^= num;
-    }
-    return ret;
+public boolean isPowerOfFour(int num) {
+    return Integer.toString(num, 4).matches("10*");
 }
 ```
 
-**ÅĞ¶ÏÒ»¸öÊıµÄÎ»¼¶±íÊ¾ÊÇ·ñ²»»á³öÏÖÁ¬ĞøµÄ 0 ºÍ 1**
+**åˆ¤æ–­ä¸€ä¸ªæ•°çš„ä½çº§è¡¨ç¤ºæ˜¯å¦ä¸ä¼šå‡ºç°è¿ç»­çš„ 0 å’Œ 1** 
 
-[Leetcode : 693. Binary Number with Alternating Bits (Easy)](https://leetcode.com/problems/binary-number-with-alternating-bits/description/)
+[693. Binary Number with Alternating Bits (Easy)](https://leetcode.com/problems/binary-number-with-alternating-bits/description/)
 
-¶ÔÓÚ 10101 ÕâÖÖÎ»¼¶±íÊ¾µÄÊı£¬°ÑËüÏòÓÒÒÆ¶¯ 1 Î»µÃµ½ 1010 £¬ÕâÁ½¸öÊıÃ¿¸öÎ»¶¼²»Í¬£¬Òò´ËÒì»òµÃµ½µÄ½á¹ûÎª 11111¡£
+```html
+Input: 10
+Output: True
+Explanation:
+The binary representation of 10 is: 1010.
+
+Input: 11
+Output: False
+Explanation:
+The binary representation of 11 is: 1011.
+```
+
+å¯¹äº 1010 è¿™ç§ä½çº§è¡¨ç¤ºçš„æ•°ï¼ŒæŠŠå®ƒå‘å³ç§»åŠ¨ 1 ä½å¾—åˆ° 101ï¼Œè¿™ä¸¤ä¸ªæ•°æ¯ä¸ªä½éƒ½ä¸åŒï¼Œå› æ­¤å¼‚æˆ–å¾—åˆ°çš„ç»“æœä¸º 1111ã€‚
 
 ```java
 public boolean hasAlternatingBits(int n) {
@@ -4848,36 +6935,42 @@ public boolean hasAlternatingBits(int n) {
 }
 ```
 
-**ÇóÒ»¸öÊıµÄ²¹Âë**
+**æ±‚ä¸€ä¸ªæ•°çš„è¡¥ç ** 
 
-[Leetcode : 476. Number Complement (Easy)](https://leetcode.com/problems/number-complement/description/)
+[476. Number Complement (Easy)](https://leetcode.com/problems/number-complement/description/)
 
-²»¿¼ÂÇ¶ş½øÖÆ±íÊ¾ÖĞµÄÊ× 0 ²¿·Ö
+```html
+Input: 5
+Output: 2
+Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
+```
 
-¶ÔÓÚ 00000101£¬ÒªÇó²¹Âë¿ÉÒÔ½«ËüÓë 00000111 ½øĞĞÒì»ò²Ù×÷¡£ÄÇÃ´ÎÊÌâ¾Í×ª»»ÎªÇóÑÚÂë 00000111¡£
+é¢˜ç›®æè¿°ï¼šä¸è€ƒè™‘äºŒè¿›åˆ¶è¡¨ç¤ºä¸­çš„é¦– 0 éƒ¨åˆ†ã€‚
+
+å¯¹äº 00000101ï¼Œè¦æ±‚è¡¥ç å¯ä»¥å°†å®ƒä¸ 00000111 è¿›è¡Œå¼‚æˆ–æ“ä½œã€‚é‚£ä¹ˆé—®é¢˜å°±è½¬æ¢ä¸ºæ±‚æ©ç  00000111ã€‚
 
 ```java
 public int findComplement(int num) {
-    if(num == 0) return 1;
+    if (num == 0) return 1;
     int mask = 1 << 30;
-    while((num & mask) == 0) mask >>= 1;
+    while ((num & mask) == 0) mask >>= 1;
     mask = (mask << 1) - 1;
     return num ^ mask;
 }
 ```
 
-¿ÉÒÔÀûÓÃ Java µÄ Integer.highestOneBit() ·½·¨À´»ñµÃº¬ÓĞÊ× 1 µÄÊı¡£
+å¯ä»¥åˆ©ç”¨ Java çš„ Integer.highestOneBit() æ–¹æ³•æ¥è·å¾—å«æœ‰é¦– 1 çš„æ•°ã€‚
 
 ```java
 public int findComplement(int num) {
-    if(num == 0) return 1;
+    if (num == 0) return 1;
     int mask = Integer.highestOneBit(num);
     mask = (mask << 1) - 1;
     return num ^ mask;
 }
 ```
 
-¶ÔÓÚ 10000000 ÕâÑùµÄÊıÒªÀ©Õ¹³É 11111111£¬¿ÉÒÔÀûÓÃÒÔÏÂ·½·¨£º
+å¯¹äº 10000000 è¿™æ ·çš„æ•°è¦æ‰©å±•æˆ 11111111ï¼Œå¯ä»¥åˆ©ç”¨ä»¥ä¸‹æ–¹æ³•ï¼š
 
 ```html
 mask |= mask >> 1    11000000
@@ -4897,11 +6990,13 @@ public int findComplement(int num) {
 }
 ```
 
-**ÊµÏÖÕûÊıµÄ¼Ó·¨**
+**å®ç°æ•´æ•°çš„åŠ æ³•** 
 
-[Leetcode : 371. Sum of Two Integers (Easy)](https://leetcode.com/problems/sum-of-two-integers/description/)
+[371. Sum of Two Integers (Easy)](https://leetcode.com/problems/sum-of-two-integers/description/)
 
-a ^ b ±íÊ¾Ã»ÓĞ¿¼ÂÇ½øÎ»µÄÇé¿öÏÂÁ½ÊıµÄºÍ£¬(a & b) << 1 ¾ÍÊÇ½øÎ»¡£µİ¹é»áÖÕÖ¹µÄÔ­ÒòÊÇ (a & b) << 1 ×îÓÒ±ß»á¶àÒ»¸ö 0£¬ÄÇÃ´¼ÌĞøµİ¹é£¬½øÎ»×îÓÒ±ßµÄ 0 »áÂıÂıÔö¶à£¬×îºó½øÎ»»á±äÎª 0£¬µİ¹éÖÕÖ¹¡£
+a ^ b è¡¨ç¤ºæ²¡æœ‰è€ƒè™‘è¿›ä½çš„æƒ…å†µä¸‹ä¸¤æ•°çš„å’Œï¼Œ(a & b) << 1 å°±æ˜¯è¿›ä½ã€‚
+
+é€’å½’ä¼šç»ˆæ­¢çš„åŸå› æ˜¯ (a & b) << 1 æœ€å³è¾¹ä¼šå¤šä¸€ä¸ª 0ï¼Œé‚£ä¹ˆç»§ç»­é€’å½’ï¼Œè¿›ä½æœ€å³è¾¹çš„ 0 ä¼šæ…¢æ…¢å¢å¤šï¼Œæœ€åè¿›ä½ä¼šå˜ä¸º 0ï¼Œé€’å½’ç»ˆæ­¢ã€‚
 
 ```java
 public int getSum(int a, int b) {
@@ -4909,18 +7004,23 @@ public int getSum(int a, int b) {
 }
 ```
 
-**×Ö·û´®Êı×é×î´ó³Ë»ı**
+**å­—ç¬¦ä¸²æ•°ç»„æœ€å¤§ä¹˜ç§¯** 
 
-[Leetcode : 318. Maximum Product of Word Lengths (Medium)](https://leetcode.com/problems/maximum-product-of-word-lengths/description/)
+[318. Maximum Product of Word Lengths (Medium)](https://leetcode.com/problems/maximum-product-of-word-lengths/description/)
 
-ÌâÄ¿ÃèÊö£º×Ö·û´®Êı×éµÄ×Ö·û´®Ö»º¬ÓĞĞ¡Ğ´×Ö·û¡£Çó½â×Ö·û´®Êı×éÖĞÁ½¸ö×Ö·û´®³¤¶ÈµÄ×î´ó³Ë»ı£¬ÒªÇóÕâÁ½¸ö×Ö·û´®²»ÄÜº¬ÓĞÏàÍ¬×Ö·û¡£
+```html
+Given ["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]
+Return 16
+The two words can be "abcw", "xtfn".
+```
 
-½âÌâË¼Â·£º±¾ÌâÖ÷ÒªÎÊÌâÊÇÅĞ¶ÏÁ½¸ö×Ö·û´®ÊÇ·ñº¬ÏàÍ¬×Ö·û£¬ÓÉÓÚ×Ö·û´®Ö»º¬ÓĞĞ¡Ğ´×Ö·û£¬×Ü¹² 26 Î»£¬Òò´Ë¿ÉÒÔÓÃÒ»¸ö 32 Î»µÄÕûÊıÀ´´æ´¢Ã¿¸ö×Ö·ûÊÇ·ñ³öÏÖ¹ı¡£
+é¢˜ç›®æè¿°ï¼šå­—ç¬¦ä¸²æ•°ç»„çš„å­—ç¬¦ä¸²åªå«æœ‰å°å†™å­—ç¬¦ã€‚æ±‚è§£å­—ç¬¦ä¸²æ•°ç»„ä¸­ä¸¤ä¸ªå­—ç¬¦ä¸²é•¿åº¦çš„æœ€å¤§ä¹˜ç§¯ï¼Œè¦æ±‚è¿™ä¸¤ä¸ªå­—ç¬¦ä¸²ä¸èƒ½å«æœ‰ç›¸åŒå­—ç¬¦ã€‚
+
+æœ¬é¢˜ä¸»è¦é—®é¢˜æ˜¯åˆ¤æ–­ä¸¤ä¸ªå­—ç¬¦ä¸²æ˜¯å¦å«ç›¸åŒå­—ç¬¦ï¼Œç”±äºå­—ç¬¦ä¸²åªå«æœ‰å°å†™å­—ç¬¦ï¼Œæ€»å…± 26 ä½ï¼Œå› æ­¤å¯ä»¥ç”¨ä¸€ä¸ª 32 ä½çš„æ•´æ•°æ¥å­˜å‚¨æ¯ä¸ªå­—ç¬¦æ˜¯å¦å‡ºç°è¿‡ã€‚
 
 ```java
 public int maxProduct(String[] words) {
     int n = words.length;
-    if (n == 0) return 0;
     int[] val = new int[n];
     for (int i = 0; i < n; i++) {
         for (char c : words[i].toCharArray()) {
@@ -4939,12 +7039,28 @@ public int maxProduct(String[] words) {
 }
 ```
 
-# ²Î¿¼×ÊÁÏ
+**ç»Ÿè®¡ä» 0 \~ n æ¯ä¸ªæ•°çš„äºŒè¿›åˆ¶è¡¨ç¤ºä¸­ 1 çš„ä¸ªæ•°** 
+
+[338. Counting Bits (Medium)](https://leetcode.com/problems/counting-bits/description/)
+
+å¯¹äºæ•°å­— 6(110)ï¼Œå®ƒå¯ä»¥çœ‹æˆæ˜¯ 4(100) å†åŠ ä¸€ä¸ª 2(10)ï¼Œå› æ­¤ dp[i] = dp[i&(i-1)] + 1;
+
+```java
+public int[] countBits(int num) {
+    int[] ret = new int[num + 1];
+    for(int i = 1; i <= num; i++){
+        ret[i] = ret[i&(i-1)] + 1;
+    }
+    return ret;
+}
+```
+
+# å‚è€ƒèµ„æ–™
 
 - [Leetcode](https://leetcode.com/problemset/algorithms/?status=Todo)
-- Êı¾İ½á¹¹ÓëËã·¨·ÖÎö
-- Ëã·¨
-- ½£Ö¸ Offer
-- ±à³ÌÖ®ÃÀ
-- ³ÌĞòÔ±´úÂëÃæÊÔÖ¸ÄÏ
+- Weiss M A, å†¯èˆœçº. æ•°æ®ç»“æ„ä¸ç®—æ³•åˆ†æâ€”â€”C è¯­è¨€æè¿°[J]. 2004.
+- Sedgewick R. Algorithms[M]. Pearson Education India, 1988.
+- ä½•æµ·æ¶›, è½¯ä»¶å·¥ç¨‹å¸ˆ. å‰‘æŒ‡ Offer: åä¼é¢è¯•å®˜ç²¾è®²å…¸å‹ç¼–ç¨‹é¢˜[M]. ç”µå­å·¥ä¸šå‡ºç‰ˆç¤¾, 2014.
+- ã€Šç¼–ç¨‹ä¹‹ç¾ã€‹å°ç»„. ç¼–ç¨‹ä¹‹ç¾[M]. ç”µå­å·¥ä¸šå‡ºç‰ˆç¤¾, 2008.
+- å·¦ç¨‹äº‘. ç¨‹åºå‘˜ä»£ç é¢è¯•æŒ‡å—[M]. ç”µå­å·¥ä¸šå‡ºç‰ˆç¤¾, 2015.
 

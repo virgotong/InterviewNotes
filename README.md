@@ -1,111 +1,237 @@
-# 数据结构与算法
+| Ⅰ | Ⅱ | Ⅲ | Ⅳ | Ⅴ | Ⅵ | Ⅶ | Ⅷ | Ⅸ | Ⅹ |
+| :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|
+| 算法[:pencil2:](#pencil2-算法) | 操作系统[:computer:](#computer-操作系统)|网络[:cloud:](#cloud-网络) | 面向对象[:couple:](#couple-面向对象) |数据库[:floppy_disk:](#floppy_disk-数据库)| Java [:coffee:](#coffee-java)| 系统设计[:bulb:](#bulb-系统设计)| 工具[:hammer:](#hammer-工具)| 编码实践[:speak_no_evil:](#speak_no_evil-编码实践)| 后记[:memo:](#memo-后记) |
 
-> [算法](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/算法.md)
+<br>
+<div align="center">
+    <img src="other/LogoMakr_0zpEzN.png" width="150px">
+    <br>
+    <a href="other/Group.md"> <img src="https://img.shields.io/badge/>-group-4ab8a1.svg"></a> <a href="https://legacy.gitbook.com/book/cyc2018/interview-notebook/details"> <img src="https://img.shields.io/badge/_-gitbook-4ab8a1.svg"></a> 
+</div>
 
-整理自《算法 第四版》
+### :pencil2: 算法
 
-> [Leetcode 题解](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Leetcode%20题解.md)
+- [剑指 Offer 题解](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/剑指%20offer%20题解.md)
 
-对题目做了一个分类，并对每种题型的解题思想做了总结。
+  目录根据原书第二版进行编排，代码和原书有所不同，尽量比原书更简洁。
 
-已经整理了 300+ 的题目，基本涵盖所有经典题目，持续整理中。
+- [Leetcode 题解](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Leetcode%20题解.md)
 
-> [剑指 Offer 题解](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/剑指%20offer%20题解.md)
+  对题目做了一个大致分类，并对每种题型的解题思路做了总结。
+  
+ - [算法](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/算法.md)
 
-目录按《剑指 Offer 第二版》编排，在牛客网的在线编程中出现的题目都已经 AC。
+   排序、并查集、栈和队列、红黑树、散列表。
 
-很多题目都在 Leetcode 中出现过，所以一些解题思路就不在这里重复写了。想要看解题思路的话，可以看《剑指 Offer》原书，或者先看 Leetcode 题解，看完 Leetcode 题解再看剑指 Offer 会觉得很容易。
+### :computer: 操作系统
 
-# 网络
+- [计算机操作系统](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/计算机操作系统.md)
 
-> [计算机网络](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/计算机网络.md)
+  进程管理、内存管理、设备管理、链接。
 
-整理自《计算机网络 第七版》，重点内容会在标题之后加 \*。
+- [Linux](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Linux.md)
 
-> [HTTP](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/HTTP.md)
+  基本实现原理以及基本操作。
 
-整理自《图解 HTTP》
+### :cloud: 网络 
 
-# 操作系统
+- [计算机网络](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/计算机网络.md)
 
-> [计算机操作系统](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/计算机操作系统.md)
+  物理层、链路层、网络层、运输层、应用层。
 
-整理自《现代操作系统》
+- [HTTP](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/HTTP.md)
 
-> [Linux](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Linux.md)
+  方法、状态码、Cookie、缓存、连接管理、HTTPs、HTTP 2.0。
 
-整理自《鸟哥的 Linux 私房菜》
+- [Socket](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Socket.md)
 
-# 面向对象
+  I/O 模型、I/O 多路复用。
 
-> [设计模式](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/设计模式.md)
+### :couple: 面向对象
 
-整理自《Head First 设计模式》，这本书内容废话太多，笔记内容提取了重点部分。
+- [设计模式](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/设计模式.md)
 
-> [面向对象思想](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/面向对象思想.md)
+  实现了 Gof 的 23 种设计模式。
 
-一些面向对象思想和原则
+- [面向对象思想](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/面向对象思想.md)
 
-# 数据库
+  三大原则（继承、封装、多态）、类图、设计原则。
 
-> [SQL 语法](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/SQL%20语法.md)
+### :floppy_disk: 数据库 
 
-整理自《SQL 必知必会》，原书内容不多，笔记内容会更简洁。
+- [数据库系统原理](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/数据库系统原理.md)
 
-> [MySQL](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/MySQL.md)
+  事务、锁、隔离级别、MVCC、间隙锁、范式。
 
-整理自《高性能 MySQL》，重点整理。
+- [SQL](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/SQL.md)
 
-# Java
+  SQL 基本语法。
 
-> [JVM](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/JVM.md)
+- [Leetcode-Database 题解](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Leetcode-Database%20题解.md)
 
-整理自《深入理解 Java 虚拟机》
+  Leetcode 上数据库题目的解题记录。
 
-> [Java 容器](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20容器.md)
+- [MySQL](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/MySQL.md)
 
-容器的一些总结，包含容器源码的分析。
+  存储引擎、索引、查询优化、切分、复制。
 
-> [Java IO](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20IO.md)
+- [Redis](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Redis.md)
 
-File、InputStream 和 OutputStream、Reader 和 Writer、Serializable、Socket 以及 NIO
+  五种数据类型、字典和跳跃表数据结构、使用场景、和 Memcache 的比较、淘汰策略、持久化、文件事件的 Reactor 模式、复制。
 
-# 编码实践
+### :coffee: Java
 
-> [重构](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/重构.md)
+- [Java 基础](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20基础.md)
 
-重构是对软件内部结构的一种调整，目的是在不改变软件可观察行为的前提下，提高其可理解性，降低其修改成本。
+  不会涉及很多基本语法介绍，主要是一些实现原理以及关键特性。
 
-> [编写可读代码的艺术](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/编写可读代码的艺术.md)
+- [Java 容器](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20容器.md)
 
-编程有很大一部分时间是在阅读代码，可读性良好的代码能够大大提高编程效率。
+  源码分析：ArrayList、Vector、CopyOnWriteArrayList、LinkedList、HashMap、ConcurrentHashMap、LinkedHashMap、WeekHashMap。
 
-# 资料下载
+- [Java 并发](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20并发.md)
 
-> [百度网盘](https://pan.baidu.com/s/1o9oD1s2#list/path=%2F)
+  线程使用方式、两种互斥同步方法、线程协作、JUC、线程安全、内存模型、锁优化。
 
-一些 PDF 书籍
+- [Java 虚拟机](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20虚拟机.md)
 
-# 后记
+  运行时数据区域、垃圾收集、类加载。
 
-原文发表在 [牛客网：计算机基础知识整理](https://www.nowcoder.com/discuss/66985)
+- [Java I/O](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Java%20IO.md)
 
-:star: :star: :star:
+  NIO 的原理以及实例。
 
-牛客网上有很多优质面经，面经往往会给出一些面试需要准备的知识列表，但是这些知识列表都很零散，不适合系统地进行学习。为此，楼主选取了一些计算机经典书籍和材料，对面试相关的计算机基础知识做了比较系统整理，希望对大家有所帮助。
+### :bulb: 系统设计 
 
-整理的笔记开源在 Github 上，包括数据结构与算法、网络、操作系统、面向对象。Github 仓库提供相关 PDF 书籍的下载，基本都是高清版本。
+- [系统设计基础](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/系统设计基础.md)
 
-如果发现笔误，可以直接编辑修改，楼主会及时处理。
+  性能、伸缩性、扩展性、可用性、安全性
 
-如果您觉得哪部分内容写的好或者不好，都希望您能在 Issues 中进行反馈，您的反馈是楼主改进的方向。
+- [分布式](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/分布式.md)
 
-想要支持楼主的话，在 Github 上点个 Star 即可。
+  分布式锁、分布式事务、CAP、BASE、Paxos、Raft
 
-笔记内容基本是楼主一个字一个字打上去的，可供个人随意使用，转载请注明出处，毕竟写了很久没那么轻松~
+- [集群](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/集群.md)
 
-楼主作为一个轻度强迫症患者，笔记内容会尽量保证排版美观，可读性好。为了让笔记内容更整洁，前前后后做了很多次修改，也写了一个为中英混排文档进行排版的脚本，来提高笔记的可读性。
+  负载均衡、Session 管理
 
-为了上传笔记到 Github 上，也花了不少时间。楼主使用的笔记软件是为知笔记，怎么把笔记内容提取成文本文档，并且提取笔记中的图片就是一个问题。Github 使用的是 GFM 来渲染 md 文档，和普通的 Markdown 不太一样，例如 GFM 不支持 MathJax 公式，也不支持 TOC 标记，为此需要替换 MathJax 公式为 CodeCogs 的云服务和重新生成 TOC 目录。楼主实现了脚本解决了上述的问题，并且整个过程可以一键进行，包括 Git 同步到仓库中。有需要该工具的话可以在我的 Github 中找到。
+- [攻击技术](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/攻击技术.md)
 
-:star: :star: :star:
+  XSS、CSRF、SQL 注入、DDoS
+
+- [缓存](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/缓存.md)
+
+  缓存特征、缓存位置、缓存问题、数据分布、一致性哈希、LRU、CDN
+
+- [消息队列](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/消息队列.md)
+
+  消息处理模型、使用场景、可靠性
+
+### :hammer: 工具 
+
+- [Git](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Git.md)
+
+  一些 Git 的使用和概念。
+
+- [Docker](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/Docker.md)
+
+  Docker 基本原理。
+
+- [正则表达式](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/正则表达式.md)
+
+  正则表达式基本语法。
+
+- [构建工具](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/构建工具.md)
+
+  构建工具的基本概念、主流构建工具介绍。
+
+### :speak_no_evil: 编码实践 
+
+- [重构](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/重构.md)
+
+  参考 重构 改善既有代码的设计。
+
+- [代码可读性](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/代码可读性.md)
+
+  参考 编写可读代码的艺术。
+
+- [代码风格规范](https://github.com/CyC2018/InnterviewNotes/blob/master/notes/代码风格规范.md)
+
+  Google 开源项目的代码风格规范。
+
+### :memo: 后记 
+
+#### About
+
+本仓库主要是根据计算机经典书籍以及官方技术文档进行总结的学习笔记，希望对大家有所帮助。
+
+学习笔记不是从网上到处拼凑而来，除了少部分引用书上和技术文档的原文，其余都是笔者的原创。在您引用本仓库内容或者对内容进行修改演绎时，请遵循文末的开源协议，谢谢。
+
+#### BookList
+
+本仓库参考的书目：[BOOKLIST](https://github.com/CyC2018/Interview-Notebook/blob/master/BOOKLIST.md)。
+
+#### How To Contribute
+
+笔记内容是笔者一个字一个字打上去的，难免会有一些笔误，如果发现笔误可直接对相应文档进行编辑修改。
+
+如果想要提交一个仓库现在还没有的全新内容，可以先将相应的文档放到 other 目录下。
+
+欢迎在 Issue 中提交对本仓库的改进建议~
+
+#### Typesetting
+
+笔记内容按照 [中文文案排版指北](http://mazhuang.org/wiki/chinese-copywriting-guidelines/) 进行排版，以保证内容的可读性。
+
+笔记不使用 `![]()` 这种方式来引用图片，而是用 `<img>` 标签。一方面是为了能够控制图片以合适的大小显示，另一方面是因为 GFM 不支持 `<center> ![]() </center>` 让图片居中显示，只能使用 `<div align="center"> <img src=""/> </div>` 达到居中的效果。
+
+笔者将自己实现的文档排版功能提取出来，放在 Github Page 中，无需下载安装即可免费使用：[Text-Typesetting](https://github.com/CyC2018/Markdown-Typesetting)。
+
+#### Uploading
+
+笔者在本地使用为知笔记软件进行书写，为了方便将本地笔记内容上传到 Github 上，实现了一整套自动化上传方案，包括文本文件的导出、提取图片、Markdown 文档转换、Git 同步。
+
+进行 Markdown 文档转换是因为 Github 使用的 GFM 不支持 MathJax 公式和 TOC 标记，所以需要替换 MathJax 公式为 CodeCogs 的云服务和重新生成 TOC 目录。
+
+笔者将自己实现文档转换功能提取出来，方便大家在需要将本地 Markdown 上传到 Github，或者制作项目 README 文档时生成目录时使用：[GFM-Converter](https://github.com/CyC2018/GFM-Converter)。
+
+#### Statement
+
+本仓库不参与商业行为，不向读者收取任何费用。(This repository is not engaging in business activities, and does not charge readers any fee.)
+
+#### Logo
+
+Power by [logomakr](https://logomakr.com/).
+
+#### Acknowledgements
+
+感谢以下人员对本仓库做出的贡献，当然不仅仅只有这些贡献者，这里就不一一列举了。如果你希望被添加到这个名单中，并且提交过 Issue 或者 PR，请与笔者联系。
+
+<a href="https://github.com/linw7">
+    <img src="other/21679154.png" width="50px">
+</a> 
+<a href="https://github.com/g10guang">
+    <img src="other/18458140.jpg" width="50px">
+</a> 
+<a href="https://github.com/ResolveWang">
+    <img src="other/8018776.jpg" width="50px">
+</a>
+<a href="https://github.com/crossoverJie">
+    <img src="other/15684156.jpg" width="50px">
+</a> 
+<a href="https://github.com/jy03078584">
+    <img src="other/7719370.png" width="50px">
+</a>
+<a href="https://github.com/kwongtailau">
+    <img src="other/22954582.jpg" width="50px">
+</a>
+<a href="https://github.com/xiangflight">
+    <img src="other/10072416.jpg" width="50px">
+</a>
+
+#### License
+
+在对本作品进行演绎时，请署名并以相同方式共享。
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+

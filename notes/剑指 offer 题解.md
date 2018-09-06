@@ -1,175 +1,326 @@
 <!-- GFM-TOC -->
-* [µÚ¶şÕÂ ÃæÊÔĞèÒªµÄ»ù´¡ÖªÊ¶](#µÚ¶şÕÂ-ÃæÊÔĞèÒªµÄ»ù´¡ÖªÊ¶)
-    * [2. ÊµÏÖ Singleton](#2-ÊµÏÖ-singleton)
-    * [3. Êı×éÖĞÖØ¸´µÄÊı×Ö](#3-Êı×éÖĞÖØ¸´µÄÊı×Ö)
-    * [4. ¶şÎ¬Êı×éÖĞµÄ²éÕÒ](#4-¶şÎ¬Êı×éÖĞµÄ²éÕÒ)
-    * [5. Ìæ»»¿Õ¸ñ](#5-Ìæ»»¿Õ¸ñ)
-    * [6. ´ÓÎ²µ½Í·´òÓ¡Á´±í](#6-´ÓÎ²µ½Í·´òÓ¡Á´±í)
-    * [7. ÖØ½¨¶ş²æÊ÷](#7-ÖØ½¨¶ş²æÊ÷)
-    * [8. ¶ş²æÊ÷µÄÏÂÒ»¸ö½áµã](#8-¶ş²æÊ÷µÄÏÂÒ»¸ö½áµã)
-    * [9. ÓÃÁ½¸öÕ»ÊµÏÖ¶ÓÁĞ](#9-ÓÃÁ½¸öÕ»ÊµÏÖ¶ÓÁĞ)
-    * [10.1 ì³²¨ÄÇÆõÊıÁĞ](#101-ì³²¨ÄÇÆõÊıÁĞ)
-    * [10.2 ÌøÌ¨½×](#102-ÌøÌ¨½×)
-    * [10.3 ±äÌ¬ÌøÌ¨½×](#103-±äÌ¬ÌøÌ¨½×)
-    * [10.4 ¾ØĞÎ¸²¸Ç](#104-¾ØĞÎ¸²¸Ç)
-    * [11. Ğı×ªÊı×éµÄ×îĞ¡Êı×Ö](#11-Ğı×ªÊı×éµÄ×îĞ¡Êı×Ö)
-    * [12. ¾ØÕóÖĞµÄÂ·¾¶](#12-¾ØÕóÖĞµÄÂ·¾¶)
-    * [13. »úÆ÷ÈËµÄÔË¶¯·¶Î§](#13-»úÆ÷ÈËµÄÔË¶¯·¶Î§)
-    * [14. ¼ôÉş×Ó](#14-¼ôÉş×Ó)
-    * [15. ¶ş½øÖÆÖĞ 1 µÄ¸öÊı](#15-¶ş½øÖÆÖĞ-1-µÄ¸öÊı)
-* [µÚÈıÕÂ ¸ßÖÊÁ¿µÄ´úÂë](#µÚÈıÕÂ-¸ßÖÊÁ¿µÄ´úÂë)
-    * [16. ÊıÖµµÄÕûÊı´Î·½](#16-ÊıÖµµÄÕûÊı´Î·½)
-    * [18. É¾³ıÁ´±íÖĞÖØ¸´µÄ½áµã](#18-É¾³ıÁ´±íÖĞÖØ¸´µÄ½áµã)
-    * [19. ÕıÔò±í´ïÊ½Æ¥Åä](#19-ÕıÔò±í´ïÊ½Æ¥Åä)
-    * [20. ±íÊ¾ÊıÖµµÄ×Ö·û´®](#20-±íÊ¾ÊıÖµµÄ×Ö·û´®)
-    * [21. µ÷ÕûÊı×éË³ĞòÊ¹ÆæÊıÎ»ÓÚÅ¼ÊıÇ°Ãæ](#21-µ÷ÕûÊı×éË³ĞòÊ¹ÆæÊıÎ»ÓÚÅ¼ÊıÇ°Ãæ)
-    * [22. Á´±íÖĞµ¹ÊıµÚ k ¸ö½áµã](#22-Á´±íÖĞµ¹ÊıµÚ-k-¸ö½áµã)
-    * [23. Á´±íÖĞ»·µÄÈë¿Ú½áµã](#23-Á´±íÖĞ»·µÄÈë¿Ú½áµã)
-    * [24. ·´×ªÁ´±í](#24-·´×ªÁ´±í)
-    * [25. ºÏ²¢Á½¸öÅÅĞòµÄÁ´±í](#25-ºÏ²¢Á½¸öÅÅĞòµÄÁ´±í)
-    * [26. Ê÷µÄ×Ó½á¹¹](#26-Ê÷µÄ×Ó½á¹¹)
-* [µÚËÄÕÂ ½â¾öÃæÊÔÌâµÄË¼Â·](#µÚËÄÕÂ-½â¾öÃæÊÔÌâµÄË¼Â·)
-    * [27. ¶ş²æÊ÷µÄ¾µÏñ](#27-¶ş²æÊ÷µÄ¾µÏñ)
-    * [28.1 ¶Ô³ÆµÄ¶ş²æÊ÷](#281-¶Ô³ÆµÄ¶ş²æÊ÷)
-    * [28.2 Æ½ºâ¶ş²æÊ÷](#282-Æ½ºâ¶ş²æÊ÷)
-    * [29. Ë³Ê±Õë´òÓ¡¾ØÕó](#29-Ë³Ê±Õë´òÓ¡¾ØÕó)
-    * [30. °üº¬ min º¯ÊıµÄÕ»](#30-°üº¬-min-º¯ÊıµÄÕ»)
-    * [31. Õ»µÄÑ¹Èë¡¢µ¯³öĞòÁĞ](#31-Õ»µÄÑ¹Èëµ¯³öĞòÁĞ)
-    * [32.1 ´ÓÉÏÍùÏÂ´òÓ¡¶ş²æÊ÷](#321-´ÓÉÏÍùÏÂ´òÓ¡¶ş²æÊ÷)
-    * [32.3  °Ñ¶ş²æÊ÷´òÓ¡³É¶àĞĞ](#323--°Ñ¶ş²æÊ÷´òÓ¡³É¶àĞĞ)
-    * [32.3 °´Ö®×ÖĞÎË³Ğò´òÓ¡¶ş²æÊ÷](#323-°´Ö®×ÖĞÎË³Ğò´òÓ¡¶ş²æÊ÷)
-    * [33. ¶ş²æËÑË÷Ê÷µÄºóĞò±éÀúĞòÁĞ](#33-¶ş²æËÑË÷Ê÷µÄºóĞò±éÀúĞòÁĞ)
-    * [34. ¶ş²æÊ÷ÖĞºÍÎªÄ³Ò»ÖµµÄÂ·¾¶](#34-¶ş²æÊ÷ÖĞºÍÎªÄ³Ò»ÖµµÄÂ·¾¶)
-    * [35. ¸´ÔÓÁ´±íµÄ¸´ÖÆ](#35-¸´ÔÓÁ´±íµÄ¸´ÖÆ)
-    * [36. ¶ş²æËÑË÷Ê÷ÓëË«ÏòÁ´±í](#36-¶ş²æËÑË÷Ê÷ÓëË«ÏòÁ´±í)
-    * [37. ĞòÁĞ»¯¶ş²æÊ÷](#37-ĞòÁĞ»¯¶ş²æÊ÷)
-    * [38. ×Ö·û´®µÄÅÅÁĞ](#38-×Ö·û´®µÄÅÅÁĞ)
-* [µÚÎåÕÂ ÓÅ»¯Ê±¼äºÍ¿Õ¼äĞ§ÂÊ](#µÚÎåÕÂ-ÓÅ»¯Ê±¼äºÍ¿Õ¼äĞ§ÂÊ)
-    * [39. Êı×éÖĞ³öÏÖ´ÎÊı³¬¹ıÒ»°ëµÄÊı×Ö](#39-Êı×éÖĞ³öÏÖ´ÎÊı³¬¹ıÒ»°ëµÄÊı×Ö)
-    * [40. ×îĞ¡µÄ K ¸öÊı](#40-×îĞ¡µÄ-k-¸öÊı)
-    * [41.1 Êı¾İÁ÷ÖĞµÄÖĞÎ»Êı](#411-Êı¾İÁ÷ÖĞµÄÖĞÎ»Êı)
-    * [14.2 ×Ö·ûÁ÷ÖĞµÚÒ»¸ö²»ÖØ¸´µÄ×Ö·û](#142-×Ö·ûÁ÷ÖĞµÚÒ»¸ö²»ÖØ¸´µÄ×Ö·û)
-    * [42. Á¬Ğø×ÓÊı×éµÄ×î´óºÍ](#42-Á¬Ğø×ÓÊı×éµÄ×î´óºÍ)
-    * [43. ´Ó 1 µ½ n ÕûÊıÖĞ 1 ³öÏÖµÄ´ÎÊı](#43-´Ó-1-µ½-n-ÕûÊıÖĞ-1-³öÏÖµÄ´ÎÊı)
-    * [45. °ÑÊı×éÅÅ³É×îĞ¡µÄÊı](#45-°ÑÊı×éÅÅ³É×îĞ¡µÄÊı)
-    * [49. ³óÊı](#49-³óÊı)
-    * [50. µÚÒ»¸öÖ»³öÏÖÒ»´ÎµÄ×Ö·ûÎ»ÖÃ](#50-µÚÒ»¸öÖ»³öÏÖÒ»´ÎµÄ×Ö·ûÎ»ÖÃ)
-    * [51. Êı×éÖĞµÄÄæĞò¶Ô](#51-Êı×éÖĞµÄÄæĞò¶Ô)
-    * [52. Á½¸öÁ´±íµÄµÚÒ»¸ö¹«¹²½áµã](#52-Á½¸öÁ´±íµÄµÚÒ»¸ö¹«¹²½áµã)
-* [µÚÁùÕÂ ÃæÊÔÖĞµÄ¸÷ÏîÄÜÁ¦](#µÚÁùÕÂ-ÃæÊÔÖĞµÄ¸÷ÏîÄÜÁ¦)
-    * [53 Êı×ÖÔÚÅÅĞòÊı×éÖĞ³öÏÖµÄ´ÎÊı](#53-Êı×ÖÔÚÅÅĞòÊı×éÖĞ³öÏÖµÄ´ÎÊı)
-    * [54. ¶ş²æËÑË÷Ê÷µÄµÚ k ¸ö½áµã](#54-¶ş²æËÑË÷Ê÷µÄµÚ-k-¸ö½áµã)
-    * [55 ¶ş²æÊ÷µÄÉî¶È](#55-¶ş²æÊ÷µÄÉî¶È)
-    * [56. Êı×éÖĞÖ»³öÏÖÒ»´ÎµÄÊı×Ö](#56-Êı×éÖĞÖ»³öÏÖÒ»´ÎµÄÊı×Ö)
-    * [57.1 ºÍÎª S µÄÁ½¸öÊı×Ö](#571-ºÍÎª-s-µÄÁ½¸öÊı×Ö)
-    * [57.2 ºÍÎª S µÄÁ¬ĞøÕıÊıĞòÁĞ](#572-ºÍÎª-s-µÄÁ¬ĞøÕıÊıĞòÁĞ)
-    * [58.1 ·­×ªµ¥´ÊË³ĞòÁĞ](#581-·­×ªµ¥´ÊË³ĞòÁĞ)
-    * [58.2 ×óĞı×ª×Ö·û´®](#582-×óĞı×ª×Ö·û´®)
-    * [59. »¬¶¯´°¿ÚµÄ×î´óÖµ](#59-»¬¶¯´°¿ÚµÄ×î´óÖµ)
-    * [61. ÆË¿ËÅÆË³×Ó](#61-ÆË¿ËÅÆË³×Ó)
-    * [62. Ô²È¦ÖĞ×îºóÊ£ÏÂµÄÊı](#62-Ô²È¦ÖĞ×îºóÊ£ÏÂµÄÊı)
-    * [63. ¹ÉÆ±µÄ×î´óÀûÈó](#63-¹ÉÆ±µÄ×î´óÀûÈó)
-    * [64. Çó 1+2+3+...+n](#64-Çó-1+2+3++n)
-    * [65. ²»ÓÃ¼Ó¼õ³Ë³ı×ö¼Ó·¨](#65-²»ÓÃ¼Ó¼õ³Ë³ı×ö¼Ó·¨)
-    * [66. ¹¹½¨³Ë»ıÊı×é](#66-¹¹½¨³Ë»ıÊı×é)
-* [µÚÆßÕÂ Á½¸öÃæÊÔ°¸Àı](#µÚÆßÕÂ-Á½¸öÃæÊÔ°¸Àı)
-    * [67. °Ñ×Ö·û´®×ª»»³ÉÕûÊı](#67-°Ñ×Ö·û´®×ª»»³ÉÕûÊı)
-    * [68. Ê÷ÖĞÁ½¸ö½ÚµãµÄ×îµÍ¹«¹²×æÏÈ](#68-Ê÷ÖĞÁ½¸ö½ÚµãµÄ×îµÍ¹«¹²×æÏÈ)
+* [1. å‰è¨€](#1-å‰è¨€)
+* [2. å®ç° Singleton](#2-å®ç°-singleton)
+* [3. æ•°ç»„ä¸­é‡å¤çš„æ•°å­—](#3-æ•°ç»„ä¸­é‡å¤çš„æ•°å­—)
+* [4. äºŒç»´æ•°ç»„ä¸­çš„æŸ¥æ‰¾](#4-äºŒç»´æ•°ç»„ä¸­çš„æŸ¥æ‰¾)
+* [5. æ›¿æ¢ç©ºæ ¼](#5-æ›¿æ¢ç©ºæ ¼)
+* [6. ä»å°¾åˆ°å¤´æ‰“å°é“¾è¡¨](#6-ä»å°¾åˆ°å¤´æ‰“å°é“¾è¡¨)
+* [7. é‡å»ºäºŒå‰æ ‘](#7-é‡å»ºäºŒå‰æ ‘)
+* [8. äºŒå‰æ ‘çš„ä¸‹ä¸€ä¸ªç»“ç‚¹](#8-äºŒå‰æ ‘çš„ä¸‹ä¸€ä¸ªç»“ç‚¹)
+* [9. ç”¨ä¸¤ä¸ªæ ˆå®ç°é˜Ÿåˆ—](#9-ç”¨ä¸¤ä¸ªæ ˆå®ç°é˜Ÿåˆ—)
+* [10.1 æ–æ³¢é‚£å¥‘æ•°åˆ—](#101-æ–æ³¢é‚£å¥‘æ•°åˆ—)
+* [10.2 è·³å°é˜¶](#102-è·³å°é˜¶)
+* [10.3 çŸ©å½¢è¦†ç›–](#103-çŸ©å½¢è¦†ç›–)
+* [10.4 å˜æ€è·³å°é˜¶](#104-å˜æ€è·³å°é˜¶)
+* [11. æ—‹è½¬æ•°ç»„çš„æœ€å°æ•°å­—](#11-æ—‹è½¬æ•°ç»„çš„æœ€å°æ•°å­—)
+* [12. çŸ©é˜µä¸­çš„è·¯å¾„](#12-çŸ©é˜µä¸­çš„è·¯å¾„)
+* [13. æœºå™¨äººçš„è¿åŠ¨èŒƒå›´](#13-æœºå™¨äººçš„è¿åŠ¨èŒƒå›´)
+* [14. å‰ªç»³å­](#14-å‰ªç»³å­)
+* [15. äºŒè¿›åˆ¶ä¸­ 1 çš„ä¸ªæ•°](#15-äºŒè¿›åˆ¶ä¸­-1-çš„ä¸ªæ•°)
+* [16. æ•°å€¼çš„æ•´æ•°æ¬¡æ–¹](#16-æ•°å€¼çš„æ•´æ•°æ¬¡æ–¹)
+* [17. æ‰“å°ä» 1 åˆ°æœ€å¤§çš„ n ä½æ•°](#17-æ‰“å°ä»-1-åˆ°æœ€å¤§çš„-n-ä½æ•°)
+* [18.1 åœ¨ O(1) æ—¶é—´å†…åˆ é™¤é“¾è¡¨èŠ‚ç‚¹](#181-åœ¨-o1-æ—¶é—´å†…åˆ é™¤é“¾è¡¨èŠ‚ç‚¹)
+* [18.2 åˆ é™¤é“¾è¡¨ä¸­é‡å¤çš„ç»“ç‚¹](#182-åˆ é™¤é“¾è¡¨ä¸­é‡å¤çš„ç»“ç‚¹)
+* [19. æ­£åˆ™è¡¨è¾¾å¼åŒ¹é…](#19-æ­£åˆ™è¡¨è¾¾å¼åŒ¹é…)
+* [20. è¡¨ç¤ºæ•°å€¼çš„å­—ç¬¦ä¸²](#20-è¡¨ç¤ºæ•°å€¼çš„å­—ç¬¦ä¸²)
+* [21. è°ƒæ•´æ•°ç»„é¡ºåºä½¿å¥‡æ•°ä½äºå¶æ•°å‰é¢](#21-è°ƒæ•´æ•°ç»„é¡ºåºä½¿å¥‡æ•°ä½äºå¶æ•°å‰é¢)
+* [22. é“¾è¡¨ä¸­å€’æ•°ç¬¬ K ä¸ªç»“ç‚¹](#22-é“¾è¡¨ä¸­å€’æ•°ç¬¬-k-ä¸ªç»“ç‚¹)
+* [23. é“¾è¡¨ä¸­ç¯çš„å…¥å£ç»“ç‚¹](#23-é“¾è¡¨ä¸­ç¯çš„å…¥å£ç»“ç‚¹)
+* [24. åè½¬é“¾è¡¨](#24-åè½¬é“¾è¡¨)
+* [25. åˆå¹¶ä¸¤ä¸ªæ’åºçš„é“¾è¡¨](#25-åˆå¹¶ä¸¤ä¸ªæ’åºçš„é“¾è¡¨)
+* [26. æ ‘çš„å­ç»“æ„](#26-æ ‘çš„å­ç»“æ„)
+* [27. äºŒå‰æ ‘çš„é•œåƒ](#27-äºŒå‰æ ‘çš„é•œåƒ)
+* [28 å¯¹ç§°çš„äºŒå‰æ ‘](#28-å¯¹ç§°çš„äºŒå‰æ ‘)
+* [29. é¡ºæ—¶é’ˆæ‰“å°çŸ©é˜µ](#29-é¡ºæ—¶é’ˆæ‰“å°çŸ©é˜µ)
+* [30. åŒ…å« min å‡½æ•°çš„æ ˆ](#30-åŒ…å«-min-å‡½æ•°çš„æ ˆ)
+* [31. æ ˆçš„å‹å…¥ã€å¼¹å‡ºåºåˆ—](#31-æ ˆçš„å‹å…¥å¼¹å‡ºåºåˆ—)
+* [32.1 ä»ä¸Šå¾€ä¸‹æ‰“å°äºŒå‰æ ‘](#321-ä»ä¸Šå¾€ä¸‹æ‰“å°äºŒå‰æ ‘)
+* [32.2 æŠŠäºŒå‰æ ‘æ‰“å°æˆå¤šè¡Œ](#322-æŠŠäºŒå‰æ ‘æ‰“å°æˆå¤šè¡Œ)
+* [32.3 æŒ‰ä¹‹å­—å½¢é¡ºåºæ‰“å°äºŒå‰æ ‘](#323-æŒ‰ä¹‹å­—å½¢é¡ºåºæ‰“å°äºŒå‰æ ‘)
+* [33. äºŒå‰æœç´¢æ ‘çš„ååºéå†åºåˆ—](#33-äºŒå‰æœç´¢æ ‘çš„ååºéå†åºåˆ—)
+* [34. äºŒå‰æ ‘ä¸­å’Œä¸ºæŸä¸€å€¼çš„è·¯å¾„](#34-äºŒå‰æ ‘ä¸­å’Œä¸ºæŸä¸€å€¼çš„è·¯å¾„)
+* [35. å¤æ‚é“¾è¡¨çš„å¤åˆ¶](#35-å¤æ‚é“¾è¡¨çš„å¤åˆ¶)
+* [36. äºŒå‰æœç´¢æ ‘ä¸åŒå‘é“¾è¡¨](#36-äºŒå‰æœç´¢æ ‘ä¸åŒå‘é“¾è¡¨)
+* [37. åºåˆ—åŒ–äºŒå‰æ ‘](#37-åºåˆ—åŒ–äºŒå‰æ ‘)
+* [38. å­—ç¬¦ä¸²çš„æ’åˆ—](#38-å­—ç¬¦ä¸²çš„æ’åˆ—)
+* [39. æ•°ç»„ä¸­å‡ºç°æ¬¡æ•°è¶…è¿‡ä¸€åŠçš„æ•°å­—](#39-æ•°ç»„ä¸­å‡ºç°æ¬¡æ•°è¶…è¿‡ä¸€åŠçš„æ•°å­—)
+* [40. æœ€å°çš„ K ä¸ªæ•°](#40-æœ€å°çš„-k-ä¸ªæ•°)
+* [41.1 æ•°æ®æµä¸­çš„ä¸­ä½æ•°](#411-æ•°æ®æµä¸­çš„ä¸­ä½æ•°)
+* [41.2 å­—ç¬¦æµä¸­ç¬¬ä¸€ä¸ªä¸é‡å¤çš„å­—ç¬¦](#412-å­—ç¬¦æµä¸­ç¬¬ä¸€ä¸ªä¸é‡å¤çš„å­—ç¬¦)
+* [42. è¿ç»­å­æ•°ç»„çš„æœ€å¤§å’Œ](#42-è¿ç»­å­æ•°ç»„çš„æœ€å¤§å’Œ)
+* [43. ä» 1 åˆ° n æ•´æ•°ä¸­ 1 å‡ºç°çš„æ¬¡æ•°](#43-ä»-1-åˆ°-n-æ•´æ•°ä¸­-1-å‡ºç°çš„æ¬¡æ•°)
+* [44. æ•°å­—åºåˆ—ä¸­çš„æŸä¸€ä½æ•°å­—](#44-æ•°å­—åºåˆ—ä¸­çš„æŸä¸€ä½æ•°å­—)
+* [45. æŠŠæ•°ç»„æ’æˆæœ€å°çš„æ•°](#45-æŠŠæ•°ç»„æ’æˆæœ€å°çš„æ•°)
+* [46. æŠŠæ•°å­—ç¿»è¯‘æˆå­—ç¬¦ä¸²](#46-æŠŠæ•°å­—ç¿»è¯‘æˆå­—ç¬¦ä¸²)
+* [47. ç¤¼ç‰©çš„æœ€å¤§ä»·å€¼](#47-ç¤¼ç‰©çš„æœ€å¤§ä»·å€¼)
+* [48. æœ€é•¿ä¸å«é‡å¤å­—ç¬¦çš„å­å­—ç¬¦ä¸²](#48-æœ€é•¿ä¸å«é‡å¤å­—ç¬¦çš„å­å­—ç¬¦ä¸²)
+* [49. ä¸‘æ•°](#49-ä¸‘æ•°)
+* [50. ç¬¬ä¸€ä¸ªåªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦ä½ç½®](#50-ç¬¬ä¸€ä¸ªåªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦ä½ç½®)
+* [51. æ•°ç»„ä¸­çš„é€†åºå¯¹](#51-æ•°ç»„ä¸­çš„é€†åºå¯¹)
+* [52. ä¸¤ä¸ªé“¾è¡¨çš„ç¬¬ä¸€ä¸ªå…¬å…±ç»“ç‚¹](#52-ä¸¤ä¸ªé“¾è¡¨çš„ç¬¬ä¸€ä¸ªå…¬å…±ç»“ç‚¹)
+* [53. æ•°å­—åœ¨æ’åºæ•°ç»„ä¸­å‡ºç°çš„æ¬¡æ•°](#53-æ•°å­—åœ¨æ’åºæ•°ç»„ä¸­å‡ºç°çš„æ¬¡æ•°)
+* [54. äºŒå‰æŸ¥æ‰¾æ ‘çš„ç¬¬ K ä¸ªç»“ç‚¹](#54-äºŒå‰æŸ¥æ‰¾æ ‘çš„ç¬¬-k-ä¸ªç»“ç‚¹)
+* [55.1 äºŒå‰æ ‘çš„æ·±åº¦](#551-äºŒå‰æ ‘çš„æ·±åº¦)
+* [55.2 å¹³è¡¡äºŒå‰æ ‘](#552-å¹³è¡¡äºŒå‰æ ‘)
+* [56. æ•°ç»„ä¸­åªå‡ºç°ä¸€æ¬¡çš„æ•°å­—](#56-æ•°ç»„ä¸­åªå‡ºç°ä¸€æ¬¡çš„æ•°å­—)
+* [57.1 å’Œä¸º S çš„ä¸¤ä¸ªæ•°å­—](#571-å’Œä¸º-s-çš„ä¸¤ä¸ªæ•°å­—)
+* [57.2 å’Œä¸º S çš„è¿ç»­æ­£æ•°åºåˆ—](#572-å’Œä¸º-s-çš„è¿ç»­æ­£æ•°åºåˆ—)
+* [58.1 ç¿»è½¬å•è¯é¡ºåºåˆ—](#581-ç¿»è½¬å•è¯é¡ºåºåˆ—)
+* [58.2 å·¦æ—‹è½¬å­—ç¬¦ä¸²](#582-å·¦æ—‹è½¬å­—ç¬¦ä¸²)
+* [59. æ»‘åŠ¨çª—å£çš„æœ€å¤§å€¼](#59-æ»‘åŠ¨çª—å£çš„æœ€å¤§å€¼)
+* [60. n ä¸ªéª°å­çš„ç‚¹æ•°](#60-n-ä¸ªéª°å­çš„ç‚¹æ•°)
+* [61. æ‰‘å…‹ç‰Œé¡ºå­](#61-æ‰‘å…‹ç‰Œé¡ºå­)
+* [62. åœ†åœˆä¸­æœ€åå‰©ä¸‹çš„æ•°](#62-åœ†åœˆä¸­æœ€åå‰©ä¸‹çš„æ•°)
+* [63. è‚¡ç¥¨çš„æœ€å¤§åˆ©æ¶¦](#63-è‚¡ç¥¨çš„æœ€å¤§åˆ©æ¶¦)
+* [64. æ±‚ 1+2+3+...+n](#64-æ±‚-123n)
+* [65. ä¸ç”¨åŠ å‡ä¹˜é™¤åšåŠ æ³•](#65-ä¸ç”¨åŠ å‡ä¹˜é™¤åšåŠ æ³•)
+* [66. æ„å»ºä¹˜ç§¯æ•°ç»„](#66-æ„å»ºä¹˜ç§¯æ•°ç»„)
+* [67. æŠŠå­—ç¬¦ä¸²è½¬æ¢æˆæ•´æ•°](#67-æŠŠå­—ç¬¦ä¸²è½¬æ¢æˆæ•´æ•°)
+* [68. æ ‘ä¸­ä¸¤ä¸ªèŠ‚ç‚¹çš„æœ€ä½å…¬å…±ç¥–å…ˆ](#68-æ ‘ä¸­ä¸¤ä¸ªèŠ‚ç‚¹çš„æœ€ä½å…¬å…±ç¥–å…ˆ)
+* [å‚è€ƒæ–‡çŒ®](#å‚è€ƒæ–‡çŒ®)
 <!-- GFM-TOC -->
 
-# µÚ¶şÕÂ ÃæÊÔĞèÒªµÄ»ù´¡ÖªÊ¶
 
-## 2. ÊµÏÖ Singleton
+# 1. å‰è¨€
 
-[µ¥ÀıÄ£Ê½](https://github.com/CyC2018/InterviewNotes/blob/master/notes/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.md#%E7%AC%AC-5-%E7%AB%A0-%E5%8D%95%E4%BB%B6%E6%A8%A1%E5%BC%8F)
+æœ¬æ–‡çš„ç»˜å›¾å¯é€šè¿‡ä»¥ä¸‹é€”å¾„å…è´¹è·å¾—å¹¶ä½¿ç”¨ï¼š
 
-## 3. Êı×éÖĞÖØ¸´µÄÊı×Ö
+- [ProcessOn](https://www.processon.com/view/5a3e4c7be4b0909c1aa18b49)
+- [DrawIO](https://drive.google.com/file/d/1nSSCpPUC05MFoeFuf_aeTtkm7dG5-bJ1/view?usp=sharing)
 
-**ÌâÄ¿ÃèÊö**
+# 2. å®ç° Singleton
 
-ÔÚÒ»¸ö³¤¶ÈÎª n µÄÊı×éÀïµÄËùÓĞÊı×Ö¶¼ÔÚ 0 µ½ n-1 µÄ·¶Î§ÄÚ¡£ Êı×éÖĞÄ³Ğ©Êı×ÖÊÇÖØ¸´µÄ£¬µ«²»ÖªµÀÓĞ¼¸¸öÊı×ÖÊÇÖØ¸´µÄ¡£Ò²²»ÖªµÀÃ¿¸öÊı×ÖÖØ¸´¼¸´Î¡£ÇëÕÒ³öÊı×éÖĞÈÎÒâÒ»¸öÖØ¸´µÄÊı×Ö¡£ ÀıÈç£¬Èç¹ûÊäÈë³¤¶ÈÎª 7 µÄÊı×é {2, 3, 1, 0, 2, 5, 3}£¬ÄÇÃ´¶ÔÓ¦µÄÊä³öÊÇµÚÒ»¸öÖØ¸´µÄÊı×Ö 2¡£
+[å•ä¾‹æ¨¡å¼](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.md)
 
-**½âÌâË¼Â·**
+# 3. æ•°ç»„ä¸­é‡å¤çš„æ•°å­—
 
-ÕâÖÖÊı×éÔªËØÔÚ [0, n-1] ·¶Î§ÄÚµÄÎÊÌâ£¬¿ÉÒÔ½«ÖµÎª i µÄÔªËØ·Åµ½µÚ i ¸öÎ»ÖÃÉÏ¡£
+[NowCoder](https://www.nowcoder.com/practice/623a5ac0ea5b4e5f95552655361ae0a8?tpId=13&tqId=11203&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+åœ¨ä¸€ä¸ªé•¿åº¦ä¸º n çš„æ•°ç»„é‡Œçš„æ‰€æœ‰æ•°å­—éƒ½åœ¨ 0 åˆ° n-1 çš„èŒƒå›´å†…ã€‚æ•°ç»„ä¸­æŸäº›æ•°å­—æ˜¯é‡å¤çš„ï¼Œä½†ä¸çŸ¥é“æœ‰å‡ ä¸ªæ•°å­—æ˜¯é‡å¤çš„ï¼Œä¹Ÿä¸çŸ¥é“æ¯ä¸ªæ•°å­—é‡å¤å‡ æ¬¡ã€‚è¯·æ‰¾å‡ºæ•°ç»„ä¸­ä»»æ„ä¸€ä¸ªé‡å¤çš„æ•°å­—ã€‚
+
+```html
+Input:
+{2, 3, 1, 0, 2, 5}
+
+Output:
+2
+```
+
+## è§£é¢˜æ€è·¯
+
+è¦æ±‚å¤æ‚åº¦ä¸º O(N) + O(1)ï¼Œä¹Ÿå°±æ˜¯æ—¶é—´å¤æ‚åº¦ O(N)ï¼Œç©ºé—´å¤æ‚åº¦ O(1)ã€‚å› æ­¤ä¸èƒ½ä½¿ç”¨æ’åºçš„æ–¹æ³•ï¼Œä¹Ÿä¸èƒ½ä½¿ç”¨é¢å¤–çš„æ ‡è®°æ•°ç»„ã€‚ç‰›å®¢ç½‘è®¨è®ºåŒºè¿™ä¸€é¢˜çš„é¦–ç¥¨ç­”æ¡ˆä½¿ç”¨ nums[i] + length æ¥å°†å…ƒç´ æ ‡è®°ï¼Œè¿™ä¹ˆåšä¼šæœ‰åŠ æ³•æº¢å‡ºé—®é¢˜ã€‚
+
+è¿™ç§æ•°ç»„å…ƒç´ åœ¨ [0, n-1] èŒƒå›´å†…çš„é—®é¢˜ï¼Œå¯ä»¥å°†å€¼ä¸º i çš„å…ƒç´ è°ƒæ•´åˆ°ç¬¬ i ä¸ªä½ç½®ä¸Šã€‚
+
+ä»¥ (2, 3, 1, 0, 2, 5) ä¸ºä¾‹ï¼š
+
+```text
+position-0 : (2,3,1,0,2,5) // 2 <-> 1
+             (1,3,2,0,2,5) // 1 <-> 3
+             (3,1,2,0,2,5) // 3 <-> 0
+             (0,1,2,3,2,5) // already in position
+position-1 : (0,1,2,3,2,5) // already in position
+position-2 : (0,1,2,3,2,5) // already in position
+position-3 : (0,1,2,3,2,5) // already in position
+position-4 : (0,1,2,3,2,5) // nums[i] == nums[nums[i]], exit
+```
+
+éå†åˆ°ä½ç½® 4 æ—¶ï¼Œè¯¥ä½ç½®ä¸Šçš„æ•°ä¸º 2ï¼Œä½†æ˜¯ç¬¬ 2 ä¸ªä½ç½®ä¸Šå·²ç»æœ‰ä¸€ä¸ª 2 çš„å€¼äº†ï¼Œå› æ­¤å¯ä»¥çŸ¥é“ 2 é‡å¤ã€‚
 
 ```java
-public boolean duplicate(int numbers[], int length, int[] duplication) {
+public boolean duplicate(int[] nums, int length, int[] duplication) {
+    if (nums == null || length <= 0)
+        return false;
     for (int i = 0; i < length; i++) {
-        while (numbers[i] != i && numbers[i] != numbers[numbers[i]]) {
-            swap(numbers, i, numbers[i]);
-        }
-        if (numbers[i] != i && numbers[i] == numbers[numbers[i]]) {
-            duplication[0] = numbers[i];
-            return true;
+        while (nums[i] != i) {
+            if (nums[i] == nums[nums[i]]) {
+                duplication[0] = nums[i];
+                return true;
+            }
+            swap(nums, i, nums[i]);
         }
     }
     return false;
 }
 
-private void swap(int[] numbers, int i, int j) {
-    int t = numbers[i];
-    numbers[i] = numbers[j];
-    numbers[j] = t;
+private void swap(int[] nums, int i, int j) {
+    int t = nums[i];
+    nums[i] = nums[j];
+    nums[j] = t;
 }
 ```
 
-## 4. ¶şÎ¬Êı×éÖĞµÄ²éÕÒ
+# 4. äºŒç»´æ•°ç»„ä¸­çš„æŸ¥æ‰¾
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&tqId=11154&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÔÚÒ»¸ö¶şÎ¬Êı×éÖĞ£¬Ã¿Ò»ĞĞ¶¼°´ÕÕ´Ó×óµ½ÓÒµİÔöµÄË³ĞòÅÅĞò£¬Ã¿Ò»ÁĞ¶¼°´ÕÕ´ÓÉÏµ½ÏÂµİÔöµÄË³ĞòÅÅĞò¡£ÇëÍê³ÉÒ»¸öº¯Êı£¬ÊäÈëÕâÑùµÄÒ»¸ö¶şÎ¬Êı×éºÍÒ»¸öÕûÊı£¬ÅĞ¶ÏÊı×éÖĞÊÇ·ñº¬ÓĞ¸ÃÕûÊı¡£
+## é¢˜ç›®æè¿°
+
+åœ¨ä¸€ä¸ªäºŒç»´æ•°ç»„ä¸­ï¼Œæ¯ä¸€è¡Œéƒ½æŒ‰ç…§ä»å·¦åˆ°å³é€’å¢çš„é¡ºåºæ’åºï¼Œæ¯ä¸€åˆ—éƒ½æŒ‰ç…§ä»ä¸Šåˆ°ä¸‹é€’å¢çš„é¡ºåºæ’åºã€‚è¯·å®Œæˆä¸€ä¸ªå‡½æ•°ï¼Œè¾“å…¥è¿™æ ·çš„ä¸€ä¸ªäºŒç»´æ•°ç»„å’Œä¸€ä¸ªæ•´æ•°ï¼Œåˆ¤æ–­æ•°ç»„ä¸­æ˜¯å¦å«æœ‰è¯¥æ•´æ•°ã€‚
+
+```html
+Consider the following matrix:
+[
+  [1,   4,  7, 11, 15],
+  [2,   5,  8, 12, 19],
+  [3,   6,  9, 16, 22],
+  [10, 13, 14, 17, 24],
+  [18, 21, 23, 26, 30]
+]
+
+Given target = 5, return true.
+Given target = 20, return false.
+```
+
+## è§£é¢˜æ€è·¯
+
+ä»å³ä¸Šè§’å¼€å§‹æŸ¥æ‰¾ã€‚çŸ©é˜µä¸­çš„ä¸€ä¸ªæ•°ï¼Œå®ƒå·¦è¾¹çš„æ•°éƒ½æ¯”å®ƒå°ï¼Œä¸‹è¾¹çš„æ•°éƒ½æ¯”å®ƒå¤§ã€‚å› æ­¤ï¼Œä»å³ä¸Šè§’å¼€å§‹æŸ¥æ‰¾ï¼Œå°±å¯ä»¥æ ¹æ® target å’Œå½“å‰å…ƒç´ çš„å¤§å°å…³ç³»æ¥ç¼©å°æŸ¥æ‰¾åŒºé—´ã€‚
+
+å¤æ‚åº¦ï¼šO(M + N) + O(1)
+
+å½“å‰å…ƒç´ çš„æŸ¥æ‰¾åŒºé—´ä¸ºå·¦ä¸‹è§’çš„æ‰€æœ‰å…ƒç´ ï¼Œä¾‹å¦‚å…ƒç´  12 çš„æŸ¥æ‰¾åŒºé—´å¦‚ä¸‹ï¼š
+
+<div align="center"> <img src="../pics//f94389e9-55b1-4f49-9d37-00ed05900ae0.png" width="250"/> </div><br>
 
 ```java
-public boolean Find(int target, int [][] array) {
-    if (array == null || array.length == 0 || array[0].length == 0) return false;
-    int m = array.length, n = array[0].length;
-    int row = 0, col = n - 1;
-    while (row < m && col >= 0) {
-        if (target == array[row][col]) return true;
-        else if (target < array[row][col]) col--;
-        else row++;
+public boolean Find(int target, int[][] matrix) {
+    if (matrix == null || matrix.length == 0 || matrix[0].length == 0)
+        return false;
+    int rows = matrix.length, cols = matrix[0].length;
+    int r = 0, c = cols - 1; // ä»å³ä¸Šè§’å¼€å§‹
+    while (r <= rows - 1 && c >= 0) {
+        if (target == matrix[r][c])
+            return true;
+        else if (target > matrix[r][c])
+            r++;
+        else
+            c--;
     }
     return false;
 }
 ```
 
-## 5. Ìæ»»¿Õ¸ñ
+# 5. æ›¿æ¢ç©ºæ ¼
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423?tpId=13&tqId=11155&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÇëÊµÏÖÒ»¸öº¯Êı£¬½«Ò»¸ö×Ö·û´®ÖĞµÄ¿Õ¸ñÌæ»»³É¡°%20¡±¡£ÀıÈç£¬µ±×Ö·û´®Îª We Are Happy. Ôò¾­¹ıÌæ»»Ö®ºóµÄ×Ö·û´®Îª We%20Are%20Happy¡£
+## é¢˜ç›®æè¿°
 
-**ÌâÄ¿ÒªÇó**
 
-ÒÔ O(1) µÄ¿Õ¼ä¸´ÔÓ¶ÈÀ´Çó½â¡£
+å°†ä¸€ä¸ªå­—ç¬¦ä¸²ä¸­çš„ç©ºæ ¼æ›¿æ¢æˆ "%20"ã€‚
+
+```text
+Input:
+"We Are Happy"
+
+Output:
+"We%20Are%20Happy"
+```
+
+## è§£é¢˜æ€è·¯
+
+åœ¨å­—ç¬¦ä¸²å°¾éƒ¨å¡«å……ä»»æ„å­—ç¬¦ï¼Œä½¿å¾—å­—ç¬¦ä¸²çš„é•¿åº¦ç­‰äºæ›¿æ¢ä¹‹åçš„é•¿åº¦ã€‚å› ä¸ºä¸€ä¸ªç©ºæ ¼è¦æ›¿æ¢æˆä¸‰ä¸ªå­—ç¬¦ï¼ˆ%20ï¼‰ï¼Œå› æ­¤å½“éå†åˆ°ä¸€ä¸ªç©ºæ ¼æ—¶ï¼Œéœ€è¦åœ¨å°¾éƒ¨å¡«å……ä¸¤ä¸ªä»»æ„å­—ç¬¦ã€‚
+
+ä»¤ P1 æŒ‡å‘å­—ç¬¦ä¸²åŸæ¥çš„æœ«å°¾ä½ç½®ï¼ŒP2 æŒ‡å‘å­—ç¬¦ä¸²ç°åœ¨çš„æœ«å°¾ä½ç½®ã€‚P1 å’Œ P2ä»åå‘å‰éå†ï¼Œå½“ P1 éå†åˆ°ä¸€ä¸ªç©ºæ ¼æ—¶ï¼Œå°±éœ€è¦ä»¤ P2 æŒ‡å‘çš„ä½ç½®ä¾æ¬¡å¡«å…… 02%ï¼ˆæ³¨æ„æ˜¯é€†åºçš„ï¼‰ï¼Œå¦åˆ™å°±å¡«å……ä¸Š P1 æŒ‡å‘å­—ç¬¦çš„å€¼ã€‚
+
+ä»åå‘å‰éæ˜¯ä¸ºäº†åœ¨æ”¹å˜ P2 æ‰€æŒ‡å‘çš„å†…å®¹æ—¶ï¼Œä¸ä¼šå½±å“åˆ° P1 éå†åŸæ¥å­—ç¬¦ä¸²çš„å†…å®¹ã€‚
 
 ```java
 public String replaceSpace(StringBuffer str) {
-    int n = str.length();
-    for (int i = 0; i < n; i++) {
-        if (str.charAt(i) == ' ') str.append("  "); // Î²²¿Ìî³äÁ½¸ö
-    }
+    int P1 = str.length() - 1;
+    for (int i = 0; i < P1 + 1; i++)
+        if (str.charAt(i) == ' ')
+            str.append("  ");
 
-    int idxOfOriginal = n - 1;
-    int idxOfNew = str.length() - 1;
-    while (idxOfOriginal >= 0 && idxOfNew > idxOfOriginal) {
-        if (str.charAt(idxOfOriginal) == ' ') {
-            str.setCharAt(idxOfNew--, '0');
-            str.setCharAt(idxOfNew--, '2');
-            str.setCharAt(idxOfNew--, '%');
+    int P2 = str.length() - 1;
+    while (P1 >= 0 && P2 > P1) {
+        char c = str.charAt(P1--);
+        if (c == ' ') {
+            str.setCharAt(P2--, '0');
+            str.setCharAt(P2--, '2');
+            str.setCharAt(P2--, '%');
         } else {
-            str.setCharAt(idxOfNew--, str.charAt(idxOfOriginal));
+            str.setCharAt(P2--, c);
         }
-        idxOfOriginal--;
     }
     return str.toString();
 }
 ```
 
-## 6. ´ÓÎ²µ½Í·´òÓ¡Á´±í
+# 6. ä»å°¾åˆ°å¤´æ‰“å°é“¾è¡¨
 
-ÕıÏò±éÀúÈ»ºóµ÷ÓÃ Collections.reverse().
+[NowCoder](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+è¾“å…¥é“¾è¡¨çš„ç¬¬ä¸€ä¸ªèŠ‚ç‚¹ï¼Œä»å°¾åˆ°å¤´åè¿‡æ¥æ‰“å°å‡ºæ¯ä¸ªç»“ç‚¹çš„å€¼ã€‚
+
+<div align="center"> <img src="../pics//d99dc9e2-197c-4085-813d-7195da1c6762.png" width="300"/> </div><br>
+
+## è§£é¢˜æ€è·¯
+
+### ä½¿ç”¨æ ˆ
+
+```java
+public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+    Stack<Integer> stack = new Stack<>();
+    while (listNode != null) {
+        stack.add(listNode.val);
+        listNode = listNode.next;
+    }
+    ArrayList<Integer> ret = new ArrayList<>();
+    while (!stack.isEmpty())
+        ret.add(stack.pop());
+    return ret;
+}
+```
+
+### ä½¿ç”¨é€’å½’
+
+```java
+public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+    ArrayList<Integer> ret = new ArrayList<>();
+    if (listNode != null) {
+        ret.addAll(printListFromTailToHead(listNode.next));
+        ret.add(listNode.val);
+    }
+    return ret;
+}
+```
+
+### ä½¿ç”¨å¤´æ’æ³•
+
+åˆ©ç”¨é“¾è¡¨å¤´æ’æ³•ä¸ºé€†åºçš„ç‰¹ç‚¹ã€‚
+
+å¤´ç»“ç‚¹å’Œç¬¬ä¸€ä¸ªèŠ‚ç‚¹çš„åŒºåˆ«ï¼š
+
+- å¤´ç»“ç‚¹æ˜¯åœ¨å¤´æ’æ³•ä¸­ä½¿ç”¨çš„ä¸€ä¸ªé¢å¤–èŠ‚ç‚¹ï¼Œè¿™ä¸ªèŠ‚ç‚¹ä¸å­˜å‚¨å€¼ï¼›
+- ç¬¬ä¸€ä¸ªèŠ‚ç‚¹å°±æ˜¯é“¾è¡¨çš„ç¬¬ä¸€ä¸ªçœŸæ­£å­˜å‚¨å€¼çš„èŠ‚ç‚¹ã€‚
+
+```java
+public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+    // å¤´æ’æ³•æ„å»ºé€†åºé“¾è¡¨
+    ListNode head = new ListNode(-1);
+    while (listNode != null) {
+        ListNode memo = listNode.next;
+        listNode.next = head.next;
+        head.next = listNode;
+        listNode = memo;
+    }
+    // æ„å»º ArrayList
+    ArrayList<Integer> ret = new ArrayList<>();
+    head = head.next;
+    while (head != null) {
+        ret.add(head.val);
+        head = head.next;
+    }
+    return ret;
+}
+```
+
+### ä½¿ç”¨ Collections.reverse()
 
 ```java
 public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
@@ -183,258 +334,428 @@ public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
 }
 ```
 
-µİ¹é
+# 7. é‡å»ºäºŒå‰æ ‘
 
-```java
-public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-    ArrayList<Integer> ret = new ArrayList<>();
-    if(listNode != null) {
-        ret.addAll(printListFromTailToHead(listNode.next));
-        ret.add(listNode.val);
-    }
-    return ret;
-}
+[NowCoder](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+æ ¹æ®äºŒå‰æ ‘çš„å‰åºéå†å’Œä¸­åºéå†çš„ç»“æœï¼Œé‡å»ºå‡ºè¯¥äºŒå‰æ ‘ã€‚å‡è®¾è¾“å…¥çš„å‰åºéå†å’Œä¸­åºéå†çš„ç»“æœä¸­éƒ½ä¸å«é‡å¤çš„æ•°å­—ã€‚
+
+```html
+preorder = [3,9,20,15,7]
+inorder =  [9,3,15,20,7]
 ```
 
-²»Ê¹ÓÃ¿âº¯Êı£¬²¢ÇÒ²»Ê¹ÓÃµİ¹éµÄµü´úÊµÏÖ£¬ÀûÓÃÁ´±íµÄÍ·²å·¨ÎªÄæĞòµÄÌØĞÔ¡£
+<div align="center"> <img src="../pics//8a4c6ad4-a816-47d1-b93f-7ca4f78ab67a.png" width="250"/> </div><br>
+
+## è§£é¢˜æ€è·¯
+
+å‰åºéå†çš„ç¬¬ä¸€ä¸ªå€¼ä¸ºæ ¹èŠ‚ç‚¹çš„å€¼ï¼Œä½¿ç”¨è¿™ä¸ªå€¼å°†ä¸­åºéå†ç»“æœåˆ†æˆä¸¤éƒ¨åˆ†ï¼Œå·¦éƒ¨åˆ†ä¸ºæ ‘çš„å·¦å­æ ‘ä¸­åºéå†ç»“æœï¼Œå³éƒ¨åˆ†ä¸ºæ ‘çš„å³å­æ ‘ä¸­åºéå†çš„ç»“æœã€‚
 
 ```java
-public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-    ListNode head = new ListNode(-1); // Í·½áµã
-    ListNode cur = listNode;
-    while (cur != null) {
-        ListNode next = cur.next;
-        cur.next = head.next;
-        head.next = cur;
-        cur = next;
-    }
-    ArrayList<Integer> ret = new ArrayList<>();
-    head = head.next;
-    while (head != null) {
-        ret.add(head.val);
-        head = head.next;
-    }
-    return ret;
-}
-```
+// ç¼“å­˜ä¸­åºéå†æ•°ç»„æ¯ä¸ªå€¼å¯¹åº”çš„ç´¢å¼•
+private Map<Integer, Integer> indexForInOrders = new HashMap<>();
 
-## 7. ÖØ½¨¶ş²æÊ÷
-
-**ÌâÄ¿ÃèÊö**
-
-¸ù¾İ¶ş²æÊ÷µÄÇ°Ğò±éÀúºÍÖĞĞò±éÀúµÄ½á¹û£¬ÖØ½¨³ö¸Ã¶ş²æÊ÷¡£
-
-```java
 public TreeNode reConstructBinaryTree(int[] pre, int[] in) {
-    return reConstructBinaryTree(pre, 0, pre.length - 1, in, 0, in.length - 1);
+    for (int i = 0; i < in.length; i++)
+        indexForInOrders.put(in[i], i);
+    return reConstructBinaryTree(pre, 0, pre.length - 1, 0);
 }
-private TreeNode reConstructBinaryTree(int[] pre, int preL, int preR, int[] in, int inL, int inR) {
-    if(preL > preR || inL > inR) return null;
+
+private TreeNode reConstructBinaryTree(int[] pre, int preL, int preR, int inL) {
+    if (preL > preR)
+        return null;
     TreeNode root = new TreeNode(pre[preL]);
-    if (preL != preR) {
-        int idx = inL;
-        while (idx <= inR && in[idx] != root.val) idx++;
-        int leftTreeLen = idx - inL;
-        root.left = reConstructBinaryTree(pre, preL + 1, preL + leftTreeLen, in, inL, inL + leftTreeLen - 1);
-        root.right = reConstructBinaryTree(pre, preL + leftTreeLen + 1, preR, in, inL + leftTreeLen + 1, inR);
-    }
+    int inIndex = indexForInOrders.get(root.val);
+    int leftTreeSize = inIndex - inL;
+    root.left = reConstructBinaryTree(pre, preL + 1, preL + leftTreeSize, inL);
+    root.right = reConstructBinaryTree(pre, preL + leftTreeSize + 1, preR, inL + leftTreeSize + 1);
     return root;
 }
 ```
 
-## 8. ¶ş²æÊ÷µÄÏÂÒ»¸ö½áµã
+# 8. äºŒå‰æ ‘çš„ä¸‹ä¸€ä¸ªç»“ç‚¹
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/9023a0c988684a53960365b889ceaf5e?tpId=13&tqId=11210&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-¸ø¶¨Ò»¸ö¶ş²æÊ÷ºÍÆäÖĞµÄÒ»¸ö½áµã£¬ÇëÕÒ³öÖĞĞò±éÀúË³ĞòµÄÏÂÒ»¸ö½áµã²¢ÇÒ·µ»Ø¡£×¢Òâ£¬Ê÷ÖĞµÄ½áµã²»½ö°üº¬×óÓÒ×Ó½áµã£¬Í¬Ê±°üº¬Ö¸Ïò¸¸½áµãµÄÖ¸Õë¡£
+## é¢˜ç›®æè¿°
+
+ç»™å®šä¸€ä¸ªäºŒå‰æ ‘å’Œå…¶ä¸­çš„ä¸€ä¸ªç»“ç‚¹ï¼Œè¯·æ‰¾å‡ºä¸­åºéå†é¡ºåºçš„ä¸‹ä¸€ä¸ªç»“ç‚¹å¹¶ä¸”è¿”å›ã€‚æ³¨æ„ï¼Œæ ‘ä¸­çš„ç»“ç‚¹ä¸ä»…åŒ…å«å·¦å³å­ç»“ç‚¹ï¼ŒåŒæ—¶åŒ…å«æŒ‡å‘çˆ¶ç»“ç‚¹çš„æŒ‡é’ˆã€‚
+
+```java
+public class TreeLinkNode {
+    int val;
+    TreeLinkNode left = null;
+    TreeLinkNode right = null;
+    TreeLinkNode next = null;
+
+    TreeLinkNode(int val) {
+        this.val = val;
+    }
+}
+```
+
+## è§£é¢˜æ€è·¯
+
+â‘  å¦‚æœä¸€ä¸ªèŠ‚ç‚¹çš„å³å­æ ‘ä¸ä¸ºç©ºï¼Œé‚£ä¹ˆè¯¥èŠ‚ç‚¹çš„ä¸‹ä¸€ä¸ªèŠ‚ç‚¹æ˜¯å³å­æ ‘çš„æœ€å·¦èŠ‚ç‚¹ï¼›
+
+<div align="center"> <img src="../pics//cb0ed469-27ab-471b-a830-648b279103c8.png" width="250"/> </div><br>
+
+â‘¡ å¦åˆ™ï¼Œå‘ä¸Šæ‰¾ç¬¬ä¸€ä¸ªå·¦é“¾æ¥æŒ‡å‘çš„æ ‘åŒ…å«è¯¥èŠ‚ç‚¹çš„ç¥–å…ˆèŠ‚ç‚¹ã€‚
+
+<div align="center"> <img src="../pics//e143f6da-d114-4ba4-8712-f65299047fa2.png" width="250"/> </div><br>
 
 ```java
 public TreeLinkNode GetNext(TreeLinkNode pNode) {
-    if (pNode == null) return null;
     if (pNode.right != null) {
-        pNode = pNode.right;
-        while (pNode.left != null) pNode = pNode.left;
-        return pNode;
+        TreeLinkNode node = pNode.right;
+        while (node.left != null)
+            node = node.left;
+        return node;
     } else {
-        TreeLinkNode parent = pNode.next;
-        while (parent != null) {
-            if (parent.left == pNode) return parent;
+        while (pNode.next != null) {
+            TreeLinkNode parent = pNode.next;
+            if (parent.left == pNode)
+                return parent;
             pNode = pNode.next;
-            parent = pNode.next;
         }
     }
     return null;
 }
 ```
 
-## 9. ÓÃÁ½¸öÕ»ÊµÏÖ¶ÓÁĞ
+# 9. ç”¨ä¸¤ä¸ªæ ˆå®ç°é˜Ÿåˆ—
+
+[NowCoder](https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6?tpId=13&tqId=11158&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+ç”¨ä¸¤ä¸ªæ ˆæ¥å®ç°ä¸€ä¸ªé˜Ÿåˆ—ï¼Œå®Œæˆé˜Ÿåˆ—çš„ Push å’Œ Pop æ“ä½œã€‚
+
+## è§£é¢˜æ€è·¯
+
+in æ ˆç”¨æ¥å¤„ç†å…¥æ ˆï¼ˆpushï¼‰æ“ä½œï¼Œout æ ˆç”¨æ¥å¤„ç†å‡ºæ ˆï¼ˆpopï¼‰æ“ä½œã€‚ä¸€ä¸ªå…ƒç´ è¿›å…¥ in æ ˆä¹‹åï¼Œå‡ºæ ˆçš„é¡ºåºè¢«åè½¬ã€‚å½“å…ƒç´ è¦å‡ºæ ˆæ—¶ï¼Œéœ€è¦å…ˆè¿›å…¥ out æ ˆï¼Œæ­¤æ—¶å…ƒç´ å‡ºæ ˆé¡ºåºå†ä¸€æ¬¡è¢«åè½¬ï¼Œå› æ­¤å‡ºæ ˆé¡ºåºå°±å’Œæœ€å¼€å§‹å…¥æ ˆé¡ºåºæ˜¯ç›¸åŒçš„ï¼Œå…ˆè¿›å…¥çš„å…ƒç´ å…ˆé€€å‡ºï¼Œè¿™å°±æ˜¯é˜Ÿåˆ—çš„é¡ºåºã€‚
+
+<div align="center"> <img src="../pics//5acf7550-86c5-4c5b-b912-8ce70ef9c34e.png" width="400"/> </div><br>
 
 ```java
-Stack<Integer> stack1 = new Stack<Integer>();
-Stack<Integer> stack2 = new Stack<Integer>();
+Stack<Integer> in = new Stack<Integer>();
+Stack<Integer> out = new Stack<Integer>();
 
 public void push(int node) {
-    stack1.push(node);
+    in.push(node);
 }
 
-public int pop() {
-    if (stack2.isEmpty()) {
-        while (!stack1.isEmpty()) {
-            stack2.push(stack1.pop());
-        }
-    }
-    return stack2.pop();
+public int pop() throws Exception {
+    if (out.isEmpty())
+        while (!in.isEmpty())
+            out.push(in.pop());
+
+    if (out.isEmpty())
+        throw new Exception("queue is empty");
+
+    return out.pop();
 }
 ```
 
-## 10.1 ì³²¨ÄÇÆõÊıÁĞ
+# 10.1 æ–æ³¢é‚£å¥‘æ•°åˆ—
+
+[NowCoder](https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+æ±‚æ–æ³¢é‚£å¥‘æ•°åˆ—çš„ç¬¬ n é¡¹ï¼Œn <= 39ã€‚
+
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?f(n)=\left\{\begin{array}{rcl}0&&{n=0}\\1&&{n=1}\\f(n-1)+f(n-2)&&{n>1}\end{array}\right."/></div> <br>
+
+## è§£é¢˜æ€è·¯
+
+å¦‚æœä½¿ç”¨é€’å½’æ±‚è§£ï¼Œä¼šé‡å¤è®¡ç®—ä¸€äº›å­é—®é¢˜ã€‚ä¾‹å¦‚ï¼Œè®¡ç®— f(10) éœ€è¦è®¡ç®— f(9) å’Œ f(8)ï¼Œè®¡ç®— f(9) éœ€è¦è®¡ç®— f(8) å’Œ f(7)ï¼Œå¯ä»¥çœ‹åˆ° f(8) è¢«é‡å¤è®¡ç®—äº†ã€‚
+
+<div align="center"> <img src="../pics//faecea49-9974-40db-9821-c8636137df61.jpg" width="300"/> </div><br>
+
+é€’å½’æ˜¯å°†ä¸€ä¸ªé—®é¢˜åˆ’åˆ†æˆå¤šä¸ªå­é—®é¢˜æ±‚è§£ï¼ŒåŠ¨æ€è§„åˆ’ä¹Ÿæ˜¯å¦‚æ­¤ï¼Œä½†æ˜¯åŠ¨æ€è§„åˆ’ä¼šæŠŠå­é—®é¢˜çš„è§£ç¼“å­˜èµ·æ¥ï¼Œä»è€Œé¿å…é‡å¤æ±‚è§£å­é—®é¢˜ã€‚
 
 ```java
-private int[] fib = new int[40];
-
-public Solution() {
-    fib[1] = 1;
-    fib[2] = 2;
-    for (int i = 2; i < fib.length; i++) {
-        fib[i] = fib[i - 1] + fib[i - 2];
-    }
-}
-
 public int Fibonacci(int n) {
+    if (n <= 1)
+        return n;
+    int[] fib = new int[n + 1];
+    fib[1] = 1;
+    for (int i = 2; i <= n; i++)
+        fib[i] = fib[i - 1] + fib[i - 2];
     return fib[n];
 }
 ```
 
-## 10.2 ÌøÌ¨½×
+è€ƒè™‘åˆ°ç¬¬ i é¡¹åªä¸ç¬¬ i-1 å’Œç¬¬ i-2 é¡¹æœ‰å…³ï¼Œå› æ­¤åªéœ€è¦å­˜å‚¨å‰ä¸¤é¡¹çš„å€¼å°±èƒ½æ±‚è§£ç¬¬ i é¡¹ï¼Œä»è€Œå°†ç©ºé—´å¤æ‚åº¦ç”± O(N) é™ä½ä¸º O(1)ã€‚
 
 ```java
-public int JumpFloor(int target) {
-    if (target == 1) return 1;
-    int[] dp = new int[target];
-    dp[0] = 1;
-    dp[1] = 2;
-    for (int i = 2; i < dp.length; i++) {
-        dp[i] = dp[i - 1] + dp[i - 2];
+public int Fibonacci(int n) {
+    if (n <= 1)
+        return n;
+    int pre2 = 0, pre1 = 1;
+    int fib = 0;
+    for (int i = 2; i <= n; i++) {
+        fib = pre2 + pre1;
+        pre2 = pre1;
+        pre1 = fib;
     }
-    return dp[target - 1];
+    return fib;
 }
 ```
 
-## 10.3 ±äÌ¬ÌøÌ¨½×
+ç”±äºå¾…æ±‚è§£çš„ n å°äº 40ï¼Œå› æ­¤å¯ä»¥å°†å‰ 40 é¡¹çš„ç»“æœå…ˆè¿›è¡Œè®¡ç®—ï¼Œä¹‹åå°±èƒ½ä»¥ O(1) æ—¶é—´å¤æ‚åº¦å¾—åˆ°ç¬¬ n é¡¹çš„å€¼äº†ã€‚
+
+```java
+public class Solution {
+    private int[] fib = new int[40];
+
+    public Solution() {
+        fib[1] = 1;
+        fib[2] = 2;
+        for (int i = 2; i < fib.length; i++)
+            fib[i] = fib[i - 1] + fib[i - 2];
+    }
+
+    public int Fibonacci(int n) {
+        return fib[n];
+    }
+}
+```
+
+# 10.2 è·³å°é˜¶
+
+[NowCoder](https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4?tpId=13&tqId=11161&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+ä¸€åªé’è›™ä¸€æ¬¡å¯ä»¥è·³ä¸Š 1 çº§å°é˜¶ï¼Œä¹Ÿå¯ä»¥è·³ä¸Š 2 çº§ã€‚æ±‚è¯¥é’è›™è·³ä¸Šä¸€ä¸ª n çº§çš„å°é˜¶æ€»å…±æœ‰å¤šå°‘ç§è·³æ³•ã€‚
+
+## è§£é¢˜æ€è·¯
+
+```java
+public int JumpFloor(int n) {
+    if (n <= 2)
+        return n;
+    int pre2 = 1, pre1 = 2;
+    int result = 1;
+    for (int i = 2; i < n; i++) {
+        result = pre2 + pre1;
+        pre2 = pre1;
+        pre1 = result;
+    }
+    return result;
+}
+```
+
+# 10.3 çŸ©å½¢è¦†ç›–
+
+[NowCoder](https://www.nowcoder.com/practice/72a5a919508a4251859fb2cfb987a0e6?tpId=13&tqId=11163&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+æˆ‘ä»¬å¯ä»¥ç”¨ 2\*1 çš„å°çŸ©å½¢æ¨ªç€æˆ–è€…ç«–ç€å»è¦†ç›–æ›´å¤§çš„çŸ©å½¢ã€‚è¯·é—®ç”¨ n ä¸ª 2\*1 çš„å°çŸ©å½¢æ— é‡å åœ°è¦†ç›–ä¸€ä¸ª 2\*n çš„å¤§çŸ©å½¢ï¼Œæ€»å…±æœ‰å¤šå°‘ç§æ–¹æ³•ï¼Ÿ
+
+## è§£é¢˜æ€è·¯
+
+```java
+public int RectCover(int n) {
+    if (n <= 2)
+        return n;
+    int pre2 = 1, pre1 = 2;
+    int result = 0;
+    for (int i = 3; i <= n; i++) {
+        result = pre2 + pre1;
+        pre2 = pre1;
+        pre1 = result;
+    }
+    return result;
+}
+```
+
+# 10.4 å˜æ€è·³å°é˜¶
+
+[NowCoder](https://www.nowcoder.com/practice/22243d016f6b47f2a6928b4313c85387?tpId=13&tqId=11162&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+ä¸€åªé’è›™ä¸€æ¬¡å¯ä»¥è·³ä¸Š 1 çº§å°é˜¶ï¼Œä¹Ÿå¯ä»¥è·³ä¸Š 2 çº§... å®ƒä¹Ÿå¯ä»¥è·³ä¸Š n çº§ã€‚æ±‚è¯¥é’è›™è·³ä¸Šä¸€ä¸ª n çº§çš„å°é˜¶æ€»å…±æœ‰å¤šå°‘ç§è·³æ³•ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public int JumpFloorII(int target) {
     int[] dp = new int[target];
     Arrays.fill(dp, 1);
-    for (int i = 1; i < target; i++) {
-        for (int j = 0; j < i; j++) {
+    for (int i = 1; i < target; i++)
+        for (int j = 0; j < i; j++)
             dp[i] += dp[j];
-        }
-    }
     return dp[target - 1];
 }
 ```
 
-## 10.4 ¾ØĞÎ¸²¸Ç
 
-**ÌâÄ¿ÃèÊö**
+# 11. æ—‹è½¬æ•°ç»„çš„æœ€å°æ•°å­—
 
-ÎÒÃÇ¿ÉÒÔÓÃ 2\*1 µÄĞ¡¾ØĞÎºá×Å»òÕßÊú×ÅÈ¥¸²¸Ç¸ü´óµÄ¾ØĞÎ¡£ÇëÎÊÓÃ n ¸ö 2\*1 µÄĞ¡¾ØĞÎÎŞÖØµşµØ¸²¸ÇÒ»¸ö 2\*n µÄ´ó¾ØĞÎ£¬×Ü¹²ÓĞ¶àÉÙÖÖ·½·¨£¿
+[NowCoder](https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba?tpId=13&tqId=11159&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+æŠŠä¸€ä¸ªæ•°ç»„æœ€å¼€å§‹çš„è‹¥å¹²ä¸ªå…ƒç´ æ¬åˆ°æ•°ç»„çš„æœ«å°¾ï¼Œæˆ‘ä»¬ç§°ä¹‹ä¸ºæ•°ç»„çš„æ—‹è½¬ã€‚è¾“å…¥ä¸€ä¸ªéé€’å‡æ’åºçš„æ•°ç»„çš„ä¸€ä¸ªæ—‹è½¬ï¼Œè¾“å‡ºæ—‹è½¬æ•°ç»„çš„æœ€å°å…ƒç´ ã€‚
+
+ä¾‹å¦‚æ•°ç»„ {3, 4, 5, 1, 2} ä¸º {1, 2, 3, 4, 5} çš„ä¸€ä¸ªæ—‹è½¬ï¼Œè¯¥æ•°ç»„çš„æœ€å°å€¼ä¸º 1ã€‚
+
+## è§£é¢˜æ€è·¯
+
+åœ¨ä¸€ä¸ªæœ‰åºæ•°ç»„ä¸­æŸ¥æ‰¾ä¸€ä¸ªå…ƒç´ å¯ä»¥ç”¨äºŒåˆ†æŸ¥æ‰¾ï¼ŒäºŒåˆ†æŸ¥æ‰¾ä¹Ÿç§°ä¸ºæŠ˜åŠæŸ¥æ‰¾ï¼Œæ¯æ¬¡éƒ½èƒ½å°†æŸ¥æ‰¾åŒºé—´å‡åŠï¼Œè¿™ç§æŠ˜åŠç‰¹æ€§çš„ç®—æ³•æ—¶é—´å¤æ‚åº¦éƒ½ä¸º O(logN)ã€‚
+
+æœ¬é¢˜å¯ä»¥ä¿®æ”¹äºŒåˆ†æŸ¥æ‰¾ç®—æ³•è¿›è¡Œæ±‚è§£ï¼š
+
+- å½“ nums[m] <= nums[h] çš„æƒ…å†µä¸‹ï¼Œè¯´æ˜è§£åœ¨ [l, m] ä¹‹é—´ï¼Œæ­¤æ—¶ä»¤ h = mï¼›
+- å¦åˆ™è§£åœ¨ [m + 1, h] ä¹‹é—´ï¼Œä»¤ l = m + 1ã€‚
 
 ```java
-public int RectCover(int target) {
-    if (target <= 2) return target;
-    return RectCover(target - 1) + RectCover(target - 2);
+public int minNumberInRotateArray(int[] nums) {
+    if (nums.length == 0)
+        return 0;
+    int l = 0, h = nums.length - 1;
+    while (l < h) {
+        int m = l + (h - l) / 2;
+        if (nums[m] <= nums[h])
+            h = m;
+        else
+            l = m + 1;
+    }
+    return nums[l];
 }
 ```
 
-
-## 11. Ğı×ªÊı×éµÄ×îĞ¡Êı×Ö
-
-**ÌâÄ¿ÃèÊö**
-
-°ÑÒ»¸öÊı×é×î¿ªÊ¼µÄÈô¸É¸öÔªËØ°áµ½Êı×éµÄÄ©Î²£¬ÎÒÃÇ³ÆÖ®ÎªÊı×éµÄĞı×ª¡£ ÊäÈëÒ»¸ö·Çµİ¼õÅÅĞòµÄÊı×éµÄÒ»¸öĞı×ª£¬Êä³öĞı×ªÊı×éµÄ×îĞ¡ÔªËØ¡£ ÀıÈçÊı×é {3, 4, 5, 1, 2} Îª {1, 2, 3, 4, 5} µÄÒ»¸öĞı×ª£¬¸ÃÊı×éµÄ×îĞ¡ÖµÎª 1¡£ NOTE£º¸ø³öµÄËùÓĞÔªËØ¶¼´óÓÚ 0£¬ÈôÊı×é´óĞ¡Îª 0£¬Çë·µ»Ø 0¡£
+å¦‚æœæ•°ç»„å…ƒç´ å…è®¸é‡å¤çš„è¯ï¼Œé‚£ä¹ˆå°±ä¼šå‡ºç°ä¸€ä¸ªç‰¹æ®Šçš„æƒ…å†µï¼šnums[l] == nums[m] == nums[h]ï¼Œé‚£ä¹ˆæ­¤æ—¶æ— æ³•ç¡®å®šè§£åœ¨å“ªä¸ªåŒºé—´ï¼Œéœ€è¦åˆ‡æ¢åˆ°é¡ºåºæŸ¥æ‰¾ã€‚ä¾‹å¦‚å¯¹äºæ•°ç»„ {1,1,1,0,1}ï¼Œlã€m å’Œ h æŒ‡å‘çš„æ•°éƒ½ä¸º 1ï¼Œæ­¤æ—¶æ— æ³•çŸ¥é“æœ€å°æ•°å­— 0 åœ¨å“ªä¸ªåŒºé—´ã€‚
 
 ```java
-public int minNumberInRotateArray(int[] array) {
-    if (array.length == 0) return 0;
-    for (int i = 0; i < array.length - 1; i++) {
-        if (array[i] > array[i + 1]) return array[i + 1];
+public int minNumberInRotateArray(int[] nums) {
+    if (nums.length == 0)
+        return 0;
+    int l = 0, h = nums.length - 1;
+    while (l < h) {
+        int m = l + (h - l) / 2;
+        if (nums[l] == nums[m] && nums[m] == nums[h])
+            return minNumber(nums, l, h);
+        else if (nums[m] <= nums[h])
+            h = m;
+        else
+            l = m + 1;
     }
-    return 0;
+    return nums[l];
+}
+
+private int minNumber(int[] nums, int l, int h) {
+    for (int i = l; i < h; i++)
+        if (nums[i] > nums[i + 1])
+            return nums[i + 1];
+    return nums[l];
 }
 ```
 
-## 12. ¾ØÕóÖĞµÄÂ·¾¶
+# 12. çŸ©é˜µä¸­çš„è·¯å¾„
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/c61c6999eecb4b8f88a98f66b273a3cc?tpId=13&tqId=11218&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÇëÉè¼ÆÒ»¸öº¯Êı£¬ÓÃÀ´ÅĞ¶ÏÔÚÒ»¸ö¾ØÕóÖĞÊÇ·ñ´æÔÚÒ»Ìõ°üº¬Ä³×Ö·û´®ËùÓĞ×Ö·ûµÄÂ·¾¶¡£Â·¾¶¿ÉÒÔ´Ó¾ØÕóÖĞµÄÈÎÒâÒ»¸ö¸ñ×Ó¿ªÊ¼£¬Ã¿Ò»²½¿ÉÒÔÔÚ¾ØÕóÖĞÏò×ó£¬ÏòÓÒ£¬ÏòÉÏ£¬ÏòÏÂÒÆ¶¯Ò»¸ö¸ñ×Ó¡£Èç¹ûÒ»ÌõÂ·¾¶¾­¹ıÁË¾ØÕóÖĞµÄÄ³Ò»¸ö¸ñ×Ó£¬Ôò¸ÃÂ·¾¶²»ÄÜÔÙ½øÈë¸Ã¸ñ×Ó¡£ ÀıÈç a b c e s f c s a d e e ¾ØÕóÖĞ°üº¬Ò»Ìõ×Ö·û´® "bcced" µÄÂ·¾¶£¬µ«ÊÇ¾ØÕóÖĞ²»°üº¬ "abcb" Â·¾¶£¬ÒòÎª×Ö·û´®µÄµÚÒ»¸ö×Ö·û b Õ¼¾İÁË¾ØÕóÖĞµÄµÚÒ»ĞĞµÚ¶ş¸ö¸ñ×ÓÖ®ºó£¬Â·¾¶²»ÄÜÔÙ´Î½øÈë¸Ã¸ñ×Ó¡£
+## é¢˜ç›®æè¿°
+
+è¯·è®¾è®¡ä¸€ä¸ªå‡½æ•°ï¼Œç”¨æ¥åˆ¤æ–­åœ¨ä¸€ä¸ªçŸ©é˜µä¸­æ˜¯å¦å­˜åœ¨ä¸€æ¡åŒ…å«æŸå­—ç¬¦ä¸²æ‰€æœ‰å­—ç¬¦çš„è·¯å¾„ã€‚è·¯å¾„å¯ä»¥ä»çŸ©é˜µä¸­çš„ä»»æ„ä¸€ä¸ªæ ¼å­å¼€å§‹ï¼Œæ¯ä¸€æ­¥å¯ä»¥åœ¨çŸ©é˜µä¸­å‘å·¦ï¼Œå‘å³ï¼Œå‘ä¸Šï¼Œå‘ä¸‹ç§»åŠ¨ä¸€ä¸ªæ ¼å­ã€‚å¦‚æœä¸€æ¡è·¯å¾„ç»è¿‡äº†çŸ©é˜µä¸­çš„æŸä¸€ä¸ªæ ¼å­ï¼Œåˆ™è¯¥è·¯å¾„ä¸èƒ½å†è¿›å…¥è¯¥æ ¼å­ã€‚
+
+ä¾‹å¦‚ä¸‹é¢çš„çŸ©é˜µåŒ…å«äº†ä¸€æ¡ bfce è·¯å¾„ã€‚
+
+<div align="center"> <img src="../pics//e31abb94-9201-4e06-9902-61101b92f475.png" width="300"/> </div><br>
+
+## è§£é¢˜æ€è·¯
 
 ```java
-private int[][] next = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
+private final static int[][] next = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
+private int rows;
+private int cols;
 
-public boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
-    if (rows == 0 || cols == 0) return false;
-    char[][] m = new char[rows][cols];
-    for (int i = 0, idx = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            m[i][j] = matrix[idx++];
-        }
-    }
-
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            if (backtracking(m, rows, cols, str, new boolean[rows][cols], 0, i, j)) return true;
-        }
-    }
+public boolean hasPath(char[] array, int rows, int cols, char[] str) {
+    if (rows == 0 || cols == 0)
+        return false;
+    this.rows = rows;
+    this.cols = cols;
+    boolean[][] marked = new boolean[rows][cols];
+    char[][] matrix = buildMatrix(array);
+    for (int i = 0; i < rows; i++)
+        for (int j = 0; j < cols; j++)
+            if (backtracking(matrix, str, marked, 0, i, j))
+                return true;
     return false;
 }
 
-private boolean backtracking(char[][] m, int rows, int cols, char[] str, boolean[][] used, int path, int r, int c) {
-    if (path == str.length) return true;
-    if (r < 0 || r >= rows || c < 0 || c >= cols) return false;
-    if (m[r][c] != str[path]) return false;
-    if (used[r][c]) return false;
-    used[r][c] = true;
-    for (int i = 0; i < next.length; i++) {
-        if (backtracking(m, rows, cols, str, used, path + 1, r + next[i][0], c + next[i][1])) return true;
-    }
-    used[r][c] = false;
+private boolean backtracking(char[][] matrix, char[] str, boolean[][] marked, int pathLen, int r, int c) {
+    if (pathLen == str.length)
+        return true;
+    if (r < 0 || r >= rows || c < 0 || c >= cols || matrix[r][c] != str[pathLen] || marked[r][c])
+        return false;
+    marked[r][c] = true;
+    for (int[] n : next)
+        if (backtracking(matrix, str, marked, pathLen + 1, r + n[0], c + n[1]))
+            return true;
+    marked[r][c] = false;
     return false;
+}
+
+private char[][] buildMatrix(char[] array) {
+    char[][] matrix = new char[rows][cols];
+    for (int i = 0, idx = 0; i < rows; i++)
+        for (int j = 0; j < cols; j++)
+            matrix[i][j] = array[idx++];
+    return matrix;
 }
 ```
 
+# 13. æœºå™¨äººçš„è¿åŠ¨èŒƒå›´
 
-## 13. »úÆ÷ÈËµÄÔË¶¯·¶Î§
+[NowCoder](https://www.nowcoder.com/practice/6e5207314b5241fb83f2329e89fdecc8?tpId=13&tqId=11219&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-**ÌâÄ¿ÃèÊö**
+## é¢˜ç›®æè¿°
 
-µØÉÏÓĞÒ»¸ö m ĞĞºÍ n ÁĞµÄ·½¸ñ¡£Ò»¸ö»úÆ÷ÈË´Ó×ø±ê 0, 0 µÄ¸ñ×Ó¿ªÊ¼ÒÆ¶¯£¬Ã¿Ò»´ÎÖ»ÄÜÏò×ó£¬ÓÒ£¬ÉÏ£¬ÏÂËÄ¸ö·½ÏòÒÆ¶¯Ò»¸ñ£¬µ«ÊÇ²»ÄÜ½øÈëĞĞ×ø±êºÍÁĞ×ø±êµÄÊıÎ»Ö®ºÍ´óÓÚ k µÄ¸ñ×Ó¡£ ÀıÈç£¬µ± k Îª 18 Ê±£¬»úÆ÷ÈËÄÜ¹»½øÈë·½¸ñ£¨35, 37£©£¬ÒòÎª 3+5+3+7 = 18¡£µ«ÊÇ£¬Ëü²»ÄÜ½øÈë·½¸ñ£¨35, 38£©£¬ÒòÎª 3+5+3+8 = 19¡£ÇëÎÊ¸Ã»úÆ÷ÈËÄÜ¹»´ïµ½¶àÉÙ¸ö¸ñ×Ó£¿
+åœ°ä¸Šæœ‰ä¸€ä¸ª m è¡Œå’Œ n åˆ—çš„æ–¹æ ¼ã€‚ä¸€ä¸ªæœºå™¨äººä»åæ ‡ (0, 0) çš„æ ¼å­å¼€å§‹ç§»åŠ¨ï¼Œæ¯ä¸€æ¬¡åªèƒ½å‘å·¦å³ä¸Šä¸‹å››ä¸ªæ–¹å‘ç§»åŠ¨ä¸€æ ¼ï¼Œä½†æ˜¯ä¸èƒ½è¿›å…¥è¡Œåæ ‡å’Œåˆ—åæ ‡çš„æ•°ä½ä¹‹å’Œå¤§äº k çš„æ ¼å­ã€‚
+
+ä¾‹å¦‚ï¼Œå½“ k ä¸º 18 æ—¶ï¼Œæœºå™¨äººèƒ½å¤Ÿè¿›å…¥æ–¹æ ¼ (35,37)ï¼Œå› ä¸º 3+5+3+7=18ã€‚ä½†æ˜¯ï¼Œå®ƒä¸èƒ½è¿›å…¥æ–¹æ ¼ (35,37)ï¼Œå› ä¸º 3+5+3+8=19ã€‚è¯·é—®è¯¥æœºå™¨äººèƒ½å¤Ÿè¾¾åˆ°å¤šå°‘ä¸ªæ ¼å­ï¼Ÿ
+
+## è§£é¢˜æ€è·¯
 
 ```java
+private static final int[][] next = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
 private int cnt = 0;
-private int[][] next = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
+private int rows;
+private int cols;
+private int threshold;
 private int[][] digitSum;
 
 public int movingCount(int threshold, int rows, int cols) {
-    initDigitSum(rows, cols);
-    dfs(new boolean[rows][cols], threshold, rows, cols, 0, 0);
+    this.rows = rows;
+    this.cols = cols;
+    this.threshold = threshold;
+    initDigitSum();
+    boolean[][] marked = new boolean[rows][cols];
+    dfs(marked, 0, 0);
     return cnt;
 }
 
-private void dfs(boolean[][] visited, int threshold, int rows, int cols, int r, int c) {
-    if (r < 0 || r >= rows || c < 0 || c >= cols) return;
-    if (visited[r][c]) return;
-    visited[r][c] = true;
-    if (this.digitSum[r][c] > threshold) return;
-    this.cnt++;
-    for (int i = 0; i < this.next.length; i++) {
-        dfs(visited, threshold, rows, cols, r + next[i][0], c + next[i][1]);
-    }
+private void dfs(boolean[][] marked, int r, int c) {
+    if (r < 0 || r >= rows || c < 0 || c >= cols || marked[r][c])
+        return;
+    marked[r][c] = true;
+    if (this.digitSum[r][c] > this.threshold)
+        return;
+    cnt++;
+    for (int[] n : next)
+        dfs(marked, r + n[0], c + n[1]);
 }
 
-private void initDigitSum(int rows, int cols) {
+private void initDigitSum() {
     int[] digitSumOne = new int[Math.max(rows, cols)];
     for (int i = 0; i < digitSumOne.length; i++) {
         int n = i;
@@ -444,45 +765,85 @@ private void initDigitSum(int rows, int cols) {
         }
     }
     this.digitSum = new int[rows][cols];
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+    for (int i = 0; i < this.rows; i++)
+        for (int j = 0; j < this.cols; j++)
             this.digitSum[i][j] = digitSumOne[i] + digitSumOne[j];
-        }
-    }
 }
 ```
 
-## 14. ¼ôÉş×Ó
+# 14. å‰ªç»³å­
 
-**ÌâÄ¿ÃèÊö**
+[Leetcode](https://leetcode.com/problems/integer-break/description/)
 
-°ÑÒ»¸ùÉş×Ó¼ô³É¶à¶Î£¬²¢ÇÒÊ¹µÃÃ¿¶ÎµÄ³¤¶È³Ë»ı×î´ó¡£
+## é¢˜ç›®æè¿°
 
-**½âÌâË¼Â·**
+æŠŠä¸€æ ¹ç»³å­å‰ªæˆå¤šæ®µï¼Œå¹¶ä¸”ä½¿å¾—æ¯æ®µçš„é•¿åº¦ä¹˜ç§¯æœ€å¤§ã€‚
 
-¾¡¿ÉÄÜ¶àµÃ¼ô³¤¶ÈÎª 3 µÄÉş×Ó£¬²¢ÇÒ²»ÔÊĞíÓĞ³¤¶ÈÎª 1 µÄÉş×Ó³öÏÖ£¬Èç¹û³öÏÖÁË£¬¾Í´ÓÒÑ¾­ÇĞºÃ³¤¶ÈÎª 3 µÄÉş×ÓÖĞÄÃ³öÒ»¶ÎÓë³¤¶ÈÎª 1 µÄÉş×ÓÖØĞÂ×éºÏ£¬°ÑËüÃÇÇĞ³ÉÁ½¶Î³¤¶ÈÎª 2 µÄÉş×Ó¡£
+```html
+n = 2
+return 1 (2 = 1 + 1)
+
+n = 10
+return 36 (10 = 3 + 3 + 4)
+```
+
+## è§£é¢˜æ€è·¯
+
+### è´ªå¿ƒ
+
+å°½å¯èƒ½å¤šå‰ªé•¿åº¦ä¸º 3 çš„ç»³å­ï¼Œå¹¶ä¸”ä¸å…è®¸æœ‰é•¿åº¦ä¸º 1 çš„ç»³å­å‡ºç°ã€‚å¦‚æœå‡ºç°äº†ï¼Œå°±ä»å·²ç»åˆ‡å¥½é•¿åº¦ä¸º 3 çš„ç»³å­ä¸­æ‹¿å‡ºä¸€æ®µä¸é•¿åº¦ä¸º 1 çš„ç»³å­é‡æ–°ç»„åˆï¼ŒæŠŠå®ƒä»¬åˆ‡æˆä¸¤æ®µé•¿åº¦ä¸º 2 çš„ç»³å­ã€‚
+
+è¯æ˜ï¼šå½“ n >= 5 æ—¶ï¼Œ3(n - 3) - 2(n - 2) = n - 5 >= 0ã€‚å› æ­¤æŠŠé•¿åº¦å¤§äº 5 çš„ç»³å­åˆ‡æˆä¸¤æ®µï¼Œä»¤å…¶ä¸­ä¸€æ®µé•¿åº¦ä¸º 3 å¯ä»¥ä½¿å¾—ä¸¤æ®µçš„ä¹˜ç§¯æœ€å¤§ã€‚
 
 ```java
-int maxProductAfterCuttin(int length) {
-    if (length < 2) return 0;
-    if (length == 2) return 1;
-    if (length == 3) return 2;
-    int timesOf3 = length / 3;
-    if (length - timesOf3 * 3 == 1) timesOf3--;
-    int timesOf2 = (length - timesOf3 * 3) / 2;
+public int integerBreak(int n) {
+    if (n < 2)
+        return 0;
+    if (n == 2)
+        return 1;
+    if (n == 3)
+        return 2;
+    int timesOf3 = n / 3;
+    if (n - timesOf3 * 3 == 1)
+        timesOf3--;
+    int timesOf2 = (n - timesOf3 * 3) / 2;
     return (int) (Math.pow(3, timesOf3)) * (int) (Math.pow(2, timesOf2));
 }
 ```
 
-## 15. ¶ş½øÖÆÖĞ 1 µÄ¸öÊı
+### åŠ¨æ€è§„åˆ’
 
 ```java
-public int NumberOf1(int n) {
-    return Integer.bitCount(n);
+public int integerBreak(int n) {
+    int[] dp = new int[n + 1];
+    dp[1] = 1;
+    for (int i = 2; i <= n; i++)
+        for (int j = 1; j < i; j++)
+            dp[i] = Math.max(dp[i], Math.max(j * (i - j), dp[j] * (i - j)));
+    return dp[n];
 }
 ```
 
-n&(n-1) ¸ÃÎ»ÔËËãÊÇÈ¥³ı n µÄÎ»¼¶±íÊ¾ÖĞ×îµÍµÄÄÇÒ»Î»¡£ÀıÈç¶ÔÓÚ¶ş½øÖÆ±íÊ¾ 10110100£¬¼õÈ¥ 1 µÃµ½ 10110011£¬ÕâÁ½¸öÊıÏàÓëµÃµ½ 10110000¡£
+# 15. äºŒè¿›åˆ¶ä¸­ 1 çš„ä¸ªæ•°
+
+[NowCoder](https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8?tpId=13&tqId=11164&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+è¾“å…¥ä¸€ä¸ªæ•´æ•°ï¼Œè¾“å‡ºè¯¥æ•°äºŒè¿›åˆ¶è¡¨ç¤ºä¸­ 1 çš„ä¸ªæ•°ã€‚
+
+### n&(n-1)
+
+è¯¥ä½è¿ç®—å»é™¤ n çš„ä½çº§è¡¨ç¤ºä¸­æœ€ä½çš„é‚£ä¸€ä½ã€‚
+
+```
+n       : 10110100
+n-1     : 10110011
+n&(n-1) : 10110000
+```
+
+æ—¶é—´å¤æ‚åº¦ï¼šO(M)ï¼Œå…¶ä¸­ M è¡¨ç¤º 1 çš„ä¸ªæ•°ã€‚
+
 
 ```java
 public int NumberOf1(int n) {
@@ -493,39 +854,143 @@ public int NumberOf1(int n) {
     }
     return cnt;
 }
-
 ```
 
-# µÚÈıÕÂ ¸ßÖÊÁ¿µÄ´úÂë
 
-## 16. ÊıÖµµÄÕûÊı´Î·½
+### Integer.bitCount()
+
+```java
+public int NumberOf1(int n) {
+    return Integer.bitCount(n);
+}
+```
+
+# 16. æ•°å€¼çš„æ•´æ•°æ¬¡æ–¹
+
+[NowCoder](https://www.nowcoder.com/practice/1a834e5e3e1a4b7ba251417554e07c00?tpId=13&tqId=11165&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+ç»™å®šä¸€ä¸ª double ç±»å‹çš„æµ®ç‚¹æ•° base å’Œ int ç±»å‹çš„æ•´æ•° exponentï¼Œæ±‚ base çš„ exponent æ¬¡æ–¹ã€‚
+
+## è§£é¢˜æ€è·¯
+
+ä¸‹é¢çš„è®¨è®ºä¸­ x ä»£è¡¨ baseï¼Œn ä»£è¡¨ exponentã€‚
+
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?x^n=\left\{\begin{array}{rcl}(x*x)^{n/2}&&{n\%2=0}\\x*(x*x)^{n/2}&&{n\%2=1}\end{array}\right."/></div> <br>
+
+å› ä¸º (x\*x)<sup>n/2</sup> å¯ä»¥é€šè¿‡é€’å½’æ±‚è§£ï¼Œå¹¶ä¸”æ¯æ¬¡é€’å½’ n éƒ½å‡å°ä¸€åŠï¼Œå› æ­¤æ•´ä¸ªç®—æ³•çš„æ—¶é—´å¤æ‚åº¦ä¸º O(logN)ã€‚
 
 ```java
 public double Power(double base, int exponent) {
-    if (exponent == 0) return 1;
-    if (exponent == 1) return base;
+    if (exponent == 0)
+        return 1;
+    if (exponent == 1)
+        return base;
     boolean isNegative = false;
     if (exponent < 0) {
         exponent = -exponent;
         isNegative = true;
     }
     double pow = Power(base * base, exponent / 2);
-    if (exponent % 2 != 0) pow = pow * base;
+    if (exponent % 2 != 0)
+        pow = pow * base;
     return isNegative ? 1 / pow : pow;
 }
 ```
 
-## 18. É¾³ıÁ´±íÖĞÖØ¸´µÄ½áµã
+# 17. æ‰“å°ä» 1 åˆ°æœ€å¤§çš„ n ä½æ•°
+
+## é¢˜ç›®æè¿°
+
+è¾“å…¥æ•°å­— nï¼ŒæŒ‰é¡ºåºæ‰“å°å‡ºä» 1 åˆ°æœ€å¤§çš„ n ä½åè¿›åˆ¶æ•°ã€‚æ¯”å¦‚è¾“å…¥ 3ï¼Œåˆ™æ‰“å°å‡º 1ã€2ã€3 ä¸€ç›´åˆ°æœ€å¤§çš„ 3 ä½æ•°å³ 999ã€‚
+
+## è§£é¢˜æ€è·¯
+
+ç”±äº n å¯èƒ½ä¼šéå¸¸å¤§ï¼Œå› æ­¤ä¸èƒ½ç›´æ¥ç”¨ int è¡¨ç¤ºæ•°å­—ï¼Œè€Œæ˜¯ç”¨ char æ•°ç»„è¿›è¡Œå­˜å‚¨ã€‚
+
+ä½¿ç”¨å›æº¯æ³•å¾—åˆ°æ‰€æœ‰çš„æ•°ã€‚
+
+```java
+public void print1ToMaxOfNDigits(int n) {
+    if (n <= 0)
+        return;
+    char[] number = new char[n];
+    print1ToMaxOfNDigits(number, 0);
+}
+
+private void print1ToMaxOfNDigits(char[] number, int digit) {
+    if (digit == number.length) {
+        printNumber(number);
+        return;
+    }
+    for (int i = 0; i < 10; i++) {
+        number[digit] = (char) (i + '0');
+        print1ToMaxOfNDigits(number, digit + 1);
+    }
+}
+
+private void printNumber(char[] number) {
+    int index = 0;
+    while (index < number.length && number[index] == '0')
+        index++;
+    while (index < number.length)
+        System.out.print(number[index++]);
+    System.out.println();
+}
+```
+
+# 18.1 åœ¨ O(1) æ—¶é—´å†…åˆ é™¤é“¾è¡¨èŠ‚ç‚¹
+
+## è§£é¢˜æ€è·¯
+
+â‘  å¦‚æœè¯¥èŠ‚ç‚¹ä¸æ˜¯å°¾èŠ‚ç‚¹ï¼Œé‚£ä¹ˆå¯ä»¥ç›´æ¥å°†ä¸‹ä¸€ä¸ªèŠ‚ç‚¹çš„å€¼èµ‹ç»™è¯¥èŠ‚ç‚¹ï¼Œç„¶åä»¤è¯¥èŠ‚ç‚¹æŒ‡å‘ä¸‹ä¸‹ä¸ªèŠ‚ç‚¹ï¼Œå†åˆ é™¤ä¸‹ä¸€ä¸ªèŠ‚ç‚¹ï¼Œæ—¶é—´å¤æ‚åº¦ä¸º O(1)ã€‚
+
+<div align="center"> <img src="../pics//27ff9548-edb6-4465-92c8-7e6386e0b185.png" width="600"/> </div><br>
+
+â‘¡ å¦åˆ™ï¼Œå°±éœ€è¦å…ˆéå†é“¾è¡¨ï¼Œæ‰¾åˆ°èŠ‚ç‚¹çš„å‰ä¸€ä¸ªèŠ‚ç‚¹ï¼Œç„¶åè®©å‰ä¸€ä¸ªèŠ‚ç‚¹æŒ‡å‘ nullï¼Œæ—¶é—´å¤æ‚åº¦ä¸º O(N)ã€‚
+
+<div align="center"> <img src="../pics//280f7728-594f-4811-a03a-fa8d32c013da.png" width="600"/> </div><br>
+
+ç»¼ä¸Šï¼Œå¦‚æœè¿›è¡Œ N æ¬¡æ“ä½œï¼Œé‚£ä¹ˆå¤§çº¦éœ€è¦æ“ä½œèŠ‚ç‚¹çš„æ¬¡æ•°ä¸º N-1+N=2N-1ï¼Œå…¶ä¸­ N-1 è¡¨ç¤º N-1 ä¸ªä¸æ˜¯å°¾èŠ‚ç‚¹çš„æ¯ä¸ªèŠ‚ç‚¹ä»¥ O(1) çš„æ—¶é—´å¤æ‚åº¦æ“ä½œèŠ‚ç‚¹çš„æ€»æ¬¡æ•°ï¼ŒN è¡¨ç¤º 1 ä¸ªå°¾èŠ‚ç‚¹ä»¥ O(N) çš„æ—¶é—´å¤æ‚åº¦æ“ä½œèŠ‚ç‚¹çš„æ€»æ¬¡æ•°ã€‚(2N-1)/N \~ 2ï¼Œå› æ­¤è¯¥ç®—æ³•çš„å¹³å‡æ—¶é—´å¤æ‚åº¦ä¸º O(1)ã€‚
+
+```java
+public ListNode deleteNode(ListNode head, ListNode tobeDelete) {
+    if (head == null || head.next == null || tobeDelete == null)
+        return null;
+    if (tobeDelete.next != null) {
+        // è¦åˆ é™¤çš„èŠ‚ç‚¹ä¸æ˜¯å°¾èŠ‚ç‚¹
+        ListNode next = tobeDelete.next;
+        tobeDelete.val = next.val;
+        tobeDelete.next = next.next;
+    } else {
+        ListNode cur = head;
+        while (cur.next != tobeDelete)
+            cur = cur.next;
+        cur.next = null;
+    }
+    return head;
+}
+```
+
+# 18.2 åˆ é™¤é“¾è¡¨ä¸­é‡å¤çš„ç»“ç‚¹
+
+[NowCoder](https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef?tpId=13&tqId=11209&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+<div align="center"> <img src="../pics//8433fbb2-c35c-45ef-831d-e3ca42aebd51.png" width="500"/> </div><br>
+
+## è§£é¢˜æè¿°
 
 ```java
 public ListNode deleteDuplication(ListNode pHead) {
-    if (pHead == null) return null;
-    if (pHead.next == null) return pHead;
-    if (pHead.val == pHead.next.val) {
-        ListNode next = pHead.next;
-        while (next != null && pHead.val == next.val) {
+    if (pHead == null || pHead.next == null)
+        return pHead;
+    ListNode next = pHead.next;
+    if (pHead.val == next.val) {
+        while (next != null && pHead.val == next.val)
             next = next.next;
-        }
         return deleteDuplication(next);
     } else {
         pHead.next = deleteDuplication(pHead.next);
@@ -534,127 +999,206 @@ public ListNode deleteDuplication(ListNode pHead) {
 }
 ```
 
-## 19. ÕıÔò±í´ïÊ½Æ¥Åä
+# 19. æ­£åˆ™è¡¨è¾¾å¼åŒ¹é…
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c?tpId=13&tqId=11205&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÇëÊµÏÖÒ»¸öº¯ÊıÓÃÀ´Æ¥Åä°üÀ¨ '.' ºÍ '\*' µÄÕıÔò±í´ïÊ½¡£Ä£Ê½ÖĞµÄ×Ö·û '.' ±íÊ¾ÈÎÒâÒ»¸ö×Ö·û£¬¶ø '\*' ±íÊ¾ËüÇ°ÃæµÄ×Ö·û¿ÉÒÔ³öÏÖÈÎÒâ´Î£¨°üº¬ 0 ´Î£©¡£ ÔÚ±¾ÌâÖĞ£¬Æ¥ÅäÊÇÖ¸×Ö·û´®µÄËùÓĞ×Ö·ûÆ¥ÅäÕû¸öÄ£Ê½¡£ÀıÈç£¬×Ö·û´® "aaa" ÓëÄ£Ê½ "a.a" ºÍ "ab\*ac\*a" Æ¥Åä£¬µ«ÊÇÓë "aa.a" ºÍ "ab\*a" ¾ù²»Æ¥Åä
+## é¢˜ç›®æè¿°
+
+è¯·å®ç°ä¸€ä¸ªå‡½æ•°ç”¨æ¥åŒ¹é…åŒ…æ‹¬ '.' å’Œ '\*' çš„æ­£åˆ™è¡¨è¾¾å¼ã€‚æ¨¡å¼ä¸­çš„å­—ç¬¦ '.' è¡¨ç¤ºä»»æ„ä¸€ä¸ªå­—ç¬¦ï¼Œè€Œ '\*' è¡¨ç¤ºå®ƒå‰é¢çš„å­—ç¬¦å¯ä»¥å‡ºç°ä»»æ„æ¬¡ï¼ˆåŒ…å« 0 æ¬¡ï¼‰ã€‚
+
+åœ¨æœ¬é¢˜ä¸­ï¼ŒåŒ¹é…æ˜¯æŒ‡å­—ç¬¦ä¸²çš„æ‰€æœ‰å­—ç¬¦åŒ¹é…æ•´ä¸ªæ¨¡å¼ã€‚ä¾‹å¦‚ï¼Œå­—ç¬¦ä¸² "aaa" ä¸æ¨¡å¼ "a.a" å’Œ "ab\*ac\*a" åŒ¹é…ï¼Œä½†æ˜¯ä¸ "aa.a" å’Œ "ab\*a" å‡ä¸åŒ¹é…ã€‚
+
+## è§£é¢˜æ€è·¯
+
+åº”è¯¥æ³¨æ„åˆ°ï¼Œ'.' æ˜¯ç”¨æ¥å½“åšä¸€ä¸ªä»»æ„å­—ç¬¦ï¼Œè€Œ '\*' æ˜¯ç”¨æ¥é‡å¤å‰é¢çš„å­—ç¬¦ã€‚è¿™ä¸¤ä¸ªçš„ä½œç”¨ä¸åŒï¼Œä¸èƒ½æŠŠ '.' çš„ä½œç”¨å’Œ '\*' è¿›è¡Œç±»æ¯”ï¼Œä»è€ŒæŠŠå®ƒå½“æˆé‡å¤å‰é¢å­—ç¬¦ä¸€æ¬¡ã€‚
 
 ```java
 public boolean match(char[] str, char[] pattern) {
-    int n = str.length, m = pattern.length;
-    boolean[][] dp = new boolean[n + 1][m + 1];
+
+    int m = str.length, n = pattern.length;
+    boolean[][] dp = new boolean[m + 1][n + 1];
+
     dp[0][0] = true;
-    for (int i = 1; i <= m; i++) {
-        if (pattern[i - 1] == '*') dp[0][i] = dp[0][i - 2];
-    }
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++) {
-            if (str[i - 1] == pattern[j - 1] || pattern[j - 1] == '.') dp[i][j] = dp[i - 1][j - 1];
-            else if (pattern[j - 1] == '*') {
-                if (pattern[j - 2] != str[i - 1] && pattern[j - 2] != '.') dp[i][j] = dp[i][j - 2];
-                else dp[i][j] = dp[i][j - 1] || dp[i][j - 2] || dp[i - 1][j];
-            }
-        }
-    }
-    return dp[n][m];
+    for (int i = 1; i <= n; i++)
+        if (pattern[i - 1] == '*')
+            dp[0][i] = dp[0][i - 2];
+
+    for (int i = 1; i <= m; i++)
+        for (int j = 1; j <= n; j++)
+            if (str[i - 1] == pattern[j - 1] || pattern[j - 1] == '.')
+                dp[i][j] = dp[i - 1][j - 1];
+            else if (pattern[j - 1] == '*')
+                if (pattern[j - 2] == str[i - 1] || pattern[j - 2] == '.') {
+                    dp[i][j] |= dp[i][j - 1]; // a* counts as single a
+                    dp[i][j] |= dp[i - 1][j]; // a* counts as multiple a
+                    dp[i][j] |= dp[i][j - 2]; // a* counts as empty
+                } else
+                    dp[i][j] = dp[i][j - 2];   // a* only counts as empty
+
+    return dp[m][n];
 }
 ```
 
-## 20. ±íÊ¾ÊıÖµµÄ×Ö·û´®
+# 20. è¡¨ç¤ºæ•°å€¼çš„å­—ç¬¦ä¸²
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/6f8c901d091949a5837e24bb82a731f2?tpId=13&tqId=11206&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÇëÊµÏÖÒ»¸öº¯ÊıÓÃÀ´ÅĞ¶Ï×Ö·û´®ÊÇ·ñ±íÊ¾ÊıÖµ£¨°üÀ¨ÕûÊıºÍĞ¡Êı£©¡£ÀıÈç£¬×Ö·û´® "+100","5e2","-123","3.1416" ºÍ "-1E-16" ¶¼±íÊ¾ÊıÖµ¡£ µ«ÊÇ "12e","1a3.14","1.2.3","+-5" ºÍ "12e+4.3" ¶¼²»ÊÇ¡£
+## é¢˜ç›®æè¿°
+
+```html
+true
+
+"+100"
+"5e2"
+"-123"
+"3.1416"
+"-1E-16"
+
+false
+
+"12e"
+"1a3.14"
+"1.2.3"
+"+-5"
+"12e+4.3"
+```
+
+
+## è§£é¢˜æ€è·¯
+
+ä½¿ç”¨æ­£åˆ™è¡¨è¾¾å¼è¿›è¡ŒåŒ¹é…ã€‚
+
+```html
+[]  ï¼š å­—ç¬¦é›†åˆ
+()  ï¼š åˆ†ç»„
+?   ï¼š é‡å¤ 0 ~ 1
++   ï¼š é‡å¤ 1 ~ n
+*   ï¼š é‡å¤ 0 ~ n
+.   ï¼š ä»»æ„å­—ç¬¦
+\\. ï¼š è½¬ä¹‰åçš„ .
+\\d ï¼š æ•°å­—
+```
 
 ```java
 public boolean isNumeric(char[] str) {
-    String string = String.valueOf(str);
-    return string.matches("[\\+-]?[0-9]*(\\.[0-9]*)?([eE][\\+-]?[0-9]+)?");
+    if (str == null || str.length == 0)
+        return false;
+    return new String(str).matches("[+-]?\\d*(\\.\\d+)?([eE][+-]?\\d+)?");
 }
 ```
 
-## 21. µ÷ÕûÊı×éË³ĞòÊ¹ÆæÊıÎ»ÓÚÅ¼ÊıÇ°Ãæ
+# 21. è°ƒæ•´æ•°ç»„é¡ºåºä½¿å¥‡æ•°ä½äºå¶æ•°å‰é¢
 
-Ê±¼ä¸´ÔÓ¶È : O(n<sup>2</sup>)
-¿Õ¼ä¸´ÔÓ¶È : O(1)
+[NowCoder](https://www.nowcoder.com/practice/beb5aa231adc45b2a5dcc5b62c93f593?tpId=13&tqId=11166&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-```java
-public void reOrderArray(int[] array) {
-    int n = array.length;
-    for (int i = 0; i < n; i++) {
-        if (array[i] % 2 == 0) {
-            int nextOddIdx = i + 1;
-            while (nextOddIdx < n && array[nextOddIdx] % 2 == 0) nextOddIdx++;
-            if (nextOddIdx == n) break;
-            int nextOddVal = array[nextOddIdx];
-            for (int j = nextOddIdx; j > i; j--) {
-                array[j] = array[j - 1];
-            }
-            array[i] = nextOddVal;
-        }
-    }
-}
-```
+## é¢˜ç›®æè¿°
 
-Ê±¼ä¸´ÔÓ¶È : O(n)
-¿Õ¼ä¸´ÔÓ¶È : O(n)
+éœ€è¦ä¿è¯å¥‡æ•°å’Œå¥‡æ•°ï¼Œå¶æ•°å’Œå¶æ•°ä¹‹é—´çš„ç›¸å¯¹ä½ç½®ä¸å˜ï¼Œè¿™å’Œä¹¦æœ¬ä¸å¤ªä¸€æ ·ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
-public void reOrderArray(int[] array) {
+public void reOrderArray(int[] nums) {
+    // å¥‡æ•°ä¸ªæ•°
     int oddCnt = 0;
-    for (int num : array) if (num % 2 == 1) oddCnt++;
-    int[] copy = array.clone();
+    for (int val : nums)
+        if (val % 2 == 1)
+            oddCnt++;
+    int[] copy = nums.clone();
     int i = 0, j = oddCnt;
     for (int num : copy) {
-        if (num % 2 == 1) array[i++] = num;
-        else array[j++] = num;
+        if (num % 2 == 1)
+            nums[i++] = num;
+        else
+            nums[j++] = num;
     }
 }
 ```
 
-## 22. Á´±íÖĞµ¹ÊıµÚ k ¸ö½áµã
+# 22. é“¾è¡¨ä¸­å€’æ•°ç¬¬ K ä¸ªç»“ç‚¹
+
+[NowCoder](https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a?tpId=13&tqId=11167&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## è§£é¢˜æ€è·¯
+
+è®¾é“¾è¡¨çš„é•¿åº¦ä¸º Nã€‚è®¾ä¸¤ä¸ªæŒ‡é’ˆ P1 å’Œ P2ï¼Œå…ˆè®© P1 ç§»åŠ¨ K ä¸ªèŠ‚ç‚¹ï¼Œåˆ™è¿˜æœ‰ N - K ä¸ªèŠ‚ç‚¹å¯ä»¥ç§»åŠ¨ã€‚æ­¤æ—¶è®© P1 å’Œ P2 åŒæ—¶ç§»åŠ¨ï¼Œå¯ä»¥çŸ¥é“å½“ P1 ç§»åŠ¨åˆ°é“¾è¡¨ç»“å°¾æ—¶ï¼ŒP2 ç§»åŠ¨åˆ° N - K ä¸ªèŠ‚ç‚¹å¤„ï¼Œè¯¥ä½ç½®å°±æ˜¯å€’æ•°ç¬¬ K ä¸ªèŠ‚ç‚¹ã€‚
+
+<div align="center"> <img src="../pics//ea2304ce-268b-4238-9486-4d8f8aea8ca4.png" width="500"/> </div><br>
 
 ```java
 public ListNode FindKthToTail(ListNode head, int k) {
-    if (head == null) return null;
-    ListNode fast, slow;
-    fast = slow = head;
-    while (fast != null && k-- > 0) fast = fast.next;
-    if (k > 0) return null;
-    while (fast != null) {
-        fast = fast.next;
+    if (head == null)
+        return null;
+    ListNode P1 = head;
+    while (P1 != null && k-- > 0)
+        P1 = P1.next;
+    if (k > 0)
+        return null;
+    ListNode P2 = head;
+    while (P1 != null) {
+        P1 = P1.next;
+        P2 = P2.next;
+    }
+    return P2;
+}
+```
+
+# 23. é“¾è¡¨ä¸­ç¯çš„å…¥å£ç»“ç‚¹
+
+[NowCoder](https://www.nowcoder.com/practice/253d2c59ec3e4bc68da16833f79a38e4?tpId=13&tqId=11208&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+ä¸€ä¸ªé“¾è¡¨ä¸­åŒ…å«ç¯ï¼Œè¯·æ‰¾å‡ºè¯¥é“¾è¡¨çš„ç¯çš„å…¥å£ç»“ç‚¹ã€‚è¦æ±‚ä¸èƒ½ä½¿ç”¨é¢å¤–çš„ç©ºé—´ã€‚
+
+## è§£é¢˜æ€è·¯
+
+ä½¿ç”¨åŒæŒ‡é’ˆï¼Œä¸€ä¸ªæŒ‡é’ˆ fast æ¯æ¬¡ç§»åŠ¨ä¸¤ä¸ªèŠ‚ç‚¹ï¼Œä¸€ä¸ªæŒ‡é’ˆ slow æ¯æ¬¡ç§»åŠ¨ä¸€ä¸ªèŠ‚ç‚¹ã€‚å› ä¸ºå­˜åœ¨ç¯ï¼Œæ‰€ä»¥ä¸¤ä¸ªæŒ‡é’ˆå¿…å®šç›¸é‡åœ¨ç¯ä¸­çš„æŸä¸ªèŠ‚ç‚¹ä¸Šã€‚å‡è®¾ç›¸é‡ç‚¹åœ¨ä¸‹å›¾çš„ z1 ä½ç½®ï¼Œæ­¤æ—¶ fast ç§»åŠ¨çš„èŠ‚ç‚¹æ•°ä¸º x+2y+zï¼Œslow ä¸º x+yï¼Œç”±äº fast é€Ÿåº¦æ¯” slow å¿«ä¸€å€ï¼Œå› æ­¤ x+2y+z=2(x+y)ï¼Œå¾—åˆ° x=zã€‚
+
+åœ¨ç›¸é‡ç‚¹ï¼Œslow è¦åˆ°ç¯çš„å…¥å£ç‚¹è¿˜éœ€è¦ç§»åŠ¨ z ä¸ªèŠ‚ç‚¹ï¼Œå¦‚æœè®© fast é‡æ–°ä»å¤´å¼€å§‹ç§»åŠ¨ï¼Œå¹¶ä¸”é€Ÿåº¦å˜ä¸ºæ¯æ¬¡ç§»åŠ¨ä¸€ä¸ªèŠ‚ç‚¹ï¼Œé‚£ä¹ˆå®ƒåˆ°ç¯å…¥å£ç‚¹è¿˜éœ€è¦ç§»åŠ¨ x ä¸ªèŠ‚ç‚¹ã€‚åœ¨ä¸Šé¢å·²ç»æ¨å¯¼å‡º x=zï¼Œå› æ­¤ fast å’Œ slow å°†åœ¨ç¯å…¥å£ç‚¹ç›¸é‡ã€‚
+
+<div align="center"> <img src="../pics//2858f8ad-aedb-45a5-a706-e98c96d690fa.jpg" width="600"/> </div><br>
+
+```java
+public ListNode EntryNodeOfLoop(ListNode pHead) {
+    if (pHead == null || pHead.next == null)
+        return null;
+    ListNode slow = pHead, fast = pHead;
+    do {
+        fast = fast.next.next;
         slow = slow.next;
+    } while (slow != fast);
+    fast = pHead;
+    while (slow != fast) {
+        slow = slow.next;
+        fast = fast.next;
     }
     return slow;
 }
 ```
 
+# 24. åè½¬é“¾è¡¨
 
+[NowCoder](https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca?tpId=13&tqId=11168&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-## 23. Á´±íÖĞ»·µÄÈë¿Ú½áµã
+## è§£é¢˜æ€è·¯
+
+### é€’å½’
 
 ```java
-public ListNode EntryNodeOfLoop(ListNode pHead) {
-    if (pHead == null) return null;
-    ListNode slow = pHead, fast = pHead;
-    while (fast != null && fast.next != null) {
-        fast = fast.next.next;
-        slow = slow.next;
-        if (slow == fast) {
-            fast = pHead;
-            while (slow != fast) {
-                slow = slow.next;
-                fast = fast.next;
-            }
-            return slow;
-        }
-    }
-    return null;
+public ListNode ReverseList(ListNode head) {
+    if (head == null || head.next == null)
+        return head;
+    ListNode next = head.next;
+    head.next = null;
+    ListNode newHead = ReverseList(next);
+    next.next = head;
+    return newHead;
 }
 ```
 
-## 24. ·´×ªÁ´±í
+### è¿­ä»£
 
 ```java
 public ListNode ReverseList(ListNode head) {
@@ -669,14 +1213,42 @@ public ListNode ReverseList(ListNode head) {
 }
 ```
 
-## 25. ºÏ²¢Á½¸öÅÅĞòµÄÁ´±í
+# 25. åˆå¹¶ä¸¤ä¸ªæ’åºçš„é“¾è¡¨
+
+[NowCoder](https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337?tpId=13&tqId=11169&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+<div align="center"> <img src="../pics//43f2cafa-3568-4a89-a895-4725666b94a6.png" width="500"/> </div><br>
+
+## è§£é¢˜æ€è·¯
+
+### é€’å½’
+
+```java
+public ListNode Merge(ListNode list1, ListNode list2) {
+    if (list1 == null)
+        return list2;
+    if (list2 == null)
+        return list1;
+    if (list1.val <= list2.val) {
+        list1.next = Merge(list1.next, list2);
+        return list1;
+    } else {
+        list2.next = Merge(list1, list2.next);
+        return list2;
+    }
+}
+```
+
+### è¿­ä»£
 
 ```java
 public ListNode Merge(ListNode list1, ListNode list2) {
     ListNode head = new ListNode(-1);
     ListNode cur = head;
     while (list1 != null && list2 != null) {
-        if (list1.val < list2.val) {
+        if (list1.val <= list2.val) {
             cur.next = list1;
             list1 = list1.next;
         } else {
@@ -685,117 +1257,155 @@ public ListNode Merge(ListNode list1, ListNode list2) {
         }
         cur = cur.next;
     }
-    if (list1 != null) cur.next = list1;
-    if (list2 != null) cur.next = list2;
+    if (list1 != null)
+        cur.next = list1;
+    if (list2 != null)
+        cur.next = list2;
     return head.next;
 }
 ```
 
-## 26. Ê÷µÄ×Ó½á¹¹
+# 26. æ ‘çš„å­ç»“æ„
+
+[NowCoder](https://www.nowcoder.com/practice/6e196c44c7004d15b1610b9afca8bd88?tpId=13&tqId=11170&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+<div align="center"> <img src="../pics//4583e24f-424b-4d50-8a14-2c38a1827d4a.png" width="500"/> </div><br>
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public boolean HasSubtree(TreeNode root1, TreeNode root2) {
-    if (root1 == null || root2 == null) return false;
-    return isSubtree(root1, root2) || HasSubtree(root1.left, root2) || HasSubtree(root1.right, root2);
+    if (root1 == null || root2 == null)
+        return false;
+    return isSubtreeWithRoot(root1, root2) || HasSubtree(root1.left, root2) || HasSubtree(root1.right, root2);
 }
 
-private boolean isSubtree(TreeNode root1, TreeNode root2) {
-    if (root1 == null && root2 == null) return true;
-    if (root1 == null) return false;
-    if (root2 == null) return true;
-    if (root1.val != root2.val) return false;
-    return isSubtree(root1.left, root2.left) && isSubtree(root1.right, root2.right);
+private boolean isSubtreeWithRoot(TreeNode root1, TreeNode root2) {
+    if (root2 == null)
+        return true;
+    if (root1 == null)
+        return false;
+    if (root1.val != root2.val)
+        return false;
+    return isSubtreeWithRoot(root1.left, root2.left) && isSubtreeWithRoot(root1.right, root2.right);
 }
 ```
 
-# µÚËÄÕÂ ½â¾öÃæÊÔÌâµÄË¼Â·
+# 27. äºŒå‰æ ‘çš„é•œåƒ
 
-## 27. ¶ş²æÊ÷µÄ¾µÏñ
+[NowCoder](https://www.nowcoder.com/practice/564f4c26aa584921bc75623e48ca3011?tpId=13&tqId=11171&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+<div align="center"> <img src="../pics//a2d13178-f1ef-4811-a240-1fe95b55b1eb.png" width="300"/> </div><br>
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public void Mirror(TreeNode root) {
-    if (root == null) return;
-    TreeNode t = root.left;
-    root.left = root.right;
-    root.right = t;
+    if (root == null)
+        return;
+    swap(root);
     Mirror(root.left);
     Mirror(root.right);
 }
+
+private void swap(TreeNode root) {
+    TreeNode t = root.left;
+    root.left = root.right;
+    root.right = t;
+}
 ```
 
-## 28.1 ¶Ô³ÆµÄ¶ş²æÊ÷
+# 28 å¯¹ç§°çš„äºŒå‰æ ‘
+
+[NowCder](https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb?tpId=13&tqId=11211&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+<div align="center"> <img src="../pics//f42443e0-208d-41ea-be44-c7fd97d2e3bf.png" width="300"/> </div><br>
+
+## è§£é¢˜æ€è·¯
 
 ```java
 boolean isSymmetrical(TreeNode pRoot) {
-    if (pRoot == null) return true;
+    if (pRoot == null)
+        return true;
     return isSymmetrical(pRoot.left, pRoot.right);
 }
 
 boolean isSymmetrical(TreeNode t1, TreeNode t2) {
-    if (t1 == null && t2 == null) return true;
-    if (t1 == null || t2 == null) return false;
-    if (t1.val != t2.val) return false;
+    if (t1 == null && t2 == null)
+        return true;
+    if (t1 == null || t2 == null)
+        return false;
+    if (t1.val != t2.val)
+        return false;
     return isSymmetrical(t1.left, t2.right) && isSymmetrical(t1.right, t2.left);
 }
 ```
 
-## 28.2 Æ½ºâ¶ş²æÊ÷
+# 29. é¡ºæ—¶é’ˆæ‰“å°çŸ©é˜µ
 
-```java
-private boolean isBalanced = true;
+[NowCoder](https://www.nowcoder.com/practice/9b4c81a02cd34f76be2659fa0d54342a?tpId=13&tqId=11172&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-public boolean IsBalanced_Solution(TreeNode root) {
-    height(root);
-    return isBalanced;
-}
+## é¢˜ç›®æè¿°
 
-private int height(TreeNode root) {
-    if (root == null) return 0;
-    int left = height(root.left);
-    int right = height(root.right);
-    if (Math.abs(left - right) > 1) isBalanced = false;
-    return 1 + Math.max(left, right);
-}
-```
+ä¸‹å›¾çš„çŸ©é˜µé¡ºæ—¶é’ˆæ‰“å°ç»“æœä¸ºï¼š1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10
 
-## 29. Ë³Ê±Õë´òÓ¡¾ØÕó
+<div align="center"> <img src="../pics//6539b9a4-2b24-4d10-8c94-2eb5aba1e296.png" width="300"/> </div><br>
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public ArrayList<Integer> printMatrix(int[][] matrix) {
     ArrayList<Integer> ret = new ArrayList<>();
     int r1 = 0, r2 = matrix.length - 1, c1 = 0, c2 = matrix[0].length - 1;
     while (r1 <= r2 && c1 <= c2) {
-        for (int i = c1; i <= c2; i++) ret.add(matrix[r1][i]);
-        for (int i = r1 + 1; i <= r2; i++) ret.add(matrix[i][c2]);
-        if (r1 != r2) for (int i = c2 - 1; i >= c1; i--) ret.add(matrix[r2][i]);
-        if (c1 != c2) for (int i = r2 - 1; i > r1; i--) ret.add(matrix[i][c1]);
+        for (int i = c1; i <= c2; i++)
+            ret.add(matrix[r1][i]);
+        for (int i = r1 + 1; i <= r2; i++)
+            ret.add(matrix[i][c2]);
+        if (r1 != r2)
+            for (int i = c2 - 1; i >= c1; i--)
+                ret.add(matrix[r2][i]);
+        if (c1 != c2)
+            for (int i = r2 - 1; i > r1; i--)
+                ret.add(matrix[i][c1]);
         r1++; r2--; c1++; c2--;
     }
     return ret;
 }
 ```
 
-## 30. °üº¬ min º¯ÊıµÄÕ»
+# 30. åŒ…å« min å‡½æ•°çš„æ ˆ
+
+[NowCoder](https://www.nowcoder.com/practice/4c776177d2c04c2494f2555c9fcc1e49?tpId=13&tqId=11173&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+å®šä¹‰æ ˆçš„æ•°æ®ç»“æ„ï¼Œè¯·åœ¨è¯¥ç±»å‹ä¸­å®ç°ä¸€ä¸ªèƒ½å¤Ÿå¾—åˆ°æ ˆæœ€å°å…ƒç´ çš„ min å‡½æ•°ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
-private Stack<Integer> stack = new Stack<>();
+private Stack<Integer> dataStack = new Stack<>();
 private Stack<Integer> minStack = new Stack<>();
-private int min = Integer.MAX_VALUE;
 
 public void push(int node) {
-    stack.push(node);
-    if (min > node) min = node;
-    minStack.push(min);
+    dataStack.push(node);
+    minStack.push(minStack.isEmpty() ? node : Math.min(minStack.peek(), node));
 }
 
 public void pop() {
-    stack.pop();
+    dataStack.pop();
     minStack.pop();
-    min = minStack.peek();
 }
 
 public int top() {
-    return stack.peek();
+    return dataStack.peek();
 }
 
 public int min() {
@@ -803,247 +1413,352 @@ public int min() {
 }
 ```
 
-## 31. Õ»µÄÑ¹Èë¡¢µ¯³öĞòÁĞ
+# 31. æ ˆçš„å‹å…¥ã€å¼¹å‡ºåºåˆ—
+
+[NowCoder](https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106?tpId=13&tqId=11174&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+è¾“å…¥ä¸¤ä¸ªæ•´æ•°åºåˆ—ï¼Œç¬¬ä¸€ä¸ªåºåˆ—è¡¨ç¤ºæ ˆçš„å‹å…¥é¡ºåºï¼Œè¯·åˆ¤æ–­ç¬¬äºŒä¸ªåºåˆ—æ˜¯å¦ä¸ºè¯¥æ ˆçš„å¼¹å‡ºé¡ºåºã€‚å‡è®¾å‹å…¥æ ˆçš„æ‰€æœ‰æ•°å­—å‡ä¸ç›¸ç­‰ã€‚
+
+ä¾‹å¦‚åºåˆ— 1,2,3,4,5 æ˜¯æŸæ ˆçš„å‹å…¥é¡ºåºï¼Œåºåˆ— 4,5,3,2,1 æ˜¯è¯¥å‹æ ˆåºåˆ—å¯¹åº”çš„ä¸€ä¸ªå¼¹å‡ºåºåˆ—ï¼Œä½† 4,3,5,1,2 å°±ä¸å¯èƒ½æ˜¯è¯¥å‹æ ˆåºåˆ—çš„å¼¹å‡ºåºåˆ—ã€‚
+
+## è§£é¢˜æ€è·¯
+
+ä½¿ç”¨ä¸€ä¸ªæ ˆæ¥æ¨¡æ‹Ÿå‹å…¥å¼¹å‡ºæ“ä½œã€‚
 
 ```java
-public boolean IsPopOrder(int[] pushA, int[] popA) {
-    int n = pushA.length;
+public boolean IsPopOrder(int[] pushSequence, int[] popSequence) {
+    int n = pushSequence.length;
     Stack<Integer> stack = new Stack<>();
-    for (int i = 0, j = 0; i < n; i++) {
-        stack.push(pushA[i]);
-        while (j < n && stack.peek() == popA[j]) {
+    for (int pushIndex = 0, popIndex = 0; pushIndex < n; pushIndex++) {
+        stack.push(pushSequence[pushIndex]);
+        while (popIndex < n && !stack.isEmpty() 
+                && stack.peek() == popSequence[popIndex]) {
             stack.pop();
-            j++;
+            popIndex++;
         }
     }
     return stack.isEmpty();
 }
 ```
 
-## 32.1 ´ÓÉÏÍùÏÂ´òÓ¡¶ş²æÊ÷
+# 32.1 ä»ä¸Šå¾€ä¸‹æ‰“å°äºŒå‰æ ‘
+
+[NowCoder](https://www.nowcoder.com/practice/7fe2212963db4790b57431d9ed259701?tpId=13&tqId=11175&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+ä»ä¸Šå¾€ä¸‹æ‰“å°å‡ºäºŒå‰æ ‘çš„æ¯ä¸ªèŠ‚ç‚¹ï¼ŒåŒå±‚èŠ‚ç‚¹ä»å·¦è‡³å³æ‰“å°ã€‚
+
+ä¾‹å¦‚ï¼Œä»¥ä¸‹äºŒå‰æ ‘å±‚æ¬¡éå†çš„ç»“æœä¸ºï¼š1,2,3,4,5,6,7
+
+<div align="center"> <img src="../pics//348bc2db-582e-4aca-9f88-38c40e9a0e69.png" width="250"/> </div><br>
+
+## è§£é¢˜æ€è·¯
+
+ä½¿ç”¨é˜Ÿåˆ—æ¥è¿›è¡Œå±‚æ¬¡éå†ã€‚
+
+ä¸éœ€è¦ä½¿ç”¨ä¸¤ä¸ªé˜Ÿåˆ—åˆ†åˆ«å­˜å‚¨å½“å‰å±‚çš„èŠ‚ç‚¹å’Œä¸‹ä¸€å±‚çš„èŠ‚ç‚¹ï¼Œå› ä¸ºåœ¨å¼€å§‹éå†ä¸€å±‚çš„èŠ‚ç‚¹æ—¶ï¼Œå½“å‰é˜Ÿåˆ—ä¸­çš„èŠ‚ç‚¹æ•°å°±æ˜¯å½“å‰å±‚çš„èŠ‚ç‚¹æ•°ï¼Œåªè¦æ§åˆ¶éå†è¿™ä¹ˆå¤šèŠ‚ç‚¹æ•°ï¼Œå°±èƒ½ä¿è¯è¿™æ¬¡éå†çš„éƒ½æ˜¯å½“å‰å±‚çš„èŠ‚ç‚¹ã€‚
 
 ```java
 public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
     Queue<TreeNode> queue = new LinkedList<>();
     ArrayList<Integer> ret = new ArrayList<>();
-    if (root == null) return ret;
     queue.add(root);
     while (!queue.isEmpty()) {
         int cnt = queue.size();
-        for (int i = 0; i < cnt; i++) {
+        while (cnt-- > 0) {
             TreeNode t = queue.poll();
-            if (t.left != null) queue.add(t.left);
-            if (t.right != null) queue.add(t.right);
+            if (t == null)
+                continue;
             ret.add(t.val);
+            queue.add(t.left);
+            queue.add(t.right);
         }
     }
     return ret;
 }
 ```
 
-## 32.3  °Ñ¶ş²æÊ÷´òÓ¡³É¶àĞĞ
+# 32.2 æŠŠäºŒå‰æ ‘æ‰“å°æˆå¤šè¡Œ
+
+[NowCoder](https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288?tpId=13&tqId=11213&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+å’Œä¸Šé¢˜å‡ ä¹ä¸€æ ·ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
 ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
     ArrayList<ArrayList<Integer>> ret = new ArrayList<>();
-    if (pRoot == null) return ret;
     Queue<TreeNode> queue = new LinkedList<>();
     queue.add(pRoot);
     while (!queue.isEmpty()) {
-        int cnt = queue.size();
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 0; i < cnt; i++) {
+        int cnt = queue.size();
+        while (cnt-- > 0) {
             TreeNode node = queue.poll();
+            if (node == null)
+                continue;
             list.add(node.val);
-            if (node.left != null) queue.add(node.left);
-            if (node.right != null) queue.add(node.right);
+            queue.add(node.left);
+            queue.add(node.right);
         }
-        ret.add(list);
+        if (list.size() != 0)
+            ret.add(list);
     }
     return ret;
 }
 ```
 
-## 32.3 °´Ö®×ÖĞÎË³Ğò´òÓ¡¶ş²æÊ÷
+# 32.3 æŒ‰ä¹‹å­—å½¢é¡ºåºæ‰“å°äºŒå‰æ ‘
+
+[NowCoder](https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0?tpId=13&tqId=11212&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+è¯·å®ç°ä¸€ä¸ªå‡½æ•°æŒ‰ç…§ä¹‹å­—å½¢æ‰“å°äºŒå‰æ ‘ï¼Œå³ç¬¬ä¸€è¡ŒæŒ‰ç…§ä»å·¦åˆ°å³çš„é¡ºåºæ‰“å°ï¼Œç¬¬äºŒå±‚æŒ‰ç…§ä»å³è‡³å·¦çš„é¡ºåºæ‰“å°ï¼Œç¬¬ä¸‰è¡ŒæŒ‰ç…§ä»å·¦åˆ°å³çš„é¡ºåºæ‰“å°ï¼Œå…¶ä»–è¡Œä»¥æ­¤ç±»æ¨ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
     ArrayList<ArrayList<Integer>> ret = new ArrayList<>();
-    if (pRoot == null) return ret;
     Queue<TreeNode> queue = new LinkedList<>();
     queue.add(pRoot);
     boolean reverse = false;
     while (!queue.isEmpty()) {
-        int cnt = queue.size();
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 0; i < cnt; i++) {
+        int cnt = queue.size();
+        while (cnt-- > 0) {
             TreeNode node = queue.poll();
+            if (node == null)
+                continue;
             list.add(node.val);
-            if (node.left != null) queue.add(node.left);
-            if (node.right != null) queue.add(node.right);
+            queue.add(node.left);
+            queue.add(node.right);
         }
-        if (reverse) {
+        if (reverse)
             Collections.reverse(list);
-            reverse = false;
-        } else {
-            reverse = true;
-        }
-        ret.add(list);
+        reverse = !reverse;
+        if (list.size() != 0)
+            ret.add(list);
     }
     return ret;
 }
 ```
 
+# 33. äºŒå‰æœç´¢æ ‘çš„ååºéå†åºåˆ—
 
-## 33. ¶ş²æËÑË÷Ê÷µÄºóĞò±éÀúĞòÁĞ
+[NowCoder](https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd?tpId=13&tqId=11176&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+è¾“å…¥ä¸€ä¸ªæ•´æ•°æ•°ç»„ï¼Œåˆ¤æ–­è¯¥æ•°ç»„æ˜¯ä¸æ˜¯æŸäºŒå‰æœç´¢æ ‘çš„ååºéå†çš„ç»“æœã€‚å‡è®¾è¾“å…¥çš„æ•°ç»„çš„ä»»æ„ä¸¤ä¸ªæ•°å­—éƒ½äº’ä¸ç›¸åŒã€‚
+
+ä¾‹å¦‚ï¼Œä¸‹å›¾æ˜¯ååºéå†åºåˆ— 3,1,2 æ‰€å¯¹åº”çš„äºŒå‰æœç´¢æ ‘ã€‚
+
+<div align="center"> <img src="../pics//836a4eaf-4798-4e48-b52a-a3dab9435ace.png" width="150"/> </div><br>
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public boolean VerifySquenceOfBST(int[] sequence) {
-    if (sequence.length == 0) return false;
+    if (sequence == null || sequence.length == 0)
+        return false;
     return verify(sequence, 0, sequence.length - 1);
 }
 
-private boolean verify(int[] sequence, int start, int end) {
-    if (end - start <= 1) return true;
-    int rootVal = sequence[end];
-    int cutIdx = start;
-    while (cutIdx < end) {
-        if (sequence[cutIdx] > rootVal) break;
-        cutIdx++;
-    }
-    for (int i = cutIdx + 1; i < end; i++) {
-        if (sequence[i] < rootVal) return false;
-    }
-    return verify(sequence, start, cutIdx - 1) && verify(sequence, cutIdx, end - 1);
+private boolean verify(int[] sequence, int first, int last) {
+    if (last - first <= 1)
+        return true;
+    int rootVal = sequence[last];
+    int cutIndex = first;
+    while (cutIndex < last && sequence[cutIndex] <= rootVal)
+        cutIndex++;
+    for (int i = cutIndex; i < last; i++)
+        if (sequence[i] < rootVal)
+            return false;
+    return verify(sequence, first, cutIndex - 1) && verify(sequence, cutIndex, last - 1);
 }
 ```
 
-## 34. ¶ş²æÊ÷ÖĞºÍÎªÄ³Ò»ÖµµÄÂ·¾¶
+# 34. äºŒå‰æ ‘ä¸­å’Œä¸ºæŸä¸€å€¼çš„è·¯å¾„
+
+[NowCoder](https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca?tpId=13&tqId=11177&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+è¾“å…¥ä¸€é¢—äºŒå‰æ ‘å’Œä¸€ä¸ªæ•´æ•°ï¼Œæ‰“å°å‡ºäºŒå‰æ ‘ä¸­ç»“ç‚¹å€¼çš„å’Œä¸ºè¾“å…¥æ•´æ•°çš„æ‰€æœ‰è·¯å¾„ã€‚è·¯å¾„å®šä¹‰ä¸ºä»æ ‘çš„æ ¹ç»“ç‚¹å¼€å§‹å¾€ä¸‹ä¸€ç›´åˆ°å¶ç»“ç‚¹æ‰€ç»è¿‡çš„ç»“ç‚¹å½¢æˆä¸€æ¡è·¯å¾„ã€‚
+
+ä¸‹å›¾çš„äºŒå‰æ ‘æœ‰ä¸¤æ¡å’Œä¸º 22 çš„è·¯å¾„ï¼š10, 5, 7 å’Œ 10, 12
+
+<div align="center"> <img src="../pics//f5477abd-c246-4851-89ab-6b1cde2549b1.png" width="200"/> </div><br>
+
+## è§£é¢˜æ€è·¯
 
 ```java
 private ArrayList<ArrayList<Integer>> ret = new ArrayList<>();
 
 public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
-    dfs(root, target, 0, new ArrayList<>());
+    backtracking(root, target, new ArrayList<>());
     return ret;
 }
 
-private void dfs(TreeNode node, int target, int curSum, ArrayList<Integer> path) {
-    if (node == null) return;
-    curSum += node.val;
+private void backtracking(TreeNode node, int target, ArrayList<Integer> path) {
+    if (node == null)
+        return;
     path.add(node.val);
-    if (curSum == target && node.left == null && node.right == null) {
-        ret.add(new ArrayList(path));
+    target -= node.val;
+    if (target == 0 && node.left == null && node.right == null) {
+        ret.add(new ArrayList<>(path));
     } else {
-        dfs(node.left, target, curSum, path);
-        dfs(node.right, target, curSum, path);
+        backtracking(node.left, target, path);
+        backtracking(node.right, target, path);
     }
     path.remove(path.size() - 1);
 }
 ```
 
-## 35. ¸´ÔÓÁ´±íµÄ¸´ÖÆ
+# 35. å¤æ‚é“¾è¡¨çš„å¤åˆ¶
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba?tpId=13&tqId=11178&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÊäÈëÒ»¸ö¸´ÔÓÁ´±í£¨Ã¿¸ö½ÚµãÖĞÓĞ½ÚµãÖµ£¬ÒÔ¼°Á½¸öÖ¸Õë£¬Ò»¸öÖ¸ÏòÏÂÒ»¸ö½Úµã£¬ÁíÒ»¸öÌØÊâÖ¸ÕëÖ¸ÏòÈÎÒâÒ»¸ö½Úµã£©£¬·µ»Ø½á¹ûÎª¸´ÖÆºó¸´ÔÓÁ´±íµÄ head¡££¨×¢Òâ£¬Êä³ö½á¹ûÖĞÇë²»Òª·µ»Ø²ÎÊıÖĞµÄ½ÚµãÒıÓÃ£¬·ñÔòÅĞÌâ³ÌĞò»áÖ±½Ó·µ»Ø¿Õ£©
+## é¢˜ç›®æè¿°
 
-µÚÒ»²½£¬ÔÚÃ¿¸ö½ÚµãµÄºóÃæ²åÈë¸´ÖÆµÄ½Úµã¡£
+è¾“å…¥ä¸€ä¸ªå¤æ‚é“¾è¡¨ï¼ˆæ¯ä¸ªèŠ‚ç‚¹ä¸­æœ‰èŠ‚ç‚¹å€¼ï¼Œä»¥åŠä¸¤ä¸ªæŒ‡é’ˆï¼Œä¸€ä¸ªæŒ‡å‘ä¸‹ä¸€ä¸ªèŠ‚ç‚¹ï¼Œå¦ä¸€ä¸ªç‰¹æ®ŠæŒ‡é’ˆæŒ‡å‘ä»»æ„ä¸€ä¸ªèŠ‚ç‚¹ï¼‰ï¼Œè¿”å›ç»“æœä¸ºå¤åˆ¶åå¤æ‚é“¾è¡¨çš„ headã€‚
 
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/f8b12555-967b-423d-a84e-bc9eff104b8b.jpg)
+```java
+public class RandomListNode {
+    int label;
+    RandomListNode next = null;
+    RandomListNode random = null;
 
-µÚ¶ş²½£¬¶Ô¸´ÖÆ½ÚµãµÄ random Á´½Ó½øĞĞ¸³Öµ¡£
+    RandomListNode(int label) {
+        this.label = label;
+    }
+}
+```
 
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/7b877a2a-8fd1-40d8-a34c-c445827300b8.jpg)
+<div align="center"> <img src="../pics//a01d1516-8168-461a-a24b-620b9cfc40f4.png" width="300"/> </div><br>
 
-µÚÈı²½£¬²ğ·Ö¡£
+## è§£é¢˜æ€è·¯
 
-![](https://github.com/CyC2018/InterviewNotes/blob/master/pics/b2b6253c-c701-4b30-aff4-bc3c713542a7.jpg)
+ç¬¬ä¸€æ­¥ï¼Œåœ¨æ¯ä¸ªèŠ‚ç‚¹çš„åé¢æ’å…¥å¤åˆ¶çš„èŠ‚ç‚¹ã€‚
 
+<div align="center"> <img src="../pics//2e6c72f5-3b8e-4e32-b87b-9491322628fe.png" width="600"/> </div><br>
+
+ç¬¬äºŒæ­¥ï¼Œå¯¹å¤åˆ¶èŠ‚ç‚¹çš„ random é“¾æ¥è¿›è¡Œèµ‹å€¼ã€‚
+
+<div align="center"> <img src="../pics//323ffd6c-8b54-4f3e-b361-555a6c8bf218.png" width="600"/> </div><br>
+
+ç¬¬ä¸‰æ­¥ï¼Œæ‹†åˆ†ã€‚
+
+<div align="center"> <img src="../pics//8f3b9519-d705-48fe-87ad-2e4052fc81d2.png" width="600"/> </div><br>
 
 ```java
 public RandomListNode Clone(RandomListNode pHead) {
-    if (pHead == null) return null;
-    // ²åÈëĞÂ½Úµã
+    if (pHead == null)
+        return null;
+    // æ’å…¥æ–°èŠ‚ç‚¹
     RandomListNode cur = pHead;
     while (cur != null) {
-        RandomListNode node = new RandomListNode(cur.label);
-        node.next = cur.next;
-        cur.next = node;
-        cur = node.next;
+        RandomListNode clone = new RandomListNode(cur.label);
+        clone.next = cur.next;
+        cur.next = clone;
+        cur = clone.next;
     }
-    // ½¨Á¢ random Á´½Ó
+    // å»ºç«‹ random é“¾æ¥
     cur = pHead;
     while (cur != null) {
         RandomListNode clone = cur.next;
-        if (cur.random != null) {
+        if (cur.random != null)
             clone.random = cur.random.next;
-        }
         cur = clone.next;
     }
-    // ²ğ·Ö
-    RandomListNode pCloneHead = pHead.next;
+    // æ‹†åˆ†
     cur = pHead;
+    RandomListNode pCloneHead = pHead.next;
     while (cur.next != null) {
-        RandomListNode t = cur.next;
-        cur.next = t.next;
-        cur = t;
+        RandomListNode next = cur.next;
+        cur.next = next.next;
+        cur = next;
     }
     return pCloneHead;
 }
 ```
 
-## 36. ¶ş²æËÑË÷Ê÷ÓëË«ÏòÁ´±í
+# 36. äºŒå‰æœç´¢æ ‘ä¸åŒå‘é“¾è¡¨
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5?tpId=13&tqId=11179&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÊäÈëÒ»¿Ã¶ş²æËÑË÷Ê÷£¬½«¸Ã¶ş²æËÑË÷Ê÷×ª»»³ÉÒ»¸öÅÅĞòµÄË«ÏòÁ´±í¡£ÒªÇó²»ÄÜ´´½¨ÈÎºÎĞÂµÄ½áµã£¬Ö»ÄÜµ÷ÕûÊ÷ÖĞ½áµãÖ¸ÕëµÄÖ¸Ïò¡£
+## é¢˜ç›®æè¿°
+
+è¾“å…¥ä¸€æ£µäºŒå‰æœç´¢æ ‘ï¼Œå°†è¯¥äºŒå‰æœç´¢æ ‘è½¬æ¢æˆä¸€ä¸ªæ’åºçš„åŒå‘é“¾è¡¨ã€‚è¦æ±‚ä¸èƒ½åˆ›å»ºä»»ä½•æ–°çš„ç»“ç‚¹ï¼Œåªèƒ½è°ƒæ•´æ ‘ä¸­ç»“ç‚¹æŒ‡é’ˆçš„æŒ‡å‘ã€‚
+
+<div align="center"> <img src="../pics//79b12431-6d9d-4a7d-985b-1b79bc5bf5fb.png" width="400"/> </div><br>
+
+## è§£é¢˜æ€è·¯
 
 ```java
 private TreeNode pre = null;
-public TreeNode Convert(TreeNode pRootOfTree) {
-    if(pRootOfTree == null) return null;
-    inOrder(pRootOfTree);
-    while(pRootOfTree.left != null) pRootOfTree = pRootOfTree.left;
-    return pRootOfTree;
+private TreeNode head = null;
+
+public TreeNode Convert(TreeNode root) {
+    inOrder(root);
+    return head;
 }
 
 private void inOrder(TreeNode node) {
-    if(node == null) return;
+    if (node == null)
+        return;
     inOrder(node.left);
     node.left = pre;
-    if(pre != null) pre.right = node;
+    if (pre != null)
+        pre.right = node;
     pre = node;
+    if (head == null)
+        head = node;
     inOrder(node.right);
 }
 ```
 
-## 37. ĞòÁĞ»¯¶ş²æÊ÷
+# 37. åºåˆ—åŒ–äºŒå‰æ ‘
+
+[NowCoder](https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84?tpId=13&tqId=11214&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+è¯·å®ç°ä¸¤ä¸ªå‡½æ•°ï¼Œåˆ†åˆ«ç”¨æ¥åºåˆ—åŒ–å’Œååºåˆ—åŒ–äºŒå‰æ ‘ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
-private String serizeString = "";
+private String deserializeStr;
 
-String Serialize(TreeNode root) {
-    if (root == null) return "#";
-    return root.val + " " + Serialize(root.left) + " "
-        + Serialize(root.right);
+public String Serialize(TreeNode root) {
+    if (root == null)
+        return "#";
+    return root.val + " " + Serialize(root.left) + " " + Serialize(root.right);
 }
 
-TreeNode Deserialize(String str) {
-    this.serizeString = str;
+public TreeNode Deserialize(String str) {
+    deserializeStr = str;
     return Deserialize();
 }
 
 private TreeNode Deserialize() {
-    if (this.serizeString.length() == 0) return null;
-    int idx = this.serizeString.indexOf(" ");
-    if (idx == -1) return null;
-    String sub = this.serizeString.substring(0, idx);
-    this.serizeString = this.serizeString.substring(idx + 1);
-    if (sub.equals("#")) {
+    if (deserializeStr.length() == 0)
         return null;
-    }
-    int val = Integer.valueOf(sub);
+    int index = deserializeStr.indexOf(" ");
+    String node = index == -1 ? deserializeStr : deserializeStr.substring(0, index);
+    deserializeStr = index == -1 ? "" : deserializeStr.substring(index + 1);
+    if (node.equals("#"))
+        return null;
+    int val = Integer.valueOf(node);
     TreeNode t = new TreeNode(val);
     t.left = Deserialize();
     t.right = Deserialize();
@@ -1051,222 +1766,253 @@ private TreeNode Deserialize() {
 }
 ```
 
-## 38. ×Ö·û´®µÄÅÅÁĞ
+# 38. å­—ç¬¦ä¸²çš„æ’åˆ—
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7?tpId=13&tqId=11180&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÊäÈëÒ»¸ö×Ö·û´® , °´×ÖµäĞò´òÓ¡³ö¸Ã×Ö·û´®ÖĞ×Ö·ûµÄËùÓĞÅÅÁĞ¡£ÀıÈçÊäÈë×Ö·û´® abc, Ôò´òÓ¡³öÓÉ×Ö·û a, b, c ËùÄÜÅÅÁĞ³öÀ´µÄËùÓĞ×Ö·û´® abc, acb, bac, bca, cab ºÍ cba¡£
+## é¢˜ç›®æè¿°
+
+è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²ï¼ŒæŒ‰å­—å…¸åºæ‰“å°å‡ºè¯¥å­—ç¬¦ä¸²ä¸­å­—ç¬¦çš„æ‰€æœ‰æ’åˆ—ã€‚ä¾‹å¦‚è¾“å…¥å­—ç¬¦ä¸² abcï¼Œåˆ™æ‰“å°å‡ºç”±å­—ç¬¦ a, b, c æ‰€èƒ½æ’åˆ—å‡ºæ¥çš„æ‰€æœ‰å­—ç¬¦ä¸² abc, acb, bac, bca, cab å’Œ cbaã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
 private ArrayList<String> ret = new ArrayList<>();
 
 public ArrayList<String> Permutation(String str) {
-    if (str.length() == 0) return new ArrayList<>();
+    if (str.length() == 0)
+        return ret;
     char[] chars = str.toCharArray();
     Arrays.sort(chars);
-    backtracking(chars, new boolean[chars.length], "");
+    backtracking(chars, new boolean[chars.length], new StringBuilder());
     return ret;
 }
 
-private void backtracking(char[] chars, boolean[] used, String s) {
+private void backtracking(char[] chars, boolean[] hasUsed, StringBuilder s) {
     if (s.length() == chars.length) {
-        ret.add(s);
+        ret.add(s.toString());
         return;
     }
     for (int i = 0; i < chars.length; i++) {
-        if (used[i]) continue;
-        if (i != 0 && chars[i] == chars[i - 1] && !used[i - 1]) continue; // ±£Ö¤²»ÖØ¸´
-        used[i] = true;
-        backtracking(chars, used, s + chars[i]);
-        used[i] = false;
+        if (hasUsed[i])
+            continue;
+        if (i != 0 && chars[i] == chars[i - 1] && !hasUsed[i - 1]) /* ä¿è¯ä¸é‡å¤ */
+            continue;
+        hasUsed[i] = true;
+        s.append(chars[i]);
+        backtracking(chars, hasUsed, s);
+        s.deleteCharAt(s.length() - 1);
+        hasUsed[i] = false;
     }
 }
 ```
 
-# µÚÎåÕÂ ÓÅ»¯Ê±¼äºÍ¿Õ¼äĞ§ÂÊ
+# 39. æ•°ç»„ä¸­å‡ºç°æ¬¡æ•°è¶…è¿‡ä¸€åŠçš„æ•°å­—
 
-## 39. Êı×éÖĞ³öÏÖ´ÎÊı³¬¹ıÒ»°ëµÄÊı×Ö
+[NowCoder](https://www.nowcoder.com/practice/e8a1b01a2df14cb2b228b30ee6a92163?tpId=13&tqId=11181&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## è§£é¢˜æ€è·¯
+
+å¤šæ•°æŠ•ç¥¨é—®é¢˜ï¼Œå¯ä»¥åˆ©ç”¨ Boyer-Moore Majority Vote Algorithm æ¥è§£å†³è¿™ä¸ªé—®é¢˜ï¼Œä½¿å¾—æ—¶é—´å¤æ‚åº¦ä¸º O(N)ã€‚
+
+ä½¿ç”¨ cnt æ¥ç»Ÿè®¡ä¸€ä¸ªå…ƒç´ å‡ºç°çš„æ¬¡æ•°ï¼Œå½“éå†åˆ°çš„å…ƒç´ å’Œç»Ÿè®¡å…ƒç´ ç›¸ç­‰æ—¶ï¼Œä»¤ cnt++ï¼Œå¦åˆ™ä»¤ cnt--ã€‚å¦‚æœå‰é¢æŸ¥æ‰¾äº† i ä¸ªå…ƒç´ ï¼Œä¸” cnt == 0ï¼Œè¯´æ˜å‰ i ä¸ªå…ƒç´ æ²¡æœ‰ majorityï¼Œæˆ–è€…æœ‰ majorityï¼Œä½†æ˜¯å‡ºç°çš„æ¬¡æ•°å°‘äº i / 2 ï¼Œå› ä¸ºå¦‚æœå¤šäº i / 2 çš„è¯ cnt å°±ä¸€å®šä¸ä¼šä¸º 0 ã€‚æ­¤æ—¶å‰©ä¸‹çš„ n - i ä¸ªå…ƒç´ ä¸­ï¼Œmajority çš„æ•°ç›®ä¾ç„¶å¤šäº (n - i) / 2ï¼Œå› æ­¤ç»§ç»­æŸ¥æ‰¾å°±èƒ½æ‰¾å‡º majorityã€‚
 
 ```java
-public int MoreThanHalfNum_Solution(int[] array) {
-    int cnt = 1, num = array[0];
-    for (int i = 1; i < array.length; i++) {
-        if (array[i] == num) cnt++;
-        else cnt--;
+public int MoreThanHalfNum_Solution(int[] nums) {
+    int majority = nums[0];
+    for (int i = 1, cnt = 1; i < nums.length; i++) {
+        cnt = nums[i] == majority ? cnt + 1 : cnt - 1;
         if (cnt == 0) {
-            num = array[i];
+            majority = nums[i];
             cnt = 1;
         }
     }
-    cnt = 0;
-    for (int i = 0; i < array.length; i++) {
-        if (num == array[i]) cnt++;
-    }
-    return cnt > array.length / 2 ? num : 0;
+    int cnt = 0;
+    for (int val : nums)
+        if (val == majority)
+            cnt++;
+    return cnt > nums.length / 2 ? majority : 0;
 }
 ```
 
+# 40. æœ€å°çš„ K ä¸ªæ•°
 
-## 40. ×îĞ¡µÄ K ¸öÊı
+[NowCoder](https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf?tpId=13&tqId=11182&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-¹¹½¨´óĞ¡Îª k µÄĞ¡¶¥¶Ñ¡£
+## è§£é¢˜æ€è·¯
 
-Ê±¼ä¸´ÔÓ¶È£ºO(nlgk)
-¿Õ¼ä¸´ÔÓ¶È£ºO(k)
+### å¿«é€Ÿé€‰æ‹©
 
-```java
-public ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
-    if (k > input.length || k <= 0) return new ArrayList<>();
-    PriorityQueue<Integer> pq = new PriorityQueue<>((o1, o2) -> o2 - o1);
-    for (int num : input) {
-        pq.add(num);
-        if (pq.size() > k) {
-            pq.poll();
-        }
-    }
-    ArrayList<Integer> ret = new ArrayList<>(pq);
-    return ret;
-}
-```
+- å¤æ‚åº¦ï¼šO(N) + O(1)
+- åªæœ‰å½“å…è®¸ä¿®æ”¹æ•°ç»„å…ƒç´ æ—¶æ‰å¯ä»¥ä½¿ç”¨
 
-ÀûÓÃ¿ìËÙÑ¡Ôñ
-
-Ê±¼ä¸´ÔÓ¶È£ºO(n)
-¿Õ¼ä¸´ÔÓ¶È£ºO(1)
+å¿«é€Ÿæ’åºçš„ partition() æ–¹æ³•ï¼Œä¼šè¿”å›ä¸€ä¸ªæ•´æ•° j ä½¿å¾— a[l..j-1] å°äºç­‰äº a[j]ï¼Œä¸” a[j+1..h] å¤§äºç­‰äº a[j]ï¼Œæ­¤æ—¶ a[j] å°±æ˜¯æ•°ç»„çš„ç¬¬ j å¤§å…ƒç´ ã€‚å¯ä»¥åˆ©ç”¨è¿™ä¸ªç‰¹æ€§æ‰¾å‡ºæ•°ç»„çš„ç¬¬ K ä¸ªå…ƒç´ ï¼Œè¿™ç§æ‰¾ç¬¬ K ä¸ªå…ƒç´ çš„ç®—æ³•ç§°ä¸ºå¿«é€Ÿé€‰æ‹©ç®—æ³•ã€‚
 
 ```java
-public ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
-    if (k > input.length || k <= 0) return new ArrayList<>();
-    int kthSmallest = findKthSmallest(input, k - 1);
+public ArrayList<Integer> GetLeastNumbers_Solution(int[] nums, int k) {
     ArrayList<Integer> ret = new ArrayList<>();
-    for (int num : input) {
-        if(num <= kthSmallest && ret.size() < k) ret.add(num);
-    }
+    if (k > nums.length || k <= 0)
+        return ret;
+    findKthSmallest(nums, k - 1);
+    /* findKthSmallest ä¼šæ”¹å˜æ•°ç»„ï¼Œä½¿å¾—å‰ k ä¸ªæ•°éƒ½æ˜¯æœ€å°çš„ k ä¸ªæ•° */
+    for (int i = 0; i < k; i++)
+        ret.add(nums[i]);
     return ret;
 }
 
-public int findKthSmallest(int[] nums, int k) {
-    int lo = 0;
-    int hi = nums.length - 1;
-    while (lo < hi) {
-        int j = partition(nums, lo, hi);
-        if (j < k) {
-            lo = j + 1;
-        } else if (j > k) {
-            hi = j - 1;
-        } else {
+public void findKthSmallest(int[] nums, int k) {
+    int l = 0, h = nums.length - 1;
+    while (l < h) {
+        int j = partition(nums, l, h);
+        if (j == k)
             break;
-        }
+        if (j > k)
+            h = j - 1;
+        else
+            l = j + 1;
     }
-    return nums[k];
 }
 
-private int partition(int[] a, int lo, int hi) {
-    int i = lo;
-    int j = hi + 1;
+private int partition(int[] nums, int l, int h) {
+    int p = nums[l];     /* åˆ‡åˆ†å…ƒç´  */
+    int i = l, j = h + 1;
     while (true) {
-        while (i < hi && less(a[++i], a[lo])) ;
-        while (j > lo && less(a[lo], a[--j])) ;
-        if (i >= j) {
+        while (i != h && nums[++i] < p) ;
+        while (j != l && nums[--j] > p) ;
+        if (i >= j)
             break;
-        }
-        exch(a, i, j);
+        swap(nums, i, j);
     }
-    exch(a, lo, j);
+    swap(nums, l, j);
     return j;
 }
 
-private void exch(int[] a, int i, int j) {
-    final int tmp = a[i];
-    a[i] = a[j];
-    a[j] = tmp;
-}
-
-private boolean less(int v, int w) {
-    return v < w;
+private void swap(int[] nums, int i, int j) {
+    int t = nums[i];
+    nums[i] = nums[j];
+    nums[j] = t;
 }
 ```
 
-## 41.1 Êı¾İÁ÷ÖĞµÄÖĞÎ»Êı
+### å¤§å°ä¸º K çš„æœ€å°å †
 
+- å¤æ‚åº¦ï¼šO(NlogK) + O(K)
+- ç‰¹åˆ«é€‚åˆå¤„ç†æµ·é‡æ•°æ®
 
-**ÌâÄ¿ÃèÊö**
+åº”è¯¥ä½¿ç”¨å¤§é¡¶å †æ¥ç»´æŠ¤æœ€å°å †ï¼Œè€Œä¸èƒ½ç›´æ¥åˆ›å»ºä¸€ä¸ªå°é¡¶å †å¹¶è®¾ç½®ä¸€ä¸ªå¤§å°ï¼Œä¼å›¾è®©å°é¡¶å †ä¸­çš„å…ƒç´ éƒ½æ˜¯æœ€å°å…ƒç´ ã€‚
 
-ÈçºÎµÃµ½Ò»¸öÊı¾İÁ÷ÖĞµÄÖĞÎ»Êı£¿Èç¹û´ÓÊı¾İÁ÷ÖĞ¶Á³öÆæÊı¸öÊıÖµ£¬ÄÇÃ´ÖĞÎ»Êı¾ÍÊÇËùÓĞÊıÖµÅÅĞòÖ®ºóÎ»ÓÚÖĞ¼äµÄÊıÖµ¡£Èç¹û´ÓÊı¾İÁ÷ÖĞ¶Á³öÅ¼Êı¸öÊıÖµ£¬ÄÇÃ´ÖĞÎ»Êı¾ÍÊÇËùÓĞÊıÖµÅÅĞòÖ®ºóÖĞ¼äÁ½¸öÊıµÄÆ½¾ùÖµ¡£
+ç»´æŠ¤ä¸€ä¸ªå¤§å°ä¸º K çš„æœ€å°å †è¿‡ç¨‹å¦‚ä¸‹ï¼šåœ¨æ·»åŠ ä¸€ä¸ªå…ƒç´ ä¹‹åï¼Œå¦‚æœå¤§é¡¶å †çš„å¤§å°å¤§äº Kï¼Œé‚£ä¹ˆéœ€è¦å°†å¤§é¡¶å †çš„å †é¡¶å…ƒç´ å»é™¤ã€‚
 
 ```java
-private PriorityQueue<Integer> maxHeap = new PriorityQueue<>((o1, o2) -> o2-o1); // ÊµÏÖ×ó±ß²¿·Ö
-private PriorityQueue<Integer> minHeep = new PriorityQueue<>(); // ÊµÏÖÓÒ±ß²¿·Ö£¬ÓÒ±ß²¿·ÖËùÓĞÔªËØ´óÓÚ×ó±ß²¿·Ö
-private int cnt = 0;
-
-public void Insert(Integer num) {
-    // ²åÈëÒª±£Ö¤Á½¸ö¶Ñ´æÓÚÆ½ºâ×´Ì¬
-    if(cnt % 2 == 0) { 
-        // ÎªÅ¼ÊıµÄÇé¿öÏÂ²åÈëµ½×îĞ¡¶Ñ£¬ÏÈ¾­¹ı×î´ó¶ÑÉ¸Ñ¡£¬ÕâÑù¾ÍÄÜ±£Ö¤×î´ó¶ÑÖĞµÄÔªËØ¶¼Ğ¡ÓÚ×îĞ¡¶ÑÖĞµÄÔªËØ
+public ArrayList<Integer> GetLeastNumbers_Solution(int[] nums, int k) {
+    if (k > nums.length || k <= 0)
+        return new ArrayList<>();
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<>((o1, o2) -> o2 - o1);
+    for (int num : nums) {
         maxHeap.add(num);
-        minHeep.add(maxHeap.poll());
-    } else {
-        minHeep.add(num);
-        maxHeap.add(minHeep.poll());
+        if (maxHeap.size() > k)
+            maxHeap.poll();
     }
-    cnt++;
+    return new ArrayList<>(maxHeap);
+}
+```
+
+# 41.1 æ•°æ®æµä¸­çš„ä¸­ä½æ•°
+
+[NowCoder](https://www.nowcoder.com/practice/9be0172896bd43948f8a32fb954e1be1?tpId=13&tqId=11216&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+å¦‚ä½•å¾—åˆ°ä¸€ä¸ªæ•°æ®æµä¸­çš„ä¸­ä½æ•°ï¼Ÿå¦‚æœä»æ•°æ®æµä¸­è¯»å‡ºå¥‡æ•°ä¸ªæ•°å€¼ï¼Œé‚£ä¹ˆä¸­ä½æ•°å°±æ˜¯æ‰€æœ‰æ•°å€¼æ’åºä¹‹åä½äºä¸­é—´çš„æ•°å€¼ã€‚å¦‚æœä»æ•°æ®æµä¸­è¯»å‡ºå¶æ•°ä¸ªæ•°å€¼ï¼Œé‚£ä¹ˆä¸­ä½æ•°å°±æ˜¯æ‰€æœ‰æ•°å€¼æ’åºä¹‹åä¸­é—´ä¸¤ä¸ªæ•°çš„å¹³å‡å€¼ã€‚
+
+## è§£é¢˜æ€è·¯
+
+```java
+/* å¤§é¡¶å †ï¼Œå­˜å‚¨å·¦åŠè¾¹å…ƒç´  */
+private PriorityQueue<Integer> left = new PriorityQueue<>((o1, o2) -> o2 - o1);
+/* å°é¡¶å †ï¼Œå­˜å‚¨å³åŠè¾¹å…ƒç´ ï¼Œå¹¶ä¸”å³åŠè¾¹å…ƒç´ éƒ½å¤§äºå·¦åŠè¾¹ */
+private PriorityQueue<Integer> right = new PriorityQueue<>();
+/* å½“å‰æ•°æ®æµè¯»å…¥çš„å…ƒç´ ä¸ªæ•° */
+private int N = 0;
+
+public void Insert(Integer val) {
+    /* æ’å…¥è¦ä¿è¯ä¸¤ä¸ªå †å­˜äºå¹³è¡¡çŠ¶æ€ */
+    if (N % 2 == 0) {
+        /* N ä¸ºå¶æ•°çš„æƒ…å†µä¸‹æ’å…¥åˆ°å³åŠè¾¹ã€‚
+         * å› ä¸ºå³åŠè¾¹å…ƒç´ éƒ½è¦å¤§äºå·¦åŠè¾¹ï¼Œä½†æ˜¯æ–°æ’å…¥çš„å…ƒç´ ä¸ä¸€å®šæ¯”å·¦åŠè¾¹å…ƒç´ æ¥çš„å¤§ï¼Œ
+         * å› æ­¤éœ€è¦å…ˆå°†å…ƒç´ æ’å…¥å·¦åŠè¾¹ï¼Œç„¶ååˆ©ç”¨å·¦åŠè¾¹ä¸ºå¤§é¡¶å †çš„ç‰¹ç‚¹ï¼Œå–å‡ºå †é¡¶å…ƒç´ å³ä¸ºæœ€å¤§å…ƒç´ ï¼Œæ­¤æ—¶æ’å…¥å³åŠè¾¹ */
+        left.add(val);
+        right.add(left.poll());
+    } else {
+        right.add(val);
+        left.add(right.poll());
+    }
+    N++;
 }
 
 public Double GetMedian() {
-    if(cnt % 2 == 0) {
-        return (maxHeap.peek() + minHeep.peek()) / 2.0;
-    } else {
-        return (double) minHeep.peek();
-    }
+    if (N % 2 == 0)
+        return (left.peek() + right.peek()) / 2.0;
+    else
+        return (double) right.peek();
 }
 ```
 
-## 14.2 ×Ö·ûÁ÷ÖĞµÚÒ»¸ö²»ÖØ¸´µÄ×Ö·û
+# 41.2 å­—ç¬¦æµä¸­ç¬¬ä¸€ä¸ªä¸é‡å¤çš„å­—ç¬¦
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/00de97733b8e4f97a3fb5c680ee10720?tpId=13&tqId=11207&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÇëÊµÏÖÒ»¸öº¯ÊıÓÃÀ´ÕÒ³ö×Ö·ûÁ÷ÖĞµÚÒ»¸öÖ»³öÏÖÒ»´ÎµÄ×Ö·û¡£ÀıÈç£¬µ±´Ó×Ö·ûÁ÷ÖĞÖ»¶Á³öÇ°Á½¸ö×Ö·û "go" Ê±£¬µÚÒ»¸öÖ»³öÏÖÒ»´ÎµÄ×Ö·ûÊÇ "g"¡£µ±´Ó¸Ã×Ö·ûÁ÷ÖĞ¶Á³öÇ°Áù¸ö×Ö·û¡°google" Ê±£¬µÚÒ»¸öÖ»³öÏÖÒ»´ÎµÄ×Ö·ûÊÇ "l"¡£
+## é¢˜ç›®æè¿°
+
+è¯·å®ç°ä¸€ä¸ªå‡½æ•°ç”¨æ¥æ‰¾å‡ºå­—ç¬¦æµä¸­ç¬¬ä¸€ä¸ªåªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦ã€‚ä¾‹å¦‚ï¼Œå½“ä»å­—ç¬¦æµä¸­åªè¯»å‡ºå‰ä¸¤ä¸ªå­—ç¬¦ "go" æ—¶ï¼Œç¬¬ä¸€ä¸ªåªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦æ˜¯ "g"ã€‚å½“ä»è¯¥å­—ç¬¦æµä¸­è¯»å‡ºå‰å…­ä¸ªå­—ç¬¦â€œgoogle" æ—¶ï¼Œç¬¬ä¸€ä¸ªåªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦æ˜¯ "l"ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
-//Insert one char from stringstream
 private int[] cnts = new int[256];
 private Queue<Character> queue = new LinkedList<>();
 
 public void Insert(char ch) {
     cnts[ch]++;
     queue.add(ch);
-    while (!queue.isEmpty() && cnts[queue.peek()] > 1) {
+    while (!queue.isEmpty() && cnts[queue.peek()] > 1)
         queue.poll();
-    }
 }
 
-//return the first appearence once char in current stringstream
 public char FirstAppearingOnce() {
-    if (queue.isEmpty()) return '#';
-    return queue.peek();
+    return queue.isEmpty() ? '#' : queue.peek();
 }
 ```
 
+# 42. è¿ç»­å­æ•°ç»„çš„æœ€å¤§å’Œ
 
-## 42. Á¬Ğø×ÓÊı×éµÄ×î´óºÍ
+[NowCoder](https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tqId=11183&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+{6, -3, -2, 7, -15, 1, 2, 2}ï¼Œè¿ç»­å­æ•°ç»„çš„æœ€å¤§å’Œä¸º 8ï¼ˆä»ç¬¬ 0 ä¸ªå¼€å§‹ï¼Œåˆ°ç¬¬ 3 ä¸ªä¸ºæ­¢ï¼‰ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
-public int FindGreatestSumOfSubArray(int[] array) {
-    if(array.length == 0) return 0;
-    int ret = Integer.MIN_VALUE;
+public int FindGreatestSumOfSubArray(int[] nums) {
+    if (nums == null || nums.length == 0)
+        return 0;
+    int greatestSum = Integer.MIN_VALUE;
     int sum = 0;
-    for(int num : array) {
-        if(sum <= 0) sum = num;
-        else sum += num;
-        ret = Math.max(ret, sum);
+    for (int val : nums) {
+        sum = sum <= 0 ? val : sum + val;
+        greatestSum = Math.max(greatestSum, sum);
     }
-    return ret;
+    return greatestSum;
 }
 ```
 
-## 43. ´Ó 1 µ½ n ÕûÊıÖĞ 1 ³öÏÖµÄ´ÎÊı
+# 43. ä» 1 åˆ° n æ•´æ•°ä¸­ 1 å‡ºç°çš„æ¬¡æ•°
 
-½âÌâ²Î¿¼£º[Leetcode : 233. Number of Digit One](https://leetcode.com/problems/number-of-digit-one/discuss/64381/4+-lines-O(log-n)-C++JavaPython)
+[NowCoder](https://www.nowcoder.com/practice/bd7f978302044eee894445e244c7eee6?tpId=13&tqId=11184&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public int NumberOf1Between1AndN_Solution(int n) {
@@ -1279,222 +2025,537 @@ public int NumberOf1Between1AndN_Solution(int n) {
 }
 ```
 
-## 45. °ÑÊı×éÅÅ³É×îĞ¡µÄÊı
+> [Leetcode : 233. Number of Digit One](https://leetcode.com/problems/number-of-digit-one/discuss/64381/4+-lines-O(log-n)-C++JavaPython)
 
-**ÌâÄ¿ÃèÊö**
+# 44. æ•°å­—åºåˆ—ä¸­çš„æŸä¸€ä½æ•°å­—
 
-ÊäÈëÒ»¸öÕıÕûÊıÊı×é£¬°ÑÊı×éÀïËùÓĞÊı×ÖÆ´½ÓÆğÀ´ÅÅ³ÉÒ»¸öÊı£¬´òÓ¡ÄÜÆ´½Ó³öµÄËùÓĞÊı×ÖÖĞ×îĞ¡µÄÒ»¸ö¡£ÀıÈçÊäÈëÊı×é {3£¬32£¬321}£¬Ôò´òÓ¡³öÕâÈı¸öÊı×ÖÄÜÅÅ³ÉµÄ×îĞ¡Êı×ÖÎª 321323¡£
+## é¢˜ç›®æè¿°
+
+æ•°å­—ä»¥ 0123456789101112131415... çš„æ ¼å¼åºåˆ—åŒ–åˆ°ä¸€ä¸ªå­—ç¬¦ä¸²ä¸­ï¼Œæ±‚è¿™ä¸ªå­—ç¬¦ä¸²çš„ç¬¬ index ä½ã€‚
+
+## è§£é¢˜æ€è·¯
+
+```java
+public int getDigitAtIndex(int index) {
+    if (index < 0)
+        return -1;
+    int place = 1;  // 1 è¡¨ç¤ºä¸ªä½ï¼Œ2 è¡¨ç¤º åä½...
+    while (true) {
+        int amount = getAmountOfPlace(place);
+        int totalAmount = amount * place;
+        if (index < totalAmount)
+            return getDigitAtIndex(index, place);
+        index -= totalAmount;
+        place++;
+    }
+}
+
+/**
+ * place ä½æ•°çš„æ•°å­—ç»„æˆçš„å­—ç¬¦ä¸²é•¿åº¦
+ * 10, 90, 900, ...
+ */
+private int getAmountOfPlace(int place) {
+    if (place == 1)
+        return 10;
+    return (int) Math.pow(10, place - 1) * 9;
+}
+
+/**
+ * place ä½æ•°çš„èµ·å§‹æ•°å­—
+ * 0, 10, 100, ...
+ */
+private int getBeginNumberOfPlace(int place) {
+    if (place == 1)
+        return 0;
+    return (int) Math.pow(10, place - 1);
+}
+
+/**
+ * åœ¨ place ä½æ•°ç»„æˆçš„å­—ç¬¦ä¸²ä¸­ï¼Œç¬¬ index ä¸ªæ•°
+ */
+private int getDigitAtIndex(int index, int place) {
+    int beginNumber = getBeginNumberOfPlace(place);
+    int shiftNumber = index / place;
+    String number = (beginNumber + shiftNumber) + "";
+    int count = index % place;
+    return number.charAt(count) - '0';
+}
+```
+
+# 45. æŠŠæ•°ç»„æ’æˆæœ€å°çš„æ•°
+
+[NowCoder](https://www.nowcoder.com/practice/8fecd3f8ba334add803bf2a06af1b993?tpId=13&tqId=11185&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+è¾“å…¥ä¸€ä¸ªæ­£æ•´æ•°æ•°ç»„ï¼ŒæŠŠæ•°ç»„é‡Œæ‰€æœ‰æ•°å­—æ‹¼æ¥èµ·æ¥æ’æˆä¸€ä¸ªæ•°ï¼Œæ‰“å°èƒ½æ‹¼æ¥å‡ºçš„æ‰€æœ‰æ•°å­—ä¸­æœ€å°çš„ä¸€ä¸ªã€‚ä¾‹å¦‚è¾“å…¥æ•°ç»„ {3ï¼Œ32ï¼Œ321}ï¼Œåˆ™æ‰“å°å‡ºè¿™ä¸‰ä¸ªæ•°å­—èƒ½æ’æˆçš„æœ€å°æ•°å­—ä¸º 321323ã€‚
+
+## è§£é¢˜æ€è·¯
+
+å¯ä»¥çœ‹æˆæ˜¯ä¸€ä¸ªæ’åºé—®é¢˜ï¼Œåœ¨æ¯”è¾ƒä¸¤ä¸ªå­—ç¬¦ä¸² S1 å’Œ S2 çš„å¤§å°æ—¶ï¼Œåº”è¯¥æ¯”è¾ƒçš„æ˜¯ S1+S2 å’Œ S2+S1 çš„å¤§å°ï¼Œå¦‚æœ S1+S2 < S2+S1ï¼Œé‚£ä¹ˆåº”è¯¥æŠŠ S1 æ’åœ¨å‰é¢ï¼Œå¦åˆ™åº”è¯¥æŠŠ S2 æ’åœ¨å‰é¢ã€‚
 
 ```java
 public String PrintMinNumber(int[] numbers) {
+    if (numbers == null || numbers.length == 0)
+        return "";
     int n = numbers.length;
     String[] nums = new String[n];
-    for (int i = 0; i < n; i++) nums[i] = numbers[i] + "";
+    for (int i = 0; i < n; i++)
+        nums[i] = numbers[i] + "";
     Arrays.sort(nums, (s1, s2) -> (s1 + s2).compareTo(s2 + s1));
     String ret = "";
-    for (String str : nums) ret += str;
+    for (String str : nums)
+        ret += str;
     return ret;
 }
 ```
 
-## 49. ³óÊı
+# 46. æŠŠæ•°å­—ç¿»è¯‘æˆå­—ç¬¦ä¸²
 
-**ÌâÄ¿ÃèÊö**
+[Leetcode](https://leetcode.com/problems/decode-ways/description/)
 
-°ÑÖ»°üº¬Òò×Ó 2¡¢3 ºÍ 5 µÄÊı³Æ×÷³óÊı£¨Ugly Number£©¡£ÀıÈç 6¡¢8 ¶¼ÊÇ³óÊı£¬µ« 14 ²»ÊÇ£¬ÒòÎªËü°üº¬Òò×Ó 7¡£ Ï°¹ßÉÏÎÒÃÇ°Ñ 1 µ±×öÊÇµÚÒ»¸ö³óÊı¡£Çó°´´ÓĞ¡µ½´óµÄË³ĞòµÄµÚ N ¸ö³óÊı¡£
+## é¢˜ç›®æè¿°
+
+ç»™å®šä¸€ä¸ªæ•°å­—ï¼ŒæŒ‰ç…§å¦‚ä¸‹è§„åˆ™ç¿»è¯‘æˆå­—ç¬¦ä¸²ï¼š0 ç¿»è¯‘æˆâ€œaâ€ï¼Œ1 ç¿»è¯‘æˆâ€œbâ€... 25 ç¿»è¯‘æˆâ€œzâ€ã€‚ä¸€ä¸ªæ•°å­—æœ‰å¤šç§ç¿»è¯‘å¯èƒ½ï¼Œä¾‹å¦‚ 12258 ä¸€å…±æœ‰ 5 ç§ï¼Œåˆ†åˆ«æ˜¯ bccfiï¼Œbwfiï¼Œbcziï¼Œmcfiï¼Œmziã€‚å®ç°ä¸€ä¸ªå‡½æ•°ï¼Œç”¨æ¥è®¡ç®—ä¸€ä¸ªæ•°å­—æœ‰å¤šå°‘ç§ä¸åŒçš„ç¿»è¯‘æ–¹æ³•ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
-public int GetUglyNumber_Solution(int index) {
-    if (index <= 6) return index;
-    int i2 = 0, i3 = 0, i5 = 0;
-    int cnt = 1;
-    int[] dp = new int[index];
+public int numDecodings(String s) {
+    if (s == null || s.length() == 0)
+        return 0;
+    int n = s.length();
+    int[] dp = new int[n + 1];
     dp[0] = 1;
-    while (cnt < index) {
-        int n2 = dp[i2] * 2, n3 = dp[i3] * 3, n5 = dp[i5] * 5;
-        int tmp = Math.min(n2, Math.min(n3, n5));
-        dp[cnt++] = tmp;
-        if (tmp == n2) i2++;
-        if (tmp == n3) i3++;
-        if (tmp == n5) i5++;
+    dp[1] = s.charAt(0) == '0' ? 0 : 1;
+    for (int i = 2; i <= n; i++) {
+        int one = Integer.valueOf(s.substring(i - 1, i));
+        if (one != 0)
+            dp[i] += dp[i - 1];
+        if (s.charAt(i - 2) == '0')
+            continue;
+        int two = Integer.valueOf(s.substring(i - 2, i));
+        if (two <= 26)
+            dp[i] += dp[i - 2];
     }
-    return dp[index - 1];
+    return dp[n];
 }
 ```
 
-## 50. µÚÒ»¸öÖ»³öÏÖÒ»´ÎµÄ×Ö·ûÎ»ÖÃ
+# 47. ç¤¼ç‰©çš„æœ€å¤§ä»·å€¼
+
+[NowCoder](https://www.nowcoder.com/questionTerminal/72a99e28381a407991f2c96d8cb238ab)
+
+## é¢˜ç›®æè¿°
+
+åœ¨ä¸€ä¸ª m\*n çš„æ£‹ç›˜çš„æ¯ä¸€ä¸ªæ ¼éƒ½æ”¾æœ‰ä¸€ä¸ªç¤¼ç‰©ï¼Œæ¯ä¸ªç¤¼ç‰©éƒ½æœ‰ä¸€å®šä»·å€¼ï¼ˆå¤§äº 0ï¼‰ã€‚ä»å·¦ä¸Šè§’å¼€å§‹æ‹¿ç¤¼ç‰©ï¼Œæ¯æ¬¡å‘å³æˆ–å‘ä¸‹ç§»åŠ¨ä¸€æ ¼ï¼Œç›´åˆ°å³ä¸‹è§’ç»“æŸã€‚ç»™å®šä¸€ä¸ªæ£‹ç›˜ï¼Œæ±‚æ‹¿åˆ°ç¤¼ç‰©çš„æœ€å¤§ä»·å€¼ã€‚ä¾‹å¦‚ï¼Œå¯¹äºå¦‚ä¸‹æ£‹ç›˜
+
+```
+1    10   3    8
+12   2    9    6
+5    7    4    11
+3    7    16   5
+```
+
+ç¤¼ç‰©çš„æœ€å¤§ä»·å€¼ä¸º 1+12+5+7+7+16+5=53ã€‚
+
+## è§£é¢˜æ€è·¯
+
+åº”è¯¥ç”¨åŠ¨æ€è§„åˆ’æ±‚è§£ï¼Œè€Œä¸æ˜¯æ·±åº¦ä¼˜å…ˆæœç´¢ï¼Œæ·±åº¦ä¼˜å…ˆæœç´¢è¿‡äºå¤æ‚ï¼Œä¸æ˜¯æœ€ä¼˜è§£ã€‚
+
+```java
+public int getMost(int[][] values) {
+    if (values == null || values.length == 0 || values[0].length == 0)
+        return 0;
+    int n = values[0].length;
+    int[] dp = new int[n];
+    for (int[] value : values) {
+        dp[0] += value[0];
+        for (int i = 1; i < n; i++)
+            dp[i] = Math.max(dp[i], dp[i - 1]) + value[i];
+    }
+    return dp[n - 1];
+}
+```
+
+# 48. æœ€é•¿ä¸å«é‡å¤å­—ç¬¦çš„å­å­—ç¬¦ä¸²
+
+## é¢˜ç›®æè¿°
+
+è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²ï¼ˆåªåŒ…å« a\~z çš„å­—ç¬¦ï¼‰ï¼Œæ±‚å…¶æœ€é•¿ä¸å«é‡å¤å­—ç¬¦çš„å­å­—ç¬¦ä¸²çš„é•¿åº¦ã€‚ä¾‹å¦‚å¯¹äº arabcacfrï¼Œæœ€é•¿ä¸å«é‡å¤å­—ç¬¦çš„å­å­—ç¬¦ä¸²ä¸º acfrï¼Œé•¿åº¦ä¸º 4ã€‚
+
+## è§£é¢˜æ€è·¯
+
+```java
+public int longestSubStringWithoutDuplication(String str) {
+    int curLen = 0;
+    int maxLen = 0;
+    int[] preIndexs = new int[26];
+    Arrays.fill(preIndexs, -1);
+    for (int curI = 0; curI < str.length(); curI++) {
+        int c = str.charAt(curI) - 'a';
+        int preI = preIndexs[c];
+        if (preI == -1 || curI - preI > curLen) {
+            curLen++;
+        } else {
+            maxLen = Math.max(maxLen, curLen);
+            curLen = curI - preI;
+        }
+        preIndexs[c] = curI;
+    }
+    maxLen = Math.max(maxLen, curLen);
+    return maxLen;
+}
+```
+
+# 49. ä¸‘æ•°
+
+[NowCoder](https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&tqId=11186&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+æŠŠåªåŒ…å«å› å­ 2ã€3 å’Œ 5 çš„æ•°ç§°ä½œä¸‘æ•°ï¼ˆUgly Numberï¼‰ã€‚ä¾‹å¦‚ 6ã€8 éƒ½æ˜¯ä¸‘æ•°ï¼Œä½† 14 ä¸æ˜¯ï¼Œå› ä¸ºå®ƒåŒ…å«å› å­ 7ã€‚ä¹ æƒ¯ä¸Šæˆ‘ä»¬æŠŠ 1 å½“åšæ˜¯ç¬¬ä¸€ä¸ªä¸‘æ•°ã€‚æ±‚æŒ‰ä»å°åˆ°å¤§çš„é¡ºåºçš„ç¬¬ N ä¸ªä¸‘æ•°ã€‚
+
+## è§£é¢˜æ€è·¯
+
+```java
+public int GetUglyNumber_Solution(int N) {
+    if (N <= 6)
+        return N;
+    int i2 = 0, i3 = 0, i5 = 0;
+    int[] dp = new int[N];
+    dp[0] = 1;
+    for (int i = 1; i < N; i++) {
+        int next2 = dp[i2] * 2, next3 = dp[i3] * 3, next5 = dp[i5] * 5;
+        dp[i] = Math.min(next2, Math.min(next3, next5));
+        if (dp[i] == next2)
+            i2++;
+        if (dp[i] == next3)
+            i3++;
+        if (dp[i] == next5)
+            i5++;
+    }
+    return dp[N - 1];
+}
+```
+
+# 50. ç¬¬ä¸€ä¸ªåªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦ä½ç½®
+
+[NowCoder](https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c?tpId=13&tqId=11187&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+åœ¨ä¸€ä¸ªå­—ç¬¦ä¸²ä¸­æ‰¾åˆ°ç¬¬ä¸€ä¸ªåªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦ï¼Œå¹¶è¿”å›å®ƒçš„ä½ç½®ã€‚
+
+## è§£é¢˜æ€è·¯
+
+æœ€ç›´è§‚çš„è§£æ³•æ˜¯ä½¿ç”¨ HashMap å¯¹å‡ºç°æ¬¡æ•°è¿›è¡Œç»Ÿè®¡ï¼Œä½†æ˜¯è€ƒè™‘åˆ°è¦ç»Ÿè®¡çš„å­—ç¬¦èŒƒå›´æœ‰é™ï¼Œå› æ­¤å¯ä»¥ä½¿ç”¨æ•´å‹æ•°ç»„ä»£æ›¿ HashMapã€‚
 
 ```java
 public int FirstNotRepeatingChar(String str) {
     int[] cnts = new int[256];
-    for (int i = 0; i < str.length(); i++) cnts[str.charAt(i)]++;
-    for (int i = 0; i < str.length(); i++) if (cnts[str.charAt(i)] == 1) return i;
+    for (int i = 0; i < str.length(); i++)
+        cnts[str.charAt(i)]++;
+    for (int i = 0; i < str.length(); i++)
+        if (cnts[str.charAt(i)] == 1)
+            return i;
     return -1;
 }
 ```
 
-## 51. Êı×éÖĞµÄÄæĞò¶Ô
+ä»¥ä¸Šå®ç°çš„ç©ºé—´å¤æ‚åº¦è¿˜ä¸æ˜¯æœ€ä¼˜çš„ã€‚è€ƒè™‘åˆ°åªéœ€è¦æ‰¾åˆ°åªå‡ºç°ä¸€æ¬¡çš„å­—ç¬¦ï¼Œé‚£ä¹ˆéœ€è¦ç»Ÿè®¡çš„æ¬¡æ•°ä¿¡æ¯åªæœ‰ 0,1,æ›´å¤§ï¼Œä½¿ç”¨ä¸¤ä¸ªæ¯”ç‰¹ä½å°±èƒ½å­˜å‚¨è¿™äº›ä¿¡æ¯ã€‚
 
 ```java
-private long cnt = 0;
-
-public int InversePairs(int[] array) {
-    mergeSortUp2Down(array, 0, array.length - 1);
-    return (int) (cnt % 1000000007);
-}
-
-private void mergeSortUp2Down(int[] a, int start, int end) {
-    if (end - start < 1) return;
-    int mid = start + (end - start) / 2;
-    mergeSortUp2Down(a, start, mid);
-    mergeSortUp2Down(a, mid + 1, end);
-    merge(a, start, mid, end);
-}
-
-private void merge(int[] a, int start, int mid, int end) {
-    int[] tmp = new int[end - start + 1];
-    int i = start, j = mid + 1, k = 0;
-    while (i <= mid || j <= end) {
-        if (i > mid) tmp[k] = a[j++];
-        else if (j > end) tmp[k] = a[i++];
-        else if (a[i] < a[j]) tmp[k] = a[i++];
-        else {
-            tmp[k] = a[j++];
-            this.cnt += mid - i + 1; // a[i] > a[j] £¬ËµÃ÷ a[i...mid] ¶¼´óÓÚ a[j]
-        }
-        k++;
+public int FirstNotRepeatingChar2(String str) {
+    BitSet bs1 = new BitSet(256);
+    BitSet bs2 = new BitSet(256);
+    for (char c : str.toCharArray()) {
+        if (!bs1.get(c) && !bs2.get(c))
+            bs1.set(c);     // 0 0 -> 0 1
+        else if (bs1.get(c) && !bs2.get(c))
+            bs2.set(c);     // 0 1 -> 1 1
     }
-
-    for (k = 0; k < tmp.length; k++) {
-        a[start + k] = tmp[k];
+    for (int i = 0; i < str.length(); i++) {
+        char c = str.charAt(i);
+        if (bs1.get(c) && !bs2.get(c))  // 0 1
+            return i;
     }
+    return -1;
 }
 ```
 
-## 52. Á½¸öÁ´±íµÄµÚÒ»¸ö¹«¹²½áµã
+# 51. æ•°ç»„ä¸­çš„é€†åºå¯¹
+
+[NowCoder](https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5?tpId=13&tqId=11188&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+åœ¨æ•°ç»„ä¸­çš„ä¸¤ä¸ªæ•°å­—ï¼Œå¦‚æœå‰é¢ä¸€ä¸ªæ•°å­—å¤§äºåé¢çš„æ•°å­—ï¼Œåˆ™è¿™ä¸¤ä¸ªæ•°å­—ç»„æˆä¸€ä¸ªé€†åºå¯¹ã€‚è¾“å…¥ä¸€ä¸ªæ•°ç»„ï¼Œæ±‚å‡ºè¿™ä¸ªæ•°ç»„ä¸­çš„é€†åºå¯¹çš„æ€»æ•°ã€‚
+
+## è§£é¢˜æ€è·¯
+
+```java
+private long cnt = 0;
+private int[] tmp;  // åœ¨è¿™é‡Œå£°æ˜è¾…åŠ©æ•°ç»„ï¼Œè€Œä¸æ˜¯åœ¨ merge() é€’å½’å‡½æ•°ä¸­å£°æ˜
+
+public int InversePairs(int[] nums) {
+    tmp = new int[nums.length];
+    mergeSort(nums, 0, nums.length - 1);
+    return (int) (cnt % 1000000007);
+}
+
+private void mergeSort(int[] nums, int l, int h) {
+    if (h - l < 1)
+        return;
+    int m = l + (h - l) / 2;
+    mergeSort(nums, l, m);
+    mergeSort(nums, m + 1, h);
+    merge(nums, l, m, h);
+}
+
+private void merge(int[] nums, int l, int m, int h) {
+    int i = l, j = m + 1, k = l;
+    while (i <= m || j <= h) {
+        if (i > m)
+            tmp[k] = nums[j++];
+        else if (j > h)
+            tmp[k] = nums[i++];
+        else if (nums[i] < nums[j])
+            tmp[k] = nums[i++];
+        else {
+            tmp[k] = nums[j++];
+            this.cnt += m - i + 1;  // nums[i] >= nums[j]ï¼Œè¯´æ˜ nums[i...mid] éƒ½å¤§äº nums[j]
+        }
+        k++;
+    }
+    for (k = l; k <= h; k++)
+        nums[k] = tmp[k];
+}
+```
+
+# 52. ä¸¤ä¸ªé“¾è¡¨çš„ç¬¬ä¸€ä¸ªå…¬å…±ç»“ç‚¹
+
+[NowCoder](https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46?tpId=13&tqId=11189&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+<div align="center"> <img src="../pics//8f6f9dc9-9ecd-47c8-b50e-2814f0219056.png" width="500"/> </div><br>
+
+## è§£é¢˜æ€è·¯
+
+è®¾ A çš„é•¿åº¦ä¸º a + cï¼ŒB çš„é•¿åº¦ä¸º b + cï¼Œå…¶ä¸­ c ä¸ºå°¾éƒ¨å…¬å…±éƒ¨åˆ†é•¿åº¦ï¼Œå¯çŸ¥ a + c + b = b + c + aã€‚
+
+å½“è®¿é—®é“¾è¡¨ A çš„æŒ‡é’ˆè®¿é—®åˆ°é“¾è¡¨å°¾éƒ¨æ—¶ï¼Œä»¤å®ƒä»é“¾è¡¨ B çš„å¤´éƒ¨é‡æ–°å¼€å§‹è®¿é—®é“¾è¡¨ Bï¼›åŒæ ·åœ°ï¼Œå½“è®¿é—®é“¾è¡¨ B çš„æŒ‡é’ˆè®¿é—®åˆ°é“¾è¡¨å°¾éƒ¨æ—¶ï¼Œä»¤å®ƒä»é“¾è¡¨ A çš„å¤´éƒ¨é‡æ–°å¼€å§‹è®¿é—®é“¾è¡¨ Aã€‚è¿™æ ·å°±èƒ½æ§åˆ¶è®¿é—® A å’Œ B ä¸¤ä¸ªé“¾è¡¨çš„æŒ‡é’ˆèƒ½åŒæ—¶è®¿é—®åˆ°äº¤ç‚¹ã€‚
 
 ```java
 public ListNode FindFirstCommonNode(ListNode pHead1, ListNode pHead2) {
     ListNode l1 = pHead1, l2 = pHead2;
     while (l1 != l2) {
-        if (l1 == null) l1 = pHead2;
-        else l1 = l1.next;
-        if (l2 == null) l2 = pHead1;
-        else l2 = l2.next;
+        l1 = (l1 == null) ? pHead2 : l1.next;
+        l2 = (l2 == null) ? pHead1 : l2.next;
     }
     return l1;
 }
 ```
 
-# µÚÁùÕÂ ÃæÊÔÖĞµÄ¸÷ÏîÄÜÁ¦
+# 53. æ•°å­—åœ¨æ’åºæ•°ç»„ä¸­å‡ºç°çš„æ¬¡æ•°
 
-## 53 Êı×ÖÔÚÅÅĞòÊı×éÖĞ³öÏÖµÄ´ÎÊı
+[NowCoder](https://www.nowcoder.com/practice/70610bf967994b22bb1c26f9ae901fa2?tpId=13&tqId=11190&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
+## é¢˜ç›®æè¿°
 
+```html
+Input:
+nums = 1, 2, 3, 3, 3, 3, 4, 6
+K = 3
+
+Output:
+4
+```
+
+## è§£é¢˜æ€è·¯
 
 ```java
-public int GetNumberOfK(int[] array, int k) {
-    int l = 0, h = array.length - 1;
-    while (l <= h) {
+public int GetNumberOfK(int[] nums, int K) {
+    int first = binarySearch(nums, K);
+    int last = binarySearch(nums, K + 1);
+    return (first == nums.length || nums[first] != K) ? 0 : last - first;
+}
+
+private int binarySearch(int[] nums, int K) {
+    int l = 0, h = nums.length;
+    while (l < h) {
         int m = l + (h - l) / 2;
-        if (array[m] >= k) h = m - 1;
-        else l = m + 1;
+        if (nums[m] >= K)
+            h = m;
+        else
+            l = m + 1;
     }
-    int cnt = 0;
-    while (l < array.length && array[l++] == k) cnt++;
-    return cnt;
+    return l;
 }
 ```
 
-## 54. ¶ş²æËÑË÷Ê÷µÄµÚ k ¸ö½áµã
+# 54. äºŒå‰æŸ¥æ‰¾æ ‘çš„ç¬¬ K ä¸ªç»“ç‚¹
+
+[NowCoder](https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a?tpId=13&tqId=11215&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## è§£é¢˜æ€è·¯
+
+åˆ©ç”¨äºŒå‰æŸ¥æ‰¾æ ‘ä¸­åºéå†æœ‰åºçš„ç‰¹ç‚¹ã€‚
 
 ```java
-TreeNode ret;
-int cnt = 0;
+private TreeNode ret;
+private int cnt = 0;
 
-TreeNode KthNode(TreeNode pRoot, int k) {
-    inorder(pRoot, k);
+public TreeNode KthNode(TreeNode pRoot, int k) {
+    inOrder(pRoot, k);
     return ret;
 }
 
-private void inorder(TreeNode root, int k) {
-    if (root == null) return;
-    if (cnt > k) return;
-    inorder(root.left, k);
+private void inOrder(TreeNode root, int k) {
+    if (root == null || cnt >= k)
+        return;
+    inOrder(root.left, k);
     cnt++;
-    if (cnt == k) ret = root;
-    inorder(root.right, k);
+    if (cnt == k)
+        ret = root;
+    inOrder(root.right, k);
 }
 ```
 
-## 55 ¶ş²æÊ÷µÄÉî¶È
+# 55.1 äºŒå‰æ ‘çš„æ·±åº¦
+
+[NowCoder](https://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b?tpId=13&tqId=11191&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+ä»æ ¹ç»“ç‚¹åˆ°å¶ç»“ç‚¹ä¾æ¬¡ç»è¿‡çš„ç»“ç‚¹ï¼ˆå«æ ¹ã€å¶ç»“ç‚¹ï¼‰å½¢æˆæ ‘çš„ä¸€æ¡è·¯å¾„ï¼Œæœ€é•¿è·¯å¾„çš„é•¿åº¦ä¸ºæ ‘çš„æ·±åº¦ã€‚
+
+<div align="center"> <img src="../pics//b29f8971-9cb8-480d-b986-0e60c2ece069.png" width="350"/> </div><br>
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public int TreeDepth(TreeNode root) {
-    if (root == null) return 0;
-    return 1 + Math.max(TreeDepth(root.left), TreeDepth(root.right));
+    return root == null ? 0 : 1 + Math.max(TreeDepth(root.left), TreeDepth(root.right));
 }
 ```
 
-## 56. Êı×éÖĞÖ»³öÏÖÒ»´ÎµÄÊı×Ö
+# 55.2 å¹³è¡¡äºŒå‰æ ‘
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/8b3b95850edb4115918ecebdf1b4d222?tpId=13&tqId=11192&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-Ò»¸öÕûĞÍÊı×éÀï³ıÁËÁ½¸öÊı×ÖÖ®Íâ£¬ÆäËûµÄÊı×Ö¶¼³öÏÖÁËÁ½´Î£¬ÕÒ³öÕâÁ½¸öÊı¡£
+## é¢˜ç›®æè¿°
 
-**½âÌâË¼Â·**
+å¹³è¡¡äºŒå‰æ ‘å·¦å³å­æ ‘é«˜åº¦å·®ä¸è¶…è¿‡ 1ã€‚
 
-Á½¸ö²»ÏàµÈµÄÔªËØÔÚÎ»¼¶±íÊ¾ÉÏ±Ø¶¨»áÓĞÒ»Î»´æÔÚ²»Í¬¡£
+<div align="center"> <img src="../pics//e026c24d-00fa-4e7c-97a8-95a98cdc383a.png" width="300"/> </div><br>
 
-½«Êı×éµÄËùÓĞÔªËØÒì»òµÃµ½µÄ½á¹ûÎª²»´æÔÚÖØ¸´µÄÁ½¸öÔªËØÒì»òµÄ½á¹û¡£
-
-diff &= -diff µÃµ½³ö diff ×îÓÒ²à²»Îª 0 µÄÎ»£¬Ò²¾ÍÊÇ²»´æÔÚÖØ¸´µÄÁ½¸öÔªËØÔÚÎ»¼¶±íÊ¾ÉÏ×îÓÒ²à²»Í¬µÄÄÇÒ»Î»£¬ÀûÓÃÕâÒ»Î»¾Í¿ÉÒÔ½«Á½¸öÔªËØÇø·Ö¿ªÀ´¡£
+## è§£é¢˜æ€è·¯
 
 ```java
-public void FindNumsAppearOnce(int[] array, int num1[], int num2[]) {
+private boolean isBalanced = true;
+
+public boolean IsBalanced_Solution(TreeNode root) {
+    height(root);
+    return isBalanced;
+}
+
+private int height(TreeNode root) {
+    if (root == null || !isBalanced)
+        return 0;
+    int left = height(root.left);
+    int right = height(root.right);
+    if (Math.abs(left - right) > 1)
+        isBalanced = false;
+    return 1 + Math.max(left, right);
+}
+```
+
+# 56. æ•°ç»„ä¸­åªå‡ºç°ä¸€æ¬¡çš„æ•°å­—
+
+[NowCoder](https://www.nowcoder.com/practice/e02fdb54d7524710a7d664d082bb7811?tpId=13&tqId=11193&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+ä¸€ä¸ªæ•´å‹æ•°ç»„é‡Œé™¤äº†ä¸¤ä¸ªæ•°å­—ä¹‹å¤–ï¼Œå…¶ä»–çš„æ•°å­—éƒ½å‡ºç°äº†ä¸¤æ¬¡ï¼Œæ‰¾å‡ºè¿™ä¸¤ä¸ªæ•°ã€‚
+
+## è§£é¢˜æ€è·¯
+
+ä¸¤ä¸ªä¸ç›¸ç­‰çš„å…ƒç´ åœ¨ä½çº§è¡¨ç¤ºä¸Šå¿…å®šä¼šæœ‰ä¸€ä½å­˜åœ¨ä¸åŒï¼Œå°†æ•°ç»„çš„æ‰€æœ‰å…ƒç´ å¼‚æˆ–å¾—åˆ°çš„ç»“æœä¸ºä¸å­˜åœ¨é‡å¤çš„ä¸¤ä¸ªå…ƒç´ å¼‚æˆ–çš„ç»“æœã€‚
+
+diff &= -diff å¾—åˆ°å‡º diff æœ€å³ä¾§ä¸ä¸º 0 çš„ä½ï¼Œä¹Ÿå°±æ˜¯ä¸å­˜åœ¨é‡å¤çš„ä¸¤ä¸ªå…ƒç´ åœ¨ä½çº§è¡¨ç¤ºä¸Šæœ€å³ä¾§ä¸åŒçš„é‚£ä¸€ä½ï¼Œåˆ©ç”¨è¿™ä¸€ä½å°±å¯ä»¥å°†ä¸¤ä¸ªå…ƒç´ åŒºåˆ†å¼€æ¥ã€‚
+
+```java
+public void FindNumsAppearOnce(int[] nums, int num1[], int num2[]) {
     int diff = 0;
-    for (int num : array) diff ^= num;
-    // µÃµ½×îÓÒÒ»Î»
+    for (int num : nums)
+        diff ^= num;
     diff &= -diff;
-    for (int num : array) {
-        if ((num & diff) == 0) num1[0] ^= num;
-        else num2[0] ^= num;
+    for (int num : nums) {
+        if ((num & diff) == 0)
+            num1[0] ^= num;
+        else
+            num2[0] ^= num;
     }
 }
 ```
 
-## 57.1 ºÍÎª S µÄÁ½¸öÊı×Ö
+# 57.1 å’Œä¸º S çš„ä¸¤ä¸ªæ•°å­—
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/390da4f7a00f44bea7c2f3d19491311b?tpId=13&tqId=11195&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÊäÈëÒ»¸öµİÔöÅÅĞòµÄÊı×éºÍÒ»¸öÊı×Ö S£¬ÔÚÊı×éÖĞ²éÕÒÁ½¸öÊı£¬ÊÇµÄËûÃÇµÄºÍÕıºÃÊÇ S£¬Èç¹ûÓĞ¶à¶ÔÊı×ÖµÄºÍµÈÓÚ S£¬Êä³öÁ½¸öÊıµÄ³Ë»ı×îĞ¡µÄ¡£
+## é¢˜ç›®æè¿°
+
+è¾“å…¥ä¸€ä¸ªé€’å¢æ’åºçš„æ•°ç»„å’Œä¸€ä¸ªæ•°å­— Sï¼Œåœ¨æ•°ç»„ä¸­æŸ¥æ‰¾ä¸¤ä¸ªæ•°ï¼Œä½¿å¾—ä»–ä»¬çš„å’Œæ­£å¥½æ˜¯ Sã€‚å¦‚æœæœ‰å¤šå¯¹æ•°å­—çš„å’Œç­‰äº Sï¼Œè¾“å‡ºä¸¤ä¸ªæ•°çš„ä¹˜ç§¯æœ€å°çš„ã€‚
+
+## è§£é¢˜æ€è·¯
+
+ä½¿ç”¨åŒæŒ‡é’ˆï¼Œä¸€ä¸ªæŒ‡é’ˆæŒ‡å‘å…ƒç´ è¾ƒå°çš„å€¼ï¼Œä¸€ä¸ªæŒ‡é’ˆæŒ‡å‘å…ƒç´ è¾ƒå¤§çš„å€¼ã€‚æŒ‡å‘è¾ƒå°å…ƒç´ çš„æŒ‡é’ˆä»å¤´å‘å°¾éå†ï¼ŒæŒ‡å‘è¾ƒå¤§å…ƒç´ çš„æŒ‡é’ˆä»å°¾å‘å¤´éå†ã€‚
+
+- å¦‚æœä¸¤ä¸ªæŒ‡é’ˆæŒ‡å‘å…ƒç´ çš„å’Œ sum == targetï¼Œé‚£ä¹ˆå¾—åˆ°è¦æ±‚çš„ç»“æœï¼›
+- å¦‚æœ sum > targetï¼Œç§»åŠ¨è¾ƒå¤§çš„å…ƒç´ ï¼Œä½¿ sum å˜å°ä¸€äº›ï¼›
+- å¦‚æœ sum < targetï¼Œç§»åŠ¨è¾ƒå°çš„å…ƒç´ ï¼Œä½¿ sum å˜å¤§ä¸€äº›ã€‚
 
 ```java
 public ArrayList<Integer> FindNumbersWithSum(int[] array, int sum) {
     int i = 0, j = array.length - 1;
     while (i < j) {
         int cur = array[i] + array[j];
-        if (cur == sum) return new ArrayList<Integer>(Arrays.asList(array[i], array[j]));
-        else if (cur < sum) i++;
-        else j--;
+        if (cur == sum)
+            return new ArrayList<>(Arrays.asList(array[i], array[j]));
+        if (cur < sum)
+            i++;
+        else
+            j--;
     }
-    return new ArrayList<Integer>();
+    return new ArrayList<>();
 }
 ```
 
-## 57.2 ºÍÎª S µÄÁ¬ĞøÕıÊıĞòÁĞ
+# 57.2 å’Œä¸º S çš„è¿ç»­æ­£æ•°åºåˆ—
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/c451a3fd84b64cb19485dad758a55ebe?tpId=13&tqId=11194&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ºÍÎª 100 µÄÁ¬ĞøĞòÁĞÓĞ 18, 19, 20, 21, 22
+## é¢˜ç›®æè¿°
+
+è¾“å‡ºæ‰€æœ‰å’Œä¸º S çš„è¿ç»­æ­£æ•°åºåˆ—ã€‚
+
+ä¾‹å¦‚å’Œä¸º 100 çš„è¿ç»­åºåˆ—æœ‰ï¼š
+
+```
+[9, 10, 11, 12, 13, 14, 15, 16]
+[18, 19, 20, 21, 22]ã€‚
+```
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
     ArrayList<ArrayList<Integer>> ret = new ArrayList<>();
     int start = 1, end = 2;
-    int mid = sum / 2;
     int curSum = 3;
-    while (start <= mid && end < sum) {
+    while (end < sum) {
         if (curSum > sum) {
             curSum -= start;
             start++;
@@ -1503,9 +2564,8 @@ public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
             curSum += end;
         } else {
             ArrayList<Integer> list = new ArrayList<>();
-            for (int i = start; i <= end; i++) {
+            for (int i = start; i <= end; i++)
                 list.add(i);
-            }
             ret.add(list);
             curSum -= start;
             start++;
@@ -1517,231 +2577,426 @@ public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
 }
 ```
 
-## 58.1 ·­×ªµ¥´ÊË³ĞòÁĞ
+# 58.1 ç¿»è½¬å•è¯é¡ºåºåˆ—
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/3194a4f4cf814f63919d0790578d51f3?tpId=13&tqId=11197&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-ÊäÈë£º"I am a student."
+## é¢˜ç›®æè¿°
 
-Êä³ö£º"student. a am I"
+```html
+Input:
+"I am a student."
+
+Output:
+"student. a am I"
+```
+
+## è§£é¢˜æ€è·¯
+
+é¢˜ç›®åº”è¯¥æœ‰ä¸€ä¸ªéšå«æ¡ä»¶ï¼Œå°±æ˜¯ä¸èƒ½ç”¨é¢å¤–çš„ç©ºé—´ã€‚è™½ç„¶ Java çš„é¢˜ç›®è¾“å…¥å‚æ•°ä¸º String ç±»å‹ï¼Œéœ€è¦å…ˆåˆ›å»ºä¸€ä¸ªå­—ç¬¦æ•°ç»„ä½¿å¾—ç©ºé—´å¤æ‚åº¦ä¸º O(N)ï¼Œä½†æ˜¯æ­£ç¡®çš„å‚æ•°ç±»å‹åº”è¯¥å’ŒåŸä¹¦ä¸€æ ·ï¼Œä¸ºå­—ç¬¦æ•°ç»„ï¼Œå¹¶ä¸”åªèƒ½ä½¿ç”¨è¯¥å­—ç¬¦æ•°ç»„çš„ç©ºé—´ã€‚ä»»ä½•ä½¿ç”¨äº†é¢å¤–ç©ºé—´çš„è§£æ³•åœ¨é¢è¯•æ—¶éƒ½ä¼šå¤§æ‰“æŠ˜æ‰£ï¼ŒåŒ…æ‹¬é€’å½’è§£æ³•ã€‚
+
+æ­£ç¡®çš„è§£æ³•åº”è¯¥æ˜¯å’Œä¹¦ä¸Šä¸€æ ·ï¼Œå…ˆæ—‹è½¬æ¯ä¸ªå•è¯ï¼Œå†æ—‹è½¬æ•´ä¸ªå­—ç¬¦ä¸²ã€‚
 
 ```java
 public String ReverseSentence(String str) {
-    if (str.length() == 0) return str;
     int n = str.length();
     char[] chars = str.toCharArray();
-    int start = 0, end = 0;
-    while (end <= n) {
-        if (end == n || chars[end] == ' ') {
-            reverse(chars, start, end - 1);
-            start = end + 1;
+    int i = 0, j = 0;
+    while (j <= n) {
+        if (j == n || chars[j] == ' ') {
+            reverse(chars, i, j - 1);
+            i = j + 1;
         }
-        end++;
+        j++;
     }
     reverse(chars, 0, n - 1);
     return new String(chars);
 }
 
-private void reverse(char[] c, int start, int end) {
-    while (start < end) {
-        char t = c[start];
-        c[start] = c[end];
-        c[end] = t;
-        start++;
-        end--;
-    }
+private void reverse(char[] c, int i, int j) {
+    while (i < j)
+        swap(c, i++, j--);
+}
+
+private void swap(char[] c, int i, int j) {
+    char t = c[i];
+    c[i] = c[j];
+    c[j] = t;
 }
 ```
 
-## 58.2 ×óĞı×ª×Ö·û´®
+# 58.2 å·¦æ—‹è½¬å­—ç¬¦ä¸²
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/12d959b108cb42b1ab72cef4d36af5ec?tpId=13&tqId=11196&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-¶ÔÓÚÒ»¸ö¸ø¶¨µÄ×Ö·ûĞòÁĞ S£¬ÇëÄã°ÑÆäÑ­»·×óÒÆ K Î»ºóµÄĞòÁĞÊä³ö¡£ÀıÈç£¬×Ö·ûĞòÁĞ S=¡±abcXYZdef¡±, ÒªÇóÊä³öÑ­»·×óÒÆ 3 Î»ºóµÄ½á¹û£¬¼´¡°XYZdefabc¡±¡£
+## é¢˜ç›®æè¿°
+
+```html
+Input:
+S="abcXYZdef"
+K=3
+
+Output:
+"XYZdefabc"
+```
+
+## è§£é¢˜æ€è·¯
+
+å…ˆå°† "abc" å’Œ "XYZdef" åˆ†åˆ«ç¿»è½¬ï¼Œå¾—åˆ° "cbafedZYX"ï¼Œç„¶åå†æŠŠæ•´ä¸ªå­—ç¬¦ä¸²ç¿»è½¬å¾—åˆ° "XYZdefabc"ã€‚
 
 ```java
 public String LeftRotateString(String str, int n) {
-    if (str.length() == 0) return "";
-    char[] c = str.toCharArray();
-    reverse(c, 0, n - 1);
-    reverse(c, n, c.length - 1);
-    reverse(c, 0, c.length - 1);
-    return new String(c);
+    if (n >= str.length())
+        return str;
+    char[] chars = str.toCharArray();
+    reverse(chars, 0, n - 1);
+    reverse(chars, n, chars.length - 1);
+    reverse(chars, 0, chars.length - 1);
+    return new String(chars);
 }
 
-private void reverse(char[] c, int i, int j) {
-    while (i < j) {
-        char t = c[i];
-        c[i] = c[j];
-        c[j] = t;
-        i++;
-        j--;
-    }
+private void reverse(char[] chars, int i, int j) {
+    while (i < j)
+        swap(chars, i++, j--);
+}
+
+private void swap(char[] chars, int i, int j) {
+    char t = chars[i];
+    chars[i] = chars[j];
+    chars[j] = t;
 }
 ```
 
-## 59. »¬¶¯´°¿ÚµÄ×î´óÖµ
+# 59. æ»‘åŠ¨çª—å£çš„æœ€å¤§å€¼
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/1624bc35a45c42c0bc17d17fa0cba788?tpId=13&tqId=11217&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-¸ø¶¨Ò»¸öÊı×éºÍ»¬¶¯´°¿ÚµÄ´óĞ¡£¬ÕÒ³öËùÓĞ»¬¶¯´°¿ÚÀïÊıÖµµÄ×î´óÖµ¡£ÀıÈç£¬Èç¹ûÊäÈëÊı×é {2, 3, 4, 2, 6, 2, 5, 1} ¼°»¬¶¯´°¿ÚµÄ´óĞ¡ 3£¬ÄÇÃ´Ò»¹²´æÔÚ 6 ¸ö»¬¶¯´°¿Ú£¬ËûÃÇµÄ×î´óÖµ·Ö±ğÎª {4, 4, 6, 6, 6, 5}£»
+## é¢˜ç›®æè¿°
+
+ç»™å®šä¸€ä¸ªæ•°ç»„å’Œæ»‘åŠ¨çª—å£çš„å¤§å°ï¼Œæ‰¾å‡ºæ‰€æœ‰æ»‘åŠ¨çª—å£é‡Œæ•°å€¼çš„æœ€å¤§å€¼ã€‚
+
+ä¾‹å¦‚ï¼Œå¦‚æœè¾“å…¥æ•°ç»„ {2, 3, 4, 2, 6, 2, 5, 1} åŠæ»‘åŠ¨çª—å£çš„å¤§å° 3ï¼Œé‚£ä¹ˆä¸€å…±å­˜åœ¨ 6 ä¸ªæ»‘åŠ¨çª—å£ï¼Œä»–ä»¬çš„æœ€å¤§å€¼åˆ†åˆ«ä¸º {4, 4, 6, 6, 6, 5}ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public ArrayList<Integer> maxInWindows(int[] num, int size) {
     ArrayList<Integer> ret = new ArrayList<>();
-    if (size > num.length || size < 1) return ret;
-    PriorityQueue<Integer> heap = new PriorityQueue<Integer>((o1, o2) -> o2 - o1);
-    for (int i = 0; i < size; i++) heap.add(num[i]);
+    if (size > num.length || size < 1)
+        return ret;
+    PriorityQueue<Integer> heap = new PriorityQueue<>((o1, o2) -> o2 - o1);  /* å¤§é¡¶å † */
+    for (int i = 0; i < size; i++)
+        heap.add(num[i]);
     ret.add(heap.peek());
-    for (int i = 1; i + size - 1 < num.length; i++) {
+    for (int i = 1, j = i + size - 1; j < num.length; i++, j++) {            /* ç»´æŠ¤ä¸€ä¸ªå¤§å°ä¸º size çš„å¤§é¡¶å † */
         heap.remove(num[i - 1]);
-        heap.add(num[i + size - 1]);
+        heap.add(num[j]);
         ret.add(heap.peek());
     }
     return ret;
 }
 ```
 
-## 61. ÆË¿ËÅÆË³×Ó
+# 60. n ä¸ªéª°å­çš„ç‚¹æ•°
 
-**ÌâÄ¿ÃèÊö**
+[Lintcode](https://www.lintcode.com/en/problem/dices-sum/)
 
-ÎåÕÅÅÆ£¬ÆäÖĞ´óĞ¡¹íÎªñ®×Ó£¬ÅÆÃæ´óĞ¡Îª 0¡£ÅĞ¶ÏÊÇ·ñÄÜ×é³ÉË³×Ó¡£
+## é¢˜ç›®æè¿°
+
+æŠŠ n ä¸ªéª°å­ä»åœ¨åœ°ä¸Šï¼Œæ±‚ç‚¹æ•°å’Œä¸º s çš„æ¦‚ç‡ã€‚
+
+## è§£é¢˜æ€è·¯
+
+### åŠ¨æ€è§„åˆ’è§£æ³•
+
+ä½¿ç”¨ä¸€ä¸ªäºŒç»´æ•°ç»„ dp å­˜å‚¨ç‚¹æ•°å‡ºç°çš„æ¬¡æ•°ï¼Œå…¶ä¸­ dp[i][j] è¡¨ç¤ºå‰ i ä¸ªéª°å­äº§ç”Ÿç‚¹æ•° j çš„æ¬¡æ•°ã€‚
+
+ç©ºé—´å¤æ‚åº¦ï¼šO(N<sup>2</sup>)
 
 ```java
-public boolean isContinuous(int[] numbers) {
-    if (numbers.length < 5) return false;
-    Arrays.sort(numbers);
-    int cnt = 0;
-    for (int num : numbers) if (num == 0) cnt++;
-    for (int i = cnt; i < numbers.length - 1; i++) {
-        if (numbers[i + 1] == numbers[i]) return false;
-        int cut = numbers[i + 1] - numbers[i] - 1;
-        if (cut > cnt) return false;
-        cnt -= cut;
-    }
-    return true;
+public List<Map.Entry<Integer, Double>> dicesSum(int n) {
+    final int face = 6;
+    final int pointNum = face * n;
+    long[][] dp = new long[n + 1][pointNum + 1];
+
+    for (int i = 1; i <= face; i++)
+        dp[1][i] = 1;
+
+    for (int i = 2; i <= n; i++)
+        for (int j = i; j <= pointNum; j++)     /* ä½¿ç”¨ i ä¸ªéª°å­æœ€å°ç‚¹æ•°ä¸º i */
+            for (int k = 1; k <= face && k <= j; k++)
+                dp[i][j] += dp[i - 1][j - k];
+
+    final double totalNum = Math.pow(6, n);
+    List<Map.Entry<Integer, Double>> ret = new ArrayList<>();
+    for (int i = n; i <= pointNum; i++)
+        ret.add(new AbstractMap.SimpleEntry<>(i, dp[n][i] / totalNum));
+
+    return ret;
 }
 ```
 
-## 62. Ô²È¦ÖĞ×îºóÊ£ÏÂµÄÊı
+### åŠ¨æ€è§„åˆ’è§£æ³• + æ—‹è½¬æ•°ç»„
 
-**ÌâÄ¿ÃèÊö**
+ç©ºé—´å¤æ‚åº¦ï¼šO(N)
 
-ÈÃĞ¡ÅóÓÑÃÇÎ§³ÉÒ»¸ö´óÈ¦¡£È»ºó , ËûËæ»úÖ¸¶¨Ò»¸öÊı m, ÈÃ±àºÅÎª 0 µÄĞ¡ÅóÓÑ¿ªÊ¼±¨Êı¡£Ã¿´Îº°µ½ m-1 µÄÄÇ¸öĞ¡ÅóÓÑÒª³öÁĞ³ªÊ×¸è , È»ºó¿ÉÒÔÔÚÀñÆ·ÏäÖĞÈÎÒâµÄÌôÑ¡ÀñÎï , ²¢ÇÒ²»ÔÙ»Øµ½È¦ÖĞ , ´ÓËûµÄÏÂÒ»¸öĞ¡ÅóÓÑ¿ªÊ¼ , ¼ÌĞø 0...m-1 ±¨Êı .... ÕâÑùÏÂÈ¥ .... Ö±µ½Ê£ÏÂ×îºóÒ»¸öĞ¡ÅóÓÑ , ¿ÉÒÔ²»ÓÃ±íÑİ¡£
+```java
+public List<Map.Entry<Integer, Double>> dicesSum(int n) {
+    final int face = 6;
+    final int pointNum = face * n;
+    long[][] dp = new long[2][pointNum + 1];
 
-**½âÌâË¼Â·**
+    for (int i = 1; i <= face; i++)
+        dp[0][i] = 1;
 
-Ô¼Éª·ò»·
+    int flag = 1;                                     /* æ—‹è½¬æ ‡è®° */
+    for (int i = 2; i <= n; i++, flag = 1 - flag) {
+        for (int j = 0; j <= pointNum; j++)
+            dp[flag][j] = 0;                          /* æ—‹è½¬æ•°ç»„æ¸…é›¶ */
+
+        for (int j = i; j <= pointNum; j++)
+            for (int k = 1; k <= face && k <= j; k++)
+                dp[flag][j] += dp[1 - flag][j - k];
+    }
+
+    final double totalNum = Math.pow(6, n);
+    List<Map.Entry<Integer, Double>> ret = new ArrayList<>();
+    for (int i = n; i <= pointNum; i++)
+        ret.add(new AbstractMap.SimpleEntry<>(i, dp[1 - flag][i] / totalNum));
+
+    return ret;
+}
+```
+
+# 61. æ‰‘å…‹ç‰Œé¡ºå­
+
+[NowCoder](https://www.nowcoder.com/practice/762836f4d43d43ca9deb273b3de8e1f4?tpId=13&tqId=11198&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+äº”å¼ ç‰Œï¼Œå…¶ä¸­å¤§å°é¬¼ä¸ºç™å­ï¼Œç‰Œé¢å¤§å°ä¸º 0ã€‚åˆ¤æ–­è¿™äº”å¼ ç‰Œæ˜¯å¦èƒ½ç»„æˆé¡ºå­ã€‚
+
+## è§£é¢˜æ€è·¯
+
+```java
+public boolean isContinuous(int[] nums) {
+
+    if (nums.length < 5)
+        return false;
+
+    Arrays.sort(nums);
+
+    // ç»Ÿè®¡ç™å­æ•°é‡
+    int cnt = 0;
+    for (int num : nums)
+        if (num == 0)
+            cnt++;
+
+    // ä½¿ç”¨ç™å­å»è¡¥å…¨ä¸è¿ç»­çš„é¡ºå­
+    for (int i = cnt; i < nums.length - 1; i++) {
+        if (nums[i + 1] == nums[i])
+            return false;
+        cnt -= nums[i + 1] - nums[i] - 1;
+    }
+
+    return cnt >= 0;
+}
+```
+
+# 62. åœ†åœˆä¸­æœ€åå‰©ä¸‹çš„æ•°
+
+[NowCoder](https://www.nowcoder.com/practice/f78a359491e64a50bce2d89cff857eb6?tpId=13&tqId=11199&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+è®©å°æœ‹å‹ä»¬å›´æˆä¸€ä¸ªå¤§åœˆã€‚ç„¶åï¼ŒéšæœºæŒ‡å®šä¸€ä¸ªæ•° mï¼Œè®©ç¼–å·ä¸º 0 çš„å°æœ‹å‹å¼€å§‹æŠ¥æ•°ã€‚æ¯æ¬¡å–Šåˆ° m-1 çš„é‚£ä¸ªå°æœ‹å‹è¦å‡ºåˆ—å”±é¦–æ­Œï¼Œç„¶åå¯ä»¥åœ¨ç¤¼å“ç®±ä¸­ä»»æ„çš„æŒ‘é€‰ç¤¼ç‰©ï¼Œå¹¶ä¸”ä¸å†å›åˆ°åœˆä¸­ï¼Œä»ä»–çš„ä¸‹ä¸€ä¸ªå°æœ‹å‹å¼€å§‹ï¼Œç»§ç»­ 0...m-1 æŠ¥æ•° .... è¿™æ ·ä¸‹å» .... ç›´åˆ°å‰©ä¸‹æœ€åä¸€ä¸ªå°æœ‹å‹ï¼Œå¯ä»¥ä¸ç”¨è¡¨æ¼”ã€‚
+
+## è§£é¢˜æ€è·¯
+
+çº¦ç‘Ÿå¤«ç¯ï¼Œåœ†åœˆé•¿åº¦ä¸º n çš„è§£å¯ä»¥çœ‹æˆé•¿åº¦ä¸º n-1 çš„è§£å†åŠ ä¸ŠæŠ¥æ•°çš„é•¿åº¦ mã€‚å› ä¸ºæ˜¯åœ†åœˆï¼Œæ‰€ä»¥æœ€åéœ€è¦å¯¹ n å–ä½™ã€‚
 
 ```java
 public int LastRemaining_Solution(int n, int m) {
-    if (n == 0) return -1;
-    if (n == 1) return 0;
+    if (n == 0)     /* ç‰¹æ®Šè¾“å…¥çš„å¤„ç† */
+        return -1;
+    if (n == 1)     /* é€’å½’è¿”å›æ¡ä»¶ */
+        return 0;
     return (LastRemaining_Solution(n - 1, m) + m) % n;
 }
 ```
 
-## 63. ¹ÉÆ±µÄ×î´óÀûÈó
+# 63. è‚¡ç¥¨çš„æœ€å¤§åˆ©æ¶¦
 
-**ÌâÄ¿ÃèÊö**
+[Leetcode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 
-¿ÉÒÔÓĞÒ»´ÎÂòÈëºÍÒ»´ÎÂô³ö£¬ÂòÈë±ØĞëÔÚÇ°¡£Çó×î´óÊÕÒæ¡£
+## é¢˜ç›®æè¿°
+
+å¯ä»¥æœ‰ä¸€æ¬¡ä¹°å…¥å’Œä¸€æ¬¡å–å‡ºï¼Œé‚£ä¹ˆä¹°å…¥å¿…é¡»åœ¨å‰ã€‚æ±‚æœ€å¤§æ”¶ç›Šã€‚
+
+## è§£é¢˜æ€è·¯
+
+ä½¿ç”¨è´ªå¿ƒç­–ç•¥ï¼Œå‡è®¾ç¬¬ i è½®è¿›è¡Œå–å‡ºæ“ä½œï¼Œä¹°å…¥æ“ä½œä»·æ ¼åº”è¯¥åœ¨ i ä¹‹å‰å¹¶ä¸”ä»·æ ¼æœ€ä½ã€‚
 
 ```java
 public int maxProfit(int[] prices) {
-    int n = prices.length;
-    if(n == 0) return 0;
+    if (prices == null || prices.length == 0)
+        return 0;
     int soFarMin = prices[0];
-    int max = 0;
-    for(int i = 1; i < n; i++) {
-        if(soFarMin > prices[i]) soFarMin = prices[i];
-        else max = Math.max(max, prices[i] - soFarMin);
+    int maxProfit = 0;
+    for (int i = 1; i < prices.length; i++) {
+        soFarMin = Math.min(soFarMin, prices[i]);
+        maxProfit = Math.max(maxProfit, prices[i] - soFarMin);
     }
-    return max;
+    return maxProfit;
 }
 ```
 
-## 64. Çó 1+2+3+...+n
+# 64. æ±‚ 1+2+3+...+n
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/7a0da8fc483247ff8800059e12d7caf1?tpId=13&tqId=11200&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-Çó 1+2+3+...+n£¬ÒªÇó²»ÄÜÊ¹ÓÃ³Ë³ı·¨¡¢for¡¢while¡¢if¡¢else¡¢switch¡¢case µÈ¹Ø¼ü×Ö¼°Ìõ¼şÅĞ¶ÏÓï¾ä£¨A?B:C£©
+## é¢˜ç›®æè¿°
+
+è¦æ±‚ä¸èƒ½ä½¿ç”¨ä¹˜é™¤æ³•ã€forã€whileã€ifã€elseã€switchã€case ç­‰å…³é”®å­—åŠæ¡ä»¶åˆ¤æ–­è¯­å¥ A ? B : Cã€‚
+
+## è§£é¢˜æ€è·¯
+
+ä½¿ç”¨é€’å½’è§£æ³•æœ€é‡è¦çš„æ˜¯æŒ‡å®šè¿”å›æ¡ä»¶ï¼Œä½†æ˜¯æœ¬é¢˜æ— æ³•ç›´æ¥ä½¿ç”¨ if è¯­å¥æ¥æŒ‡å®šè¿”å›æ¡ä»¶ã€‚
+
+æ¡ä»¶ä¸ && å…·æœ‰çŸ­è·¯åŸåˆ™ï¼Œå³åœ¨ç¬¬ä¸€ä¸ªæ¡ä»¶è¯­å¥ä¸º false çš„æƒ…å†µä¸‹ä¸ä¼šå»æ‰§è¡Œç¬¬äºŒä¸ªæ¡ä»¶è¯­å¥ã€‚åˆ©ç”¨è¿™ä¸€ç‰¹æ€§ï¼Œå°†é€’å½’çš„è¿”å›æ¡ä»¶å–éç„¶åä½œä¸º && çš„ç¬¬ä¸€ä¸ªæ¡ä»¶è¯­å¥ï¼Œé€’å½’çš„ä¸»ä½“è½¬æ¢ä¸ºç¬¬äºŒä¸ªæ¡ä»¶è¯­å¥ï¼Œé‚£ä¹ˆå½“é€’å½’çš„è¿”å›æ¡ä»¶ä¸º true çš„æƒ…å†µä¸‹å°±ä¸ä¼šæ‰§è¡Œé€’å½’çš„ä¸»ä½“éƒ¨åˆ†ï¼Œé€’å½’è¿”å›ã€‚
+
+æœ¬é¢˜çš„é€’å½’è¿”å›æ¡ä»¶ä¸º n <= 0ï¼Œå–éåå°±æ˜¯ n > 0ï¼›é€’å½’çš„ä¸»ä½“éƒ¨åˆ†ä¸º sum += Sum_Solution(n - 1)ï¼Œè½¬æ¢ä¸ºæ¡ä»¶è¯­å¥åå°±æ˜¯ (sum += Sum_Solution(n - 1)) > 0ã€‚
 
 ```java
 public int Sum_Solution(int n) {
-    if(n == 0) return 0;
-    return n + Sum_Solution(n - 1);
+    int sum = n;
+    boolean b = (n > 0) && ((sum += Sum_Solution(n - 1)) > 0);
+    return sum;
 }
 ```
 
-## 65. ²»ÓÃ¼Ó¼õ³Ë³ı×ö¼Ó·¨
+# 65. ä¸ç”¨åŠ å‡ä¹˜é™¤åšåŠ æ³•
 
-a ^ b ±íÊ¾Ã»ÓĞ¿¼ÂÇ½øÎ»µÄÇé¿öÏÂÁ½ÊıµÄºÍ£¬(a & b) << 1 ¾ÍÊÇ½øÎ»¡£µİ¹é»áÖÕÖ¹µÄÔ­ÒòÊÇ (a & b) << 1 ×îÓÒ±ß»á¶àÒ»¸ö 0£¬ÄÇÃ´¼ÌĞøµİ¹é£¬½øÎ»×îÓÒ±ßµÄ 0 »áÂıÂıÔö¶à£¬×îºó½øÎ»»á±äÎª 0£¬µİ¹éÖÕÖ¹¡£
+[NowCoder](https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215?tpId=13&tqId=11201&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+å†™ä¸€ä¸ªå‡½æ•°ï¼Œæ±‚ä¸¤ä¸ªæ•´æ•°ä¹‹å’Œï¼Œè¦æ±‚ä¸å¾—ä½¿ç”¨ +ã€-ã€\*ã€/ å››åˆ™è¿ç®—ç¬¦å·ã€‚
+
+## è§£é¢˜æ€è·¯
+
+a ^ b è¡¨ç¤ºæ²¡æœ‰è€ƒè™‘è¿›ä½çš„æƒ…å†µä¸‹ä¸¤æ•°çš„å’Œï¼Œ(a & b) << 1 å°±æ˜¯è¿›ä½ã€‚
+
+é€’å½’ä¼šç»ˆæ­¢çš„åŸå› æ˜¯ (a & b) << 1 æœ€å³è¾¹ä¼šå¤šä¸€ä¸ª 0ï¼Œé‚£ä¹ˆç»§ç»­é€’å½’ï¼Œè¿›ä½æœ€å³è¾¹çš„ 0 ä¼šæ…¢æ…¢å¢å¤šï¼Œæœ€åè¿›ä½ä¼šå˜ä¸º 0ï¼Œé€’å½’ç»ˆæ­¢ã€‚
 
 ```java
-public int Add(int num1, int num2) {
-    if(num2 == 0) return num1;
-    return Add(num1 ^ num2, (num1 & num2) << 1);
+public int Add(int a, int b) {
+    return b == 0 ? a : Add(a ^ b, (a & b) << 1);
 }
 ```
 
-## 66. ¹¹½¨³Ë»ıÊı×é
+# 66. æ„å»ºä¹˜ç§¯æ•°ç»„
 
-**ÌâÄ¿ÃèÊö**
+[NowCoder](https://www.nowcoder.com/practice/94a4d381a68b47b7a8bed86f2975db46?tpId=13&tqId=11204&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
 
-¸ø¶¨Ò»¸öÊı×é A[0, 1,..., n-1], Çë¹¹½¨Ò»¸öÊı×é B[0, 1,..., n-1], ÆäÖĞ B ÖĞµÄÔªËØ B[i]=A[0]\*A[1]\*...\*A[i-1]\*A[i+1]\*...\*A[n-1]¡£²»ÄÜÊ¹ÓÃ³ı·¨¡£
+## é¢˜ç›®æè¿°
+
+ç»™å®šä¸€ä¸ªæ•°ç»„ A[0, 1,..., n-1]ï¼Œè¯·æ„å»ºä¸€ä¸ªæ•°ç»„ B[0, 1,..., n-1]ï¼Œå…¶ä¸­ B ä¸­çš„å…ƒç´  B[i]=A[0]\*A[1]\*...\*A[i-1]\*A[i+1]\*...\*A[n-1]ã€‚è¦æ±‚ä¸èƒ½ä½¿ç”¨é™¤æ³•ã€‚
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public int[] multiply(int[] A) {
     int n = A.length;
-    int[][] dp = new int[n][n];
-    for (int i = 0; i < n; i++) {
-        dp[i][i] = A[i];
-    }
-    for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
-            dp[i][j] = dp[i][j - 1] * A[j];
-        }
-    }
-
     int[] B = new int[n];
-    Arrays.fill(B, 1);
-    for (int i = 0; i < n; i++) {
-        if (i != 0) B[i] *= dp[0][i - 1];
-        if (i != n - 1) B[i] *= dp[i + 1][n - 1];
-    }
+    for (int i = 0, product = 1; i < n; product *= A[i], i++)       /* ä»å·¦å¾€å³ç´¯ä¹˜ */
+        B[i] = product;
+    for (int i = n - 1, product = 1; i >= 0; product *= A[i], i--)  /* ä»å³å¾€å·¦ç´¯ä¹˜ */
+        B[i] *= product;
     return B;
 }
 ```
 
-# µÚÆßÕÂ Á½¸öÃæÊÔ°¸Àı
+# 67. æŠŠå­—ç¬¦ä¸²è½¬æ¢æˆæ•´æ•°
 
-## 67. °Ñ×Ö·û´®×ª»»³ÉÕûÊı
+[NowCoder](https://www.nowcoder.com/practice/1277c681251b4372bdef344468e4f26e?tpId=13&tqId=11202&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+## é¢˜ç›®æè¿°
+
+å°†ä¸€ä¸ªå­—ç¬¦ä¸²è½¬æ¢æˆä¸€ä¸ªæ•´æ•°ï¼Œå­—ç¬¦ä¸²ä¸æ˜¯ä¸€ä¸ªåˆæ³•çš„æ•°å€¼åˆ™è¿”å› 0ï¼Œè¦æ±‚ä¸èƒ½ä½¿ç”¨å­—ç¬¦ä¸²è½¬æ¢æ•´æ•°çš„åº“å‡½æ•°ã€‚
+
+```html
+Iuput:
++2147483647
+1a33
+
+Output:
+2147483647
+0
+```
+
+## è§£é¢˜æ€è·¯
 
 ```java
 public int StrToInt(String str) {
-    if (str.length() == 0) return 0;
-    char[] chars = str.toCharArray();
-    boolean isNegative = chars[0] == '-';
+    if (str == null || str.length() == 0)
+        return 0;
+    boolean isNegative = str.charAt(0) == '-';
     int ret = 0;
-    for (int i = 0; i < chars.length; i++) {
-        if (i == 0 && (chars[i] == '+' || chars[i] == '-')) continue;
-        if (chars[i] < '0' || chars[i] > '9') return 0;
-        ret = ret * 10 + (chars[i] - '0');
+    for (int i = 0; i < str.length(); i++) {
+        char c = str.charAt(i);
+        if (i == 0 && (c == '+' || c == '-'))  /* ç¬¦å·åˆ¤å®š */
+            continue;
+        if (c < '0' || c > '9')                /* éæ³•è¾“å…¥ */
+            return 0;
+        ret = ret * 10 + (c - '0');
     }
     return isNegative ? -ret : ret;
 }
 ```
 
-## 68. Ê÷ÖĞÁ½¸ö½ÚµãµÄ×îµÍ¹«¹²×æÏÈ
+# 68. æ ‘ä¸­ä¸¤ä¸ªèŠ‚ç‚¹çš„æœ€ä½å…¬å…±ç¥–å…ˆ
 
-Ê÷ÊÇ¶ş²æ²éÕÒÊ÷µÄ×îµÍ¹«¹²×æÏÈÎÊÌâ£º
+## è§£é¢˜æ€è·¯
+
+### äºŒå‰æŸ¥æ‰¾æ ‘
+
+<div align="center"> <img src="../pics//293d2af9-de1d-403e-bed0-85d029383528.png" width="300"/> </div><br>
+
+[Leetcode : 235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/)
+
+äºŒå‰æŸ¥æ‰¾æ ‘ä¸­ï¼Œä¸¤ä¸ªèŠ‚ç‚¹ p, q çš„å…¬å…±ç¥–å…ˆ root æ»¡è¶³ root.val >= p.val && root.val <= q.valã€‚
 
 ```java
 public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-    if(root.val > p.val && root.val > q.val) return lowestCommonAncestor(root.left, p, q);
-    if(root.val < p.val && root.val < q.val) return lowestCommonAncestor(root.right, p, q);
+    if (root == null)
+        return root;
+    if (root.val > p.val && root.val > q.val)
+        return lowestCommonAncestor(root.left, p, q);
+    if (root.val < p.val && root.val < q.val)
+        return lowestCommonAncestor(root.right, p, q);
     return root;
 }
 ```
+
+### æ™®é€šäºŒå‰æ ‘
+
+<div align="center"> <img src="../pics//37a72755-4890-4b42-9eab-b0084e0c54d9.png" width="300"/> </div><br>
+
+[Leetcode : 236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/)
+
+åœ¨å·¦å³å­æ ‘ä¸­æŸ¥æ‰¾æ˜¯å¦å­˜åœ¨ p æˆ–è€… qï¼Œå¦‚æœ p å’Œ q åˆ†åˆ«åœ¨ä¸¤ä¸ªå­æ ‘ä¸­ï¼Œé‚£ä¹ˆå°±è¯´æ˜æ ¹èŠ‚ç‚¹å°±æ˜¯æœ€ä½å…¬å…±ç¥–å…ˆã€‚
+
+```java
+public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    if (root == null || root == p || root == q)
+        return root;
+    TreeNode left = lowestCommonAncestor(root.left, p, q);
+    TreeNode right = lowestCommonAncestor(root.right, p, q);
+    return left == null ? right : right == null ? left : root;
+}
+```
+
+# å‚è€ƒæ–‡çŒ®
+
+- ä½•æµ·æ¶›. å‰‘æŒ‡ Offer[M]. ç”µå­å·¥ä¸šå‡ºç‰ˆç¤¾, 2012.
